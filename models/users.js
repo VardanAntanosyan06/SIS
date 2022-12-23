@@ -26,14 +26,14 @@ module.exports = (sequelize, DataTypes) => {
     planType: DataTypes.STRING,
     aid: DataTypes.BOOLEAN,
     legacy: DataTypes.BOOLEAN,
-    activityName: DataTypes.STRING,
+    activityName: DataTypes.ARRAY(DataTypes.STRING),
     applyingFrom: DataTypes.STRING,
     testSubmit: DataTypes.STRING,
     school: DataTypes.STRING,
     report: DataTypes.BOOLEAN,
     reportDescription: DataTypes.STRING,
     hadtests: DataTypes.BOOLEAN,
-    hobby: DataTypes.STRING,
+    hobby: DataTypes.ARRAY(DataTypes.STRING),
     workExperience: DataTypes.STRING,
     addinfo: DataTypes.BOOLEAN
   }, {
@@ -42,3 +42,4 @@ module.exports = (sequelize, DataTypes) => {
   });
   return Users;
 };
+
