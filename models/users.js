@@ -26,14 +26,14 @@ module.exports = (sequelize, DataTypes) => {
     planType: DataTypes.STRING,
     aid: DataTypes.BOOLEAN,
     legacy: DataTypes.BOOLEAN,
-    activityName: DataTypes.ARRAY(DataTypes.STRING),
+    activityName: DataTypes.STRING,
     applyingFrom: DataTypes.STRING,
     testSubmit: DataTypes.STRING,
     school: DataTypes.STRING,
     report: DataTypes.BOOLEAN,
     reportDescription: DataTypes.STRING,
     hadtests: DataTypes.BOOLEAN,
-    hobby: DataTypes.ARRAY(DataTypes.STRING),
+    hobby: DataTypes.STRING,
     workExperience: DataTypes.STRING,
     addinfo: DataTypes.BOOLEAN
   }, {
