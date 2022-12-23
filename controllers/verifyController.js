@@ -10,6 +10,7 @@ const verify = async (req,res)=>{
         await item.save();
         return res.json({success:true})
     }
+    return res.json("something went wrong")
 }
 
 module.exports = {

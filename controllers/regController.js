@@ -24,7 +24,7 @@ const reg = async (req, res) => {
       from: "davit.manukyan.d@tumo.org",
       to: email,
       subject: "verification",
-      html: "<a href='http://localhost:4000/verify?email=" + hashEmail + "?id="+item.id+"'>click here</a>",
+      html: "<a href='http://164.90.224.111:4000/verify?email=" + hashEmail + "?id="+item.id+"'>click here</a>",
     };
 
 
