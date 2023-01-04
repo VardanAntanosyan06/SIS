@@ -3,11 +3,32 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const swaggerJSDOC = require("swagger-jsdoc")
+const swagerUI = require("swagger-ui-express")
+
+
+const options = {
+  definition: {
+    openapi:'3.0.0',
+    info:{
+      title:"SIS progress"
+    },
+    servers :[
+      {
+        api:"http://164.90.224.111/"
+      }
+    ]
+  }
+}
+
+const swagerSpec = swaggerJSDOC(options)
+app.use("/swagger-api",swagerUI.serve,swagerUI.setup(swagerSpec))
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var verifyRouter = require('./routes/verify');
-var loginRouter = require('./routes/login')
+var loginRouter = require('./routes/login');
+var resetPassword = require('./routes/resetPassword')
 var app = express();
 
 // view engine setup
@@ -24,6 +45,7 @@ app.use('/', indexRouter);
 app.use('/register', usersRouter);
 app.use('/verify', verifyRouter);
 app.use('/login', loginRouter);
+app.use('/resetPassword', resetPassword);
 
 
 
