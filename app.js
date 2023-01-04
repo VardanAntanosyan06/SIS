@@ -11,18 +11,19 @@ const options = {
   definition: {
     openapi:'3.0.0',
     info:{
-      title:"SIS progress"
+      title:"SIS progress",
+      version: '1.0.0',
     },
     servers :[
       {
-        api:"http://164.90.224.111/"
+        api:"http://164.90.224.111"
       }
     ]
-  }
+  },
+  apis:['./config/config.json']
 }
 
-const swagerSpec = swaggerJSDOC(options)
-app.use("/swagger-api",swagerUI.serve,swagerUI.setup(swagerSpec))
+const swagerSpec = swaggerJSDOC(options)  
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -34,7 +35,8 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-  
+
+app.use("/swagger-api",swagerUI.serve,swagerUI.setup(swagerSpec))
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
