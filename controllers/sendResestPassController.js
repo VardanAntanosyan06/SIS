@@ -22,7 +22,7 @@ const sendMail = async (req,res)=>{
       from: "davit.manukyan.d@tumo.org",
       to: email,
       subject: `reset Password user ${user}`,
-      html: "<a href='http://164.90.224.111/resetPassword?email=" +hashEmail+ "?id="+item.id+"'>reset password</a>",
+      html: "<a href='http://164.90.224.111/resetPassword?email=" +hashEmail+ "?id="+user.id+"'>reset password</a>",
     };
 
 
@@ -35,4 +35,8 @@ const sendMail = async (req,res)=>{
 } catch (error) {
         console.log(error);
     }
+}
+
+module.exports = {
+  sendMail
 }

@@ -4,16 +4,18 @@ const bcrypt = require("bcrypt")
 const resetPass = async (req, res) => {
   try {
     const {password} = req.body;
-    const {email,id} = req.query;
+    const reqQuery = req.query;
+    const email = reqQuery.email.split("?id=")[0]
+    const id = reqQuery.email.split("?id=")[1]
 
     const user = await model.findOne({where:{id}})
-      if(user && (await bcrypt.compareSync(email, user.email))){
-      user.password = password;
+    if(user){
+      user.password = bcrypt.hashSync(password,10);
 
       user.save();
       return res.json({success:true})
     }
-    return res.json("something wnet wrong!")
+    return res.json("user not found!")
   } catch (error) {
     console.log(error);
   }

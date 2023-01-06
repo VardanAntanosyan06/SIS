@@ -61,9 +61,6 @@ module.exports = {
       report: {
         type: Sequelize.BOOLEAN,
       },
-      reportDescription: {
-        type: Sequelize.STRING,
-      },
       hadtests: {
         type: Sequelize.BOOLEAN,
       },
@@ -75,6 +72,9 @@ module.exports = {
       },
       addinfo: {
         type: Sequelize.BOOLEAN,
+      },
+      moreInfo:{
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,

@@ -31,11 +31,11 @@ module.exports = (sequelize, DataTypes) => {
     testSubmit: DataTypes.STRING,
     school: DataTypes.STRING,
     report: DataTypes.BOOLEAN,
-    reportDescription: DataTypes.STRING,
     hadtests: DataTypes.BOOLEAN,
     hobby: DataTypes.STRING,
     workExperience: DataTypes.STRING,
-    addinfo: DataTypes.BOOLEAN
+    addinfo: DataTypes.BOOLEAN,
+    moreInfo: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Users',

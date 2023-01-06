@@ -1,10 +1,14 @@
 var createError = require('http-errors');
 var express = require('express');
+var app = express();
+var router = express.Router();
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const cors = require('cors');
+
 const swaggerJSDOC = require("swagger-jsdoc")
-const swagerUI = require("swagger-ui-express")
+const swaggerUI = require("swagger-ui-express")
 
 
 const options = {
@@ -16,39 +20,41 @@ const options = {
     },
     servers :[
       {
-        api:"http://164.90.224.111"
+        url:"http://localhost:4000/"
       }
     ]
   },
-  apis:['./config/config.json']
-}
+  apis:['./routes/*.js']
+} 
 
-const swagerSpec = swaggerJSDOC(options)  
+const swaggerSpec = swaggerJSDOC(options)  
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var verifyRouter = require('./routes/verify');
 var loginRouter = require('./routes/login');
+var sendResetPassword = require('./routes/sendResspassword')
 var resetPassword = require('./routes/resetPassword')
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use("/swagger-api",swagerUI.serve,swagerUI.setup(swagerSpec))
+app.use("/api-docs",swaggerUI.serve,swaggerUI.setup(swaggerSpec))
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(cors())
 app.use('/', indexRouter);
 app.use('/register', usersRouter);
 app.use('/verify', verifyRouter);
 app.use('/login', loginRouter);
 app.use('/resetPassword', resetPassword);
-
+app.use('/sendResetPassword', sendResetPassword);
 
 
 // catch 404 and forward to error handler

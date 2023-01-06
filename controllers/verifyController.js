@@ -2,7 +2,8 @@ const model = require("../models").Users;
 
 
 const verify = async (req,res)=>{
-    const id = req.query.email.slice(-1)
+    const id = req.query.email.split("id=")[1]
+    console.log(id);
     const item = await model.findOne({where:{id}})
     if(item){
         item.isVerifed = true;
@@ -15,4 +16,4 @@ const verify = async (req,res)=>{
 
 module.exports = {
     verify
-}
+}   
