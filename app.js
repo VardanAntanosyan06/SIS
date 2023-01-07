@@ -36,6 +36,7 @@ var verifyRouter = require('./routes/verify');
 var loginRouter = require('./routes/login');
 var sendResetPassword = require('./routes/sendResspassword')
 var resetPassword = require('./routes/resetPassword')
+var getUniversities = require('./routes/getUniversities')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -55,6 +56,7 @@ app.use('/verify', verifyRouter);
 app.use('/login', loginRouter);
 app.use('/resetPassword', resetPassword);
 app.use('/sendResetPassword', sendResetPassword);
+app.use('/get', getUniversities);
 
 
 // catch 404 and forward to error handler
