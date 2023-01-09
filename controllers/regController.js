@@ -31,9 +31,9 @@ const reg = async (req, res) => {
       transporter.sendMail(mailOptions, (err) => {
       err?console.log(err):null
     });
-  return res.json("email is sent!")
+  return res.status(200).json("email is sent!")
   }else{
-    return res.json("user alredy exit")
+    return res.status(403).json("user alredy exit")
   }} catch (error) {
     console.log(error);
   }
