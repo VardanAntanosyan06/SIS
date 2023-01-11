@@ -7,9 +7,9 @@ const login = async (req, res) => {
 
     const user = await model.findOne({where:{email}})
     if(user && user.isVerifed && (await bcrypt.compareSync(password, user.password))){
-        return res.json({success:true})
+        return res.satus(200).json({success:true})
     }
-    return res.json("invalid email or password")
+    return res.status(403).json("invalid email or password")
   } catch (error) {
     console.log(error);
   }
