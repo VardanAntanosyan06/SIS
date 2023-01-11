@@ -6,13 +6,13 @@ require("dotenv").config();
 const model = require("../models").Users;
 const reg = async (req, res) => {
   try {
-    const {fullName,email,password,phone,age,country,whichClass,term,planType,aid,legacy,activityName,applyingFrom,testSubmit,school,report,reportDescription,hadtests,hobby,workExperience,addinfo} = req.body;
+    const {fullName,email,password,phone,age,country,whichClass,term,university,Unyshcool,proffession,planType,aid,legacy,activityName,applyingFrom,testSubmit,recentSchool,report,reportDescription,hadtests,hobby,workExperience,addinfo} = req.body;
     const user = await model.findOne({where:{email}})
     if(!user){
     const hashEmail = bcrypt.hashSync(email, 10);
     const hashPassword = bcrypt.hashSync(password, 10);
     
-    const item = await model.create({fullName,email,password:hashPassword,phone,age,country,whichClass,term,planType,aid,legacy,activityName,applyingFrom,testSubmit,school,report,reportDescription,hadtests,hobby,workExperience,addinfo}); 
+    const item = await model.create({fullName,email,password:hashPassword,phone,age,country,whichClass,term,university,Unyshcool,proffession,planType,aid,legacy,activityName,applyingFrom,testSubmit,school,report,reportDescription,hadtests,hobby,workExperience,addinfo}); 
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {

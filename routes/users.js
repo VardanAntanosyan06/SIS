@@ -34,7 +34,7 @@ const regController = require("../controllers/regController")
  *           example: Johns Hopkins University 
  *         Unyshcool:
  *           type: string
- *           example: Business school
+ *           example: Business school 
  *         proffession:
  *           type: string
  *           example: Business Management

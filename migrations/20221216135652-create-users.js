@@ -34,6 +34,15 @@ module.exports = {
       whichClass: {
         type: Sequelize.INTEGER,
       },
+      university: {
+        type: Sequelize.STRING,
+      },
+      Unyshcool: {
+        type: Sequelize.STRING,
+      }, 
+      proffession: {
+        type: Sequelize.STRING,
+      },
       term: {
         type: Sequelize.STRING,
       },
@@ -55,7 +64,7 @@ module.exports = {
       testSubmit: {
         type: Sequelize.STRING,
       },
-      school: {
+      recentSchool: {
         type: Sequelize.STRING,
       },
       report: {
