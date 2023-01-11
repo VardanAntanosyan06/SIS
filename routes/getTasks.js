@@ -21,7 +21,7 @@ router.get("/All",getTasks.getAllTasks)
  *   get:
  *     summary: get my Tasks
  *     parameters:
- *      - userId: 1
+ *      - name: id
  *        in: query
  *        description: id of user
  *        required: true
