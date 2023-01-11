@@ -15,7 +15,6 @@ const getMyUniversity = async (req, res) => {
     const { name } = req.query;
 
     const myUniversity = await UniModel.findOne({ where: { name } });
-    console.log(name);
     if (myUniversity) {
       return res.json(myUniversity);
     }

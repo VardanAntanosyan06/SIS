@@ -12,19 +12,20 @@ const getAllTasks = async (req,res)=>{
     }
 }
 
-// const getYourTasks = async (req,res)=>{
-//     try {
-//         const {id} = req.query;
-//         const user = await UserModel.findOne({where:{id}})
-//         const university = await UniversityModel.findOne({where:{id:user.}})
-//         const tasks = await TaskModel.findAll({where:{universityId}});
+const getYourTasks = async (req,res)=>{
+    try {
+        const {id} = req.query;
+        const user = await UserModel.findOne({where:{id}})
+        const university = await UniversityModel.findOne({where:{name:user.university}})
+        const tasks = await TaskModel.findAll({where:{universityId:university.id}});
 
-//         return res.status(200).json({allTasks})
-//     } catch (error) {
-//         return res.json("something wnet wrong!")
-//     }
-// }
+        return res.status(200).json({tasks})
+    } catch (error) {
+        return res.json("something wnet wrong!")
+    }
+}
 
 module.exports = {
-    getAllTasks
+    getAllTasks,
+    getYourTasks
 }
