@@ -59,7 +59,7 @@ const regController = require("../controllers/regController")
  *         testSubmit:
  *           type: string
  *           example: SAT
- *         school:
+ *         recentSchool:
  *           type: string
  *           example: my school
  *         report:
