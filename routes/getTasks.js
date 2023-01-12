@@ -6,7 +6,7 @@ const getTasks = require("../controllers/getTaskController")
  * @swagger
  * /getTasks/All:
  *   get:
- *     summary: get All Tasks
+ *     summary: get All Tasks with subtasks
  *     responses:
  *       200:
  *         description: object Tasks
@@ -19,7 +19,7 @@ router.get("/All",getTasks.getAllTasks)
  * @swagger
  * /getTasks/my:
  *   get:
- *     summary: get my Tasks
+ *     summary: get my Tasks with subtasks
  *     parameters:
  *      - name: id
  *        in: query

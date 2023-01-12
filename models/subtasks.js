@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Tasks extends Model {
+  class SubTasks extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,20 +13,14 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Tasks.init({
-    facultName: DataTypes.STRING,
-    positionName: DataTypes.STRING,
-    compamyName: DataTypes.STRING,
-    universityId: DataTypes.INTEGER
+  SubTasks.init({
+    taskId: DataTypes.INTEGER,
+    name: DataTypes.STRING,
+    points: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'Tasks',
+    modelName: 'SubTasks',
   });
 
-  const SubTasks = sequelize.define("SubTasks")
-
-  Tasks.hasMany(SubTasks,{
-    foreignKey:"taskId"
-  })
-  return Tasks;
+  return SubTasks;
 };

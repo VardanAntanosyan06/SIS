@@ -1,10 +1,13 @@
 const UserModel = require("../models").Users;
 const TaskModel = require('../models').Tasks;
 const UniversityModel = require("../models").UniversityTable;
+const SubTasks = require("../models").SubTasks
 
 const getAllTasks = async (req,res)=>{
     try {
-        const allTasks = await TaskModel.findAll();
+        const allTasks = await TaskModel.findAll({
+            include:[SubTasks]
+        });
 
         return res.status(200).json({allTasks})
     } catch (error) {
