@@ -16,7 +16,7 @@ const login = async (req, res) => {
     user.token = token;
     user.save();
 
-    return res.status(200).json({user,success:true});
+    return res.status(200).json({token:user.token,success:true});
     }
     return res.status(403).json("invalid email or password")
   } catch (error) {

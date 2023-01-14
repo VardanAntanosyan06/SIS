@@ -1,3 +1,35 @@
+const bcrypt = require("bcrypt");
+
+const testUserExample = [{
+    fullName: "User",
+    email: "user@test.com",
+    isVerifed: true, 
+    password:bcrypt.hashSync("test1234",10),
+    phone: "+37499999999",
+    age: 17,
+    country: "Armenia",
+    whichClass: 10,
+    university: "Johns Hopkins University",
+    Unyshcool: "Business school",
+    proffession: "Business Management",
+    term: "start term",
+    planType: "Regular Desicion",
+    aid: false,
+    legacy: false,
+    area: "aboute me (for 9th)",
+    activityName: "values of join as ,",
+    applyingFrom: "Armenia",
+    testSubmit: "SAT",
+    recentSchool: "my school",
+    report: false,
+    hadtests: false,
+    hobby: "values of join as ,",
+    workExperience: "about my work  experience",
+    addinfo: true,
+    moreInfo: "about me",
+    createdAt:new Date(),
+    updatedAt:new Date()
+}]
 
 const UniversityTable = [{
     name: "Stanford University",
@@ -1297,5 +1329,6 @@ const TaskTable = [
 ]
 module.exports = {
     UniversityTable,
-    TaskTable
+    TaskTable,
+    testUserExample
 }
