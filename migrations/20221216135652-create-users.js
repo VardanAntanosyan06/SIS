@@ -55,6 +55,9 @@ module.exports = {
       legacy: {
         type: Sequelize.BOOLEAN,
       },
+     area:{
+      type: Sequelize.STRING,
+     },
       activityName: {
         type: Sequelize.STRING,
       },

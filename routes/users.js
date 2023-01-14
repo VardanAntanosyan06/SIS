@@ -29,7 +29,7 @@ const regController = require("../controllers/regController")
  *         country:
  *           type: string
  *           example: Armenia 
- *         wichClass:
+ *         whichClass:
  *           type: integer
  *           example: 10 
  *         university:
@@ -53,6 +53,9 @@ const regController = require("../controllers/regController")
  *         legacy:
  *           type: boolean
  *           example: false
+ *         area:
+ *           type: string
+ *           example: aboute me (for 9th)
  *         activityName:
  *           type: string
  *           example: values of join as ,

@@ -29,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
     planType: DataTypes.STRING,
     aid: DataTypes.BOOLEAN,
     legacy: DataTypes.BOOLEAN,
+    area:DataTypes.STRING,
     activityName: DataTypes.STRING, 
     applyingFrom: DataTypes.STRING,
     testSubmit: DataTypes.STRING,
