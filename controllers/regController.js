@@ -32,14 +32,12 @@ const reg = async (req, res) => {
     };
 
 
-      transporter.sendMail(mailOptions, (err) => {
-      err?console.log(err):null
-    });
+      transporter.sendMail(mailOptions);
   return res.status(200).json("email is sent!")
   }else{
-    return res.status(403).json("user alredy exit")
+    return res.json("user alredy exit")
   }} catch (error) {
-    console.log(error);
+    console.log(error),"++++++++++++++++++++++++++++++++++++++++++++++++";
   }
 };
 
