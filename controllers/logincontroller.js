@@ -24,7 +24,37 @@ const login = async (req, res) => {
   }
 };
 
+const logOut = async (req,res)=>{
+  try {
+    const {email} = req.query;
+    const user = await model.findOne({
+        where:{email}
+    })
+    user.token = null
+    await user.save();
 
+    return res.json({success:true})
+  } catch (error) {
+    return ("something wnet wrong")
+  }
+}
+
+const isLogined = async (req,res)=>{
+  try {
+    const {token} = req.body;
+
+    const user = await model.findOne({where:{token}})
+
+    if(user){
+      return res.status(200).json(user)
+    }
+    return res.status(404).json("not found")
+  } catch (error) {
+    console.log(error);
+  }
+}
 module.exports={
-  login
+  login,
+  logOut,
+  isLogined
 }

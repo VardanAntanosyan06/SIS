@@ -55,7 +55,7 @@ app.use(cors())
 app.use('/', indexRouter);
 app.use('/register', usersRouter);
 app.use('/verify', verifyRouter);
-app.use('/login', loginRouter);
+app.use('/user', loginRouter);
 app.use('/resetPassword', resetPassword);
 app.use('/sendResetPassword', sendResetPassword);
 app.use('/get', getUniversities);
