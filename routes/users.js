@@ -29,6 +29,9 @@ const regController = require("../controllers/regController")
  *         country:
  *           type: string
  *           example: Armenia 
+ *         wichClass:
+ *           type: integer
+ *           example: 10 
  *         university:
  *           type: string
  *           example: Johns Hopkins University 
