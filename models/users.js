@@ -40,6 +40,7 @@ module.exports = (sequelize, DataTypes) => {
     workExperience: DataTypes.STRING,
     addinfo: DataTypes.BOOLEAN,
     moreInfo: DataTypes.STRING,
+    token:DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Users',
