@@ -20,7 +20,7 @@ const options = {
     },
     servers :[
       {
-        url:"http://164.90.224.111/"
+        url:"http://localhost:3000/"
       }
     ]
   },
@@ -38,6 +38,7 @@ var sendResetPassword = require('./routes/sendResspassword')
 var resetPassword = require('./routes/resetPassword')
 var getUniversities = require('./routes/getUniversities')
 var getTasks = require('./routes/getTasks')
+var calenar = require('./routes/calendar')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -59,6 +60,7 @@ app.use('/resetPassword', resetPassword);
 app.use('/sendResetPassword', sendResetPassword);
 app.use('/get', getUniversities);
 app.use('/getTasks', getTasks);
+app.use('/calendar', calenar);
 
 
 // catch 404 and forward to error handler

@@ -29,8 +29,23 @@ const getYourTasks = async (req,res)=>{
         return res.json("something wnet wrong!")
     }
 }
+const getYourFreeTasks = async (req,res)=>{
+    try {
+        const {id} = req.query;
+        const user = await UserModel.findOne({where:{id}})
+            if (user) {
+                const university = await UniversityModel.findOne({where:{name:user.university}})
+                const tasks = await TaskModel.findAll({where:{universityId:university.id,isFree:true},include:[SubTasks]});
+                return res.status(200).json({tasks})
+            }
+            return res.status(404).json("user not found")
+    } catch (error) {
+        return res.json("something wnet wrong!")
+    }
+}
 
 module.exports = {
     getAllTasks,
-    getYourTasks
+    getYourTasks,
+    getYourFreeTasks
 }
