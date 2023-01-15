@@ -26,6 +26,11 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Tasks',
   });
 
+  const SubTasks = sequelize.define("SubTasks")
 
+  Tasks.hasMany(SubTasks,{
+    foreignKey:"taskId"
+  })
+  
   return Tasks;
 };
