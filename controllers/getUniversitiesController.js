@@ -24,6 +24,7 @@ const getMyUniversity = async (req, res) => {
     return res.json("something went wrong")
   }
 };
+
 module.exports = {
   getAllUniversities,
   getMyUniversity

@@ -6,16 +6,36 @@ require("dotenv").config();
 const model = require("../models").Users;
 const reg = async (req, res) => {
   try {
-    console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-    console.log(req.body);
-    console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+    // console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+    // console.log(req.body);
+    // console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
     const {fullName,email,password,phone,age,country,whichClass,term,university,Unyshcool,proffession,planType,aid,legacy,activityName,applyingFrom,testSubmit,recentSchool,report,reportDescription,hadtests,hobby,workExperience,addinfo} = req.body;
     const user = await model.findOne({where:{email}})
-    console.log(user);
-    if(!user){
+
+  const isNull = Object.values({fullName,email,password,phone,age,country,whichClass,term,university,Unyshcool,proffession,planType,aid,legacy,activityName,applyingFrom,testSubmit,recentSchool,report,reportDescription,hadtests,hobby,workExperience,addinfo}).map((el,index)=>{
+         if(el==null){
+          return index
+        }
+        return null;
+  })
+  const indexArr = isNull.filter((el)=>{
+  return el>0
+})
+let whichIsNull= [];
+indexArr.map((index)=>{
+ var arr = Object.keys({fullName,email,password,phone,age,country,whichClass,term,university,Unyshcool,proffession,planType,aid,legacy,activityName,applyingFrom,testSubmit,recentSchool,report,reportDescription,hadtests,hobby,workExperience,addinfo}).filter((element,i)=>{
+    return index==i;
+})
+  whichIsNull.push(arr.join())
+ })
+  if(whichIsNull.length>=1){
+    return res.json(whichIsNull);
+  } 
+
+  if(!user){
     const hashEmail = bcrypt.hashSync(email, 10);
     const hashPassword = bcrypt.hashSync(password, 10);
-    
+
     const item = await model.create({fullName,email,password:hashPassword,phone,age,country,whichClass,term,university,Unyshcool,proffession,planType,aid,legacy,activityName,applyingFrom,testSubmit,recentSchool,report,reportDescription,hadtests,hobby,workExperience,addinfo}); 
     const transporter = nodemailer.createTransport({
       service: "gmail",

@@ -320,133 +320,133 @@ const timeTasks = [
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:18,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:19,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:19,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:19,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:19,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:20,
+        taskSpentWeek: "up to 4 weeks",
+        point:2
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
-        point:2
+        task_id:20,
+        taskSpentWeek: "5-7 weeks",
+        point:1.5
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:20,
+        taskSpentWeek: "8-9 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:20,
+        taskSpentWeek: "10-11 weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:21,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:21,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:21,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:21,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:21,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:21,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:21,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:21,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:22,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:22,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:22,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:22,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:23,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:23,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:23,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:23,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:24,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:24,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:24,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:24,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
@@ -464,619 +464,618 @@ const timeTasks = [
         point:1
     },
     {
-        task_id:1,
+        task_id:24,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:25,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:25,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:25,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:25,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:26,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
+        task_id:26,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:26,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:26,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:27,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:27,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:27,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:27,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
+        task_id:28,
+        taskSpentWeek: "up to 5 weeks",
         point:3
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:28,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
         task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
         task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:29,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:29,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:29,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:29,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:30,
+        taskSpentWeek: "up to 4 weeks",
+        point:2
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
-        point:2
+        task_id:30,
+        taskSpentWeek: "5-7 weeks",
+        point:1.5
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:30,
+        taskSpentWeek: "8-9 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:30,
+        taskSpentWeek: "10 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:31,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:31,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:31,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:31,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:32,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:32,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:32,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:32,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:33,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:33,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:33,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:33,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:34,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:34,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:34,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:34,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:35,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:35,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
         task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:35,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
-    },    {
-        task_id:1,
+    },{
+        task_id:36,
         taskSpentWeek: "up to 6 weeks",
-        point:3
-    },
-    {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:36,
+        taskSpentWeek: "6-8 weeks",
+        point:2
+    },{
+        task_id:36,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:36,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:40,
+        taskSpentWeek: "up to 4 weeks",
+        point:2
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
-        point:2
+        task_id:40,
+        taskSpentWeek: "5-7 weeks",
+        point:1.5
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:40,
+        taskSpentWeek: "8-9 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:40,
+        taskSpentWeek: "10 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:41,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:41,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:41,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:41,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:42,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:42,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:42,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:42,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:43,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:43,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:43,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:43,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:44,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:44,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:44,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:44,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:45,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:45,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:45,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:45,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:46,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:46,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:46,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:46,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:47,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:47,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:47,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:47,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:48,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:48,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
         task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:48,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
-    },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+    },{
+        task_id:49,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:49,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:49,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:49,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:50,
+        taskSpentWeek: "up to 4 weeks",
+        point:2
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
-        point:2
+        task_id:50,
+        taskSpentWeek: "5-7 weeks",
+        point:1.5
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:50,
+        taskSpentWeek: "8-9 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:50,
+        taskSpentWeek: "10 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:51,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:51,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:51,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:51,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:52,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:52,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:52,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:52,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:53,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:53,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:53,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:53,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:54,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:54,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:54,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:54,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:55,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:55,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:55,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:55,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:56,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:56,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:56,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:56,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:57,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:57,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:57,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:57,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:58,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:58,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:58,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:58,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:59,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:59,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:59,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:59,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:60,
+        taskSpentWeek: "up to 4 weeks",
+        point:2
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
-        point:2
+        task_id:60,
+        taskSpentWeek: "5-7 weeks",
+        point:1.5
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:60,
+        taskSpentWeek: "8-9 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:60,
+        taskSpentWeek: "10 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:61,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:61,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:61,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:61,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
@@ -1085,376 +1084,376 @@ const timeTasks = [
         point:3
     },
     {
-        task_id:1,
+        task_id:62,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:62,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:62,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:63,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:63,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:63,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:63,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:64,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:64,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:64,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:64,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:65,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:65,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:65,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:65,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:66,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:66,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
         task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:11,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:67,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:67,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:67,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
         task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:68,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:68,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:68,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:68,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:69,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:69,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:69,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:69,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:70,
+        taskSpentWeek: "up to 4 weeks",
+        point:2
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
-        point:2
+        task_id:70,
+        taskSpentWeek: "5-7 weeks",
+        point:1.5
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:70,
+        taskSpentWeek: "8-9 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:70,
+        taskSpentWeek: "10 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:71,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:71,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:71,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:71,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:72,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:72,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:72,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:72,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:73,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:73,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:73,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:73,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:74,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:74,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:74,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:74,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:75,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:75,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:75,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:75,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:76,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:75,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:75,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:75,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:76,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:76,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:76,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:76,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:77,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:77,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:77,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:77,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:78,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:78,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:78,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:78,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:79,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:79,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:79,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:79,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:80,
+        taskSpentWeek: "up to 4 weeks",
+        point:2
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
-        point:2
+        task_id:80,
+        taskSpentWeek: "5-7 weeks",
+        point:1.5
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:80,
+        taskSpentWeek: "8-9 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:80,
+        taskSpentWeek: "10 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:81,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:81,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:81,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:81,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
@@ -1463,416 +1462,416 @@ const timeTasks = [
         point:3
     },
     {
-        task_id:1,
+        task_id:82,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:82,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:82,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:83,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:83,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:83,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:83,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:84,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:84,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:84,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:84,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:85,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:85,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:85,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:85,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:86,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:86,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:86,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:87,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:87,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:87,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:87,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:87,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
-    },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+    },{
+        task_id:88,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:88,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:88,
+        taskSpentWeek: "8-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:88,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
-    },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+    },{
+        task_id:89,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:89,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:89,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:89,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
-    },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+    },{
+        task_id:90,
+        taskSpentWeek: "up to 4 weeks",
+        point:2
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
-        point:2
+        task_id:90,
+        taskSpentWeek: "5-7 weeks",
+        point:1.5
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:90,
+        taskSpentWeek: "8-9 weeks",
         point:1
     },
     {
         task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        taskSpentWeek: "10 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:91,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:91,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:91,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:91,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:92,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:92,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:92,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:92,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:93,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:93,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:93,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:93,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:94,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:94,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:94,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:94,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:95,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:95,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:95,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:95,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:96,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:96,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:96,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
         task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:97,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:97,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:97,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:97,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:98,
+        taskSpentWeek: "up to 5 weeks",
+        point:2.5
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
+        task_id:98,
+        taskSpentWeek: "6-8 weeks",
         point:2
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:98,
+        taskSpentWeek: "9-10 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:98,
+        taskSpentWeek: "11 && more weeks",
         point:0.5
     },    {
-        task_id:1,
-        taskSpentWeek: "up to 6 weeks",
-        point:3
+        task_id:100,
+        taskSpentWeek: "up to 4 weeks",
+        point:2
     },
     {
-        task_id:1,
-        taskSpentWeek: "8-10 weeks",
-        point:2
+        task_id:100,
+        taskSpentWeek: "5-7 weeks",
+        point:1.5
     },{
-        task_id:1,
-        taskSpentWeek: "10-12 weeks",
+        task_id:100,
+        taskSpentWeek: "8-9 weeks",
         point:1
     },
     {
-        task_id:1,
-        taskSpentWeek: "12 && more weeks",
+        task_id:100,
+        taskSpentWeek: "10 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:101,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:101,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:101,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:101,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:102,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:102,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:102,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:102,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:103,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:103,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:103,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:103,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:104,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:104,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:104,
         taskSpentWeek: "10-12 weeks",
         point:1
     },
     {
-        task_id:1,
+        task_id:104,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:105,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },
     {
-        task_id:1,
+        task_id:105,
         taskSpentWeek: "8-10 weeks",
         point:2
     },{
-        task_id:1,
+        task_id:105,
         taskSpentWeek: "10-12 weeks",
-        point:1
+        point:105
     },
     {
-        task_id:1,
+        task_id:105,
         taskSpentWeek: "12 && more weeks",
         point:0.5
     },    {
-        task_id:1,
+        task_id:106,
         taskSpentWeek: "up to 6 weeks",
         point:3
     },

@@ -4,15 +4,9 @@ const UserModel = require("../models").Users;
 
 const create = async (req, res) => {
   try {
-    const { taskId, statusOfTask, timePoints, userId,startDate } =
-      req.body;
-    const user = await UserModel.findOne({ where: { id: userId } });
-    if (user) {
+    const { taskId,startDate } =req.body;
       const newTask = await CalendarModel.create({
         taskId,
-        statusOfTask,
-        timePoints,
-        userId,
         startDate
       });
 
@@ -24,8 +18,7 @@ const create = async (req, res) => {
         await task.save();
       }
       return res.status(200).json(newTask);
-    }
-    return res.status(404).json("user not found");
+    
   } catch (error) {
     console.log(error);
     // return res.status(500).json("something went wrong")
