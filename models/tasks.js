@@ -18,16 +18,14 @@ module.exports = (sequelize, DataTypes) => {
     positionName: DataTypes.STRING,
     compamyName: DataTypes.STRING,
     universityId: DataTypes.INTEGER,
-    isFree: DataTypes.BOOLEAN
+    isFree: DataTypes.BOOLEAN,
+    status:DataTypes.STRING,
+    
   }, {
     sequelize,
     modelName: 'Tasks',
   });
 
-  const SubTasks = sequelize.define("SubTasks")
 
-  Tasks.hasMany(SubTasks,{
-    foreignKey:"taskId"
-  })
   return Tasks;
 };

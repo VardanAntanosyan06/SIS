@@ -2,25 +2,21 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('SubTasks', {
+    await queryInterface.createTable('timeTasks', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      taskId: {
+      task_id: {
         type: Sequelize.INTEGER
       },
-      name: {
+      taskSpentWeek: {
         type: Sequelize.STRING
       },
-      points: {
+      point: {
         type: Sequelize.INTEGER
-      },
-      done: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false
       },
       createdAt: {
         allowNull: false,
@@ -33,6 +29,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('SubTasks');
+    await queryInterface.dropTable('timeTasks');
   }
 };

@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const loginController = require("../controllers/logincontroller")
-
+const controller = require("../controllers/changeStatusController");
 
 /**
  * @swagger
@@ -40,7 +39,7 @@ const loginController = require("../controllers/logincontroller")
  *         description: invalid email or password
  */
 
-router.post("/login",loginController.login)
+router.patch("/TaskStatus",controller.changeTaskStatus)
 
 /**
  * @swagger
@@ -62,21 +61,7 @@ router.post("/login",loginController.login)
  *         description: something went wrong..
  */
 
-router.get("/logOut",loginController.logOut)
-
-/**
- * @swagger
- * components:
- *   schema:
- *     Token:
- *       type: object
- *       required:
- *         - token
- *       properties:
- *         token:
- *           type: string
- *           example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE2NzM3MjY1MzN9.QWnDI2R4z5axl1yu2A6Y80KHtuT7gM4vevjxuZUjgHg
- */
+router.patch("/SubTaskStatus",controller.changeSubTaskStatus)
 
 /**
  * @swagger

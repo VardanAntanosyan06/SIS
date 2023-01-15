@@ -24,6 +24,9 @@ module.exports = {
       isFree: {
        type: Sequelize.BOOLEAN
       },
+      status: {
+        type: Sequelize.BOOLEAN,
+       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

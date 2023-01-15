@@ -24,6 +24,12 @@ module.exports = {
       userId: {
         type: Sequelize.INTEGER
       },
+      deadline: {
+        type: Sequelize.DATE
+       },
+       startDate: {
+         type: Sequelize.DATE
+       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

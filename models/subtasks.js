@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class SubTasks extends Model {
     /**
@@ -16,7 +17,8 @@ module.exports = (sequelize, DataTypes) => {
   SubTasks.init({
     taskId: DataTypes.INTEGER,
     name: DataTypes.STRING,
-    points: DataTypes.INTEGER
+    points: DataTypes.INTEGER,
+    done:DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'SubTasks',

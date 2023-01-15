@@ -36,11 +36,14 @@ router.get("/All",getTasks.getAllTasks)
  */
 router.get("/my",getTasks.getYourTasks)
 
+
+router.get("/myFree",getTasks.getYourFreeTasks)
+
 /**
  * @swagger
- * /getTasks/myFree:
+ * /getTasks/inCalendar:
  *   get:
- *     summary: get my Tasks with subtasks wich will be in Calendar (not selected)
+ *     summary: get my Tasks with subtasks wich in Calendar
  *     parameters:
  *      - name: id
  *        in: query
@@ -55,6 +58,6 @@ router.get("/my",getTasks.getYourTasks)
  *       404:
  *         description: not found
  */
-router.get("/myFree",getTasks.getYourFreeTasks)
+router.get("/inCalendar",getTasks.getTasksInCalendar)
 
 module.exports = router;

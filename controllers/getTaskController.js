@@ -2,6 +2,7 @@ const UserModel = require("../models").Users;
 const TaskModel = require('../models').Tasks;
 const UniversityModel = require("../models").UniversityTable;
 const SubTasks = require("../models").SubTasks
+const Calendar = require("../models").Calendar;
 
 const getAllTasks = async (req,res)=>{
     try {
@@ -43,9 +44,23 @@ const getYourFreeTasks = async (req,res)=>{
         return res.json("something wnet wrong!")
     }
 }
+const getTasksInCalendar = async (req,res)=>{
+    try {
+        const {id} = req.query;
+        const task = await Calendar.findAll({where:{userId:id}})
+            if (task) {
+                return res.status(200).json({task})
+            }
+            return res.status(404).json("user not found")
+    } catch (error) {
+        return res.json("something wnet wrong!")
+    }
+}
+
 
 module.exports = {
     getAllTasks,
     getYourTasks,
-    getYourFreeTasks
+    getYourFreeTasks,
+    getTasksInCalendar
 }
