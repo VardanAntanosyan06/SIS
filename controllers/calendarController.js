@@ -15,11 +15,12 @@ const create = async (req, res) => {
       });
 
       if (newTask) {
-        const task = await TaskModel.findOne({ where: { id: taskId } });
+        const task = await CalendarModel.findOne({ where: { id: taskId } });
 
         task.isFree = false;
         task.status = "planed"
         await task.save();
+        console.log("okkkk");
       }
       return res.status(200).json(newTask);
     

@@ -21,11 +21,14 @@ module.exports = {
       userId: {
         type: Sequelize.INTEGER
       },
+      startDate: {
+         type: Sequelize.DATE
+       },
       deadline: {
         type: Sequelize.DATE
        },
-       startDate: {
-         type: Sequelize.DATE
+       isFree: {
+        type:Sequelize.DATE
        },
       createdAt: {
         allowNull: false,

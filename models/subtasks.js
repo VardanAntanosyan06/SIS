@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
     taskId: DataTypes.INTEGER,
     name: DataTypes.STRING,
     points: DataTypes.INTEGER,
-    done:DataTypes.BOOLEAN
+    done:DataTypes.BOOLEAN,
+    description:DataTypes.STRING
   }, {
     sequelize,
     modelName: 'SubTasks',
