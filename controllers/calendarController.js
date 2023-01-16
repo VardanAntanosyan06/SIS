@@ -10,7 +10,6 @@ const create = async (req, res) => {
   const {taskId,startDate,position} =req.body;
   
   try {
-    console.log(new Date(startDate),"+++++++++++++++++++++++++");
     if(position){
       const newTask = await CalendarModel.create({
         taskId,
