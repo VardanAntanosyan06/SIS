@@ -23,7 +23,7 @@ const loginController = require("../controllers/logincontroller")
 
 /**
  * @swagger
- * user/login:
+ * /user/login:
  *   post:
  *     summary: Login User
  *     requestBody:
