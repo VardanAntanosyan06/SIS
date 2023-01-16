@@ -33,6 +33,7 @@ const create = async (req, res) => {
     console.log(myTasks);
     const positionLength = myTasks.map((el)=>{
       if(el.startDate){
+        console.log(el.startDate.getDate,today,"+++++++++++++++++");
         return el.startDate.getDate() == today;
 
       }
