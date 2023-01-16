@@ -55,6 +55,7 @@ const getTasksInCalendar = async (req,res)=>{
             }
             return res.status(404).json("user not found")
     } catch (error) {
+        console.log(error);
         return res.json("something wnet wrong!")
     }
 }
