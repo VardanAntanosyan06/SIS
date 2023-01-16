@@ -17,7 +17,6 @@ const create = async (req, res) => {
       if (newTask) {
         const task = await CalendarModel.findOne({ where: { id: taskId } });
 
-        task.isFree = false;
         task.status = "planed"
         await task.save();
         console.log("okkkk");
