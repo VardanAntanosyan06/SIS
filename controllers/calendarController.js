@@ -31,13 +31,17 @@ const create = async (req, res) => {
     const myTasks = await CalendarModel.findAll();
     console.log(myTasks);
     const positionLength = myTasks.filter((el)=>{
-      return new Date(el.startDate).getDay == today;
+      if(el.startDate){
+        return new Date(el.startDate).getDay == today;
+      }
+      return 1;
     })
+    
     const newTask = await CalendarModel.create({
         taskId,
         startDate,
         userId:user.id,
-        position:+positionLength.length+1
+        position:positionLength.length?positionLength.length+1:1
       });
 
       if (newTask) {
