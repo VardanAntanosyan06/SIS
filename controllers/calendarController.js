@@ -4,6 +4,7 @@ const UserModel = require("../models").Users;
 
 const create = async (req, res) => {
   const {token} = req.headers.authorization;
+  console.log(req.headers.authorization,token);
   const user = UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
   try {
     const { taskId,startDate} =req.body;
