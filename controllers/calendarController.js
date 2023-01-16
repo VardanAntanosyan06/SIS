@@ -28,7 +28,7 @@ const create = async (req, res) => {
       return res.status(200).json(newTask);
     }
     const today = new Date().getDay;
-    const myTasks = CalendarModel.findAll();
+    const myTasks = await CalendarModel.findAll();
     console.log(myTasks);
     myTasks.filter((el)=>{
       return new Date(el.startDate).getDay == today;
