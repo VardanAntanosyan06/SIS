@@ -15,7 +15,7 @@ const create = async (req, res) => {
       });
 
       if (newTask) {
-        const task = await CalendarModel.findOne({ where: { id: taskId } });
+        const task = await CalendarModel.findOne({ where: {taskId} });
 
         task.status = "planed"
         await task.save();
