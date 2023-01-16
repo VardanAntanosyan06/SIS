@@ -37,7 +37,7 @@ const create = async (req, res) => {
         taskId,
         startDate,
         userId:user.id,
-        position:positionLength.length()+1
+        position:positionLength.length+1
       });
 
       if (newTask) {
