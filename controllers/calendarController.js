@@ -34,14 +34,13 @@ const create = async (req, res) => {
       if(el.startDate){
         return new Date(el.startDate).getDay == today;
       }
-      return 1;
     })
     
     const newTask = await CalendarModel.create({
         taskId,
         startDate,
         userId:user.id,
-        position:positionLength.length?positionLength.length+1:1
+        position:positionLength.length>0?positionLength.length+1:1
       });
 
       if (newTask) {
