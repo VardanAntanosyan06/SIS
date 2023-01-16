@@ -18,8 +18,8 @@ const getAllTasks = async (req,res)=>{
 
 const getYourTasks = async (req,res)=>{
     try {
-        const {id} = req.query;
-        const user = await UserModel.findOne({where:{id}})
+        const {authorization: token} = req.headers;
+        const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
             if (user) {
                 const university = await UniversityModel.findOne({where:{name:user.university}})
                 const tasks = await TaskModel.findAll({where:{universityId:university.id},include:[SubTasks]});
@@ -32,8 +32,8 @@ const getYourTasks = async (req,res)=>{
 }
 const getYourFreeTasks = async (req,res)=>{
     try {
-        const {id} = req.query;
-        const user = await UserModel.findOne({where:{id}})
+    const {authorization: token} = req.headers;
+      const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
             if (user) {
                 const university = await UniversityModel.findOne({where:{name:user.university}})
                 const tasks = await TaskModel.findAll({where:{universityId:university.id,isFree:true},include:[SubTasks]});
