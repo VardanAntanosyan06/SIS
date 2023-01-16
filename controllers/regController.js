@@ -180,7 +180,6 @@ const reg = async (req, res) => {
         testSubmit,
         recentSchool,
         report,
-        reportDescription,
         hadtests,
         hobby,
         workExperience,
