@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Calendar.init({
     taskId: DataTypes.INTEGER,
-    statusOfTask: DataTypes.STRING,
+    status: DataTypes.STRING,
     timePoints: DataTypes.STRING,
     userId: DataTypes.INTEGER,
     startDate:DataTypes.DATE,

@@ -20,7 +20,6 @@ module.exports = (sequelize, DataTypes) => {
     universityId: DataTypes.INTEGER,
     isFree: DataTypes.BOOLEAN,
     status:DataTypes.STRING,
-    
   }, {
     sequelize,
     modelName: 'Tasks',

@@ -12,10 +12,7 @@ module.exports = {
       taskId: {
         type: Sequelize.INTEGER
       },
-      DateOfAddTask: {
-        type: Sequelize.DATE
-      },
-      statusOfTask: {
+      status: {
         type: Sequelize.STRING
       },
       timePoints: {

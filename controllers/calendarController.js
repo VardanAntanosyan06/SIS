@@ -7,14 +7,15 @@ const create = async (req, res) => {
     const { taskId,startDate } =req.body;
       const newTask = await CalendarModel.create({
         taskId,
-        startDate
+        startDate,
+        userId
       });
 
       if (newTask) {
         const task = await TaskModel.findOne({ where: { id: taskId } });
 
         task.isFree = false;
-
+        task.status = "planed"
         await task.save();
       }
       return res.status(200).json(newTask);
