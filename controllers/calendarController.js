@@ -38,7 +38,7 @@ const create = async (req, res) => {
     
     const newTask = await CalendarModel.create({
         taskId,
-        startDate,
+        startDate:new Date(startDate),
         userId:user.id,
         position:positionLength.length>0?positionLength.length+1:1
       });
