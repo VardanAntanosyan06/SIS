@@ -46,8 +46,9 @@ const getYourFreeTasks = async (req,res)=>{
 }
 const getTasksInCalendar = async (req,res)=>{
     try {
-        const {id} = req.query;
-        const task = await Calendar.findAll({where:{userId:id}})
+        const {authorization: token} = req.headers;
+      const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
+    const task = await Calendar.findAll({where:{userId:user.id}})
             if (task) {
                 return res.status(200).json({task})
             }
