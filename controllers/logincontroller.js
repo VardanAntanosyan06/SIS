@@ -41,7 +41,7 @@ const logOut = async (req,res)=>{
 
 const isLogined = async (req,res)=>{
   try {
-    const {token} = req.headers.authorization;
+    const {token} = req.body;
 
     const user = await model.findOne({where:{token}})
 
@@ -53,7 +53,6 @@ const isLogined = async (req,res)=>{
     console.log(error);
   }
 }
-
 module.exports={
   login,
   logOut,
