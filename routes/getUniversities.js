@@ -12,7 +12,7 @@ const controller = require("../controllers/getUniversitiesController")
  *       200:
  *         description: object universities
  *       500:
- *         description: something wnet wrong
+ *         description: something went wrong
  */
 router.get("/AllUniversities",controller.getAllUniversities)
 

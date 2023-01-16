@@ -11,7 +11,7 @@ const getTasks = require("../controllers/getTaskController")
  *       200:
  *         description: object Tasks
  *       500:
- *         description: something wnet wrong
+ *         description: something went wrong
  */
 router.get("/All",getTasks.getAllTasks)
 

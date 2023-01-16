@@ -35,7 +35,7 @@ const logOut = async (req,res)=>{
 
     return res.json({success:true})
   } catch (error) {
-    return ("something wnet wrong")
+    return ("something went wrong")
   }
 }
 
@@ -44,7 +44,7 @@ const isLogined = async (req,res)=>{
     const {token} = req.body;
 
     const user = await model.findOne({where:{token}})
-
+ 
     if(user){
       return res.status(200).json(user)
     }

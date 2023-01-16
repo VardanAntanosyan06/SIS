@@ -32,7 +32,7 @@ const changeSubTaskStatus = async (req,res)=>{
         }
         return res.status(404).json("not found")
     } catch (error) {
-        return res.json("something wnet wrong")
+        return res.json("something went wrong")
     }
 }
 

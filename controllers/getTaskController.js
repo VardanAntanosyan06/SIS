@@ -12,7 +12,7 @@ const getAllTasks = async (req,res)=>{
 
         return res.status(200).json({allTasks})
     } catch (error) {
-        return res.json("something wnet wrong!")
+        return res.json("something went wrong!")
     }
 }
 
@@ -28,7 +28,7 @@ const getYourTasks = async (req,res)=>{
             }
             return res.status(404).json("not found")
     } catch (error) {
-        return res.json("something wnet wrong!")
+        return res.json("something went wrong!")
     }
 }
 const getYourFreeTasks = async (req,res)=>{
@@ -42,14 +42,14 @@ const getYourFreeTasks = async (req,res)=>{
             }
             return res.status(404).json("user not found")
     } catch (error) {
-        return res.json("something wnet wrong!")
+        return res.json("something went wrong!")
     }
 }
 const getTasksInCalendar = async (req,res)=>{
     try {
         const {authorization: token} = req.headers;
       const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
-      
+
     const task = await Calendar.findAll({where:{userId:user.id},include:[TaskModel,SubTasks]})
             if (task) {
                 return res.status(200).json({task})
@@ -57,7 +57,7 @@ const getTasksInCalendar = async (req,res)=>{
             return res.status(404).json("user not found")
     } catch (error) {
         console.log(error);
-        return res.json("something wnet wrong!")
+        return res.json("something went wrong!")
     }
 }
 
