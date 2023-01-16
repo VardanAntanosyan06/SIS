@@ -49,7 +49,7 @@ const getTasksInCalendar = async (req,res)=>{
     try {
         const {authorization: token} = req.headers;
       const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
-    const task = await Calendar.findAll({where:{userId:user.id},include:[TaskModel]})
+    const task = await Calendar.findAll({where:{userId:user.id},include:[TaskModel,SubTasks]})
             if (task) {
                 return res.status(200).json({task})
             }
