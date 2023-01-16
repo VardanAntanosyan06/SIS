@@ -3,12 +3,14 @@ const TaskModel = require("../models").Tasks;
 const UserModel = require("../models").Users;
 
 const create = async (req, res) => {
+  const {token} = req.headers.authorization;
+  const user = UserModel.findOne({where:{token}})
   try {
-    const { taskId,startDate } =req.body;
+    const { taskId,startDate} =req.body;
       const newTask = await CalendarModel.create({
         taskId,
         startDate,
-        userId
+        userId:user.id
       });
 
       if (newTask) {
