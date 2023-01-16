@@ -6,6 +6,7 @@ const create = async (req, res) => {
   const {authorization: token} = req.headers;
   console.log(token);
   const user = UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
+  console.log(user);
   try {
     const { taskId,startDate} =req.body;
       const newTask = await CalendarModel.create({
