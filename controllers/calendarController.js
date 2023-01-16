@@ -28,7 +28,7 @@ const create = async (req, res) => {
       return res.status(200).json(newTask);
     }
     const today = new Date().getDay;
-    const myTasks = CalendarModel.findAl();
+    const myTasks = CalendarModel.findAll();
     
     myTasks.filter((el)=>{
       return new Date(el.startDate).getDay == today;
@@ -50,7 +50,7 @@ const create = async (req, res) => {
     
   } catch (error) {
     console.log(error);
-    // return res.status(500).json("something went wrong")
+    return res.status(500).json("something went wrong")
   }
 };
 
