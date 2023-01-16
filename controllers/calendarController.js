@@ -5,20 +5,19 @@ const TaskModel = require("../models").Tasks;
 const UserModel = require("../models").Users;
 
 const create = async (req, res) => {
-  const {authorization: token} = req.headers;
-  const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
-  const {position} = req.query;
-  const {taskId,startDate} =req.body;
-
+  // const {authorization: token} = req.headers;
+  // const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
+  const {taskId,startDate,position} =req.body;
+  
   try {
+    console.log(new Date(startDate),"+++++++++++++++++++++++++");
     if(position){
       const newTask = await CalendarModel.create({
         taskId,
-        startDate,
-        userId:user.id,
+        startDate:new Date(startDate),
+        userId:1,
         position
       });
-
       if (newTask) {
         const task = await CalendarModel.findOne({ where: {taskId} });
         task.status = "planed"
@@ -41,8 +40,8 @@ const create = async (req, res) => {
     
     const newTask = await CalendarModel.create({
         taskId,
-        startDate,
-        userId:user.id,
+        startDate:new Date(startDate),
+        userId:1,
         position:positionLength.length>0?positionLength.length+1:1
       });
 
