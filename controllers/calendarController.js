@@ -1,4 +1,4 @@
-const e = require("express");
+
 
 const CalendarModel = require("../models").Calendar;
 const TaskModel = require("../models").Tasks;
@@ -22,7 +22,10 @@ const create = async (req, res) => {
         newTask.isFree = false
         task.status = "planed"
         await task.save();
+        const myTask = await TaskModel.findOne({where:{id:taskId}})
+        myTask.isFree = false;
 
+        await myTask.save();
       }
       return res.status(200).json(newTask);
     }
@@ -46,9 +49,10 @@ const create = async (req, res) => {
       if (newTask) {
         const task = await CalendarModel.findOne({ where: {taskId} });
         task.status = "planed"
-        newTask.isFree = false
-
         await task.save();
+        const myTask = await TaskModel.findOne({where:{id:taskId}})
+        myTask.isFree = false;
+        
 
       }
       return res.status(200).json(newTask);
