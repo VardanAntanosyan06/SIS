@@ -27,19 +27,19 @@ const create = async (req, res) => {
       }
       return res.status(200).json(newTask);
     }
-    const today = new Date().getDay;
+    const today = new Date().getDate();
     
     const myTasks = await CalendarModel.findAll();
     console.log(myTasks);
     const positionLength = myTasks.filter((el)=>{
       if(el.startDate){
-        return new el.startDate.getDay == today;
+        return el.startDate.getDate() == today;
       }
     })
     
     const newTask = await CalendarModel.create({
         taskId,
-        startDate:startDate.toISOString().slice(0, 19).replace('T', ' '),
+        startDate,
         userId:user.id,
         position:positionLength.length>0?positionLength.length+1:1
       });
