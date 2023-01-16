@@ -3,7 +3,7 @@ const TaskModel = require("../models").Tasks;
 const UserModel = require("../models").Users;
 
 const create = async (req, res) => {
-  const {token} = req.headers.authorization;
+  const {authorization: token} = req.headers;
   console.log(token);
   const user = UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
   try {
