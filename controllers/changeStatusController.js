@@ -1,5 +1,6 @@
 const TaskModel = require("./models").Tasks
 const SubTaskModel = require("./models").SubTasks;
+const CalendarModel = require("../models").Calendar
 
 const changeSubTaskStatus = async (req,res)=>{
     try {
@@ -11,18 +12,20 @@ const changeSubTaskStatus = async (req,res)=>{
             await item.save();
 
         const taskId = item.taskId;
+        const calendar = await CalendarModel.findOne({ where: { id: taskId } });
+
         const task = await TaskModel.findOne({where:{id:taskId}});
         const isFinish = task.SubTasks.filter((el)=>{
             return el.status==true
         })
         if(item && isFinish.length == item.SubTasks.length){
-            item.status = "done";
-            await item.save();
+            calendar.status = "done";
+            await calendar.save();
             
             return res.status(200).json(task)
         }else if(item && isFinish.length == item.SubTasks.length>=1){
-            item.status = "in process";
-            await item.save();
+            calendar.status = "in process";
+            await calendar.save();
             
             return res.status(200).json(task)
         }
