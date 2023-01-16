@@ -48,7 +48,7 @@ const isLogined = async (req,res)=>{
     if(user){
       return res.status(200).json(user)
     }
-    return res.status(404).json("not found")
+    return res.status(401).json("not found")
   } catch (error) {
     console.log(error);
   }
