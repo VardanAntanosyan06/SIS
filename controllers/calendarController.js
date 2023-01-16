@@ -31,9 +31,10 @@ const create = async (req, res) => {
     
     const myTasks = await CalendarModel.findAll();
     console.log(myTasks);
-    const positionLength = myTasks.filter((el)=>{
+    const positionLength = myTasks.map((el)=>{
       if(el.startDate){
         return el.startDate.getDate() == today;
+
       }
     })
     
