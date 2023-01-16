@@ -5,8 +5,8 @@ const TaskModel = require("../models").Tasks;
 const UserModel = require("../models").Users;
 
 const create = async (req, res) => {
-  // const {authorization: token} = req.headers;
-  // const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
+  const {authorization: token} = req.headers;
+  const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
   const {taskId,startDate,position} =req.body;
   
   try {
@@ -15,7 +15,7 @@ const create = async (req, res) => {
       const newTask = await CalendarModel.create({
         taskId,
         startDate:new Date(startDate),
-        userId:1,
+        userId:user.id,
         position
       });
       if (newTask) {
@@ -41,7 +41,7 @@ const create = async (req, res) => {
     const newTask = await CalendarModel.create({
         taskId,
         startDate:new Date(startDate),
-        userId:1,
+        userId:user.id,
         position:positionLength.length>0?positionLength.length+1:1
       });
 
