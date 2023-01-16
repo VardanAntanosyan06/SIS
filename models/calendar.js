@@ -20,7 +20,6 @@ module.exports = (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER,
     startDate:DataTypes.DATE,
     deadline:DataTypes.DATE,
-    isFree: DataTypes.BOOLEAN,
   }, {
     sequelize,
     modelName: 'Calendar',
