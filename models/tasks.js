@@ -25,8 +25,13 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   const SubTasks = sequelize.define("SubTasks")
+  const Calendar = sequelize.define("Calendar")
 
   Tasks.hasMany(SubTasks,{
+    foreignKey:"taskId"
+  })
+
+  Tasks.hasOne(Calendar,{
     foreignKey:"taskId"
   })
   
