@@ -29,7 +29,7 @@ const create = async (req, res) => {
     }
     const today = new Date().getDay;
     const myTasks = CalendarModel.findAll();
-    
+    console.log(myTasks);
     myTasks.filter((el)=>{
       return new Date(el.startDate).getDay == today;
     })
