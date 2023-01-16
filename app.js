@@ -39,8 +39,8 @@ var resetPassword = require('./routes/resetPassword')
 var getUniversities = require('./routes/getUniversities')
 var getTasks = require('./routes/getTasks')
 var calendar = require('./routes/calendar')
-var changeStatus = require('./routes/')
-
+var changeStatus = require('./routes/changeStatus')
+var addDescription  = require("./routes/adddescription")
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -62,6 +62,8 @@ app.use('/sendResetPassword', sendResetPassword);
 app.use('/get', getUniversities);
 app.use('/getTasks', getTasks);
 app.use('/calendar', calendar);
+app.use("/change",changeStatus)
+app.use("/add",addDescription)
 
 
 // catch 404 and forward to error handler

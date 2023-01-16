@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     taskId: DataTypes.INTEGER,
     name: DataTypes.STRING,
     points: DataTypes.INTEGER,
+    userId:DataTypes.STRING,
     done:DataTypes.BOOLEAN,
     description:DataTypes.STRING
   }, {

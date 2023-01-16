@@ -5,11 +5,12 @@ const TaskModel = require("../models").Tasks;
 const UserModel = require("../models").Users;
 
 const create = async (req, res) => {
-  const {authorization: token} = req.headers;
-  const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
+   const {authorization: token} = req.headers;
+   const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
   const {taskId,startDate,position} =req.body;
-  
+  const isTasks = await CalendarModel.findOne({where:{taskId}})
   try {
+    if(!isTasks){
     if(position){
       const newTask = await CalendarModel.create({
         taskId,
@@ -17,6 +18,7 @@ const create = async (req, res) => {
         userId:user.id,
         position
       });
+
       if (newTask) {
         const task = await CalendarModel.findOne({ where: {taskId} });
         newTask.isFree = false
@@ -35,7 +37,6 @@ const create = async (req, res) => {
     const positionLength = myTasks.map((el)=>{
       if(el.startDate){
         return el.startDate.getDate() == today;
-
       }
     })
     
@@ -56,7 +57,8 @@ const create = async (req, res) => {
 
       }
       return res.status(200).json(newTask);
-    
+    }
+    return res.json("task already exit");
   } catch (error) {
     console.log(error);
     return res.status(500).json("something went wrong")

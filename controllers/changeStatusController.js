@@ -1,5 +1,5 @@
-const TaskModel = require("./models").Tasks
-const SubTaskModel = require("./models").SubTasks;
+const TaskModel = require("../models").Tasks
+const SubTaskModel = require("../models").SubTasks;
 const CalendarModel = require("../models").Calendar
 
 const changeSubTaskStatus = async (req,res)=>{

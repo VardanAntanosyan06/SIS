@@ -21,6 +21,10 @@ module.exports = {
       points: {
         type: Sequelize.INTEGER
       },
+      userId : {
+        type: Sequelize.STRING
+
+      },
       done: {
         type: Sequelize.BOOLEAN,
         defaultValue: false
