@@ -28,11 +28,12 @@ const create = async (req, res) => {
       return res.status(200).json(newTask);
     }
     const today = new Date().getDay;
+    
     const myTasks = await CalendarModel.findAll();
     console.log(myTasks);
     const positionLength = myTasks.filter((el)=>{
       if(el.startDate){
-        return new Date(el.startDate).getDay == today;
+        return new el.startDate.getDay == today;
       }
     })
     
