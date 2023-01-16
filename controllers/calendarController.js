@@ -19,7 +19,7 @@ const create = async (req, res) => {
       });
       if (newTask) {
         const task = await CalendarModel.findOne({ where: {taskId} });
-        task.isFree = false
+        newTask.isFree = false
         task.status = "planed"
         await task.save();
 
@@ -46,7 +46,7 @@ const create = async (req, res) => {
       if (newTask) {
         const task = await CalendarModel.findOne({ where: {taskId} });
         task.status = "planed"
-        task.isFree = false
+        newTask.isFree = false
 
         await task.save();
 
