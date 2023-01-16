@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER,
     startDate:DataTypes.DATE,
     deadline:DataTypes.DATE,
+    position:DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Calendar',
