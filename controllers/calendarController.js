@@ -19,6 +19,7 @@ const create = async (req, res) => {
       });
       if (newTask) {
         const task = await CalendarModel.findOne({ where: {taskId} });
+        task.isFree = false
         task.status = "planed"
         await task.save();
 
@@ -28,10 +29,8 @@ const create = async (req, res) => {
     const today = new Date().getDate();
     
     const myTasks = await CalendarModel.findAll();
-    console.log(myTasks);
     const positionLength = myTasks.map((el)=>{
       if(el.startDate){
-        console.log(el.startDate.getDate,today,"+++++++++++++++++");
         return el.startDate.getDate() == today;
 
       }
@@ -47,6 +46,8 @@ const create = async (req, res) => {
       if (newTask) {
         const task = await CalendarModel.findOne({ where: {taskId} });
         task.status = "planed"
+        task.isFree = false
+
         await task.save();
 
       }
