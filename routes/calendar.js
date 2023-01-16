@@ -9,10 +9,8 @@ const calendarController = require("../controllers/calendarController")
  *     Calendar:
  *       type: object
  *       required:
- *         - TaskName
+ *         - taskid
  *         - startDate
- *         - statusOfTask
- *         - timePoints
  *         - userId 
  *       properties:
  *         taskId:
@@ -21,15 +19,6 @@ const calendarController = require("../controllers/calendarController")
  *         startDate:
  *           type: date
  *           example: 2023-01-12 19:53:21.692+00
- *         statusOfTask:
- *           type: string
- *           example: in process
- *         timePoints:
- *           type: string
- *           example: up to 6 weeks
- *         userId:
- *           type: integer
- *           example: 1
  */
 
 /**
