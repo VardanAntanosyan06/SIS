@@ -37,7 +37,7 @@ const getYourFreeTasks = async (req,res)=>{
       const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
             if (user) {
                 const university = await UniversityModel.findOne({where:{name:user.university}})
-                const tasks = await TaskModel.findAll({where:{universityId:university.id,isFree:true},include:[SubTasks]});
+                const tasks = await TaskModel.findAll({where:{universityId:university.id,isFree:true,userId:user.id},include:[SubTasks]});
                 return res.status(200).json({tasks}) 
             }
             return res.status(404).json("user not found")

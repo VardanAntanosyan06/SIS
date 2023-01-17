@@ -34,7 +34,7 @@ const create = async (req, res) => {
     }
     const today = new Date().getDate();
     
-    const myTasks = await CalendarModel.findAll();
+    const myTasks = await CalendarModel.findAll({where:{startDate:new Date()}});
     const positionLength = myTasks.map((el)=>{
       if(el.startDate){
         return el.startDate.getDate() == today;
