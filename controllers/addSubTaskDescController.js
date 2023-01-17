@@ -8,9 +8,10 @@ const addDescription = async (req,res)=>{
     try {
         const {authorization: token} = req.headers;
         const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
-        const {description,id} = req.body;
+        const {description,taskId} = req.body;
         
-        const newdesc = await SubTaskModel.findOne({where:{id}})
+        const Task = await TaskModel.findOne({wher:{userId:user.id,id:taskId}})
+        const newdesc = await SubTaskModel.findOne({where:{id:Task.id}})
 
         newdesc.description = description;
 
