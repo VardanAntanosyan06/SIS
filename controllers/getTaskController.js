@@ -3,6 +3,7 @@ const TaskModel = require('../models').Tasks;
 const UniversityModel = require("../models").UniversityTable;
 const SubTasks = require("../models").SubTasks
 const Calendar = require("../models").Calendar;
+const TaskNotFree = require("../models").TasksNotFree;
 
 const getAllTasks = async (req,res)=>{
     try {
@@ -50,8 +51,9 @@ const getTasksInCalendar = async (req,res)=>{
         const {authorization: token} = req.headers;
       const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
 
-    const task = await Calendar.findAll({where:{userId:user.id},include:[TaskModel,SubTasks]})
+    const task = await TaskNotFree.findAll({where:{userId:user.id},include:[TaskModel,SubTasks]})
             if (task) {
+                
                 return res.status(200).json({task})
             }
             return res.status(404).json("user not found")

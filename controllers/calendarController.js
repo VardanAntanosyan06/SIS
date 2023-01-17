@@ -1,61 +1,59 @@
+const tasksnotfree = require("../models/tasksnotfree");
 
 
 const CalendarModel = require("../models").Calendar;
 const TaskModel = require("../models").Tasks;
 const UserModel = require("../models").Users;
+const TasksNotFree = require("../models").TasksNotFree;
 
 const create = async (req, res) => {
-   const {authorization: token} = req.headers;
-   const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
+  const {authorization: token} = req.headers;
+  const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
   const {taskId,startDate,position} =req.body;
-  const isTasks = await CalendarModel.findOne({where:{taskId}})
+  const isTasks = await TasksNotFree.findOne({where:{TaskId:taskId,userId:user.id}})
 
   try {
     if(!isTasks){
     if(position){
-      const newTask = await CalendarModel.create({
-        taskId,
+      const newTask = await TasksNotFree.create({
+        TaskId:taskId,
         startDate:new Date(startDate),
         userId:user.id,
         position
       });
 
-      console.log(newTask);
-      if (newTask) {
-        const task = await CalendarModel.findOne({ where: {taskId} });
+    if (newTask) {
+    const task = await TaskModel.findOne({ where: {id:taskId} });
         task.status = "planed"
+        task.isfree = false+user.id;
         await task.save();
-        const myTask = await TaskModel.findOne({where:{id:taskId}})
-        console.log(myTask,"++++++++++++++++++++++++++++++++++");
-        myTask.isFree = false;
-        await myTask.save();
       }
       return res.status(200).json(newTask);
     }
     const today = new Date().getDate();
     
-    const myTasks = await CalendarModel.findAll({where:{startDate:new Date()}});
+    const myTasks = await TasksNotFree.findAll({where:{userId:user.id}});
+    console.log(myTasks.length);
     const positionLength = myTasks.map((el)=>{
       if(el.startDate){
         return el.startDate.getDate() == today;
       }
     })
     
-    const newTask = await CalendarModel.create({
-        taskId,
-        status: "planed",
+    const newTask = await TasksNotFree.create({
+        TaskId:taskId,
         startDate:new Date(startDate),
         userId:user.id,
         position:positionLength.length>0?positionLength.length+1:1
       });
 
       if (newTask) {
-        const task = await CalendarModel.findOne({ where: {taskId} });
+        const task = await TasksNotFree.findOne({ where: {TaskId:taskId} });
         task.status = "planed"
+        task.isfree = false+user.id;
         await task.save();
         const myTask = await TaskModel.findOne({where:{id:taskId}})
-        console.log(myTask,"++++++++++++++++++++++++++++++++++");
-        myTask.isFree = false;
+
         await myTask.save();
       }
       return res.status(200).json(newTask);

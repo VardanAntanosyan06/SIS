@@ -44,7 +44,7 @@ router.post("/add",calendarController.create)
  * @swagger
  * /calendar/getAll:
  *   get:
- *     summary: get All Tasks wich in use
+ *     summary: get All Tasks wich in use 
  *     responses:
  *       200:
  *         description: object Tasks

@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Tasks extends Model {
+  class TasksNotFree extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,28 +13,26 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Tasks.init({
-    facultName: DataTypes.STRING,
-    positionName: DataTypes.STRING,
-    compamyName: DataTypes.STRING,
-    universityId: DataTypes.INTEGER,
-    isFree: DataTypes.BOOLEAN,
-    status:DataTypes.STRING
+  TasksNotFree.init({
+    TaskId: DataTypes.INTEGER,
+    userId: DataTypes.INTEGER,
+    startDate: DataTypes.DATE,
+    position: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'Tasks',
+    modelName: 'TasksNotFree',
   });
-
-  const SubTasks = sequelize.define("SubTasks")
-  const Calendar = sequelize.define("Calendar")
-
-  Tasks.hasMany(SubTasks,{
-    foreignKey:"taskId"
-  })
-
-  Tasks.hasOne(Calendar,{
-    foreignKey:"taskId"
-  })
   
-  return Tasks;
+  const Tasks = sequelize.define("Tasks")
+  const SubTasks = sequelize.define("SubTasks")
+
+
+  TasksNotFree.hasMany(SubTasks,{
+    foreignKey:"taskId"
+  })
+  TasksNotFree.hasMany(Tasks,{
+    foreignKey:"id"
+  })
+
+  return TasksNotFree;
 };
