@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     positionName: DataTypes.STRING,
     compamyName: DataTypes.STRING,
     universityId: DataTypes.INTEGER,
-    isFree: DataTypes.BOOLEAN,
+    isFree:DataTypes.STRING,
     status:DataTypes.STRING
   }, {
     sequelize,

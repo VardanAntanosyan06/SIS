@@ -23,10 +23,10 @@ const create = async (req, res) => {
       });
 
     if (newTask) {
-    const task = await TaskModel.findOne({ where: {id:taskId} });
-        task.status = "planed"
-        task.isfree = false+user.id;
-        await task.save();
+      const task = await TaskModel.findOne({ where: {id:taskId} });
+      task.status = "planed"
+      task.isFree = "false"+user.id;
+      await task.save();
       }
       return res.status(200).json(newTask);
     }
@@ -48,12 +48,12 @@ const create = async (req, res) => {
       });
 
       if (newTask) {
-        const task = await TasksNotFree.findOne({ where: {TaskId:taskId} });
+        console.log("okkkkkkkkkkkkkkkkkkkkkkk");
+        const task = await TaskModel.findOne({ where: {id:taskId} });
         task.status = "planed"
-        task.isfree = false+user.id;
+        task.isFree = "false"+user.id;
         await task.save();
         const myTask = await TaskModel.findOne({where:{id:taskId}})
-
         await myTask.save();
       }
       return res.status(200).json(newTask);

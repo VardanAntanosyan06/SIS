@@ -12,9 +12,6 @@ module.exports = {
       taskId: {
         type: Sequelize.INTEGER
       },
-      status: {
-        type: Sequelize.STRING
-      },
       timePoints: {
         type: Sequelize.STRING
       },

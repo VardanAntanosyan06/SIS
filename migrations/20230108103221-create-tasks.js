@@ -22,7 +22,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       isFree: {
-       type: Sequelize.BOOLEAN
+       type: Sequelize.STRING
       },
       status: {
         type: Sequelize.STRING
