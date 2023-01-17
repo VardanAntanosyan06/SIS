@@ -6,15 +6,19 @@ const jwt = require("jsonwebtoken");
 const login = async (req, res) => {
   try {
     const {email, password } = req.body;
-
+    let token;
     const user = await model.findOne({where:{email}})
     if(user && user.isVerifed && (await bcrypt.compareSync(password, user.password))){
-      const token = jwt.sign(
+      if(user.token){
+        token = user.token;
+      }else{
+       token = jwt.sign(
         {user_id: user.id, email},
         process.env.SECRET
-    );
+    )
     user.token = token;
     user.save();
+  }
 
     return res.status(200).json({token:user.token,success:true});
     }
@@ -30,10 +34,11 @@ const logOut = async (req,res)=>{
     const user = await model.findOne({
         where:{email}
     })
+    if(user){
     user.token = null
     await user.save();
-
-    return res.json({success:true})
+    return res.json({success:true})}
+    return res.json('user not found!')
   } catch (error) {
     return ("something went wrong")
   }

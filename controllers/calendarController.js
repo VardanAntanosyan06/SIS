@@ -9,6 +9,7 @@ const create = async (req, res) => {
    const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
   const {taskId,startDate,position} =req.body;
   const isTasks = await CalendarModel.findOne({where:{taskId}})
+
   try {
     if(!isTasks){
     if(position){
@@ -19,14 +20,14 @@ const create = async (req, res) => {
         position
       });
 
+      console.log(newTask);
       if (newTask) {
         const task = await CalendarModel.findOne({ where: {taskId} });
-        newTask.isFree = false
         task.status = "planed"
         await task.save();
         const myTask = await TaskModel.findOne({where:{id:taskId}})
+        console.log(myTask,"++++++++++++++++++++++++++++++++++");
         myTask.isFree = false;
-
         await myTask.save();
       }
       return res.status(200).json(newTask);
@@ -53,9 +54,9 @@ const create = async (req, res) => {
         task.status = "planed"
         await task.save();
         const myTask = await TaskModel.findOne({where:{id:taskId}})
+        console.log(myTask,"++++++++++++++++++++++++++++++++++");
         myTask.isFree = false;
-        
-
+        await myTask.save();
       }
       return res.status(200).json(newTask);
     }
