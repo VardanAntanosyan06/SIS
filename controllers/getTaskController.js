@@ -17,6 +17,7 @@ const getAllTasks = async (req,res)=>{
     }
 }
 
+
 const getYourTasks = async (req,res)=>{
     try {
         const {authorization: token} = req.headers;
@@ -37,7 +38,7 @@ const getYourFreeTasks = async (req,res)=>{
     const {authorization: token} = req.headers;
       const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
             if (user) {
-                const university = await UniversityModel.findOne({where:{name:user.university}})
+                const uxniversity = await UniversityModel.findOne({where:{name:user.university}})
                 const tasks = await TaskModel.findAll({where:{universityId:university.id,isFree:true,userId:user.id},include:[SubTasks]});
                 return res.status(200).json({tasks}) 
             }
@@ -50,8 +51,9 @@ const getTasksInCalendar = async (req,res)=>{
     try {
         const {authorization: token} = req.headers;
       const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
-        console.log("false"+user.id);
-        const task = await TaskModel.findAll({where:{isFree:"false"+user.id},include:[SubTasks]})
+      console.log(user);
+      
+        const task = await TaskNotFree.findAll({where:{userId:user.id},include:[TaskModel,SubTasks]})
             if (task.length>0) {
                 return res.status(200).json({task})
             }
