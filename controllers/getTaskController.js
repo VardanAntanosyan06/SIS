@@ -51,10 +51,10 @@ const getTasksInCalendar = async (req,res)=>{
     try {
         const {authorization: token} = req.headers;
       const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
-      console.log(user);
+      console.log(user.id);
       
         const task = await TaskNotFree.findAll({where:{userId:user.id},include:[TaskModel,SubTasks]})
-            if (task.length>0) {
+            if (task) {
                 return res.status(200).json({task})
             }
             return res.status(404).json("user not found")
