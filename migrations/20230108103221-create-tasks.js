@@ -21,12 +21,6 @@ module.exports = {
       universityId: {
         type: Sequelize.INTEGER
       },
-      isFree: {
-       type: Sequelize.STRING
-      },
-      status: {
-        type: Sequelize.STRING
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

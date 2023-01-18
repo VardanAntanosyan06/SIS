@@ -23,9 +23,8 @@ const create = async (req, res) => {
       });
 
     if (newTask) {
-      const task = await TaskModel.findOne({ where: {id:taskId} });
-      task.status = "planed"
-      task.isFree = "false"+user.id;
+      newTask.status = "planed"
+      newTask.isFree = false;
       await task.save();
       }
       return res.status(200).json(newTask);
@@ -50,9 +49,9 @@ const create = async (req, res) => {
       if (newTask) {
         console.log("okkkkkkkkkkkkkkkkkkkkkkk");
         const task = await TaskModel.findOne({ where: {id:taskId} });
-        task.status = "planed"
-        task.isFree = "false"+user.id;
-        await task.save();
+        newTask.status = "planed"
+        newTask.isFree = false;
+        await newTask.save();
         const myTask = await TaskModel.findOne({where:{id:taskId}})
         await myTask.save();
       }

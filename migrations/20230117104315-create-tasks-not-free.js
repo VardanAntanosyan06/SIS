@@ -21,6 +21,13 @@ module.exports = {
       position: {
         type: Sequelize.INTEGER
       },
+      status:{
+        type:Sequelize.STRING
+    },
+    isFree: {
+      type : Sequelize.BOOLEAN,
+      defaultValue: true,
+    },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

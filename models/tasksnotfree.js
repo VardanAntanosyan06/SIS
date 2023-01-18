@@ -17,6 +17,8 @@ module.exports = (sequelize, DataTypes) => {
     TaskId: DataTypes.INTEGER,
     userId: DataTypes.INTEGER,
     startDate: DataTypes.DATE,
+    status:DataTypes.STRING,
+    isFree:DataTypes.BOOLEAN,
     position: DataTypes.INTEGER
   }, {
     sequelize,
