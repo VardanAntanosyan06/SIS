@@ -41,6 +41,7 @@ var getTasks = require('./routes/getTasks')
 var calendar = require('./routes/calendar')
 var changeStatus = require('./routes/changeStatus')
 var addDescription  = require("./routes/adddescription")
+var dashboard  = require("./routes/dashboard")
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -64,6 +65,7 @@ app.use('/getTasks', getTasks);
 app.use('/calendar', calendar);
 app.use("/change",changeStatus)
 app.use("/add",addDescription)
+app.use("/dashboard",dashboard)
 
 
 // catch 404 and forward to error handler

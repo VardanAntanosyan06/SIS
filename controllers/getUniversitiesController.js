@@ -1,3 +1,4 @@
+
 const UniModel = require("../models").UniversityTable;
 
 const getAllUniversities = async (req, res) => {
@@ -12,9 +13,10 @@ const getAllUniversities = async (req, res) => {
 
 const getMyUniversity = async (req, res) => {
   try {
-    const { name } = req.query;
+    const {authorization: token} = req.headers;
+    const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
 
-    const myUniversity = await UniModel.findOne({ where: { name } });
+    const myUniversity = await UniModel.findOne({ where: { name:user.university } });
     if (myUniversity) {
       return res.json(myUniversity);
     }
