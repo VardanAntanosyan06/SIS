@@ -45,7 +45,6 @@ const getYourTasks = async (req, res) => {
               tasks.push({
                 TaskId: e.id,
                 isFree: false,
-                status: myStatus,
                 facultName: e.facultName,
                 positionName: e.positionName,
                 compamyName: e.compamyName,
