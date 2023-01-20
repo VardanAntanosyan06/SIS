@@ -37,7 +37,7 @@ const getYourTasks = async (req, res) => {
         include: [TaskModel, SubTasks],
       });
 
-      const tasks = [];
+      let tasks = [];
       AllMytasks.map((e) => {
         if (InCalendarTask.length > 0) {
           InCalendarTask.map((element) => {
@@ -82,6 +82,7 @@ const getYourTasks = async (req, res) => {
             });
           });
         }
+        
       });
       return res.status(200).json({ tasks });
     }
