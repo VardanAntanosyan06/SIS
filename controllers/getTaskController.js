@@ -38,25 +38,28 @@ const getYourTasks = async (req, res) => {
       });
 
       const tasks = [];
-      AllMytasks.map((e)=>{
-        if(InCalendarTask.length>0){
-         InCalendarTask.map((element)=>{
-            if(e.id==element.TaskId){
-                // console.log(e.id,element.TaskId);
-                tasks.push({
-                    TaskId: e.id,
-                    isFree: false,
-                    facultName: e.facultName,
-                    positionName: e.positionName,
-                    compamyName: e.compamyName,
-                    universityId: e.universityId,
-                    createdAt: e.createdAt,
-                    updatedAt: e.updatedAt,
-                    SubTasks:e.SubTasks
-                })
-            }else{
-                tasks.push(
-                {
+      AllMytasks.map((e) => {
+        if (InCalendarTask.length > 0) {
+          InCalendarTask.map(async (element) => {
+            if (e.id == element.TaskId) {
+              const myStatus = await SubTasks.findAll({
+                where: { taskId: e.id },
+              });
+              console.log(myStatus, "++++++++++++++");
+              tasks.push({
+                TaskId: e.id,
+                isFree: false,
+                status: myStatus,
+                facultName: e.facultName,
+                positionName: e.positionName,
+                compamyName: e.compamyName,
+                universityId: e.universityId,
+                createdAt: e.createdAt,
+                updatedAt: e.updatedAt,
+                SubTasks: e.SubTasks,
+              });
+            } else {
+              tasks.push({
                 TaskId: e.id,
                 isFree: true,
                 facultName: e.facultName,
@@ -65,25 +68,26 @@ const getYourTasks = async (req, res) => {
                 universityId: e.universityId,
                 createdAt: e.createdAt,
                 updatedAt: e.updatedAt,
-                SubTasks:e.SubTasks
-            })
+                SubTasks: e.SubTasks,
+              });
             }
-        })}
-        else{
-            AllMytasks.map((e)=>{
-                tasks.push({
-                TaskId: e.id,
-                isFree: true,
-                facultName: e.facultName,
-                positionName: e.positionName,
-                compamyName: e.compamyName,
-                universityId: e.universityId,
-                createdAt: e.createdAt,
-                updatedAt: e.updatedAt,
-                SubTasks:e.SubTasks
-                })})
+          });
+        } else {
+          AllMytasks.map((e) => {
+            tasks.push({
+              TaskId: e.id,
+              isFree: true,
+              facultName: e.facultName,
+              positionName: e.positionName,
+              compamyName: e.compamyName,
+              universityId: e.universityId,
+              createdAt: e.createdAt,
+              updatedAt: e.updatedAt,
+              SubTasks: e.SubTasks,
+            });
+          });
         }
-      })
+      });
       return res.status(200).json({ tasks });
     }
     return res.json("not found");
@@ -135,9 +139,21 @@ const getTasksInCalendar = async (req, res) => {
   }
 };
 
+const getSubTasks = async (req, res) => {
+  try {
+    const {taskId} = req.query;
+    const mySubTasks = await SubTasks.findAll({where:{taskId}})
+
+    return res.json(mySubTasks)
+  } catch (error) {
+    console.log(error);
+    return res.json("something went wrong!");
+  }
+};
 module.exports = {
   getAllTasks,
   getYourTasks,
   getYourFreeTasks,
   getTasksInCalendar,
+  getSubTasks
 };

@@ -59,5 +59,7 @@ router.get("/myFree",getTasks.getYourFreeTasks)
  *         description: not found
  */
 router.get("/inCalendar",getTasks.getTasksInCalendar)
+router.get("/subTasks",getTasks.getSubTasks)
+
 
 module.exports = router;
