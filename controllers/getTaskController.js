@@ -40,12 +40,8 @@ const getYourTasks = async (req, res) => {
       const tasks = [];
       AllMytasks.map((e) => {
         if (InCalendarTask.length > 0) {
-          InCalendarTask.map(async (element) => {
+          InCalendarTask.map((element) => {
             if (e.id == element.TaskId) {
-              const myStatus = await SubTasks.findAll({
-                where: { taskId: e.id },
-              });
-              console.log(myStatus, "++++++++++++++");
               tasks.push({
                 TaskId: e.id,
                 isFree: false,
