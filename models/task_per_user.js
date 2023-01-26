@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Calendar extends Model {
+  class Task_per_User extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,28 +13,21 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Calendar.init({
+  Task_per_User.init({
     taskId: DataTypes.INTEGER,
-    status: DataTypes.STRING,
-    timePoints: DataTypes.STRING,
-    userId: DataTypes.INTEGER,
-    startDate:DataTypes.DATE,
-    deadline:DataTypes.DATE,
-    position:DataTypes.INTEGER
+    userId: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'Calendar',
+    modelName: 'Task_per_User',
   });
 
+  
   const Tasks = sequelize.define("Tasks")
-  const SubTasks = sequelize.define("SubTasks")
 
-
-  Calendar.hasMany(SubTasks,{
-    foreignKey:"taskId"
-  })
-  Calendar.hasMany(Tasks,{
+  Task_per_User.hasOne(Tasks,{
     foreignKey:"id"
   })
-  return Calendar;
+
+
+  return Task_per_User;
 };

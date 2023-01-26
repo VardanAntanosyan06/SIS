@@ -13,7 +13,7 @@ const getTasks = require("../controllers/getTaskController")
  *       500:
  *         description: something went wrong
  */
-router.get("/All",getTasks.getAllTasks)
+//router.get("/All",getTasks.getAllTasks)
 
 /**
  * @swagger
@@ -58,6 +58,7 @@ router.get("/myFree",getTasks.getYourFreeTasks)
  *       404:
  *         description: not found
  */
+
 router.get("/inCalendar",getTasks.getTasksInCalendar)
 router.get("/subTasks",getTasks.getSubTasks)
 

@@ -1,8 +1,12 @@
+
 'use strict';
 const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
+  const SubTasks = sequelize.define("SubTasks")
+  const Tasks_per_User = sequelize.define("Task_per_User")
+  const Users = sequelize.define("Users")
   class Tasks extends Model {
     /**
      * Helper method for defining associations.
@@ -14,6 +18,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Tasks.init({
+    id:{
+      type:DataTypes.INTEGER,
+      primaryKey:true,
+      autoIncrement:true
+    },
     facultName: DataTypes.STRING,
     positionName: DataTypes.STRING,
     compamyName: DataTypes.STRING,
@@ -23,16 +32,19 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Tasks',
   });
 
-  const SubTasks = sequelize.define("SubTasks")
-  const Calendar = sequelize.define("Calendar")
-
+  
   Tasks.hasMany(SubTasks,{
     foreignKey:"taskId"
   })
 
-  Tasks.hasOne(Calendar,{
+
+  Tasks.hasMany(Tasks_per_User,{
     foreignKey:"taskId"
   })
-  
+
+  Tasks.belongsToMany(Users,{
+   through:Tasks_per_User,foreignKey:"taskId" ,otherKey:"userId"
+  })
+
   return Tasks;
 };

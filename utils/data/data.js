@@ -1,4 +1,5 @@
 const bcrypt = require("bcrypt");
+const xlsx = require("xlsx")
 
 const testUserExample = [{
     fullName: "User",
@@ -60,6 +61,10 @@ const testUserExample = [{
     createdAt:new Date(),
     updatedAt:new Date()
 }]
+
+
+//xlsx.readFile("https://docs.google.com/spreadsheets/d/1zb4NWZy9W2GXq4BPiGwkOjT-r7U8MIn0J5lcS32L3d4/edit#gid=231289614")
+
 
 const UniversityTable = [{
     name: "Stanford University",
