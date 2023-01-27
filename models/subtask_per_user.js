@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Task_per_User extends Model {
+  class SubTask_per_User extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,27 +13,25 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Task_per_User.init({
-    taskId: DataTypes.INTEGER,
+  SubTask_per_User.init({
+    subTaskId: DataTypes.INTEGER,
     userId: DataTypes.INTEGER,
-    status:DataTypes.STRING
+    status: DataTypes.BOOLEAN,
+    description:DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Task_per_User',
+    modelName: 'SubTask_per_User',
   });
 
-  
-  const Tasks = sequelize.define("Tasks")
   const SubTasks = sequelize.define("SubTasks")
   const Users = sequelize.define("Users")
- Task_per_User.belongsTo(Users,{
-  foreignKey:"id"
- })
- Task_per_User.belongsTo(Tasks,{
-  foreignKey:"id"
- })
-//  Task_per_User.hasMany(SubTasks,{
-//   foreignKey:"taskId"
-//  })
-  return Task_per_User;
+
+  SubTask_per_User.belongsTo(SubTasks,{
+    foreignKey:"subTaskId"
+  })
+  SubTask_per_User.belongsTo(Users,{
+    foreignKey:"id"
+  })
+  
+  return SubTask_per_User;
 };

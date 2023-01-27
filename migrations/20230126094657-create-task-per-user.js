@@ -15,6 +15,11 @@ module.exports = {
       userId: {
         type: Sequelize.INTEGER
       },
+      status: {
+        type:Sequelize.STRING,
+        allowNull:false,
+        defaultValue:"planed"
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

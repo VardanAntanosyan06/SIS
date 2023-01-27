@@ -45,6 +45,34 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Users',
   });
+
+  const Tasks = sequelize.define("Tasks");
+  const SubTasks = sequelize.define("SubTasks");
+  const Task_per_User = sequelize.define("Task_per_User")
+  const SubTask_per_User = sequelize.define("SubTask_per_User")
+
+
+  Users.belongsToMany(Tasks,{ 
+    through:Task_per_User,
+    foreignKey:'userId',
+    otherKey:'taskId',
+    allowNull:true,
+})
+
+Users.hasMany(Task_per_User,{
+  foreignKey:"userId"
+})
+Users.belongsToMany(SubTasks,{ 
+  through:SubTask_per_User,
+  foreignKey:'userId',
+  otherKey:'SubTaskId',
+  allowNull:true,
+})
+
+Users.hasMany(SubTask_per_User,{
+foreignKey:"userId"
+})
+
   return Users;
 };
 

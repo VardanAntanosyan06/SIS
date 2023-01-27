@@ -15,20 +15,35 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   SubTasks.init({
+    id:{type:DataTypes.INTEGER,primaryKey:true},
     taskId: DataTypes.INTEGER,
     name: DataTypes.STRING,
     points: DataTypes.INTEGER,
-    userId:DataTypes.STRING,
-    done:DataTypes.BOOLEAN,
-    description:DataTypes.STRING
   }, {
     sequelize,
     modelName: 'SubTasks',
   });
   const Calendar = sequelize.define("Calendar")
+  const Tasks = sequelize.define("Tasks")
+ 
 
-  SubTasks.hasOne(Calendar,{
-    foreignKey:"taskId"
-  })  
+  SubTasks.hasOne(Tasks,{
+    foreignKey:"id"
+  })
+  const SubTask_per_User = sequelize.define("SubTask_per_User")
+  const Users = sequelize.define("Users")
+
+  SubTasks.belongsToMany(Users,{ 
+    through:SubTask_per_User,
+    foreignKey:'subTaskId',
+    otherKey:'userId',
+    allowNull:true,
+})
+
+ SubTasks.hasMany(SubTask_per_User,{
+  foreignKey:"subTaskId"
+ })
+
+
   return SubTasks;
 };

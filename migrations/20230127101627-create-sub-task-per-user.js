@@ -2,39 +2,39 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('TasksNotFrees', {
+    await queryInterface.createTable('SubTask_per_Users', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      TaskId: {
+      subTaskId: {
         type: Sequelize.INTEGER
       },
       userId: {
         type: Sequelize.INTEGER
       },
-      startDate: {
-        type: Sequelize.DATE
+      status: {
+        type: Sequelize.BOOLEAN
       },
-      position: {
-        type: Sequelize.INTEGER
+      description:{
+        type: Sequelize.STRING,
+        allowNull:true
       },
-      status:{
-        type:Sequelize.STRING
-    },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue:new Date()
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue:new Date()
       }
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('TasksNotFrees');
+    await queryInterface.dropTable('SubTask_per_Users');
   }
 };

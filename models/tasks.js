@@ -1,11 +1,9 @@
-
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const {  Model } = require('sequelize');
+const { sequelize } = require('.');
 module.exports = (sequelize, DataTypes) => {
   const SubTasks = sequelize.define("SubTasks")
-  const Tasks_per_User = sequelize.define("Task_per_User")
+  const Task_per_User = sequelize.define("Task_per_User")
   const Users = sequelize.define("Users")
   class Tasks extends Model {
     /**
@@ -37,14 +35,16 @@ module.exports = (sequelize, DataTypes) => {
     foreignKey:"taskId"
   })
 
+  Tasks.belongsToMany(Users,{ 
+    through:Task_per_User,
+    foreignKey:'taskId',
+    otherKey:'userId',
+    allowNull:true,
+})
 
-  Tasks.hasMany(Tasks_per_User,{
-    foreignKey:"taskId"
-  })
-
-  Tasks.belongsToMany(Users,{
-   through:Tasks_per_User,foreignKey:"taskId" ,otherKey:"userId"
-  })
+ Tasks.hasMany(Task_per_User,{
+  foreignKey:"taskId"
+ })
 
   return Tasks;
 };
