@@ -16,7 +16,8 @@ module.exports = (sequelize, DataTypes) => {
   Task_per_User.init({
     taskId: DataTypes.INTEGER,
     userId: DataTypes.INTEGER,
-    status:DataTypes.STRING
+    status:DataTypes.STRING,
+    position:DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Task_per_User',

@@ -20,6 +20,9 @@ module.exports = {
         allowNull:false,
         defaultValue:"planed"
       },
+      position: {
+        type:Sequelize.INTEGER,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
