@@ -17,15 +17,6 @@ const SubTask_per_User = require("../models").SubTask_per_User
 
 let sequelize = new Sequelize(config.database, config.username, config.password, config);
 
-// const getAllTasks = async (req, res) => {
-//   try {
-//     const tasks = 
-//     return res.status(200).json("a");
-//   } catch (error) {
-//     console.log(error);
-//     return res.json("something went wrong!");
-//   }
-// };
 
 const getYourTasks = async (req, res) => {
   try {
@@ -136,25 +127,83 @@ const getYourFreeTasks = async (req, res) => {
   }
 };
 const getTasksInCalendar = async (req, res) => {
-  try {
-    const { authorization: token } = req.headers;
-    const user = await UserModel.findOne({
-      where: { token: token.replace("Bearer ", "") },
+  const { authorization: token } = req.headers;
+  const user = await UserModel.findOne({
+    where: { token: token.replace("Bearer ", "") },
+  });
+  if (user) {
+    const myUniversity = await UniversityModel.findOne({
+       where: { name: user.university },
     });
+    let tasks = await TaskModel.findAll({
+      where: {
+        universityId:myUniversity.id,
+        // isFree:false
+      },
+        include: [
+        {model:SubTasks,
+          include:{
+            model:SubTask_per_User,
+            required:false,
+            where:{userId:user.id}
+          }
+        },
+        {
+          model: Task_per_User,
+          // where:{isFee:false}
+        },]
+      })
+    tasks = tasks.map(e => CircularJSON.stringify(e))
+  
+    const newTasks = tasks.map((_task)=>{
+      let task = JSON.parse(_task)
+      let taskStatus = true;
+      const userSpecificData = task.Task_per_Users.length === 0 ? 
+      {createdAt: null, status: null} : 
+      task.Task_per_Users.filter(e => +e.userId === +user.id)[0]  ; 
+      console.log(userSpecificData,"++++++++++++++=");
+      task = {
+        ...task,
+        status: userSpecificData.status,
+        SubTasks: task.SubTasks.map(_subTask => 
+          _subTask.SubTask_per_Users.length === 1 ? 
+          (() => {
+            const _sub_task = {
+              ..._subTask, 
+              status: _subTask.SubTask_per_Users[0].status,
+              description: _subTask.SubTask_per_Users[0].description
+            }
 
-    const task = await Task_per_User.findAll({
-      where: { userId: user.id },
-      
-        });
-    if (task) {
-      return res.status(200).json({ task });
-    }
-    return res.status(404).json("user not found");
-  } catch (error) {
-    console.log(error);
-    return res.json("something went wrong!");
+            delete _sub_task.SubTask_per_Users
+            return _sub_task
+
+          })()
+         : 
+            (() => {
+              delete _subTask.SubTask_per_Users;
+              return {..._subTask, status: false, description: null}
+            })()
+          ) 
+      }  
+      if(task.Task_per_Users.length === 1){
+          taskStatus = false
+      }
+      delete task.Task_per_Users
+      if(taskStatus===false){
+        return { ...task, isFree: taskStatus}
+      }else{
+        return "";
+      }
+    })
+
+ let myTasks = newTasks.filter((e)=>{
+    return e!==""
+  })
+
+  return res.status(200).send({myTasks})
+      }
+      return res.json("user not found");
   }
-};
 
 const getSubTasks = async (req, res) => {
   try {
