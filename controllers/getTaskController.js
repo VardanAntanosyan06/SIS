@@ -17,6 +17,15 @@ const SubTask_per_User = require("../models").SubTask_per_User
 
 let sequelize = new Sequelize(config.database, config.username, config.password, config);
 
+// const getAllTasks = async (req, res) => {
+//   try {
+//     const tasks = 
+//     return res.status(200).json("a");
+//   } catch (error) {
+//     console.log(error);
+//     return res.json("something went wrong!");
+//   }
+// };
 
 const getYourTasks = async (req, res) => {
   try {
@@ -51,7 +60,7 @@ const getYourTasks = async (req, res) => {
         let taskStatus = true;
         const userSpecificData = task.Task_per_Users.length === 0 ? 
         {createdAt: null, status: null} : 
-        task.Task_per_Users.filter(e => +e.userId === +user.id)[0]  ; 
+        task.Task_per_Users.filter(e => +e.userId === +user.id)[0]; 
         console.log(userSpecificData,"++++++++++++++=");
         task = {
           ...task,
@@ -126,6 +135,7 @@ const getYourFreeTasks = async (req, res) => {
     return res.json("something went wrong!");
   }
 };
+
 const getTasksInCalendar = async (req, res) => {
   const { authorization: token } = req.headers;
   const user = await UserModel.findOne({
@@ -165,6 +175,7 @@ const getTasksInCalendar = async (req, res) => {
       task = {
         ...task,
         status: userSpecificData.status,
+        position: userSpecificData.position,
         SubTasks: task.SubTasks.map(_subTask => 
           _subTask.SubTask_per_Users.length === 1 ? 
           (() => {
