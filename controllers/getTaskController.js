@@ -135,7 +135,6 @@ const getYourFreeTasks = async (req, res) => {
     return res.json("something went wrong!");
   }
 };
-
 const getTasksInCalendar = async (req, res) => {
   const { authorization: token } = req.headers;
   const user = await UserModel.findOne({
@@ -175,7 +174,9 @@ const getTasksInCalendar = async (req, res) => {
       task = {
         ...task,
         status: userSpecificData.status,
-        position: userSpecificData.position,
+        startDate:userSpecificData.startDate,
+        deadlineAtWeek:userSpecificData.deadlineAtWeek,
+        position:userSpecificData.position,
         SubTasks: task.SubTasks.map(_subTask => 
           _subTask.SubTask_per_Users.length === 1 ? 
           (() => {

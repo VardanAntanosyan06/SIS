@@ -1,15 +1,13 @@
 const TaskModel = require("../models").Tasks
-const SubTaskModel = require("../models").SubTasks;
-const TaskNotFree = require("../models").TasksNotFree;
+const SubTask_per_User = require("../models").SubTask_per_User;
 
 const changeSubTaskStatus = async (req,res)=>{
     try {
         const {id,status} = req.body;
 
-        const item = await SubTaskModel.findOne({where:{id}});
+        const item = await SubTask_per_User.findOne({where:{subTaskId:id}});
         if(item){
-            console.log(item);
-            item.done = status;
+            item.status = status;
             await item.save();
             return res.json(item)
             }

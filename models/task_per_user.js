@@ -17,6 +17,9 @@ module.exports = (sequelize, DataTypes) => {
     taskId: DataTypes.INTEGER,
     userId: DataTypes.INTEGER,
     status:DataTypes.STRING,
+    startDate:DataTypes.DATE,
+    deadlineAtWeek:DataTypes.STRING,
+    deadline:DataTypes.DATE,
     position:DataTypes.INTEGER
   }, {
     sequelize,

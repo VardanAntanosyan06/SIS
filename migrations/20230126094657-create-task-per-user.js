@@ -20,6 +20,15 @@ module.exports = {
         allowNull:false,
         defaultValue:"planed"
       },
+      startDate:{
+        type:Sequelize.DATE
+      },
+      deadlineAtWeek:{
+        type:Sequelize.STRING
+      },
+      deadline:{
+        type: Sequelize.DATE
+      },
       position: {
         type:Sequelize.INTEGER,
       },
