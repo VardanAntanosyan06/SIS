@@ -9,7 +9,7 @@ const TaskModel = require("../models").Tasks;
 const UniversityModel = require("../models").UniversityTable;
 const SubTasks = require("../models").SubTasks;
 const Calendar = require("../models").Calendar;
-const TaskNotFree = require("../models").TasksNotFree;
+//const TaskNotFree = require("../models").TasksNotFree;
 const { Op } = require("sequelize");
 const subtasks = require("../models/subtasks");
 const Task_per_User = require("../models").Task_per_User
@@ -60,10 +60,10 @@ const getYourTasks = async (req, res) => {
         let taskStatus = true;
         const userSpecificData = task.Task_per_Users.length === 0 ? 
         {createdAt: null, status: null} : 
-        task.Task_per_Users.filter(e => +e.userId === +user.id)[0]; 
+        task.Task_per_Users.filter(e => +e.userId === +user.id)[0]  ; 
+        console.log(userSpecificData,"++++++++++++++=");
         task = {
           ...task,
-          createdAt: userSpecificData.createdAt,
           status: userSpecificData.status,
           SubTasks: task.SubTasks.map(_subTask => 
             _subTask.SubTask_per_Users.length === 1 ? 
@@ -141,12 +141,11 @@ const getTasksInCalendar = async (req, res) => {
     const user = await UserModel.findOne({
       where: { token: token.replace("Bearer ", "") },
     });
-    console.log(user.id);
 
-    const task = await TaskNotFree.findAll({
+    const task = await Task_per_User.findAll({
       where: { userId: user.id },
-      include: [TaskModel, SubTasks],
-    });
+      
+        });
     if (task) {
       return res.status(200).json({ task });
     }
