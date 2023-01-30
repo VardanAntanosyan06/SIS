@@ -164,11 +164,10 @@ const getTasksInCalendar = async (req, res) => {
 
       task = {
         ...task,
-        status: userSpecificData.status,
-        startDate:userSpecificData.startDate,
-        deadlineAtWeek:userSpecificData.deadlineAtWeek,
-        position:userSpecificData.position,
-        startDate:userSpecificData.startDate,
+          status: userSpecificData?userSpecificData.status:null,
+        startDate:userSpecificData?userSpecificData.startDate:null,
+        deadlineAtWeek:userSpecificData?userSpecificData.deadlineAtWeek:null,
+        position:userSpecificData?userSpecificData.position:null,
         SubTasks: task.SubTasks.map(_subTask => 
           _subTask.SubTask_per_Users.length === 1 ? 
           (() => {
@@ -189,9 +188,9 @@ const getTasksInCalendar = async (req, res) => {
             })()
           ) 
       }  
-      if(task.Task_per_Users.length === 1){
-          taskStatus = false
-      }
+      if(task.Task_per_Users.length > 0 && userSpecificData){
+        taskStatus = false
+    }
       delete task.Task_per_Users
       if(taskStatus===false){
         return { ...task, isFree: taskStatus}
