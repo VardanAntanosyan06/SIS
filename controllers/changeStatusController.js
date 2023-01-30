@@ -1,5 +1,7 @@
 const TaskModel = require("../models").Tasks
 const SubTask_per_User = require("../models").SubTask_per_User;
+const Task_per_User = require("../models").Task_per_User;
+
 const UserModel = require("../models").Users;
 
 const changeSubTaskStatus = async (req,res)=>{
@@ -14,7 +16,7 @@ const changeSubTaskStatus = async (req,res)=>{
             item.description = description!==undefined?description:item.description;
             await item.save();
             return res.json(item)
-            }
+            }    
         return res.status(404).json("not found")
     } catch (error) {
         console.log(error);

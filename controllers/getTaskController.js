@@ -160,7 +160,7 @@ const getTasksInCalendar = async (req, res) => {
       let taskStatus = true;
       const userSpecificData = task.Task_per_Users.length === 0 ? 
       {createdAt: null, status: null} : 
-      task.Task_per_Users.filter(e => +e.userId === +user.id)[0]  ; 
+      task.Task_per_Users.filter(e => +e.userId === +user.id)[0]; 
 
       task = {
         ...task,
@@ -168,6 +168,7 @@ const getTasksInCalendar = async (req, res) => {
         startDate:userSpecificData.startDate,
         deadlineAtWeek:userSpecificData.deadlineAtWeek,
         position:userSpecificData.position,
+        startDate:userSpecificData.startDate,
         SubTasks: task.SubTasks.map(_subTask => 
           _subTask.SubTask_per_Users.length === 1 ? 
           (() => {
