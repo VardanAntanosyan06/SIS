@@ -1,7 +1,12 @@
+const { when } = require("@craco/craco");
+const { urlencoded } = require("express");
+const e = require("express");
 const Task_per_Users = require("../models").Task_per_User;
 const SubTask_per_Users = require("../models").SubTask_per_User;
 const TimeTaskModel = require("../models").timeTasks;
 const UserModel = require("../models").Users
+const SubTasks = require("../models").SubTasks
+
 
 const create = async (req, res) => {
   const {authorization: token} = req.headers;
@@ -10,43 +15,56 @@ const create = async (req, res) => {
     const {taskId,startDate,position} =req.body;
     const deadlineAtWeek = await TimeTaskModel.findOne({where:{task_id:taskId}})
 
-    const isTasks = await Task_per_Users.findOne({where:{taskId}})
-    if(!isTasks){
-    if(position){
-      const newTask = await Task_per_Users.create({
-        taskId,
-        startDate,
+
+    const myTasks = await Task_per_Users.findAll({
+      where:{
         userId:user.id,
-        deadlineAtWeek:deadlineAtWeek.taskSpentWeek,
-        position
-      });
+        startDate
+         },
+         order : [
+          ['position','DESC']
+         ]
+        });
+        if(myTasks.filter((el)=>el.taskId === taskId).length>0){
+          return res.json("task already exist")
+        }
+        const count = myTasks.length>0?
+         myTasks[0].position+1:
+         1;  
+        let newPosition = 0;
+      if(position){
+        newPosition = position
+      }else{
 
-      // const newSubTasks = await SubTask_per_Users.create({
-      //   subTaskId,
-      //   userId:user.id,
 
-      // })
-      return res.status(200).json(newTask,newSubTasks);
-    }
-    const today = new Date().getDate();
-    const myTasks = await Task_per_Users.findAll({where:{userId:user.id}});
-    const positionLength = myTasks.map((el)=>{
-      if(el.startDate){
-        return el.startDate.getDate() == today;
+      for (let i = 1; i <= count; i++) {
+        if(myTasks.filter((el)=>el.position === i).length===0){
+          newPosition = i;
+          break;
+        }
+        
       }
-    })
-    
-    const newTask = await Task_per_Users.create({
-        taskId,
-        startDate,
-        userId:user.id,
-        deadlineAtWeek:deadlineAtWeek.taskSpentWeek,
-        position:positionLength.length>0?positionLength.length+1:1
-      });
+    }
+      const newTask = await Task_per_Users.create({
+         taskId,
+         startDate,
+         userId:user.id,
+         deadlineAtWeek:deadlineAtWeek.taskSpentWeek,
+         position:newPosition
+     });
+
+     const mySubTasks = await SubTasks.findAll({where:{taskId},attributes:['id']})
+
+     const newSubTasks = [];
+     mySubTasks.map((e)=>
+     newSubTasks.push({subTaskId:e.id,userId:user.id,status:false})
+     )
+
+     await SubTask_per_Users.bulkCreate(newSubTasks)
       return res.status(200).json(newTask);
     }
-    return res.json("task already exit");
-  } catch (error) {
+
+    catch (error) {
     console.log(error);
     return res.status(500).json("something went wrong")
   }
