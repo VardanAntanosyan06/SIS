@@ -31,16 +31,19 @@ module.exports = {
       country: {
         type: Sequelize.STRING,
       },
-      whichClass: {
+      greade: {
         type: Sequelize.INTEGER,
       },
       university: {
         type: Sequelize.STRING,
       },
-      Unyshcool: {
+      BusinessSchool: {
         type: Sequelize.STRING,
       }, 
-      proffession: {
+      BusinessManager: {
+        type: Sequelize.STRING,
+      },
+      termOption:{
         type: Sequelize.STRING,
       },
       term: {
