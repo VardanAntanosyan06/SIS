@@ -16,15 +16,16 @@ const create = async (req, res) => {
     const deadlineAtWeek = await TimeTaskModel.findOne({where:{task_id:taskId}})
 
 
-    const myTasks = await Task_per_Users.findAll({
+    let myTasks = await Task_per_Users.findAll({
       where:{
-        userId:user.id,
-        startDate
-         },
+          userId:user.id,
+               },
          order : [
           ['position','DESC']
          ]
         });
+        //console.log(myTasks[0].startDate.toISOString().split("T")[0],startDate.slice(0,10));
+        myTasks = myTasks.filter((e)=>e.startDate.toISOString().slice(0,10) === startDate.slice(0,10))
         if(myTasks.filter((el)=>el.taskId === taskId).length>0){
           return res.json("task already exist")
         }
@@ -32,11 +33,9 @@ const create = async (req, res) => {
          myTasks[0].position+1:
          1;  
         let newPosition = 0;
-      if(position){
+      if(position && myTasks.filter((el)=>el.position === position).length===0){
         newPosition = position
       }else{
-
-
       for (let i = 1; i <= count; i++) {
         if(myTasks.filter((el)=>el.position === i).length===0){
           newPosition = i;
@@ -52,7 +51,7 @@ const create = async (req, res) => {
          deadlineAtWeek:deadlineAtWeek.taskSpentWeek,
          position:newPosition
      });
-
+    
      const mySubTasks = await SubTasks.findAll({where:{taskId},attributes:['id']})
 
      const newSubTasks = [];
