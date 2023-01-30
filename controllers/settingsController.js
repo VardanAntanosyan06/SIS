@@ -8,15 +8,25 @@ const change = async (req,res)=>{
 
         if(user){
             user.fullName = fullName!==undefined?fullName:user.fullName;
-            item.description = description!==undefined?description:item.description;
-            await item.save();
-            return res.json(item)
+            user.phone = phone!==undefined?phone:user.phone;
+            user.country = country!==undefined?country:user.country;
+            user.email = email!==undefined?email:user.email;
+            user.age = age!==undefined?age:user.age;
+            user.greade = greade!==undefined?greade:user.greade;
+            user.university = university!==undefined?university:user.university;
+            user.BusinessSchool = BusinessSchool!==undefined?BusinessSchool:user.BusinessSchool;
+            user.BusinessManager = BusinessManager!==undefined?BusinessManager:user.BusinessManager;
+            await user.save();
+            return res.json(user)
             }    
-            
             
         return res.status(404).json("user not found")
     } catch (error) {
         console.log(error);
         return res.json("something went wrong")
     }
+}
+
+module.exports = {
+    change
 }

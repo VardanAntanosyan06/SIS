@@ -99,7 +99,7 @@ router.get("/logOut",loginController.logOut)
 
 router.post("/isLogined",loginController.isLogined)
 
-
+router.get("/get",loginController.getUser)
 
 
 module.exports = router;

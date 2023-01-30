@@ -1,7 +1,7 @@
 const model = require("../models").Users;
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken");
-
+const UserModel = require("../models").Users
 
 const login = async (req, res) => {
   try {
@@ -58,8 +58,21 @@ const isLogined = async (req,res)=>{
     console.log(error);
   }
 }
+
+const getUser = async (req,res)=>{
+  try {
+    const {authorization: token} = req.headers;
+    const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
+
+    return res.json(user)
+  } catch (error) {
+    return res.json("something went wrong"),
+    console.log(error);
+  }
+}
 module.exports={
   login,
   logOut,
-  isLogined
+  isLogined,
+  getUser
 }

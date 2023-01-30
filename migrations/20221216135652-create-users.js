@@ -37,10 +37,10 @@ module.exports = {
       university: {
         type: Sequelize.STRING,
       },
-      BusinessSchool: {
+      academicProgram: {
         type: Sequelize.STRING,
       }, 
-      BusinessManager: {
+      study: {
         type: Sequelize.STRING,
       },
       termOption:{
