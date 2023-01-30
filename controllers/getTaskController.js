@@ -211,8 +211,14 @@ const getTasksInCalendar = async (req, res) => {
 
 const getSubTasks = async (req, res) => {
   try {
-    const { taskId } = req.query;
-    const mySubTasks = await SubTasks.findAll({ where: { taskId } });
+    const { authorization: token } = req.headers;
+    const user = await UserModel.findOne({
+      where: { token: token.replace("Bearer ", "") },
+    });
+
+    const { subTaskId } = req.query;
+
+    const mySubTasks = await SubTask_per_User.findOne({ where: { subTaskId,userId:user.id } });
 
     return res.json(mySubTasks);
   } catch (error) {
