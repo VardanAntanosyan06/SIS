@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'TasksNotFree',
+    timestamps: false
   });
   
   const Tasks = sequelize.define("Tasks")

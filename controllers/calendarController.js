@@ -24,7 +24,7 @@ const create = async (req, res) => {
           ['position','DESC']
          ]
         });
-        //console.log(myTasks[0].startDate.toISOString().split("T")[0],startDate.slice(0,10));
+
         myTasks = myTasks.filter((e)=>e.startDate.toISOString().slice(0,10) === startDate.slice(0,10))
         if(myTasks.filter((el)=>el.taskId === taskId).length>0){
           return res.json("task already exist")
@@ -44,12 +44,16 @@ const create = async (req, res) => {
         
       }
     }
+    let newStartDate= new Date(startDate)
+      let deadline = new Date()
+      deadline.setDate(newStartDate.getDate() + deadlineAtWeek.taskSpentDays)
       const newTask = await Task_per_Users.create({
          taskId,
          startDate,
          userId:user.id,
          deadlineAtWeek:deadlineAtWeek.taskSpentWeek,
-         position:newPosition
+         position:newPosition,
+         deadline:deadline         ,
      });
     
      const mySubTasks = await SubTasks.findAll({where:{taskId},attributes:['id']})

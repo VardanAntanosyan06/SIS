@@ -16,10 +16,13 @@ module.exports = (sequelize, DataTypes) => {
   timeTasks.init({
     task_id: DataTypes.INTEGER,
     taskSpentWeek: DataTypes.STRING,
+    taskSpentDays: DataTypes.STRING,
     point: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'timeTasks',
+    timestamps: false
+
   });
   return timeTasks;
 };

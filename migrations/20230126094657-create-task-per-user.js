@@ -18,7 +18,7 @@ module.exports = {
       status: {
         type:Sequelize.STRING,
         allowNull:false,
-        defaultValue:"planed"
+        defaultValue:"Planned"
       },
       startDate:{
         type:Sequelize.DATE

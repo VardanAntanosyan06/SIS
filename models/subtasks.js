@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'SubTasks',
+    timestamps: false
   });
   const Calendar = sequelize.define("Calendar")
   const Tasks = sequelize.define("Tasks")

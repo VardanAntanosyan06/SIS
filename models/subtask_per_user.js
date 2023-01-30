@@ -21,6 +21,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'SubTask_per_User',
+    timestamps: false
+
   });
 
   const SubTasks = sequelize.define("SubTasks")

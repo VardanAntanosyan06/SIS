@@ -15,17 +15,13 @@ module.exports = {
       taskSpentWeek: {
         type: Sequelize.STRING
       },
+      taskSpentDays : {
+        type: Sequelize.INTEGER,
+        defaultValue:10
+      },
       point: {
         type: Sequelize.INTEGER
       },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      }
     });
   },
   async down(queryInterface, Sequelize) {
