@@ -52,19 +52,21 @@ const getYourTasks = async (req, res) => {
           {
             model: Task_per_User,
           },]
-        })
+         })
+
       tasks = tasks.map(e => CircularJSON.stringify(e))
     
       const newTasks = tasks.map((_task)=>{
         let task = JSON.parse(_task)
         let taskStatus = true;
+
         const userSpecificData = task.Task_per_Users.length === 0 ? 
         {createdAt: null, status: null} : 
         task.Task_per_Users.filter(e => +e.userId === +user.id)[0]; 
-        console.log(userSpecificData,"++++++++++++++=");
+
         task = {
           ...task,
-          status: userSpecificData.status,
+          status: userSpecificData?userSpecificData.status:null,
           SubTasks: task.SubTasks.map(_subTask => 
             _subTask.SubTask_per_Users.length === 1 ? 
             (() => {
@@ -84,8 +86,8 @@ const getYourTasks = async (req, res) => {
                 return {..._subTask, status: false, description: null}
               })()
             ) 
-        }  
-        if(task.Task_per_Users.length === 1){
+        }
+        if(task.Task_per_Users.length > 0 && userSpecificData){
             taskStatus = false
         }
         delete task.Task_per_Users
@@ -100,19 +102,6 @@ const getYourTasks = async (req, res) => {
   }
 };
 
-// const getYourTasks = async (req, res) => {
-//   try {
-//     const tasks = await Task_per_User.findAll({
-//       where:{userId:1},
-//       include:[TaskModel,SubTasks]
-//     })
-
-//     return res.json({tasks})
-//   } catch (error) {
-    
-//   }
-// }
-
 
 const getYourFreeTasks = async (req, res) => {
   try {
@@ -121,7 +110,7 @@ const getYourFreeTasks = async (req, res) => {
       where: { token: token.replace("Bearer ", "") },
     });
     if (user) {
-      const uxniversity = await UniversityModel.findOne({
+      const university = await UniversityModel.findOne({
         where: { name: user.university },
       });
       const tasks = await TaskModel.findAll({
@@ -135,6 +124,8 @@ const getYourFreeTasks = async (req, res) => {
     return res.json("something went wrong!");
   }
 };
+
+
 const getTasksInCalendar = async (req, res) => {
   const { authorization: token } = req.headers;
   const user = await UserModel.findOne({
@@ -170,7 +161,7 @@ const getTasksInCalendar = async (req, res) => {
       const userSpecificData = task.Task_per_Users.length === 0 ? 
       {createdAt: null, status: null} : 
       task.Task_per_Users.filter(e => +e.userId === +user.id)[0]  ; 
-      console.log(userSpecificData,"++++++++++++++=");
+      console.log(userSpecificData,"++++++++++++++++++++++++++=");
       task = {
         ...task,
         status: userSpecificData.status,
