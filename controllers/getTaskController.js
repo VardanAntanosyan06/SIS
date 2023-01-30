@@ -154,17 +154,26 @@ const getTasksInCalendar = async (req, res) => {
         },]
       })
     tasks = tasks.map(e => CircularJSON.stringify(e))
-  
+  let tasksToUpdate = [];
     const newTasks = tasks.map((_task)=>{
       let task = JSON.parse(_task)
       let taskStatus = true;
       const userSpecificData = task.Task_per_Users.length === 0 ? 
       {createdAt: null, status: null} : 
       task.Task_per_Users.filter(e => +e.userId === +user.id)[0]; 
+      if (new Date(userSpecificData.deadline)<new Date()) {
+        userSpecificData.status = "Overdue";
+        tasksToUpdate.push({
+          taskId:userSpecificData.taskId,
+          userId:user.id,
+          status:"Overdue"
+        })
 
+
+      }
       task = {
         ...task,
-          status: userSpecificData?userSpecificData.status:null,
+        status: userSpecificData?userSpecificData.status:null,
         startDate:userSpecificData?userSpecificData.startDate:null,
         deadlineAtWeek:userSpecificData?userSpecificData.deadlineAtWeek:null,
         position:userSpecificData?userSpecificData.position:null,
@@ -202,7 +211,14 @@ const getTasksInCalendar = async (req, res) => {
  let myTasks = newTasks.filter((e)=>{
     return e!==""
   })
+  if(tasksToUpdate.length>0){
+     tasksToUpdate.map(async (e)=>{
+      const taskToUpdate = await Task_per_User.findOne({where:{taskId:e.taskId,userId:user.id}})
+        taskToUpdate.status = e.status;
 
+        taskToUpdate.save()
+    })
+  }
   return res.status(200).send({myTasks})
       }
       return res.json("user not found");
