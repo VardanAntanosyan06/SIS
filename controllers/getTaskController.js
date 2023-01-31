@@ -245,8 +245,28 @@ const getSubTasks = async (req, res) => {
     return res.json("something went wrong!");
   }
 };
+
+const getTasksFilter = async(req,res)=>{
+
+  try {
+    const {name} = req.query;
+
+     const tasks = await TaskModel.findAll({where:{
+      [Op.or] : [
+        {facultName:{ [Op.like]: '%' + name + '%'}},
+        {positionName:{ [Op.like]: '%' + name + '%'}},
+        {compamyName:{ [Op.like]: '%' + name + '%'}}
+      ]
+  }})
+    console.log(name);
+     return res.json({tasks})
+  } catch (error) {
+    console.log(error);
+  }
+
+} 
 module.exports = {
-  //getAllTasks,
+  getTasksFilter,
   getYourTasks,
   getYourFreeTasks,
   getTasksInCalendar,

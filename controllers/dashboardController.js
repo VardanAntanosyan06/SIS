@@ -16,6 +16,7 @@ const dashboard = async (req, res) => {
       where: { token: token.replace("Bearer ", "") },
     });
     myUni = await UniversityModel.findOne({ where: { name: user.university } });
+    console.log(myUni);
     if (user) {
       let difference = new Date().getTime() - new Date(user.createdAt).getTime();
       let TrainingDays = Math.ceil(difference / (1000 * 3600 * 24));
