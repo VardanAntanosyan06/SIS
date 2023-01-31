@@ -161,7 +161,7 @@ const getTasksInCalendar = async (req, res) => {
       const userSpecificData = task.Task_per_Users.length === 0 ? 
       {createdAt: null, status: null} : 
       task.Task_per_Users.filter(e => +e.userId === +user.id)[0]; 
-      if (new Date(userSpecificData.deadline)<new Date()) {
+      if (new Date(userSpecificData?.deadline)<new Date()) {
         userSpecificData.status = "Overdue";
         tasksToUpdate.push({
           taskId:userSpecificData.taskId,
