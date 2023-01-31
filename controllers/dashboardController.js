@@ -24,15 +24,16 @@ const dashboard = async (req, res) => {
       order: sequelize.random(), limit: 1,
       attributes:['text']
     })
-        const completedTask = await Task_per_User.findAll({
+      const myTasks = await Task_per_User.findAll({where:{userId:user.id}})
+      const completedTask = await Task_per_User.findAll({
         where: { userId: user.id,status:"Completed" }
       });
       const completed = completedTask.length;
 
-      const oversllProgress = Math.round(completed*totalPoints/100)
-      
+      const overallProgress = Math.round(completed*totalPoints/100)
+
       // const progress = Math.round(complitedTask*totalPoints/100)
-      return res.json({ TrainingDays, totalPoints,complitedTask,oversllProgress,progress,RandomGreetingMessages});
+      return res.json({ TrainingDays,totalPoints,completed,overallProgress,RandomGreetingMessages});
     } else {
       return res.json("user not found!");
     }

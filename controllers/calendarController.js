@@ -6,7 +6,7 @@ const SubTask_per_Users = require("../models").SubTask_per_User;
 const TimeTaskModel = require("../models").timeTasks;
 const UserModel = require("../models").Users
 const SubTasks = require("../models").SubTasks
-
+const moment = require("moment")
 
 const create = async (req, res) => {
   const {authorization: token} = req.headers;
@@ -44,16 +44,14 @@ const create = async (req, res) => {
         
       }
     }
-    let newStartDate= new Date(startDate)
-      let deadline = new Date()
-      deadline.setDate(newStartDate.getDate() + deadlineAtWeek.taskSpentDays)
+  
       const newTask = await Task_per_Users.create({
          taskId,
          startDate,
          userId:user.id,
          deadlineAtWeek:deadlineAtWeek.taskSpentWeek,
          position:newPosition,
-         deadline:deadline         ,
+         deadline:moment(startDate).add(deadlineAtWeek.taskSpentDays,"day"),
      });
     
      const mySubTasks = await SubTasks.findAll({where:{taskId},attributes:['id']})
