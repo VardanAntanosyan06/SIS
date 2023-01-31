@@ -12,7 +12,7 @@ const changeSubTaskStatus = async (req,res)=>{
         const {subTaskId,status,description} = req.body;
         const {authorization: token} = req.headers;
         const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
-
+        
         const mySubTask = await SubTaskModel.findOne({
                 where:{id:subTaskId},
         })
