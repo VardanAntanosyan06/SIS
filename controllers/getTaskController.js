@@ -14,7 +14,7 @@ const { Op } = require("sequelize");
 const subtasks = require("../models/subtasks");
 const Task_per_User = require("../models").Task_per_User
 const SubTask_per_User = require("../models").SubTask_per_User
-
+const moment = require("moment");
 let sequelize = new Sequelize(config.database, config.username, config.password, config);
 
 // const getAllTasks = async (req, res) => {
@@ -170,14 +170,18 @@ const getTasksInCalendar = async (req, res) => {
           status:"Overdue"
         })}
 
-
+      }
+      if(userSpecificData){
+        var duration = moment.duration(moment().diff(userSpecificData.startDate));
+        var days = Math.floor(duration.asDays());
       }
       task = {
         ...task,
         status: userSpecificData?userSpecificData.status:null,
         startDate:userSpecificData?userSpecificData.startDate:null,
-        deadlineAtWeek:userSpecificData?userSpecificData.deadlineAtWeek:null,
+        // deadlineAtWeek:userSpecificData?userSpecificData.deadlineAtWeek:null,
         position:userSpecificData?userSpecificData.position:null,
+        days:days?days>0?days:null:null,
         SubTasks: task.SubTasks.map(_subTask => 
           _subTask.SubTask_per_Users.length === 1 ? 
           (() => {
@@ -216,7 +220,6 @@ const getTasksInCalendar = async (req, res) => {
      tasksToUpdate.map(async (e)=>{
       const taskToUpdate = await Task_per_User.findOne({where:{taskId:e.taskId,userId:user.id}})
         taskToUpdate.status = e.status;
-
         taskToUpdate.save()
     })
   }
