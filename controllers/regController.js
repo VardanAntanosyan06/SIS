@@ -190,7 +190,7 @@ const reg = async (req, res) => {
         hobby,
         workExperience,
         addinfo,
-      });
+      }); 
       
 
       await UserEmails.create({

@@ -16,7 +16,8 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       isVerified: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        defaultValue:false
       },
       password: {
         type: Sequelize.STRING,

@@ -2,6 +2,7 @@ const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken");
 const UserModel = require("../models").Users
 const UserEmails = require("../models").UserEmails
+const crypto = require("crypto");
 
 const login = async (req, res) => {
   try {
@@ -59,8 +60,11 @@ const isLogined = async (req,res)=>{
   try {
     const {token} = req.body;
 
-    const user = await UserModel.findOne({where:{token}})
- 
+    const user = await UserModel.findOne({where:{token},include:{
+      model:UserEmails,
+      attributes:['email'],
+    }})
+
     if(user){
       return res.status(200).json(user)
     }
