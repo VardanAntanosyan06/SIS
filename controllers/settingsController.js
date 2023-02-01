@@ -2,7 +2,7 @@ const UserModel = require("../models").Users;
 
 const change = async (req,res)=>{
     try {
-        const {fullName,phone,country,email,age,greade,university,academicProgram,study} = req.body;
+        const {fullName,phone,country,email,age,grade,university,academicProgram,study} = req.body;
         const {authorization: token} = req.headers;
         const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
 
@@ -12,7 +12,7 @@ const change = async (req,res)=>{
             user.country = country!==undefined?country:user.country;
             user.email = email!==undefined?email:user.email;
             user.age = age!==undefined?age:user.age;
-            user.greade = greade!==undefined?greade:user.greade;
+            user.grade = grade!==undefined?grade:user.grade;
             user.university = university!==undefined?university:user.university;
             user.academicProgram = academicProgram!==undefined?academicProgram:user.academicProgram;
             user.study = study!==undefined?study:user.study;

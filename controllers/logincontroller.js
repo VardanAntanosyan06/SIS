@@ -63,6 +63,7 @@ const isLogined = async (req,res)=>{
     const user = await UserModel.findOne({where:{token},include:{
       model:UserEmails,
       attributes:['email'],
+      where:{isVerified:true}
     }})
 
     if(user){
