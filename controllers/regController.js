@@ -4,7 +4,7 @@ const { where } = require("sequelize");
 const UserEmails = require("../models").UserEmails;
 require("dotenv").config();
 
-const model = require("../models").Users;
+const UserModel = require("../models").Users;
 const reg = async (req, res) => {
   try {
     const {
@@ -33,7 +33,11 @@ const reg = async (req, res) => {
       addinfo,
       area,
     } = req.body;
-    const user = await model.findOne({ where: { email } });
+    const user = await UserModel.findOne({
+      include:{
+      model:UserEmails,
+      where:{email}
+    }});
 
     if (whichClass == 10) {
       const isNull = Object.values({
@@ -157,10 +161,14 @@ const reg = async (req, res) => {
       }
     }
     if (!user) {
+      const isMail = await UserEmails.findOne({where:{email}})
+      console.log(isMail);
+      // if(!isMail){
       const hashEmail = bcrypt.hashSync(email, 10);
+      console.log(hashEmail);
       const hashPassword = bcrypt.hashSync(password, 10);
 
-      const item = await model.create({
+      const item = await UserModel.create({
         fullName,
         phone,
         age,
@@ -184,13 +192,14 @@ const reg = async (req, res) => {
         addinfo,
       });
       
+
       await UserEmails.create({
         email,
         password:hashPassword,
         userId:item.id,
         role:"First"
       })
-      
+
       const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {

@@ -37,13 +37,13 @@ const login = async (req, res) => {
 const logOut = async (req,res)=>{
   try {
     const {email} = req.query;
-    const user = UserModel.findOne({
+    const user = await UserModel.findOne({
       include:{
         model:UserEmails,
         where:{email}
       }
     })
-    
+
     if(user){
     user.token = null
     await user.save();
