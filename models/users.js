@@ -14,14 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Users.init({
-    fullName: DataTypes.STRING,
-    email: DataTypes.STRING,
-    isVerifed: DataTypes.BOOLEAN, 
-    password:DataTypes.STRING,
+    fullName: DataTypes.STRING, 
     phone: DataTypes.STRING,
     age: DataTypes.INTEGER,
     country: DataTypes.STRING,
-    greade: DataTypes.INTEGER,
+    grade: DataTypes.INTEGER,
     university:DataTypes.STRING,
     academicProgram:DataTypes.STRING,
     study:DataTypes.STRING,
@@ -51,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
   const SubTasks = sequelize.define("SubTasks");
   const Task_per_User = sequelize.define("Task_per_User")
   const SubTask_per_User = sequelize.define("SubTask_per_User")
+  const UserEmails = sequelize.define("UserEmails")
 
 
   Users.belongsToMany(Tasks,{ 
@@ -72,6 +70,11 @@ Users.belongsToMany(SubTasks,{
 
 Users.hasMany(SubTask_per_User,{
 foreignKey:"userId"
+})
+
+
+Users.hasMany(UserEmails,{
+  foreignKey:"userId"
 })
 
   return Users;

@@ -4,9 +4,6 @@ const xlsx = require("xlsx");
 const testUserExample = [
   {
     fullName: "User",
-    email: "user@test.com",
-    isVerifed: true,
-    password: bcrypt.hashSync("test1234", 10),
     phone: "+37499999999",
     age: 17,
     country: "Armenia",
@@ -33,9 +30,6 @@ const testUserExample = [
   },
   {
     fullName: "User",
-    email: "user@example.com",
-    isVerifed: true,
-    password: bcrypt.hashSync("test1234", 10),
     phone: "+37499999999",
     age: 17,
     country: "Armenia",
@@ -62,6 +56,28 @@ const testUserExample = [
   },
 ];
 
+const emails = [
+  {
+    email:"user@test.com",
+    password: bcrypt.hashSync("test1234", 10),
+    isVerified:true,
+    role:"First",
+    userId:1
+  },
+  {
+    email:"user@example.com",
+    password: bcrypt.hashSync("test1234", 10),
+    isVerified:true,
+    role:"First",
+    userId:2
+  },  {
+    email:"user@admin.com",
+    password: bcrypt.hashSync("test1234", 10),
+    isVerified:true,
+    role:"First",
+    userId:3
+  }
+]
 //xlsx.readFile("https://docs.google.com/spreadsheets/d/1zb4NWZy9W2GXq4BPiGwkOjT-r7U8MIn0J5lcS32L3d4/edit#gid=231289614")
 
 const UniversityTable = [
@@ -1040,4 +1056,5 @@ module.exports = {
   UniversityTable,
   TaskTable,
   testUserExample,
+  emails
 };

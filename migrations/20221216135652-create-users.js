@@ -12,16 +12,6 @@ module.exports = {
       fullName: {
         type: Sequelize.STRING,
       },
-      email: {
-        type: Sequelize.STRING,
-      },
-      isVerifed: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false,
-      },
-      password: {
-        type: Sequelize.STRING,
-      },
       phone: {
         type: Sequelize.STRING,
       },
@@ -31,7 +21,7 @@ module.exports = {
       country: {
         type: Sequelize.STRING,
       },
-      greade: {
+      grade: {
         type: Sequelize.INTEGER,
       },
       university: {

@@ -253,7 +253,7 @@ const getTasksFilter = async(req,res)=>{
 
      const tasks = await TaskModel.findAll({where:{
       [Op.or] : [
-        {facultName:{ [Op.like]: '%' + name + '%'}},
+        {facultName:{ [Op.like]: '%' + name.toUpperCase() + '%'}},
         {positionName:{ [Op.like]: '%' + name + '%'}},
         {compamyName:{ [Op.like]: '%' + name + '%'}}
       ]

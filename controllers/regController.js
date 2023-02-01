@@ -103,7 +103,6 @@ const reg = async (req, res) => {
         return res.json(whichIsNull);
       }
     } else {
-      console.log("s+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
       const isNull = Object.values({
         fullName,
         email,
@@ -163,7 +162,6 @@ const reg = async (req, res) => {
       const item = await model.create({
         fullName,
         email,
-        password: hashPassword,
         phone,
         age,
         country,
@@ -185,6 +183,7 @@ const reg = async (req, res) => {
         workExperience,
         addinfo,
       });
+      
       const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {

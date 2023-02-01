@@ -1,14 +1,20 @@
-const model = require("../models").Users;
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken");
 const UserModel = require("../models").Users
+const UserEmails = require("../models").UserEmails
 
 const login = async (req, res) => {
   try {
     const {email, password } = req.body;
     let token;
-    const user = await model.findOne({where:{email}})
-    if(user && user.isVerifed && (await bcrypt.compareSync(password, user.password))){
+    const user = await UserModel.findOne({
+      include:{
+        model:UserEmails,
+        where:{email}
+      }
+    })
+
+    if(user && user.UserEmails[0].isVerified && (await bcrypt.compareSync(password, user.UserEmails[0].password))){
       if(user.token){
         token = user.token;
       }else{
