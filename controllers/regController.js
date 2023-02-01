@@ -1,6 +1,7 @@
 const nodemailer = require("nodemailer");
 var bcrypt = require("bcrypt");
 const { where } = require("sequelize");
+const UserEmails = require("../models").UserEmails;
 require("dotenv").config();
 
 const model = require("../models").Users;
@@ -161,7 +162,6 @@ const reg = async (req, res) => {
 
       const item = await model.create({
         fullName,
-        email,
         phone,
         age,
         country,
@@ -183,6 +183,13 @@ const reg = async (req, res) => {
         workExperience,
         addinfo,
       });
+      
+      await UserEmails.create({
+        email,
+        password:hashPassword,
+        userId:item.id,
+        role:"First"
+      })
       
       const transporter = nodemailer.createTransport({
         service: "gmail",

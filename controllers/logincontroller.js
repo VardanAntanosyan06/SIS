@@ -37,12 +37,17 @@ const login = async (req, res) => {
 const logOut = async (req,res)=>{
   try {
     const {email} = req.query;
-    const user = await model.findOne({
+    const user = UserModel.findOne({
+      include:{
+        model:UserEmails,
         where:{email}
+      }
     })
+    
     if(user){
     user.token = null
     await user.save();
+
     return res.json({success:true})}
     return res.json('user not found!')
   } catch (error) {
@@ -54,7 +59,7 @@ const isLogined = async (req,res)=>{
   try {
     const {token} = req.body;
 
-    const user = await model.findOne({where:{token}})
+    const user = await UserModel.findOne({where:{token}})
  
     if(user){
       return res.status(200).json(user)
