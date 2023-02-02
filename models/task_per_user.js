@@ -20,7 +20,8 @@ module.exports = (sequelize, DataTypes) => {
     startDate:DataTypes.DATE,
     deadlineAtWeek:DataTypes.STRING,
     deadline:DataTypes.DATE,
-    position:DataTypes.INTEGER
+    position:DataTypes.INTEGER,
+    point:DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Task_per_User',

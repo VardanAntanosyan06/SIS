@@ -33,7 +33,7 @@ const dashboard = async (req, res) => {
 
       const overallProgress = Math.round(completed*totalPoints/100)
 
-      // const progress = Math.round(complitedTask*totalPoints/100)
+      //  const progress = Math.round(completed*totalPoints/100)
       return res.json({ TrainingDays,totalPoints,completed,overallProgress,RandomGreetingMessages});
     } else {
       return res.json("user not found!");

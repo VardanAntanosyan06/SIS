@@ -174,6 +174,8 @@ const getTasksInCalendar = async (req, res) => {
       if(userSpecificData){
         var duration = moment.duration(moment().diff(userSpecificData.startDate));
         var days = Math.floor(duration.asDays());
+
+        console.log(days,"+++++++++++++",userSpecificData.taskId);
       }
       task = {
         ...task,
@@ -181,7 +183,7 @@ const getTasksInCalendar = async (req, res) => {
         startDate:userSpecificData?userSpecificData.startDate:null,
         // deadlineAtWeek:userSpecificData?userSpecificData.deadlineAtWeek:null,
         position:userSpecificData?userSpecificData.position:null,
-        days:days?days>0?days:null:null,
+        days:days!==undefined?days>-1?days:null:null,
         SubTasks: task.SubTasks.map(_subTask => 
           _subTask.SubTask_per_Users.length === 1 ? 
           (() => {
