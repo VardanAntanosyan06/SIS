@@ -1065,6 +1065,5 @@ module.exports = {
   UniversityTable,
   TaskTable,
   testUserExample,
-  emails,
-  successMessages
+  emails
 };

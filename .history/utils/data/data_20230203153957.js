@@ -85,8 +85,8 @@ const successMessages = [
     status:"Good",
     text:"<p>With our cutting-edge technology, you are on your way to securing a spot at your dream university soon.</p> <p>We hope to see you rise to an Excellent level soon. Keep up the good work. Sky's the limit, so Prepare Different.</p>"
   },  {
-    status:"Unsatisfactory",
-    text:"<p>: The AI hints to us that your current progress toward your dream university needs to be improved. Thus, we encourage you to use the application more actively, follow app’s recommendations, and complete tasks promptly.</p> <p>Sky's the limit, so Prepare Different.</p>"
+    status:"Excellent",
+    text:"<p>: The AI hints to us that your current progress toward your dream university needs to be improved. Thus, we encourage you to use the application more actively, follow app’s recommendations, and complete tasks promptly.< Keep up the exceptional work by Preparing Differently</p>"
   }
 ]
 const UniversityTable = [
@@ -1065,6 +1065,5 @@ module.exports = {
   UniversityTable,
   TaskTable,
   testUserExample,
-  emails,
-  successMessages
+  emails
 };

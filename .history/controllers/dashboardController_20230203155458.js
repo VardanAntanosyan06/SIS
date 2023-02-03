@@ -68,7 +68,7 @@ const dashboard = async (req, res) => {
       if (doneTasks.length > LateDoneTasks.length + overdueTasks.length) {
         successMesange = await SuccessMessages.findOne({
           where: { status: "Excellent" },
-          attributes: { exclude: ["id"] },
+          exclude: ["id"],
         });
       } else if (
         doneTasks.length ===
@@ -76,7 +76,7 @@ const dashboard = async (req, res) => {
       ) {
         successMesange = await SuccessMessages.findOne({
           where: { status: "Good" },
-          attributes: { exclude: ["id"] },
+          exclude: ["id"],
         });
       } else if (
         doneTasks.length <
