@@ -80,7 +80,7 @@ const successMessages = [
   {
     status:"Excellent",
     textPart1:"With your progress, you will unlock your true potential and make the most of your university application with our AI-powered App.",
-    textPart2:"Keep up the exceptional work by Preparing Differently."
+    textpart2:"Keep up the exceptional work by Preparing Differently."
   },
   {
     status:"Good",

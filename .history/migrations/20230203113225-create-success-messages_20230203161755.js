@@ -12,9 +12,6 @@ module.exports = {
       textPart1: {
         type: Sequelize.TEXT("long")
       },
-      textPart2 : {
-        type: Sequelize.TEXT("long")
-      },
       status: {
         type: Sequelize.STRING
       }

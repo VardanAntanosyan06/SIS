@@ -14,8 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   SuccessMessages.init({
-    textPart1: DataTypes.STRING,
-    textPart2: DataTypes.STRING,
+    text: DataTypes,
     status: DataTypes.STRING
   }, {
     sequelize,

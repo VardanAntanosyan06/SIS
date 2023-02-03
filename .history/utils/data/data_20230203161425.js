@@ -79,18 +79,14 @@ const emails = [
 const successMessages = [
   {
     status:"Excellent",
-    textPart1:"With your progress, you will unlock your true potential and make the most of your university application with our AI-powered App.",
-    textPart2:"Keep up the exceptional work by Preparing Differently."
+    text:"<p>With your progress, you will unlock your true potential and make the most of your university application with our AI-powered App.</p> <p> Keep up the exceptional work by Preparing Differently</p>"
   },
   {
     status:"Good",
-    textPart1:"With our cutting-edge technology, you are on your way to securing a spot at your dream university soon. We hope to see you rise to an Excellent level soon",
-    textPart2:"Keep up the good work. Sky's the limit, so Prepare Different."
-  },
-  {
+    textPart1:"<p>With our cutting-edge technology, you are on your way to securing a spot at your dream university soon.</p> <p>We hope to see you rise to an Excellent level soon. Keep up the good work. Sky's the limit, so Prepare Different.</p>"
+  },  {
     status:"Unsatisfactory",
-    textPart1:"The AI hints to us that your current progress toward your dream university needs to be improved. Thus, we encourage you to use the application more actively, follow app’s recommendations, and complete tasks promptly.",
-    textPart2:"Sky's the limit, so Prepare Different."
+    text:"<p>: The AI hints to us that your current progress toward your dream university needs to be improved. Thus, we encourage you to use the application more actively, follow app’s recommendations, and complete tasks promptly.</p> <p>Sky's the limit, so Prepare Different.</p>"
   }
 ]
 const UniversityTable = [

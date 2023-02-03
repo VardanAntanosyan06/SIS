@@ -12,7 +12,7 @@ module.exports = {
       textPart1: {
         type: Sequelize.TEXT("long")
       },
-      textPart2 : {
+      textPart1 : {
         type: Sequelize.TEXT("long")
       },
       status: {

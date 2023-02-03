@@ -9,10 +9,8 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      textPart1: {
-        type: Sequelize.TEXT("long")
-      },
-      textPart2 : {
+      textPart1: DataTypes.STRING,
+      : {
         type: Sequelize.TEXT("long")
       },
       status: {
