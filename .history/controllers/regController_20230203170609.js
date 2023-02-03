@@ -25,7 +25,7 @@ const reg = async (req, res) => {
       console.log(hashEmail);
       const hashPassword = bcrypt.hashSync(password, 10);
 
-      const item = await UserModel.create({fullName,phone,age,country,grade,university,academicProgram,study,termOption,planType,aid,legacy,area,applyingFrom,testSubmit,recentSchool,achievements,admission,activityName,workExperience,addinfo,moreInfo}); 
+      const item = await UserModel.create({}); 
       
 
       await UserEmails.create({

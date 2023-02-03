@@ -61,11 +61,8 @@ module.exports = {
         type:Sequelize.STRING
       },
       achievements:{
-        type:Sequelize.BOOLEAN
-      },
-      admission:{
-        type:Sequelize.BOOLEAN
-      },
+        type:S.BOOLEAN,
+      admission:DataTypes.BOOLEAN,
       activityName: {
         type:Sequelize.STRING
       }, 

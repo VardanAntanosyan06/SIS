@@ -30,8 +30,7 @@ module.exports = (sequelize, DataTypes) => {
     applyingFrom: DataTypes.BOOLEAN,
     testSubmit: DataTypes.STRING,
     recentSchool: DataTypes.STRING,
-    achievements:DataTypes.BOOLEAN,
-    admission:DataTypes.BOOLEAN,
+    ac
     activityName: DataTypes.STRING, 
     workExperience: DataTypes.STRING,
     addinfo: DataTypes.BOOLEAN,

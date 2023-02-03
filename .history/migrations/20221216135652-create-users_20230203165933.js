@@ -60,12 +60,8 @@ module.exports = {
       recentSchool: {
         type:Sequelize.STRING
       },
-      achievements:{
-        type:Sequelize.BOOLEAN
-      },
-      admission:{
-        type:Sequelize.BOOLEAN
-      },
+      achievements:DataTypes.BOOLEAN,
+      admission:DataTypes.BOOLEAN,
       activityName: {
         type:Sequelize.STRING
       }, 

@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
     testSubmit: DataTypes.STRING,
     recentSchool: DataTypes.STRING,
     achievements:DataTypes.BOOLEAN,
-    admission:DataTypes.BOOLEAN,
+    admission:DataTypes>B
     activityName: DataTypes.STRING, 
     workExperience: DataTypes.STRING,
     addinfo: DataTypes.BOOLEAN,

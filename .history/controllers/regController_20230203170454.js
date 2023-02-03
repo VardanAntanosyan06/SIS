@@ -8,7 +8,16 @@ const UserModel = require("../models").Users;
 const reg = async (req, res) => {
   try {
     const {
-      fullName,email,password,phone,age,country,grade,university,academicProgram,study,termOption,planType,aid,legacy,area,applyingFrom,testSubmit,recentSchool,achievements,admission,activityName,workExperience,addinfo,moreInfo,
+      ullName: DataTypes.STRING, 
+      email:"",
+      password:"",
+          phone: DataTypes.STRING,
+          age: DataTypes.DATE,
+          country: DataTypes.STRING,
+          grade: DataTypes.INTEGER,
+          university:DataTypes.STRING,
+          academicProgram:DataTypes.STRING,
+          study,termOption,planType,aid,legacy,area,applyingFrom,testSubmit,recentSchool,achievements,admission,activityName,workExperience,addinfo,moreInfo,
     } = req.body;
     const user = await UserModel.findOne({
       include:{
@@ -25,7 +34,29 @@ const reg = async (req, res) => {
       console.log(hashEmail);
       const hashPassword = bcrypt.hashSync(password, 10);
 
-      const item = await UserModel.create({fullName,phone,age,country,grade,university,academicProgram,study,termOption,planType,aid,legacy,area,applyingFrom,testSubmit,recentSchool,achievements,admission,activityName,workExperience,addinfo,moreInfo}); 
+      const item = await UserModel.create({
+        fullName,
+        phone,
+        age,
+        country,
+        whichClass,
+        term,
+        university,
+        Unyshcool,
+        proffession,
+        planType,
+        aid,
+        legacy,
+        activityName,
+        applyingFrom,
+        testSubmit,
+        recentSchool,
+        report,
+        hadtests,
+        hobby,
+        workExperience,
+        addinfo,
+      }); 
       
 
       await UserEmails.create({

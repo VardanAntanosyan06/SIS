@@ -8,7 +8,30 @@ const UserModel = require("../models").Users;
 const reg = async (req, res) => {
   try {
     const {
-      fullName,email,password,phone,age,country,grade,university,academicProgram,study,termOption,planType,aid,legacy,area,applyingFrom,testSubmit,recentSchool,achievements,admission,activityName,workExperience,addinfo,moreInfo,
+      fullName,
+      email,
+      password,
+      phone,
+      age,
+      country,
+      whichClass,
+      term,
+      university,
+      Unyshcool,
+      proffession,
+      planType,
+      aid,
+      legacy,
+      activityName,
+      applyingFrom,
+      testSubmit,
+      recentSchool,
+      report,
+      hadtests,
+      hobby,
+      workExperience,
+      addinfo,
+      area,
     } = req.body;
     const user = await UserModel.findOne({
       include:{
@@ -25,7 +48,30 @@ const reg = async (req, res) => {
       console.log(hashEmail);
       const hashPassword = bcrypt.hashSync(password, 10);
 
-      const item = await UserModel.create({fullName,phone,age,country,grade,university,academicProgram,study,termOption,planType,aid,legacy,area,applyingFrom,testSubmit,recentSchool,achievements,admission,activityName,workExperience,addinfo,moreInfo}); 
+      const item = await UserModel.create({
+        fullName: DataTypes.STRING, 
+        phone: DataTypes.STRING,
+        age: DataTypes.DATE,
+        country: DataTypes.STRING,
+        grade: DataTypes.INTEGER,
+        university:DataTypes.STRING,
+        academicProgram:DataTypes.STRING,
+        study:DataTypes.STRING,
+        termOption:DataTypes.STRING,
+        planType: DataTypes.STRING,
+        aid: DataTypes.BOOLEAN,
+        legacy: DataTypes.BOOLEAN,
+        area:DataTypes.STRING,
+        applyingFrom: DataTypes.BOOLEAN,
+        testSubmit: DataTypes.STRING,
+        recentSchool: DataTypes.STRING,
+        achievements:DataTypes.BOOLEAN,
+        admission:DataTypes.BOOLEAN,
+        activityName: DataTypes.STRING, 
+        workExperience: DataTypes.STRING,
+        addinfo: DataTypes.BOOLEAN,
+        moreInfo: DataTypes.STRING,
+      }); 
       
 
       await UserEmails.create({

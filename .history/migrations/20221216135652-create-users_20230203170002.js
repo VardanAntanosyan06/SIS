@@ -64,7 +64,7 @@ module.exports = {
         type:Sequelize.BOOLEAN
       },
       admission:{
-        type:Sequelize.BOOLEAN
+        type:
       },
       activityName: {
         type:Sequelize.STRING

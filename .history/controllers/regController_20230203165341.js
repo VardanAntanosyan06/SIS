@@ -8,7 +8,30 @@ const UserModel = require("../models").Users;
 const reg = async (req, res) => {
   try {
     const {
-      fullName,email,password,phone,age,country,grade,university,academicProgram,study,termOption,planType,aid,legacy,area,applyingFrom,testSubmit,recentSchool,achievements,admission,activityName,workExperience,addinfo,moreInfo,
+      fullName,
+      email,
+      password,
+      phone,
+      age,
+      country,
+      whichClass,
+      term,
+      university,
+      Unyshcool,
+      proffession,
+      planType,
+      aid,
+      legacy,
+      activityName,
+      applyingFrom,
+      testSubmit,
+      recentSchool,
+      report,
+      hadtests,
+      hobby,
+      workExperience,
+      addinfo,
+      area,
     } = req.body;
     const user = await UserModel.findOne({
       include:{
@@ -16,7 +39,8 @@ const reg = async (req, res) => {
       where:{email}
     }});
 
-  
+    
+   
     if (!user) {
       const isMail = await UserEmails.findOne({where:{email}})
       console.log(isMail);
@@ -25,7 +49,29 @@ const reg = async (req, res) => {
       console.log(hashEmail);
       const hashPassword = bcrypt.hashSync(password, 10);
 
-      const item = await UserModel.create({fullName,phone,age,country,grade,university,academicProgram,study,termOption,planType,aid,legacy,area,applyingFrom,testSubmit,recentSchool,achievements,admission,activityName,workExperience,addinfo,moreInfo}); 
+      const item = await UserModel.create({
+        fullName,
+        phone,
+        age,
+        country,
+        whichClass,
+        term,
+        university,
+        Unyshcool,
+        proffession,
+        planType,
+        aid,
+        legacy,
+        activityName,
+        applyingFrom,
+        testSubmit,
+        recentSchool,
+        report,
+        hadtests,
+        hobby,
+        workExperience,
+        addinfo,
+      }); 
       
 
       await UserEmails.create({
@@ -60,7 +106,7 @@ const reg = async (req, res) => {
       return res.json("user alredy exit");
     }
   } catch (error) {
-    console.log(error)  
+    console.log(error), "++++++++++++++++++++++++++++++++++++++++++++++++";
   }
 };
 
