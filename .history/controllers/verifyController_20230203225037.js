@@ -4,9 +4,9 @@ const model = require("../models").UserEmails;
 const verify = async (req,res)=>{
     const id = req.query.email.split("id=")[1]
     console.log(id);
-    const item = await model.findOne({where:{userId:id}})
-    if(item){
-        item.isVerified = true;
+    const item = await model.findOne({where:{id}})
+    if(item){isVerified
+        item.isVerifed = true;
 
         await item.save();
         return res.json({success:true})
