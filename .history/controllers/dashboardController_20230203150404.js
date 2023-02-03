@@ -31,7 +31,7 @@ const dashboard = async (req, res) => {
       const doneTasks = myTasks.filter((e)=>  e.status === "Completed")
       const inProgressTasks = myTasks.filter((e)=>  e.status === "In Progress")
       const LateDoneTasks = myTasks.filter((e)=>  e.status === "Late Done")
-      const overdueTasks = myTasks.filter((e)=>  e.status === "Overdue")
+      const overdueTasks = myTasks.filter((e)=>  e.status === "overdue")
 
       const safetyPoints = myUni.sefetyPointMin; 
       const safetyPointsExtra = safetyPoints*30/100; 
@@ -58,7 +58,6 @@ const dashboard = async (req, res) => {
       }else if(doneTasks.length<(LateDoneTasks.length+overdueTasks.length)){
         successMesange = "c"
       }
-      console.log(doneTasks.length,"++++++++++++++++++++++++++++",(LateDoneTasks.length+overdueTasks.length));
       return res.json({TrainingDays,totalPoints,completed,extraculicular,myPoints,RandomGreetingMessages,progressWithPercent,overAllProgressDone,overAllProgressInProgress,successMesange});
     } else {
       return res.json("user not found!");

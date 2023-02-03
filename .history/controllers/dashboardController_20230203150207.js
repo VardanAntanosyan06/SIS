@@ -31,7 +31,7 @@ const dashboard = async (req, res) => {
       const doneTasks = myTasks.filter((e)=>  e.status === "Completed")
       const inProgressTasks = myTasks.filter((e)=>  e.status === "In Progress")
       const LateDoneTasks = myTasks.filter((e)=>  e.status === "Late Done")
-      const overdueTasks = myTasks.filter((e)=>  e.status === "Overdue")
+      const overdueTasks = myTasks.filter((e)=>  e.status === "overdue")
 
       const safetyPoints = myUni.sefetyPointMin; 
       const safetyPointsExtra = safetyPoints*30/100; 
@@ -49,17 +49,10 @@ const dashboard = async (req, res) => {
       const progressWithPercent = Math.round(myPoints/safetyPoints*100*10)/10
       const overAllProgressDone = Math.round(doneTasks.length/Tasks.length*100*10)/10
       const overAllProgressInProgress = Math.round(inProgressTasks.length/Tasks.length*100*10)/10
-      let successMesange = "";
+      const successMesange = "";
 
-      if(doneTasks.length>(LateDoneTasks.length+overdueTasks.length)){
-        successMesange = "a"
-      }else if(doneTasks.length===(LateDoneTasks.length+overdueTasks.length)){
-        successMesange = "b"
-      }else if(doneTasks.length<(LateDoneTasks.length+overdueTasks.length)){
-        successMesange = "c"
-      }
-      console.log(doneTasks.length,"++++++++++++++++++++++++++++",(LateDoneTasks.length+overdueTasks.length));
-      return res.json({TrainingDays,totalPoints,completed,extraculicular,myPoints,RandomGreetingMessages,progressWithPercent,overAllProgressDone,overAllProgressInProgress,successMesange});
+      if(doneTasks.length>)
+      return res.json({TrainingDays,totalPoints,completed,extraculicular,myPoints,RandomGreetingMessages,progressWithPercent,overAllProgressDone,overAllProgressInProgress});
     } else {
       return res.json("user not found!");
     }

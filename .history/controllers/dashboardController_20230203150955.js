@@ -31,7 +31,7 @@ const dashboard = async (req, res) => {
       const doneTasks = myTasks.filter((e)=>  e.status === "Completed")
       const inProgressTasks = myTasks.filter((e)=>  e.status === "In Progress")
       const LateDoneTasks = myTasks.filter((e)=>  e.status === "Late Done")
-      const overdueTasks = myTasks.filter((e)=>  e.status === "Overdue")
+      const overdueTasks = myTasks.filter((e)=>  e.status === "overdue")
 
       const safetyPoints = myUni.sefetyPointMin; 
       const safetyPointsExtra = safetyPoints*30/100; 

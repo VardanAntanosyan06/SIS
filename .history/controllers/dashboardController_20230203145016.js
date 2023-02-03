@@ -26,12 +26,11 @@ const dashboard = async (req, res) => {
       attributes:['text']
     })
       const myTasks = await Task_per_User.findAll({where:{userId:user.id}})
-      const Tasks = await Task.findAll({where:{universityId:myUni.id}})
-      
+      const Tasks = await Task.findAll({where:{un:user.id}})
+      //const overAllProgressDone = await Task_per_User.findAll({where:{userId:user.id,status:"Completed"}});
+      //const overAllProgressInProgress = await Task_per_User.findAll({where:{userId:user.id,status:"In Progress"}});
       const doneTasks = myTasks.filter((e)=>  e.status === "Completed")
       const inProgressTasks = myTasks.filter((e)=>  e.status === "In Progress")
-      const LateDoneTasks = myTasks.filter((e)=>  e.status === "Late Done")
-      const overdueTasks = myTasks.filter((e)=>  e.status === "Overdue")
 
       const safetyPoints = myUni.sefetyPointMin; 
       const safetyPointsExtra = safetyPoints*30/100; 
@@ -47,19 +46,11 @@ const dashboard = async (req, res) => {
 
       const extraculicular = Math.round(myPoints/safetyPointsExtra*100*10)/10
       const progressWithPercent = Math.round(myPoints/safetyPoints*100*10)/10
-      const overAllProgressDone = Math.round(doneTasks.length/Tasks.length*100*10)/10
-      const overAllProgressInProgress = Math.round(inProgressTasks.length/Tasks.length*100*10)/10
-      let successMesange = "";
+      const overAllProgressDone = Math.round(doneTasks.length/Task.length*100*10)/10
+      const overAllProgressInProgress = Math.round(inProgressTasks.length/myTasks.length*100*10)/10
 
-      if(doneTasks.length>(LateDoneTasks.length+overdueTasks.length)){
-        successMesange = "a"
-      }else if(doneTasks.length===(LateDoneTasks.length+overdueTasks.length)){
-        successMesange = "b"
-      }else if(doneTasks.length<(LateDoneTasks.length+overdueTasks.length)){
-        successMesange = "c"
-      }
-      console.log(doneTasks.length,"++++++++++++++++++++++++++++",(LateDoneTasks.length+overdueTasks.length));
-      return res.json({TrainingDays,totalPoints,completed,extraculicular,myPoints,RandomGreetingMessages,progressWithPercent,overAllProgressDone,overAllProgressInProgress,successMesange});
+      console.log(myTasks.length,"+++++++++++++",doneTasks.length,"++++++++++++++++++++++++",inProgressTasks.length,"++++++++++++++++++++++");
+      return res.json({ TrainingDays,totalPoints,completed,extraculicular,myPoints,RandomGreetingMessages,progressWithPercent,overAllProgressDone,overAllProgressInProgress});
     } else {
       return res.json("user not found!");
     }
