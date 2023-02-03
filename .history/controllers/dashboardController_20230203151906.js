@@ -54,9 +54,9 @@ const dashboard = async (req, res) => {
       if(doneTasks.length>(LateDoneTasks.length+overdueTasks.length)){
         successMesange = "With your progress, you will unlock your true potential and make the most of your university application with our AI-powered App. Keep up the exceptional work by Preparing Differently."
       }else if(doneTasks.length===(LateDoneTasks.length+overdueTasks.length)){
-        successMesange = "With our cutting-edge technology, you are on your way to securing a spot at your dream university soon. We hope to see you rise to an Excellent level soon. Keep up the good work. Sky's the limit, so Prepare Different."
+        successMesange = "b"
       }else if(doneTasks.length<(LateDoneTasks.length+overdueTasks.length)){
-        successMesange = "The AI hints to us that your current progress toward your dream university needs to be improved. Thus, we encourage you to use the application more actively, follow app’s recommendations, and complete tasks promptly. Sky's the limit, so Prepare Different."
+        successMesange = "c"
       }
       console.log(doneTasks.length,"++++++++++++++++++++++++++++",(LateDoneTasks.length+overdueTasks.length));
       return res.json({TrainingDays,totalPoints,completed,extraculicular,myPoints,RandomGreetingMessages,progressWithPercent,overAllProgressDone,overAllProgressInProgress,successMesange});
