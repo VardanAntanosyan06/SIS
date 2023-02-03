@@ -9,7 +9,7 @@ const resetPass = async (req, res) => {
     const id = reqQuery.email.split("?id=")[1]
 
     const user = await model.findOne({where:{id}})
-    if(user){
+    if(user){ 
       user.password = bcrypt.hashSync(password,10);
 
       user.save();

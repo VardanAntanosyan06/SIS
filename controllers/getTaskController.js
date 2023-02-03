@@ -257,7 +257,7 @@ const getTasksFilter = async(req,res)=>{
       [Op.or] : [
         {facultName:{ [Op.like]: '%' + name.toUpperCase() + '%'}},
         {positionName:{ [Op.like]: '%' + name + '%'}},
-        {compamyName:{ [Op.like]: '%' + name + '%'}}
+        {companyName:{ [Op.like]: '%' + name + '%'}}
       ]
   }})
     console.log(name);

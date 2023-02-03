@@ -55,6 +55,8 @@ const changeSubTaskStatus = async (req,res)=>{
                     }
                     if(completedSubTasks.length===myTask.length){
                         taskStatus = "Late Done"
+                        thisTask.point += 0.5
+                        await thisTask.save()
                     }
                 }else{
                 if(completedSubTasks.length<myTask.length){
