@@ -63,13 +63,12 @@ const getYourTasks = async (req, res) => {
         let taskStatus = true;
 
         const userSpecificData = task.Task_per_Users.length === 0 ? 
-        {createdAt: null, status: null,point:0} : 
+        {createdAt: null, status: null} : 
         task.Task_per_Users.filter(e => +e.userId === +user.id)[0]; 
 
         task = {
           ...task,
           status: userSpecificData?userSpecificData.status:null,
-          point: userSpecificData?userSpecificData.point:null,
           SubTasks: task.SubTasks.map(_subTask => 
             _subTask.SubTask_per_Users.length === 1 ? 
             (() => {
