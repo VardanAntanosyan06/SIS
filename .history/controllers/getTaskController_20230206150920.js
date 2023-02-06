@@ -69,8 +69,6 @@ const getYourTasks = async (req, res) => {
         task = {
           ...task,
           status: userSpecificData?userSpecificData.status:null,
-          status: userSpecificData?userSpecificData.status:null,
-          pont: userSpecificData?userSpecificData.point:0,
           SubTasks: task.SubTasks.map(_subTask => 
             _subTask.SubTask_per_Users.length === 1 ? 
             (() => {

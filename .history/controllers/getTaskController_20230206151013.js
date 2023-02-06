@@ -70,7 +70,7 @@ const getYourTasks = async (req, res) => {
           ...task,
           status: userSpecificData?userSpecificData.status:null,
           status: userSpecificData?userSpecificData.status:null,
-          pont: userSpecificData?userSpecificData.point:0,
+          status: userSpecificData?userSpecificData.status:null,
           SubTasks: task.SubTasks.map(_subTask => 
             _subTask.SubTask_per_Users.length === 1 ? 
             (() => {

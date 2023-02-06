@@ -69,8 +69,6 @@ const getYourTasks = async (req, res) => {
         task = {
           ...task,
           status: userSpecificData?userSpecificData.status:null,
-          status: userSpecificData?userSpecificData.status:null,
-          pont: userSpecificData?userSpecificData.point:0,
           SubTasks: task.SubTasks.map(_subTask => 
             _subTask.SubTask_per_Users.length === 1 ? 
             (() => {
@@ -78,6 +76,7 @@ const getYourTasks = async (req, res) => {
                 ..._subTask, 
                 status: _subTask.SubTask_per_Users[0].status,
                 description: _subTask.SubTask_per_Users[0].description,
+                points: _subTask.SubTask_per_Users[0].points
               }
 
               delete _sub_task.SubTask_per_Users
