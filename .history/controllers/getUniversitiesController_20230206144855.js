@@ -1,6 +1,5 @@
 
 const UniModel = require("../models").UniversityTable;
-const UserModel = require("../models").Users;
 
 const getAllUniversities = async (req, res) => {
   try {
@@ -24,7 +23,7 @@ const getMyUniversity = async (req, res) => {
 
     return res.json("not found");
   } catch (error) {
-    console.log(error);
+    console.log(error );
     return res.json("something went wrong")
   }
 };

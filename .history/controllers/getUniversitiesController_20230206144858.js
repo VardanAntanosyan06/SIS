@@ -1,6 +1,5 @@
 
 const UniModel = require("../models").UniversityTable;
-const UserModel = require("../models").Users;
 
 const getAllUniversities = async (req, res) => {
   try {

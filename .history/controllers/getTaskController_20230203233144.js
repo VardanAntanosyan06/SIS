@@ -36,7 +36,7 @@ const getYourTasks = async (req, res) => {
     if (user) {
       console.log(user.university);
       const myUniversity = await UniversityModel.findOne({
-         where: { name: user.university },
+         where: { name: "Yale University" },
       });
       console.log(myUniversity);
       let tasks = await TaskModel.findAll({

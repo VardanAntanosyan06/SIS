@@ -34,11 +34,10 @@ const getYourTasks = async (req, res) => {
       where: { token: token.replace("Bearer ", "") },
     });
     if (user) {
-      console.log(user.university);
       const myUniversity = await UniversityModel.findOne({
          where: { name: user.university },
       });
-      console.log(myUniversity);
+      console.log();
       let tasks = await TaskModel.findAll({
         where: {
           universityId:myUniversity.id,
