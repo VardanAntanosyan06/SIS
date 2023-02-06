@@ -63,7 +63,7 @@ const getYourTasks = async (req, res) => {
         let taskStatus = true;
 
         const userSpecificData = task.Task_per_Users.length === 0 ? 
-        {createdAt: null, status: null,point:0,deadline:null} : 
+        {createdAt: null, status: null,point:0} : 
         task.Task_per_Users.filter(e => +e.userId === +user.id)[0]; 
 
         task = {
