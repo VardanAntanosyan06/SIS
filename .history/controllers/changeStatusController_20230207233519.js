@@ -98,13 +98,10 @@ const addDescription = async (req,res)=>{
     myTask.description = description;
 
     myTask.save();
-
-    return res.json({myTask})
     } catch (error) {
-        return res.json("something went wrong")
+        
     }
 }
 module.exports = {
     changeSubTaskStatus,
-    addDescription
 }

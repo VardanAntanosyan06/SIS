@@ -18,11 +18,10 @@ module.exports = (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER,
     status:DataTypes.STRING,
     startDate:DataTypes.DATE,
-    deadlineAtWeek:DataTypes.STRING,
     deadline:DataTypes.DATE,
     position:DataTypes.INTEGER,
     point:DataTypes.INTEGER,
-    description:DataTypes.STRING
+    description:Data
   }, {
     sequelize,
     modelName: 'Task_per_User',

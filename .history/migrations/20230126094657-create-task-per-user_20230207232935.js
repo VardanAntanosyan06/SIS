@@ -37,7 +37,8 @@ module.exports = {
         defaultValue:0
       },
       description:{
-        type: Sequelize.TEXT("long")
+        type:Se\
+        
       },
       createdAt: {
         allowNull: false,

@@ -95,16 +95,11 @@ const addDescription = async (req,res)=>{
 
     const myTask = await Task_per_User.findOne({where:{userId:user.id,taskId:id}})
     
-    myTask.description = description;
-
-    myTask.save();
-
-    return res.json({myTask})
+    myTask.description = 
     } catch (error) {
-        return res.json("something went wrong")
+        
     }
 }
 module.exports = {
     changeSubTaskStatus,
-    addDescription
 }

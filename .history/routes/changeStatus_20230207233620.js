@@ -3,5 +3,5 @@ var router = express.Router();
 const changeController = require("../controllers/changeStatusController");
 
 router.patch("/subTaskStatus",changeController.changeSubTaskStatus)
-router.patch("/taskDescription",changeController.addDescription)
+router.patch("/subTaskStatus",changeController.changeSubTaskStatus)
 module.exports = router;

@@ -87,24 +87,7 @@ const changeSubTaskStatus = async (req,res)=>{
 }
 
 
-const addDescription = async (req,res)=>{
-    try {
-    const {id,description} = req.body;
-    const {authorization: token} = req.headers;
-    const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
-
-    const myTask = await Task_per_User.findOne({where:{userId:user.id,taskId:id}})
-    
-    myTask.description = description;
-
-    myTask.save();
-
-    return res.json({myTask})
-    } catch (error) {
-        return res.json("something went wrong")
-    }
-}
+const addDescription = async (req,res)
 module.exports = {
     changeSubTaskStatus,
-    addDescription
 }

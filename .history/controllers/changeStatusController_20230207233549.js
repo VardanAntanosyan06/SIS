@@ -106,5 +106,4 @@ const addDescription = async (req,res)=>{
 }
 module.exports = {
     changeSubTaskStatus,
-    addDescription
 }

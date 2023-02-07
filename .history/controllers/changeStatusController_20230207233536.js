@@ -101,10 +101,9 @@ const addDescription = async (req,res)=>{
 
     return res.json({myTask})
     } catch (error) {
-        return res.json("something went wrong")
+        return 
     }
 }
 module.exports = {
     changeSubTaskStatus,
-    addDescription
 }

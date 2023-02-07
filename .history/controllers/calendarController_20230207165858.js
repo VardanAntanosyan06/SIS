@@ -14,9 +14,9 @@ const create = async (req, res) => {
   try {
     const {taskId,startDate,position} =req.body;
     const deadlineAtWeek = await TimeTaskModel.findOne({where:{task_id:taskId}})
-
     
-      let myTasks = await Task_per_Users.findAll({
+
+    let myTasks = await Task_per_Users.findAll({
       where:{
           userId:user.id,
                },
