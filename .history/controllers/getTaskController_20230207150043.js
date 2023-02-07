@@ -268,29 +268,15 @@ const getTasksFilter = async(req,res)=>{
 const taksDescription = async (req,res)=>{
   try {
     const {id} = req.query;
-    const { authorization: token } = req.headers;
-    const user = await UserModel.findOne({
-      where: {token: token.replace("Bearer ", "") },
-    });
-      const taskDesc = await TimeTasks.findAll({
-      where:{
-        task_id:id
-      },
-      attributes:['taskSpentWeek','point','taskSpentDays']
-      })
-      const myTask = await Task_per_User.findOne({
-        where:
-        {
-        userId:user.id,
-        taskId:id
-        },
-      attributes:['startDate']
-      }) 
-    const daysDiff = moment(myTask.startDate).diff(moment(),'days')
-  
-    return res.json({taskDesc,currentDay:daysDiff})
+    
+    const taskDesc = await TimeTasks.findAll({
+      where:{task_id:id},
+      attributes:['text']
+    })
+
+    return res.json({taskDesc})
   } catch (error) {
-    console.log(error);
+    
   }
 }
 module.exports = {

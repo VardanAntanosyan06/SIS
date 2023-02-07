@@ -62,7 +62,6 @@ router.get("/myFree",getTasks.getYourFreeTasks)
 router.get("/inCalendar",getTasks.getTasksInCalendar)
 router.get("/subTasks",getTasks.getSubTasks)
 router.get("/filter",getTasks.getTasksFilter)
-router.get("/description",getTasks.taksDescription)
 
 
 module.exports = router;

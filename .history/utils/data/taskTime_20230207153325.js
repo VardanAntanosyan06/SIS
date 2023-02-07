@@ -165,7 +165,7 @@ const timeTasks = [
     task_id: 7,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
+
 },
   {
     task_id: 7,

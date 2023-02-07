@@ -17,6 +17,7 @@ module.exports = {
       },
       taskSpentDays : {
         type: Sequelize.INTEGER,
+      
       },
       point: {
         type: Sequelize.INTEGER

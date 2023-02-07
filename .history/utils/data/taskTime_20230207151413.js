@@ -20,8 +20,8 @@ const timeTasks = [
   {
     task_id: 1,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 2,
@@ -45,8 +45,8 @@ const timeTasks = [
   {
     task_id: 2,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 3,
@@ -70,8 +70,8 @@ const timeTasks = [
   {
     task_id: 3,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 4,
@@ -95,8 +95,8 @@ const timeTasks = [
   {
     task_id: 4,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 5,
@@ -120,135 +120,129 @@ const timeTasks = [
   {
     task_id: 5,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 6,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 6,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
-},
-  {
-    task_id: 6,
-    taskSpentWeek: "9-10 weeks",
-    point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 6,
+    taskSpentWeek: "9-10 weeks",
+    point: 1,
+
+},
+  {
+    task_id: 6,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5 ,
-    taskSpentDays:77
-,
+
+    point: 0.5
+    ,
   },
   {
     task_id: 7,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 7,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 7,
-    taskSpentWeek: "9-10 weeks",
+    taskSpentWeek: "9-19 weeks",
     point: 1,
-    taskSpentDays:70
+
 },
   {
     task_id: 7,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
+    point: 0.5
+    ,
   },
   {
     task_id: 8,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 8,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 8,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 8,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 9,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 9,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 9,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 9,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 10,
     taskSpentWeek: "up to 4 weeks",
     point: 2,
-    taskSpentDays:24
+
 },
   {
     task_id: 10,
     taskSpentWeek: "5-7 weeks",
-    point: 1.5,
-    taskSpentDays:49
-
+    point: 1.5
+    ,
   },
   {
     task_id: 10,
     taskSpentWeek: "8-9 weeks",
     point: 1,
-    taskSpentDays:53
+
 },
   {
     task_id: 10,
     taskSpentWeek: "10 && more weeks",
-    point: 0.5,
-    taskSpentDays:70
+    point: 0.5
+    ,
   },
   {
     task_id: 11,
@@ -272,8 +266,8 @@ const timeTasks = [
   {
     task_id: 11,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 12,
@@ -297,8 +291,8 @@ const timeTasks = [
   {
     task_id: 12,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 13,
@@ -322,8 +316,8 @@ const timeTasks = [
   {
     task_id: 13,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 14,
@@ -347,8 +341,8 @@ const timeTasks = [
   {
     task_id: 14,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 15,
@@ -372,72 +366,68 @@ const timeTasks = [
   {
     task_id: 15,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 16,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 16,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 16,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 16,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 17,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 17,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 17,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 17,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 18,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 18,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 18,
@@ -448,61 +438,56 @@ const timeTasks = [
   {
     task_id: 18,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 19,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 19,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 19,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 19,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 20,
     taskSpentWeek: "up to 4 weeks",
     point: 2,
-    taskSpentDays:24
 
 },
   {
     task_id: 20,
     taskSpentWeek: "5-7 weeks",
-    point: 1.5,
-    taskSpentDays:49
-
+    point: 1.5
+    ,
   },
   {
     task_id: 20,
     taskSpentWeek: "8-9 weeks",
     point: 1,
-    taskSpentDays:53
+
 },
   {
     task_id: 20,
     taskSpentWeek: "10-11 weeks",
-    point: 0.5,
-    taskSpentDays:77
+    point: 0.5
+    ,
   },
   {
     task_id: 21,
@@ -526,8 +511,8 @@ const timeTasks = [
   {
     task_id: 21,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 21,
@@ -551,8 +536,8 @@ const timeTasks = [
   {
     task_id: 21,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 22,
@@ -576,8 +561,8 @@ const timeTasks = [
   {
     task_id: 22,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 23,
@@ -601,8 +586,8 @@ const timeTasks = [
   {
     task_id: 23,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 24,
@@ -626,8 +611,8 @@ const timeTasks = [
   {
     task_id: 24,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 1,
@@ -651,8 +636,8 @@ const timeTasks = [
   {
     task_id: 24,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 25,
@@ -676,14 +661,14 @@ const timeTasks = [
   {
     task_id: 25,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 26,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 26,
@@ -700,112 +685,104 @@ const timeTasks = [
   {
     task_id: 26,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 27,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 27,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 27,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 27,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 28,
     taskSpentWeek: "up to 5 weeks",
-    point:2.5,
-    taskSpentDays:35
+    point: 3,
+
 },
   {
     task_id: 28,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 1,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 1,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 29,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 29,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 29,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 29,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 30,
     taskSpentWeek: "up to 4 weeks",
     point: 2,
-    taskSpentDays:24
 
 },
   {
     task_id: 30,
     taskSpentWeek: "5-7 weeks",
-    point: 1.5,
-    taskSpentDays:49
-
+    point: 1.5
+    ,
   },
   {
     task_id: 30,
     taskSpentWeek: "8-9 weeks",
     point: 1,
-    taskSpentDays:53
+
 },
   {
     task_id: 30,
     taskSpentWeek: "10 && more weeks",
-    point: 0.5,
-    taskSpentDays:70
+    point: 0.5
+    ,
   },
   {
     task_id: 31,
@@ -829,8 +806,8 @@ const timeTasks = [
   {
     task_id: 31,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 32,
@@ -854,8 +831,8 @@ const timeTasks = [
   {
     task_id: 32,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 33,
@@ -879,8 +856,8 @@ const timeTasks = [
   {
     task_id: 33,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 34,
@@ -904,34 +881,32 @@ const timeTasks = [
   {
     task_id: 34,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 35,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 35,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 1,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 35,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 36,
@@ -944,47 +919,43 @@ const timeTasks = [
     task_id: 36,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 36,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 36,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 40,
     taskSpentWeek: "up to 4 weeks",
     point: 2,
-    taskSpentDays:24
 
 },
   {
     task_id: 40,
     taskSpentWeek: "5-7 weeks",
-    point: 1.5,
-    taskSpentDays:49
-
+    point: 1.5
+    ,
   },
   {
     task_id: 40,
     taskSpentWeek: "8-9 weeks",
     point: 1,
-    taskSpentDays:53
+
 },
   {
     task_id: 40,
     taskSpentWeek: "10 && more weeks",
-    point: 0.5,
-    taskSpentDays:70
+    point: 0.5
+    ,
   },
   {
     task_id: 41,
@@ -1008,8 +979,8 @@ const timeTasks = [
   {
     task_id: 41,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 42,
@@ -1033,8 +1004,8 @@ const timeTasks = [
   {
     task_id: 42,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 43,
@@ -1058,8 +1029,8 @@ const timeTasks = [
   {
     task_id: 43,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 44,
@@ -1083,8 +1054,8 @@ const timeTasks = [
   {
     task_id: 44,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 45,
@@ -1108,138 +1079,128 @@ const timeTasks = [
   {
     task_id: 45,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 46,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 46,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 46,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 46,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 47,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 47,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 47,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 47,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 48,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 48,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 1,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 48,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 49,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 49,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 49,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 49,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 50,
     taskSpentWeek: "up to 4 weeks",
     point: 2,
-    taskSpentDays:24
 
 },
   {
     task_id: 50,
     taskSpentWeek: "5-7 weeks",
-    point: 1.5,
-    taskSpentDays:49
-
+    point: 1.5
+    ,
   },
   {
     task_id: 50,
     taskSpentWeek: "8-9 weeks",
     point: 1,
-    taskSpentDays:53
+
 },
   {
     task_id: 50,
     taskSpentWeek: "10 && more weeks",
-    point: 0.5,
-    taskSpentDays:70
+    point: 0.5
+    ,
   },
   {
     task_id: 51,
@@ -1263,8 +1224,8 @@ const timeTasks = [
   {
     task_id: 51,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 52,
@@ -1288,8 +1249,8 @@ const timeTasks = [
   {
     task_id: 52,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 53,
@@ -1313,8 +1274,8 @@ const timeTasks = [
   {
     task_id: 53,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 54,
@@ -1338,8 +1299,8 @@ const timeTasks = [
   {
     task_id: 54,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 55,
@@ -1363,138 +1324,128 @@ const timeTasks = [
   {
     task_id: 55,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 56,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 56,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
-},
-  {
-    task_id: 56,
-    taskSpentWeek: "9-10 weeks",
-    point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 56,
-    taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
+    taskSpentWeek: "9-10 weeks",
+    point: 1,
 
+},
+  {
+    task_id: 56,
+    taskSpentWeek: "11 && more weeks",
+    point: 0.5
+    ,
   },
   {
     task_id: 57,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 57,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 57,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 57,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 58,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 58,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 58,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 58,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 59,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 59,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 59,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 59,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 60,
     taskSpentWeek: "up to 4 weeks",
     point: 2,
-    taskSpentDays:24
 
 },
   {
     task_id: 60,
     taskSpentWeek: "5-7 weeks",
-    point: 1.5,
-    taskSpentDays:49
-
+    point: 1.5
+    ,
   },
   {
     task_id: 60,
     taskSpentWeek: "8-9 weeks",
     point: 1,
-    taskSpentDays:53
+
 },
   {
     task_id: 60,
     taskSpentWeek: "10 && more weeks",
-    point: 0.5,
-    taskSpentDays:70
+    point: 0.5
+    ,
   },
   {
     task_id: 61,
@@ -1518,8 +1469,8 @@ const timeTasks = [
   {
     task_id: 61,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 1,
@@ -1543,8 +1494,8 @@ const timeTasks = [
   {
     task_id: 62,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 63,
@@ -1568,8 +1519,8 @@ const timeTasks = [
   {
     task_id: 63,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 64,
@@ -1593,8 +1544,8 @@ const timeTasks = [
   {
     task_id: 64,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 65,
@@ -1618,137 +1569,128 @@ const timeTasks = [
   {
     task_id: 65,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 66,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 66,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 1,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 11,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 67,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 67,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 67,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 1,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 68,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 68,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 68,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 68,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 69,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 69,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 69,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 69,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 70,
     taskSpentWeek: "up to 4 weeks",
     point: 2,
-    taskSpentDays:24
 
 },
   {
     task_id: 70,
     taskSpentWeek: "5-7 weeks",
-    point: 1.5,
-    taskSpentDays:49
-
+    point: 1.5
+    ,
   },
   {
     task_id: 70,
     taskSpentWeek: "8-9 weeks",
     point: 1,
-    taskSpentDays:53
+
 },
   {
     task_id: 70,
     taskSpentWeek: "10 && more weeks",
-    point: 0.5,
-    taskSpentDays:70
+    point: 0.5
+    ,
   },
   {
     task_id: 71,
@@ -1772,8 +1714,8 @@ const timeTasks = [
   {
     task_id: 71,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 72,
@@ -1797,8 +1739,8 @@ const timeTasks = [
   {
     task_id: 72,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 73,
@@ -1822,8 +1764,8 @@ const timeTasks = [
   {
     task_id: 73,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 74,
@@ -1847,8 +1789,8 @@ const timeTasks = [
   {
     task_id: 74,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 75,
@@ -1872,164 +1814,152 @@ const timeTasks = [
   {
     task_id: 75,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 76,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 75,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
-},
-  {
-    task_id: 75,
-    taskSpentWeek: "9-10 weeks",
-    point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 75,
-    taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
+    taskSpentWeek: "9-10 weeks",
+    point: 1,
 
+},
+  {
+    task_id: 75,
+    taskSpentWeek: "11 && more weeks",
+    point: 0.5
+    ,
   },
   {
     task_id: 76,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 76,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
-},
-  {
-    task_id: 76,
-    taskSpentWeek: "9-10 weeks",
-    point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 76,
-    taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
+    taskSpentWeek: "9-10 weeks",
+    point: 1,
 
+},
+  {
+    task_id: 76,
+    taskSpentWeek: "11 && more weeks",
+    point: 0.5
+    ,
   },
   {
     task_id: 77,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 77,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 77,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 77,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 78,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 78,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 78,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 78,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 79,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 79,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 79,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 79,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 80,
     taskSpentWeek: "up to 4 weeks",
     point: 2,
-    taskSpentDays:24
 
 },
   {
     task_id: 80,
     taskSpentWeek: "5-7 weeks",
-    point: 1.5,
-    taskSpentDays:49
-
+    point: 1.5
+    ,
   },
   {
     task_id: 80,
     taskSpentWeek: "8-9 weeks",
     point: 1,
-    taskSpentDays:53
+
 },
   {
     task_id: 80,
     taskSpentWeek: "10 && more weeks",
-    point: 0.5,
-    taskSpentDays:70
+    point: 0.5
+    ,
   },
   {
     task_id: 81,
@@ -2053,8 +1983,8 @@ const timeTasks = [
   {
     task_id: 81,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 1,
@@ -2078,8 +2008,8 @@ const timeTasks = [
   {
     task_id: 82,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 83,
@@ -2103,8 +2033,8 @@ const timeTasks = [
   {
     task_id: 83,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 84,
@@ -2128,8 +2058,8 @@ const timeTasks = [
   {
     task_id: 84,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 85,
@@ -2153,20 +2083,20 @@ const timeTasks = [
   {
     task_id: 85,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 86,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 86,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 86,
@@ -2177,47 +2107,44 @@ const timeTasks = [
   {
     task_id: 87,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 87,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 87,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 87,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 87,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 88,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 88,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 88,
@@ -2228,61 +2155,56 @@ const timeTasks = [
   {
     task_id: 88,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 89,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 89,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 89,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 89,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 90,
     taskSpentWeek: "up to 4 weeks",
     point: 2,
-    taskSpentDays:24
 
 },
   {
     task_id: 90,
     taskSpentWeek: "5-7 weeks",
-    point: 1.5,
-    taskSpentDays:49
-
+    point: 1.5
+    ,
   },
   {
     task_id: 90,
     taskSpentWeek: "8-9 weeks",
     point: 1,
-    taskSpentDays:53
+
 },
   {
     task_id: 1,
     taskSpentWeek: "10 && more weeks",
-    point: 0.5,
-    taskSpentDays:70
+    point: 0.5
+    ,
   },
   {
     task_id: 91,
@@ -2306,8 +2228,8 @@ const timeTasks = [
   {
     task_id: 91,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 92,
@@ -2331,8 +2253,8 @@ const timeTasks = [
   {
     task_id: 92,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 93,
@@ -2356,8 +2278,8 @@ const timeTasks = [
   {
     task_id: 93,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 94,
@@ -2381,8 +2303,8 @@ const timeTasks = [
   {
     task_id: 94,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 95,
@@ -2406,112 +2328,104 @@ const timeTasks = [
   {
     task_id: 95,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 96,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 96,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 96,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 1,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 97,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 97,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 97,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 97,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 98,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 98,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 98,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 98,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 100,
     taskSpentWeek: "up to 4 weeks",
     point: 2,
-    taskSpentDays:24
 
 },
   {
     task_id: 100,
     taskSpentWeek: "5-7 weeks",
-    point: 1.5,
-    taskSpentDays:49
-
+    point: 1.5
+    ,
   },
   {
     task_id: 100,
     taskSpentWeek: "8-9 weeks",
     point: 1,
-    taskSpentDays:53
+
 },
   {
     task_id: 100,
     taskSpentWeek: "10 && more weeks",
-    point: 0.5,
-    taskSpentDays:70
+    point: 0.5
+    ,
   },
   {
     task_id: 101,
@@ -2535,8 +2449,8 @@ const timeTasks = [
   {
     task_id: 101,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 102,
@@ -2560,8 +2474,8 @@ const timeTasks = [
   {
     task_id: 102,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 103,
@@ -2585,8 +2499,8 @@ const timeTasks = [
   {
     task_id: 103,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 104,
@@ -2610,8 +2524,8 @@ const timeTasks = [
   {
     task_id: 104,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 105,
@@ -2629,20 +2543,20 @@ const timeTasks = [
   {
     task_id: 105,
     taskSpentWeek: "10-12 weeks",
-    point: 1, 
-    taskSpentDays:84
+    point: 105
+    , taskSpentDays:84
   },
   {
     task_id: 105,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 106,
     taskSpentWeek: "up to 5 weeks",
-    point:2.5,
-    taskSpentDays:35
+    point: 3,
+
 },
   {
     task_id: 106,
@@ -2654,119 +2568,109 @@ const timeTasks = [
     task_id: 106,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 106,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 107,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 107,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 107,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 107,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 108,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 108,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 108,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 108,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 109,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 109,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 109,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 109,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 110,
     taskSpentWeek: "up to 4 weeks",
     point: 2,
-    taskSpentDays:24
 
 },
   {
     task_id: 110,
     taskSpentWeek: "5-7 weeks",
-    point: 1.5,
-    taskSpentDays:49
-
+    point: 1.5
+    ,
   },
   {
     task_id: 110,
     taskSpentWeek: "8-9 weeks",
     point: 1,
-    taskSpentDays:53
+
 },
   {
     task_id: 110,
     taskSpentWeek: "10 && more weeks",
-    point: 0.5,
-    taskSpentDays:70
+    point: 0.5
+    ,
   },
   {
     task_id: 111,
@@ -2790,8 +2694,8 @@ const timeTasks = [
   {
     task_id: 112,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 112,
@@ -2815,8 +2719,8 @@ const timeTasks = [
   {
     task_id: 112,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 113,
@@ -2840,8 +2744,8 @@ const timeTasks = [
   {
     task_id: 113,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 114,
@@ -2865,8 +2769,8 @@ const timeTasks = [
   {
     task_id: 114,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 115,
@@ -2890,138 +2794,128 @@ const timeTasks = [
   {
     task_id: 115,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 116,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 116,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
-},
-  {
-    task_id: 116,
-    taskSpentWeek: "9-10 weeks",
-    point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 116,
-    taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
+    taskSpentWeek: "9-10 weeks",
+    point: 1,
 
+},
+  {
+    task_id: 116,
+    taskSpentWeek: "11 && more weeks",
+    point: 0.5
+    ,
   },
   {
     task_id: 117,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 117,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 117,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 117,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 118,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 118,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 118,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 118,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 119,
     taskSpentWeek: "up to 5 weeks",
-    point: 2.5,
-    taskSpentDays:35
+    point: 2.5
+    ,
   },
   {
     task_id: 119,
     taskSpentWeek: "6-8 weeks",
     point: 2,
-    taskSpentDays:56
+
 },
   {
     task_id: 119,
     taskSpentWeek: "9-10 weeks",
     point: 1,
-    taskSpentDays:70
 
 },
   {
     task_id: 119,
     taskSpentWeek: "11 && more weeks",
-    point: 0.5,
-    taskSpentDays:77
-
+    point: 0.5
+    ,
   },
   {
     task_id: 120,
     taskSpentWeek: "up to 4 weeks",
     point: 2,
-    taskSpentDays:24
 
 },
   {
     task_id: 120,
     taskSpentWeek: "5-7 weeks",
-    point: 1.5,
-    taskSpentDays:49
-
+    point: 1.5
+    ,
   },
   {
     task_id: 120,
     taskSpentWeek: "8-9 weeks",
     point: 1,
-    taskSpentDays:53
+
 },
   {
     task_id: 120,
     taskSpentWeek: "10 && more weeks",
-    point: 0.5,
-    taskSpentDays:70
+    point: 0.5
+    ,
   },
   {
     task_id: 121,
@@ -3045,8 +2939,8 @@ const timeTasks = [
   {
     task_id: 121,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 122,
@@ -3070,8 +2964,8 @@ const timeTasks = [
   {
     task_id: 122,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 123,
@@ -3095,8 +2989,8 @@ const timeTasks = [
   {
     task_id: 123,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 124,
@@ -3120,8 +3014,8 @@ const timeTasks = [
   {
     task_id: 124,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 125,
@@ -3145,8 +3039,8 @@ const timeTasks = [
   {
     task_id: 125,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 126,
@@ -3170,8 +3064,8 @@ const timeTasks = [
   {
     task_id: 127,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 127,
@@ -3195,8 +3089,8 @@ const timeTasks = [
   {
     task_id: 127,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 128,
@@ -3220,8 +3114,8 @@ const timeTasks = [
   {
     task_id: 128,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 129,
@@ -3245,8 +3139,8 @@ const timeTasks = [
   {
     task_id: 129,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 130,
@@ -3270,8 +3164,8 @@ const timeTasks = [
   {
     task_id: 130,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 130,
@@ -3295,8 +3189,8 @@ const timeTasks = [
   {
     task_id: 130,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 131,
@@ -3320,8 +3214,8 @@ const timeTasks = [
   {
     task_id: 131,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 132,
@@ -3345,8 +3239,8 @@ const timeTasks = [
   {
     task_id: 132,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 133,
@@ -3370,8 +3264,8 @@ const timeTasks = [
   {
     task_id: 133,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 134,
@@ -3395,8 +3289,8 @@ const timeTasks = [
   {
     task_id: 134,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 135,
@@ -3420,8 +3314,8 @@ const timeTasks = [
   {
     task_id: 135,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 136,
@@ -3445,8 +3339,8 @@ const timeTasks = [
   {
     task_id: 136,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 137,
@@ -3470,8 +3364,8 @@ const timeTasks = [
   {
     task_id: 137,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 138,
@@ -3495,8 +3389,8 @@ const timeTasks = [
   {
     task_id: 138,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 139,
@@ -3520,8 +3414,8 @@ const timeTasks = [
   {
     task_id: 139,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 140,
@@ -3545,8 +3439,8 @@ const timeTasks = [
   {
     task_id: 140,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 141,
@@ -3570,8 +3464,8 @@ const timeTasks = [
   {
     task_id: 141,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 142,
@@ -3595,8 +3489,8 @@ const timeTasks = [
   {
     task_id: 142,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 143,
@@ -3620,8 +3514,8 @@ const timeTasks = [
   {
     task_id: 143,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 143,
@@ -3645,8 +3539,8 @@ const timeTasks = [
   {
     task_id: 143,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 144,
@@ -3670,8 +3564,8 @@ const timeTasks = [
   {
     task_id: 144,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 145,
@@ -3695,8 +3589,8 @@ const timeTasks = [
   {
     task_id: 145,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 146,
@@ -3720,8 +3614,8 @@ const timeTasks = [
   {
     task_id: 146,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 147,
@@ -3745,8 +3639,8 @@ const timeTasks = [
   {
     task_id: 147,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 148,
@@ -3770,8 +3664,8 @@ const timeTasks = [
   {
     task_id: 148,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 149,
@@ -3795,8 +3689,8 @@ const timeTasks = [
   {
     task_id: 149,
     taskSpentWeek: "12 && more weeks",
-    point: 0.5,
-    taskSpentDays:91
+    point: 0.5
+    ,
   },
   {
     task_id: 150,
@@ -3821,8 +3715,8 @@ const timeTasks = [
     task_id: 150,
     taskSpentWeek: "12 && more weeks",
     point: 0.5,
-    taskSpentDays:91
-}];
+  },
+];
 
 module.exports = {
   timeTasks,

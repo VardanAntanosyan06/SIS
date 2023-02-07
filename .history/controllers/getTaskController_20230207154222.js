@@ -268,7 +268,6 @@ const getTasksFilter = async(req,res)=>{
 const taksDescription = async (req,res)=>{
   try {
     const {id} = req.query;
-    const { authorization: token } = req.headers;
     const user = await UserModel.findOne({
       where: {token: token.replace("Bearer ", "") },
     });
@@ -286,9 +285,7 @@ const taksDescription = async (req,res)=>{
         },
       attributes:['startDate']
       }) 
-    const daysDiff = moment(myTask.startDate).diff(moment(),'days')
-  
-    return res.json({taskDesc,currentDay:daysDiff})
+    return res.json({taskDesc,myTask})
   } catch (error) {
     console.log(error);
   }
