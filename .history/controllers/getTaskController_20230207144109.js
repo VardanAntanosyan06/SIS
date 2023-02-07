@@ -147,6 +147,7 @@ const getTasksInCalendar = async (req, res) => {
         },
         {
           model: Task_per_User,
+          // where:{isFee:false}
         },]
       })
     tasks = tasks.map(e => CircularJSON.stringify(e))

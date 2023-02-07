@@ -73,7 +73,7 @@ app.use("/dashboard",dashboard)
 app.use("/settings",settings)
 // app.use("/moment",momentt)
 app.use("/addEmail",addEmails)
-app.use("/contactUs",contactUs)
+app.use("/addEmail",addEmails)
 
 
 // catch 404 and forward to error handler

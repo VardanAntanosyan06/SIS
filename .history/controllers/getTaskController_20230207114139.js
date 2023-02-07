@@ -135,8 +135,15 @@ const getTasksInCalendar = async (req, res) => {
   const user = await UserModel.findOne({
     where: { token: token.replace("Bearer ", "") },
   });
-  if (user) { 
+  if (user) {
+    const myUniversity = await UniversityModel.findOne({
+       where: { name: user.university },
+    });
     let tasks = await TaskModel.findAll({
+      where: {
+        universityId:myUniversity.id,
+        // isFree:false
+      },
         include: [
         {model:SubTasks,
           include:{
@@ -147,6 +154,7 @@ const getTasksInCalendar = async (req, res) => {
         },
         {
           model: Task_per_User,
+          // where:{isFee:false}
         },]
       })
     tasks = tasks.map(e => CircularJSON.stringify(e))
@@ -268,8 +276,6 @@ const getTasksFilter = async(req,res)=>{
 
 const taksDescription = async (req,res)=>{
   try {
-    const {id} = req.query;
-    
     
   } catch (error) {
     

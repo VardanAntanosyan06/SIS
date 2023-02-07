@@ -44,7 +44,7 @@ var addDescription  = require("./routes/adddescription")
 var dashboard  = require("./routes/dashboard")
 var settings  = require("./routes/settings")
 var addEmails = require("./routes/addEmails")
-var contactUs = require("./routes/contactUs")
+var addEmails = require("./routes/contactUs")
 // var momentt = require("./routes/moment")
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -73,7 +73,6 @@ app.use("/dashboard",dashboard)
 app.use("/settings",settings)
 // app.use("/moment",momentt)
 app.use("/addEmail",addEmails)
-app.use("/contactUs",contactUs)
 
 
 // catch 404 and forward to error handler

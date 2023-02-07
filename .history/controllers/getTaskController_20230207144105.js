@@ -135,7 +135,8 @@ const getTasksInCalendar = async (req, res) => {
   const user = await UserModel.findOne({
     where: { token: token.replace("Bearer ", "") },
   });
-  if (user) { 
+  if (user) {
+
     let tasks = await TaskModel.findAll({
         include: [
         {model:SubTasks,
@@ -147,6 +148,7 @@ const getTasksInCalendar = async (req, res) => {
         },
         {
           model: Task_per_User,
+          // where:{isFee:false}
         },]
       })
     tasks = tasks.map(e => CircularJSON.stringify(e))
