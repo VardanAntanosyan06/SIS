@@ -7,7 +7,7 @@ const addEmail = async (req,res)=>{
     try {
     const {authorization: token} = req.headers;
     const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})   
-    const {email} = req.body;
+    const {email,\\} = req.body;
     const isMail = await UserEmails.findOne({where:{userId:user.id,email}})
     
     if (!isMail) {

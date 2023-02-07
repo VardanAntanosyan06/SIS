@@ -33,19 +33,14 @@ const getRestTask = async(req,res)=>{
     const user = await UserModel.findOne({
       where: { token: token.replace("Bearer ", "") },
   });
-  const university = await UniversityModel.findOne({
-    where:{name:user.university}
+  const university = await UniversityModel.findOne(where:{
+
   })
-  console.log(university.id );
   const item  = await TaskModel.findAll({where:{
-    universityId:{
-      [Op.ne]: university.id,   
-    }
+    [Op.ne]: university.id,   
   }})
-  return res.json({item})
   } catch (error) {
-    console.log(error);
-    return res.json("something went wrong!");
+    
   }
 }
 const getYourTasks = async (req, res) => {
@@ -321,6 +316,5 @@ module.exports = {
   getYourFreeTasks,
   getTasksInCalendar,
   getSubTasks,
-  taksDescription,
-  getRestTask
+  taksDescription
 };

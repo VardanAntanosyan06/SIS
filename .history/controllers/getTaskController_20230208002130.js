@@ -38,7 +38,7 @@ const getRestTask = async(req,res)=>{
   })
   console.log(university.id );
   const item  = await TaskModel.findAll({where:{
-    universityId:{
+    university:{
       [Op.ne]: university.id,   
     }
   }})
