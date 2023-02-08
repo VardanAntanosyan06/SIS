@@ -19,7 +19,7 @@ const { sequelize } = require("../models");
 const TimeTasks = require("../models").timeTasks
 // const getAllTasks = async (req, res) => {
 //   try {
-//  semur && co 
+//  semur 
 //     const tasks = 
 //     return res.status(200).json("a");
 //   } catch (error) {

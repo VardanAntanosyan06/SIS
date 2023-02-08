@@ -48,31 +48,29 @@ const reg = async (req, res) => {
         subject: "verification",
         html:
        `
-       <img src='cid:logo' style="width:350px;height:250px;" >
+       <img src='Letter.png' style="width:150px;height:200px;" >
        <h2>Verify your email address </h2>
        <p>
         You've entered <b>${email}</b> as the  email address for your account.
         Please verify this email address by clicking button below. 
        </p>
         <button style="background-color: blue;
+        text-decoration-line: none;
         border: none;
-        border-radius:20px;
         color: white;
         padding: 15px 32px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        ">
-          <a href='http://164.90.224.111/verify?email="${hashEmail}"?id="${item.id}"'
-          style="color:#fff;text-decoration-line: none;">Verify your email address</a>
         font-size: 20px;
-        </button>
+        ">
+          <a href='http://164.90.224.111/verify?email=" +
+          hashEmail +
+          "?id=" +
+          item.id +
+          "'>Verify your email address</a>
+        </ button>
           `,
-          attachments: [{
-            filename: 'Letter.png',
-            path: './controllers/Letter.png',
-            cid: 'logo' //my mistake was putting "cid:logo@cid" here! 
-       }]
       };
 
       transporter.sendMail(mailOptions);

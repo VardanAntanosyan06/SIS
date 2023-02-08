@@ -10,15 +10,12 @@ const verify = async (req,res)=>{
 
         await item.save();
         return res.send(`
-        <br>
-        <br>
-        <br>
-        <br>
         <center>
-        <h1>you have successfully registered</h1>
+        <h2>you have successfully registered</h2>
         <img src="https://cdn-icons-png.flaticon.com/512/7518/7518748.png" style="width:200px;height:200px">
-        <a href="http://45.55.36.223:3000/login"><button style="width:300px;height:40px;border:none;border-radius:20px;background:rgb(10, 155, 20);color:#fff;font-size:30px;cursor:pointer">Back to login</button></a>
-       </center>
+        </center>
+
+        <button style="width:250px;border:none;background:#CC8899;">Back to login</button>
         `)
     }
     return res.json("something went wrong")

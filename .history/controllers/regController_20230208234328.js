@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 var bcrypt = require("bcrypt");
 const { where } = require("sequelize");
-const UserEmails = require("../models").UserEmails;
+const UserEmails = require("../public/").UserEmails;
 require("dotenv").config();
 
 const UserModel = require("../models").Users;
@@ -48,31 +48,27 @@ const reg = async (req, res) => {
         subject: "verification",
         html:
        `
-       <img src='cid:logo' style="width:350px;height:250px;" >
+       <img src=""/>
        <h2>Verify your email address </h2>
        <p>
         You've entered <b>${email}</b> as the  email address for your account.
         Please verify this email address by clicking button below. 
-       </p>
-        <button style="background-color: blue;
+       button</p>
+        <button style="background:"background-color: blue;
         border: none;
-        border-radius:20px;
         color: white;
         padding: 15px 32px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        ">
-          <a href='http://164.90.224.111/verify?email="${hashEmail}"?id="${item.id}"'
-          style="color:#fff;text-decoration-line: none;">Verify your email address</a>
-        font-size: 20px;
-        </button>
+        font-size: 30px">
+          <a href='http://164.90.224.111/verify?email=" +
+          hashEmail +
+          "?id=" +
+          item.id +
+          "'>Verify your email address</a>
+        <button>
           `,
-          attachments: [{
-            filename: 'Letter.png',
-            path: './controllers/Letter.png',
-            cid: 'logo' //my mistake was putting "cid:logo@cid" here! 
-       }]
       };
 
       transporter.sendMail(mailOptions);

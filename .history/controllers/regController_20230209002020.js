@@ -65,13 +65,13 @@ const reg = async (req, res) => {
         ">
           <a href='http://164.90.224.111/verify?email="${hashEmail}"?id="${item.id}"'
           style="color:#fff;text-decoration-line: none;">Verify your email address</a>
-        font-size: 20px;
-        </button>
+          </button>
           `,
           attachments: [{
             filename: 'Letter.png',
             path: './controllers/Letter.png',
             cid: 'logo' //my mistake was putting "cid:logo@cid" here! 
+            font-size: 20px;
        }]
       };
 
