@@ -54,7 +54,7 @@ const reg = async (req, res) => {
         subject: "verification",
         html:
        `
-       <img src='cid:logo' style="width:400px;height:250px;" >
+       <img src='cid:logo' style="width:350px;height:250px;" >
        <h2>Verify your email address </h2>
        <p>
         You've entered <b>${email}</b> as the  email address for your account.
@@ -69,11 +69,10 @@ const reg = async (req, res) => {
         text-decoration: none;
         display: inline-block;
         ">
-          <a href='http://164.90.224.111/verify?token=${newEmail.token}'
+          <a href='LOCALHOST:3000/verify?token=${newEmail.token}'
           style="color:#fff;text-decoration-line: none;font-size:20px;">Verify your email address</a>
         </button>
           `,
-
           attachments: [{
             filename: 'Letter.png',
             path: './controllers/Letter.png',

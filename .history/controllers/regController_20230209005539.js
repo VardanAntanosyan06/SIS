@@ -69,7 +69,7 @@ const reg = async (req, res) => {
         text-decoration: none;
         display: inline-block;
         ">
-          <a href='http://164.90.224.111/verify?token=${newEmail.token}'
+          <a href='http://localhost:3000/verify?token=${newEmail.token}'
           style="color:#fff;text-decoration-line: none;font-size:20px;">Verify your email address</a>
         </button>
           `,

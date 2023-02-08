@@ -11,7 +11,8 @@ const login = async (req, res) => {
     let token;
     const user = await UserModel.findOne({
       include:{
-        model:UserEmails
+        model:UserEmails,
+        where:{email?email}
       }
     })
 

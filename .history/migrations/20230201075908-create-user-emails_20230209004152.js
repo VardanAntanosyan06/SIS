@@ -25,11 +25,8 @@ module.exports = {
       role : {
         type: Sequelize.STRING,
         defaultValue:"Secondary"
-        },
-      token: {
-        type: Sequelize.STRING,
-
         }
+        
     });
   },
   async down(queryInterface, Sequelize) {

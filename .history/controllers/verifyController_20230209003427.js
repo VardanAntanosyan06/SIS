@@ -2,9 +2,9 @@ const model = require("../models").UserEmails;
 
 
 const verify = async (req,res)=>{
-    console.log(req.query);
-    const token = req.query.token
-    const item = await model.findOne({where:{token}})
+    console.log(req.query./verify?email%3D%2522$2b$10$JqCgMLCulebK23Pyrlo0kuRVQg78lXDgBPdQQH.bi2G8S7arc9/LC%2522?id%3D%252224%2522&source=gmail&ust=1675974264629000&usg=AOvVaw1Jl1akj-mJfFA2Vo_oEkk2);
+    const email = req.query.email.split("id=")[0]
+    const item = await model.findOne({where:{email}})
     if(item){
         item.isVerified = true;
 

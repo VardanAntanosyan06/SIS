@@ -27,7 +27,6 @@ module.exports = {
         defaultValue:"Secondary"
         },
       token: {
-        type: Sequelize.STRING,
 
         }
     });

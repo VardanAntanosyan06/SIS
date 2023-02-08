@@ -19,7 +19,6 @@ module.exports = (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER,
     isVerified: DataTypes.BOOLEAN,
     role: DataTypes.STRING,
-    token:DataTypes.STRING
   }, {
     sequelize,
     modelName: 'UserEmails',
