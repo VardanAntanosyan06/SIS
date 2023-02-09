@@ -65,7 +65,7 @@ router.get("/filter",getTasks.getTasksFilter)
 router.get("/description",getTasks.taksDescription)
 
 router.get("/rest",getTasks.getRestTask)
-router.delete("/delete",getTasks.deleteTask)
+router.get("/rest",getTasks.getRestTask)
 
 module.exports = router;
 

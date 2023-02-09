@@ -328,27 +328,17 @@ const taksDescription = async (req, res) => {
 
 const deleteTask = async (req, res) => {
   try {
-    const { authorization: token } = req.headers;
-    const user = await UserModel.findOne({
-      where: { token: token.replace("Bearer ", "") },
-    });
     const { taskId } = req.body;
 
     await Task_per_User.destroy({
-      where: {taskId,userId:user.id},
+      where: {taskId},
     });
-    const subTasks = await SubTasks.findAll({where:{taskId}})
-    console.log(subTasks);
-    subTasks.map(async (e)=>{
-      await SubTask_per_User.destroy({
-        subTasksId:e.id,
-        userId:user.id
-      });
-    })
+
+    await SubTask_per_User.destroy({
       
-    return res.json({success:true});
+    });
+    return res.json({ message: "deleted" });
   } catch (error) {
-    console.log(error);
     return res.json("something went wrong")
   }
 };
@@ -360,5 +350,4 @@ module.exports = {
   getSubTasks,
   taksDescription,
   getRestTask,
-  deleteTask
 };

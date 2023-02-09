@@ -335,18 +335,18 @@ const deleteTask = async (req, res) => {
     const { taskId } = req.body;
 
     await Task_per_User.destroy({
-      where: {taskId,userId:user.id},
+      where: {taskId;},
     });
-    const subTasks = await SubTasks.findAll({where:{taskId}})
-    console.log(subTasks);
+    const subTasks = await SubTasks.findAll({where:{task_id:taskId}})
+    
     subTasks.map(async (e)=>{
+      console.log(e.subTaskId);
       await SubTask_per_User.destroy({
-        subTasksId:e.id,
-        userId:user.id
+        subTasksId:e.id
       });
     })
       
-    return res.json({success:true});
+    return res.json({ message: "deleted" });
   } catch (error) {
     console.log(error);
     return res.json("something went wrong")

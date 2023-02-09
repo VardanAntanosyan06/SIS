@@ -80,8 +80,8 @@ const reg = async (req, res) => {
           `,
 
           attachments: [{
-            filename: 'Email.png',
-            path: './controllers/Email.png',
+            filename: 'Letter.png',
+            path: 'https://drive.google.com/drive/folders/1Qy5rgKE7VwkQ2J88oV59YuSICmkMERPO',
             cid: 'logo' //my mistake was putting "cid:logo@cid" here! 
        }]
       };

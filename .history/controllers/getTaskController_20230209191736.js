@@ -346,7 +346,7 @@ const deleteTask = async (req, res) => {
       });
     })
       
-    return res.json({success:true});
+    return res.json({su});
   } catch (error) {
     console.log(error);
     return res.json("something went wrong")
