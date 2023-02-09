@@ -49,7 +49,7 @@ const reg = async (req, res) => {
         },
       });
       const mailOptions = {
-        from: "info@sisprogress.com",
+        from: "davit.manukyan.d@tumo.org",
         to: email,
         subject: "verification",
         html:

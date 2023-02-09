@@ -37,7 +37,7 @@ const addEmail = async (req,res)=>{
         display: inline-block;
         font-size: 30px;">${randomString}</button>`,
       };
- 
+
       transporter.sendMail(mailOptions);
     return res.json("email is sent")
 }

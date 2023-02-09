@@ -93,6 +93,7 @@ const getYourTasks = async (req, res) => {
           status: userSpecificData?userSpecificData.status:null,
           point: userSpecificData?userSpecificData.point:null,
           deadline:userSpecificData?userSpecificData.deadline:null,
+          description:userSpecificData?userSpecificData.description:null;
           SubTasks: task.SubTasks.map(_subTask => 
             _subTask.SubTask_per_Users.length === 1 ? 
             (() => {
@@ -203,7 +204,6 @@ const getTasksInCalendar = async (req, res) => {
         days:days!==undefined?days>-1?days:null:null,
         point: userSpecificData?userSpecificData.point:null,
         deadline:userSpecificData?userSpecificData.deadline:null,
-        description:userSpecificData?userSpecificData.description:null,
         SubTasks: task.SubTasks.map(_subTask => 
           _subTask.SubTask_per_Users.length === 1 ? 
           (() => {
