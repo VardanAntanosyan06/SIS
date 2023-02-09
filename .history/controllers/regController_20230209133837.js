@@ -42,7 +42,7 @@ const reg = async (req, res) => {
       })
 
       const transporter = nodemailer.createTransport({
-        host: "mail.privateemail.com",
+        host: mail.privateemail.com,
         port: 465,
         secure: true,
         auth: {
@@ -55,15 +55,13 @@ const reg = async (req, res) => {
         to: email,
         subject: "verification",
         html:
-       `<center>
+       `
        <img src='cid:logo' style="width:400px;height:250px;" >
        <h2>Verify your email address </h2>
        <p>
         You've entered <b>${email}</b> as the  email address for your account.
         Please verify this email address by clicking button below. 
        </p>
-       <br>
-       <br>
         <button style="background-color: blue;
         border: none;
         border-radius:20px;
@@ -76,7 +74,6 @@ const reg = async (req, res) => {
           <a href='http://164.90.224.111/verify?token=${newEmail.token}'
           style="color:#fff;text-decoration-line: none;font-size:20px;">Verify your email address</a>
         </button>
-        </center>
           `,
 
           attachments: [{
@@ -85,7 +82,6 @@ const reg = async (req, res) => {
             cid: 'logo' //my mistake was putting "cid:logo@cid" here! 
        }]
       };
-
 
       transporter.sendMail(mailOptions);
       return res.status(200).json("email is sent!");

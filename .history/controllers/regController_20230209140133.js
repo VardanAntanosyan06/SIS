@@ -63,7 +63,6 @@ const reg = async (req, res) => {
         Please verify this email address by clicking button below. 
        </p>
        <br>
-       <br>
         <button style="background-color: blue;
         border: none;
         border-radius:20px;

@@ -43,7 +43,7 @@ const reg = async (req, res) => {
 
       const transporter = nodemailer.createTransport({
         host: "mail.privateemail.com",
-        port: 465,
+        port: 993,
         secure: true,
         auth: {
           user: process.env.EMAIL,
@@ -62,8 +62,6 @@ const reg = async (req, res) => {
         You've entered <b>${email}</b> as the  email address for your account.
         Please verify this email address by clicking button below. 
        </p>
-       <br>
-       <br>
         <button style="background-color: blue;
         border: none;
         border-radius:20px;
@@ -77,6 +75,7 @@ const reg = async (req, res) => {
           style="color:#fff;text-decoration-line: none;font-size:20px;">Verify your email address</a>
         </button>
         </center>
+
           `,
 
           attachments: [{

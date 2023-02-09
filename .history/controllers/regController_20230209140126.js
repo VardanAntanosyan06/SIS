@@ -62,8 +62,6 @@ const reg = async (req, res) => {
         You've entered <b>${email}</b> as the  email address for your account.
         Please verify this email address by clicking button below. 
        </p>
-       <br>
-       <br>
         <button style="background-color: blue;
         border: none;
         border-radius:20px;
@@ -75,6 +73,7 @@ const reg = async (req, res) => {
         ">
           <a href='http://164.90.224.111/verify?token=${newEmail.token}'
           style="color:#fff;text-decoration-line: none;font-size:20px;">Verify your email address</a>
+          
         </button>
         </center>
           `,
