@@ -2,7 +2,7 @@ const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken");
 const UserModel = require("../models").Users
 const UserEmails = require("../models").UserEmails
-const {Op, where} = require("sequelize")
+const {Op} = require("sequelize")
 const crypto = require("crypto");
 
 const login = async (req, res) => {
@@ -10,9 +10,9 @@ const login = async (req, res) => {
     const {email, password} = req.body;
     let token;
     const user = await UserModel.findOne({
+      where:{email}
       include:{
-        model:UserEmails,
-        where:{email}
+        model:UserEmails
       }
     })
 
