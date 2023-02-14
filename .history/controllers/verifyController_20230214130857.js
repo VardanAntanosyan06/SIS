@@ -15,7 +15,7 @@ const verify = async (req,res)=>{
        </center>
         `)
     }
-    res.redirect('http://45.55.36.223:3000/massage');
+    res.redirect('your/404/path.html');
     return res.json("something went wrong")
 }
 

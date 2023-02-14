@@ -10,12 +10,15 @@ const verify = async (req,res)=>{
 
         await item.save();
         return res.send(`
+        <br>
+        <br>
+        <br>
+        <br>
         <center>
         <h1>you have successfully registered</h1>
        </center>
         `)
     }
-    res.redirect('http://45.55.36.223:3000/massage');
     return res.json("something went wrong")
 }
 
