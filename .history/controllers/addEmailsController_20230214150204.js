@@ -62,6 +62,7 @@ const verifyEmail = async (req,res)=>{
             const myEmail = await UserEmails.findOne({where:{userId:user.id,email}})
             console.log(myEmail);
             myEmail.isVerified = true;
+            myEmail.token = 
             await myEmail.save()
             return res.json({success:true})
         }else{
@@ -84,7 +85,7 @@ const updateEmail = async (req,res)=>{
             myEmail.token = jwt.sign(
                 {email},
                 process.env.SECRET
-                );  
+                );
             await myEmail.save()
             return res.json({success:true})
         }else{

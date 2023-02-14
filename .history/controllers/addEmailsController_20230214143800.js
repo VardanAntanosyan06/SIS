@@ -3,8 +3,6 @@ const UserModel = require("../models").Users
 const crypto = require("crypto");
 const nodemailer = require("nodemailer")
 const randomString = crypto.randomBytes(3).toString('hex');
-const jwt = require("jsonwebtoken");
-
 const addEmail = async (req,res)=>{
     try {
     const {authorization: token} = req.headers;
@@ -14,14 +12,11 @@ const addEmail = async (req,res)=>{
     
     if (!isMail) {
         
-        const newEmail = await UserEmails.create({
-            email,
-            userId:item.id,
-            token:jwt.sign(
-              {email},
-              process.env.SECRET
-              )
-          })
+    UserEmails.create({
+        email,
+        userId:user.id
+    })
+
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
@@ -81,10 +76,8 @@ const updateEmail = async (req,res)=>{
         if(code===randomString){
             const myEmail = await UserEmails.findOne({where:{userId:user.id,email}})
             myEmail.email = email;
-            myEmail.token = jwt.sign(
-                {email},
-                process.env.SECRET
-                );  
+            myEmail.email = email;
+
             await myEmail.save()
             return res.json({success:true})
         }else{

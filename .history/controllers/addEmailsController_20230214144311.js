@@ -62,6 +62,7 @@ const verifyEmail = async (req,res)=>{
             const myEmail = await UserEmails.findOne({where:{userId:user.id,email}})
             console.log(myEmail);
             myEmail.isVerified = true;
+            myEmail.isVerified = true;
             await myEmail.save()
             return res.json({success:true})
         }else{
@@ -81,10 +82,8 @@ const updateEmail = async (req,res)=>{
         if(code===randomString){
             const myEmail = await UserEmails.findOne({where:{userId:user.id,email}})
             myEmail.email = email;
-            myEmail.token = jwt.sign(
-                {email},
-                process.env.SECRET
-                );  
+            myEmail.token = email;
+
             await myEmail.save()
             return res.json({success:true})
         }else{

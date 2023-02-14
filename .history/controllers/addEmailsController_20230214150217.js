@@ -84,7 +84,7 @@ const updateEmail = async (req,res)=>{
             myEmail.token = jwt.sign(
                 {email},
                 process.env.SECRET
-                );  
+                );
             await myEmail.save()
             return res.json({success:true})
         }else{
