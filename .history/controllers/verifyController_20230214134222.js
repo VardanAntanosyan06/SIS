@@ -18,8 +18,6 @@ const verify = async (req,res)=>{
         `)
     }
     res.redirect('http://45.55.36.223:3000/massage')
-
-    return res.js
 } catch (error) {
     
 }

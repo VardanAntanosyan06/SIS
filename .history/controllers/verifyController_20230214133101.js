@@ -5,24 +5,18 @@ const verify = async (req,res)=>{
     console.log(req.query);
     const token = req.query.token
     const item = await model.findOne({where:{token}})
-    try {
-        
-        if(item){
-            item.isVerified = true;
-            
-            await item.save();
+    if(item){
+        item.isVerified = true;
+
+        await item.save();
         res.send(`
         <center>
         <h1>you have successfully registered</h1>
-        </center>
-        `)
+       </center>
+       `)
+       res.redirect('http://45.55.36.223:3000/massage')
     }
-    res.redirect('http://45.55.36.223:3000/massage')
-
-    return res.js
-} catch (error) {
-    
-}
+    return res.json("something went wrong")
 }
 
 module.exports = {
