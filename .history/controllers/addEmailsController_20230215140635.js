@@ -13,7 +13,7 @@ const addEmail = async (req,res)=>{
     const isMail = await UserEmails.findOne({where:{userId:user.id,email}})
     
     if (!isMail) {
-    
+        
         const newEmail = await UserEmails.create({
             email,
             userId:user.id,
@@ -45,7 +45,7 @@ const addEmail = async (req,res)=>{
         font-size: 30px;">${randomString}</button>`,
       };
  
-    transporter.sendMail(mailOptions);
+      transporter.sendMail(mailOptions);
     return res.json("email is sent")
 }
 return res.json("email is already in use")
@@ -76,13 +76,13 @@ const verifyEmail = async (req,res)=>{
 
 const updateEmail = async (req,res)=>{
     try {
-        const {email,code,newEmail} = req.body
+        const {email,code,""} = req.body
         const {authorization: token} = req.headers;
         const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})   
-        console.log(randomString,"+++++++++++++++++++++---------------");
-        if(code===randomString){        
+
+        if(code===randomString){
             const myEmail = await UserEmails.findOne({where:{userId:user.id,email}})
-            myEmail.email = newEmail;
+            myEmail.email = email;
             myEmail.token = jwt.sign(
                 {email},
                 process.env.SECRET
@@ -90,8 +90,7 @@ const updateEmail = async (req,res)=>{
             await myEmail.save()
             return res.json({success:true})
         }else{
-        
-        return res.json("invalid code")
+            return res.json({success:false})
         }
     } catch (error) {
         console.log(error);

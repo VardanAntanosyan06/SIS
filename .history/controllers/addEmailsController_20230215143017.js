@@ -12,7 +12,7 @@ const addEmail = async (req,res)=>{
     const {email} = req.body;
     const isMail = await UserEmails.findOne({where:{userId:user.id,email}})
     
-    if (!isMail) {
+    if !(isMail) {
     
         const newEmail = await UserEmails.create({
             email,

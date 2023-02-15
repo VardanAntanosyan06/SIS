@@ -11,9 +11,9 @@ const addEmail = async (req,res)=>{
     const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})   
     const {email} = req.body;
     const isMail = await UserEmails.findOne({where:{userId:user.id,email}})
-    
+        console.log(isMail);
     if (!isMail) {
-    
+        
         const newEmail = await UserEmails.create({
             email,
             userId:user.id,

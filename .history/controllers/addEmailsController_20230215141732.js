@@ -13,7 +13,7 @@ const addEmail = async (req,res)=>{
     const isMail = await UserEmails.findOne({where:{userId:user.id,email}})
     
     if (!isMail) {
-    
+        
         const newEmail = await UserEmails.create({
             email,
             userId:user.id,
@@ -45,7 +45,7 @@ const addEmail = async (req,res)=>{
         font-size: 30px;">${randomString}</button>`,
       };
  
-    transporter.sendMail(mailOptions);
+        .sendMail(mailOptions);
     return res.json("email is sent")
 }
 return res.json("email is already in use")
