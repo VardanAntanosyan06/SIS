@@ -16,7 +16,7 @@ const addEmail = async (req,res)=>{
         
         const newEmail = await UserEmails.create({
             email,
-            userId:user.id,
+            userId:item.id,
             token:jwt.sign(
               {email},
               process.env.SECRET

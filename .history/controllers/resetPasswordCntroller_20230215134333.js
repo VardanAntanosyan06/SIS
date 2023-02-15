@@ -8,7 +8,7 @@ const resetPass = async (req, res) => {
     console.log(error);
   }
 };
-  
+
 
 module.exports={
   resetPass

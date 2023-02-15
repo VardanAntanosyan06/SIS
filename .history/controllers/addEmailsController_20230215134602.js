@@ -8,15 +8,14 @@ const jwt = require("jsonwebtoken");
 const addEmail = async (req,res)=>{
     try {
     const {authorization: token} = req.headers;
-    const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})   
-    const {email} = req.body;
-    const isMail = await UserEmails.findOne({where:{userId:user.id,email}})
+?    const {email} = req.body;
+    const isMail = await UserEmails.findOne({where:{userId:user. id,email}})
     
     if (!isMail) {
         
         const newEmail = await UserEmails.create({
             email,
-            userId:user.id,
+            userId:item.id,
             token:jwt.sign(
               {email},
               process.env.SECRET
