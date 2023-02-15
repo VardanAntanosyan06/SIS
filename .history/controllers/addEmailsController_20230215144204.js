@@ -56,11 +56,8 @@ const addEmail = async (req, res) => {
 
 const sendMail = async (req, res) => {
   try {
-      const { email } = req.body;
-    const isMail = await UserEmails.findOne({
-        where: {email },
-      });
-    if (!isMail) {
+    const { email } = req.body;
+    if (email) {
       const transporter = nodemailer.createTransport({
         host: "mail.privateemail.com",
         port: 465,
@@ -88,9 +85,7 @@ const sendMail = async (req, res) => {
       return res.json("email is sent");
     }
     return res.json("email is already in use");
-  } catch (error) {
-    console.log(error);    
-  }
+  } catch (error) {}
 };
 const verifyEmail = async (req, res) => {
   try {
@@ -120,7 +115,6 @@ const updateEmail = async (req, res) => {
   try {
     const { email, code, newEmail } = req.body;
     const { authorization: token } = req.headers;
-    
     const user = await UserModel.findOne({
       where: { token: token.replace("Bearer ", "") },
     });
@@ -145,5 +139,5 @@ module.exports = {
   addEmail,
   verifyEmail,
   updateEmail,
-  sendMail                                                                                                                      
+  sendMail
 };

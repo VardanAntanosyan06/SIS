@@ -3,6 +3,6 @@ var router = express.Router();
 const controller = require("../controllers/addSubTaskDescController");
 
 router.post("/feedback",controller.addDescription);
-router.get("/feedback",controller.getfeedback);
+router.post("/feedback",controller.addDescription);
 
 module.exports = router;

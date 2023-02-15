@@ -60,7 +60,7 @@ const sendMail = async (req, res) => {
     const isMail = await UserEmails.findOne({
         where: {email },
       });
-    if (!isMail) {
+    if (isMail) {
       const transporter = nodemailer.createTransport({
         host: "mail.privateemail.com",
         port: 465,

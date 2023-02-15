@@ -39,7 +39,7 @@ const getfeedback = async (req, res) => {
 
     const task = await feedback_of_Task_per_User.findAll({ where: { taskId, userId: user.id } });
 
-    return res.json({ task });
+    return req.json({ task });
   } catch (error) {
     console.log(error);
   }
