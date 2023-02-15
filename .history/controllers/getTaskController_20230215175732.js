@@ -319,8 +319,8 @@ const taksDescription = async (req, res) => {
       attributes: ["startDate","point"],
     });
     const daysDiff = moment(myTask.startDate).diff(moment(), "days");
-
-    return res.json({ taskDesc, currentDay: daysDiff,currentPoint:myTask.point});
+    console.log(myTask.point,myTask);
+    return res.json({ taskDesc, currentDay: daysDiff,currentPoint:1});
   } catch (error) {
     console.log(error);
   }

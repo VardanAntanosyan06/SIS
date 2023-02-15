@@ -316,7 +316,7 @@ const taksDescription = async (req, res) => {
         userId: user.id,
         taskId: id,
       },
-      attributes: ["startDate","point"],
+      attributes: ["startDate"],
     });
     const daysDiff = moment(myTask.startDate).diff(moment(), "days");
 
