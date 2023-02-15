@@ -56,7 +56,7 @@ const addEmail = async (req, res) => {
 
 const sendMail = async (req, res) => {
   try {
-      const {email} = req.body;
+      const { email} = req.body;
     const isMail = await UserEmails.findOne({
         where: {email },
       });

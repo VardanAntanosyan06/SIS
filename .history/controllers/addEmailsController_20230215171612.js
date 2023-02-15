@@ -56,7 +56,7 @@ const addEmail = async (req, res) => {
 
 const sendMail = async (req, res) => {
   try {
-      const {email} = req.body;
+      const { email } = req.body;
     const isMail = await UserEmails.findOne({
         where: {email },
       });
@@ -100,17 +100,17 @@ const verifyEmail = async (req, res) => {
       where: { token: token.replace("Bearer ", "") },
     });
 
-    if (code === randomString) {
-      const myEmail = await UserEmails.findOne({
-        where: { userId: user.id, email },
-      });
-      console.log(myEmail);
-      myEmail.isVerified = true;
-      await myEmail.save();
-      return res.json({ success: true });
-    } else {
-      return res.json({ success: false });
-    }
+      if (code === randomString) {
+        const myEmail = await UserEmails.findOne({
+          where: { userId: user.id, email },
+        });
+        console.log(myEmail);
+        myEmail.isVerified = true;
+        await myEmail.save();
+        return res.json({ success: true });
+      } else {
+        return res.json({ success: false });
+      }
   } catch (error) {
     console.log(error);
   }
