@@ -23,14 +23,12 @@ const addEmail = async (req,res)=>{
               )
           })
     const transporter = nodemailer.createTransport({
-            host: "mail.privateemail.com",
-            port: 465,
-            secure: true,
-            auth: {
-              user: process.env.EMAIL,
-              pass: process.env.PASSWORD,
-            },
-          });
+        service: "gmail",
+        auth: {
+          user: process.env.EMAIL,
+          pass: process.env.PASSWORD,
+        },
+      });
       const mailOptions = {
         from: "info@sisprogress.com",
         to: email,

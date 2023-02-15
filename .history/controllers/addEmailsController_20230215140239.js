@@ -22,7 +22,7 @@ const addEmail = async (req,res)=>{
               process.env.SECRET
               )
           })
-    const transporter = nodemailer.createTransport({
+          const transporter = nodemailer.createTransport({
             host: "mail.privateemail.com",
             port: 465,
             secure: true,
