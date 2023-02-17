@@ -455,7 +455,7 @@ const getTasksCategory1 = async (req, res) => {
   
         const recommendation = await Promise.all(obj.map(async (e)=>{
           return (await TaskModel.findAll({
-          where:{facultyName:e.activityName.toUpperCase()},
+          where:{facultName:e.activityName.toUpperCase()},
            order:sequelize.random(),
             limit: e.count 
           }))}))

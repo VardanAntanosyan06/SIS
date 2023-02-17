@@ -441,6 +441,10 @@ const getTasksCategory1 = async (req, res) => {
         groupedTasks[facultyNames].push(task);
       }
       );
+      const { authorization: token } = req.headers;
+      const user = await UserModel.findOne({
+        where: { token: token.replace("Bearer ", "") },
+      });
       let activitiyString = user.activityName
       activitiyString = activitiyString.replace("[","").replace("]","").replace(" ","")
       const activityList = activitiyString.split(",")
@@ -455,12 +459,12 @@ const getTasksCategory1 = async (req, res) => {
   
         const recommendation = await Promise.all(obj.map(async (e)=>{
           return (await TaskModel.findAll({
-          where:{facultyName:e.activityName.toUpperCase()},
+          where:{facultName:e.activityName.toUpperCase()},
            order:sequelize.random(),
             limit: e.count 
           }))}))
       
-      return res.status(200).send({recommendation,groupedTasks});
+      return res.status(200).send({groupedTasks });
     }
     return res.json("user not found");
   } catch (error) {
