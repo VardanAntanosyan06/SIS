@@ -98,7 +98,7 @@ const emails = [
     userId:3
   },
   {
-    email:"user@test.com",
+    email:"user@user.com",
     password: bcrypt.hashSync("test1234", 10),
     isVerified:true,
     role:"First",

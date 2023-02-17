@@ -13,8 +13,7 @@ const Calendar = require("../models").Calendar;
 const { Op } = require("sequelize");
 const subtasks = require("../models/subtasks");
 const Task_per_User = require("../models").Task_per_User;
-const feedback_of_Task_per_User =
-  require("../models").feedback_of_Task_per_User;
+const feedback_of_Task_per_User = require("../models").feedback_of_Task_per_User;
 const SubTask_per_User = require("../models").SubTask_per_User;
 const moment = require("moment");
 const { sequelize } = require("../models");
@@ -174,11 +173,11 @@ const getTasksInCalendar = async (req, res) => {
         },
         {
           model: Task_per_User,
-          include: {
-            model: feedback_of_Task_per_User,
+          include:{
+            model : feedback_of_Task_per_User,
             where: { userId: user.id },
             required: false,
-          },
+        }
         },
       ],
     });
@@ -220,10 +219,8 @@ const getTasksInCalendar = async (req, res) => {
         point: userSpecificData ? userSpecificData.point : null,
         deadline: userSpecificData ? userSpecificData.deadline : null,
         //description: userSpecificData ? userSpecificData.description : null,
-        feedbacks: userSpecificData
-          ? userSpecificData.feedback_of_Task_per_Users
-          : [],
-
+        feedbacks: userSpecificData ? userSpecificData.feedback_of_Task_per_Users : [],
+        
         SubTasks: task.SubTasks.map((_subTask) =>
           _subTask.SubTask_per_Users.length === 1
             ? (() => {
@@ -238,7 +235,7 @@ const getTasksInCalendar = async (req, res) => {
               })()
             : (() => {
                 delete _subTask.SubTask_per_Users;
-                return { ..._subTask, status: false };
+                return { ..._subTask, status: false};
               })()
         ),
       };
@@ -329,15 +326,11 @@ const taksDescription = async (req, res) => {
         userId: user.id,
         taskId: id,
       },
-      attributes: ["startDate", "point"],
+      attributes: ["startDate","point"],
     });
     const daysDiff = moment(myTask.startDate).diff(moment(), "days");
 
-    return res.json({
-      taskDesc,
-      currentDay: daysDiff,
-      currentPoint: myTask.point,
-    });
+    return res.json({ taskDesc, currentDay: daysDiff,currentPoint:myTask.point});
   } catch (error) {
     console.log(error);
   }
@@ -352,69 +345,58 @@ const deleteTask = async (req, res) => {
     const { taskId } = req.query;
 
     await Task_per_User.destroy({
-      where: { taskId, userId: user.id },
+      where: {taskId,userId:user.id},
     });
-    const subTasks = await SubTasks.findAll({ where: { taskId } });
+    const subTasks = await SubTasks.findAll({where:{taskId}})
     console.log(subTasks);
-    subTasks.map(async (e) => {
+    subTasks.map(async (e)=>{
       await SubTask_per_User.destroy({
-        subTasksId: e.id,
-        userId: user.id,
+        subTasksId:e.id,
+        userId:user.id
       });
-    });
-
-    return res.json({ success: true });
+    })
+      
+    return res.json({success:true});
   } catch (error) {
     console.log(error);
-    return res.json("something went wrong");
+    return res.json("something went wrong")
   }
 };
 
-const getTasksCategory1 = async (req, res) => {
+
+const getTasksCategory1 = async (req,res)=>{
   try {
     const { authorization: token } = req.headers;
     const user = await UserModel.findOne({
       where: { token: token.replace("Bearer ", "") },
     });
-    let activitiyString = user.activityName;
-    activitiyString = activitiyString
-      .replace("[", "")
-      .replace("]", "")
-      .replace(" ", "");
-    const activityList = activitiyString.split(",");
-    const obj = activityList.map((activity) => {
-      const x = activity.split("(");
-      return {
-        activityName: x[0],
-        count: +x[1].replace(")", ""),
-      };
-    });
+    let activitiyString = user.activityName
+    activitiyString = activitiyString.replace("[","").replace("]","").replace(" ","")
+    const activityList = activitiyString.split(",")
+    const obj = activityList.map((activity)=>{
+      const x = activity.split("(")     
+       return ({
+         activityName:x[0],
+         count:+x[1].replace(")","")
+        })
+        
+      })
 
-    const recommendation = await Promise.all(
-      obj.map(async (e) => {
-        return await TaskModel.findAll({
-          where: { facultyName: e.activityName.toUpperCase() },
-          order: sequelize.random(),
-          limit: e.count,
-        });
-      })
-    );
-    const Allfaculties = await Faculty.findAll({
-      attributes: ["facultyName"],
-    });
-    const faculties = await Promise.all(
-      Allfaculties.map(async (e) => {
-        return await TaskModel.findAll({
-          where: { facultyName: e.facultyName.toUpperCase()},
-          include : [SubTasks]
-        });
-      })
-    );
-    return res.json({ recommendation, faculties});
-  } catch (error) {
-    console.log(error);
+      const recommendation = await Promise.all(obj.map(async (e)=>{
+        return (await TaskModel.findAll({
+        where:{facultyName:e.activityName.toUpperCase()},
+         order:sequelize.random(),
+          limit: e.count 
+        }))}))
+           const facultyName = await Faculty.findAll({
+            attributes:['facultyName'],
+           })
+      
+      return res.json({recommendation,facultyName})
+    } catch (error) {
+      console.log(error);
   }
-};
+}
 
 module.exports = {
   getTasksFilter,
@@ -425,5 +407,7 @@ module.exports = {
   taksDescription,
   getRestTask,
   deleteTask,
-  getTasksCategory1,
+  getTasksCategory1
 };
+
+

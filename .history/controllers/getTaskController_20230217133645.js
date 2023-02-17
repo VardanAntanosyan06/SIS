@@ -399,18 +399,12 @@ const getTasksCategory1 = async (req, res) => {
         });
       })
     );
-    const Allfaculties = await Faculty.findAll({
+    const AllFaculties = await 
+    const facultyName = await Faculty.findAll({
       attributes: ["facultyName"],
     });
-    const faculties = await Promise.all(
-      Allfaculties.map(async (e) => {
-        return await TaskModel.findAll({
-          where: { facultyName: e.facultyName.toUpperCase()},
-          include : [SubTasks]
-        });
-      })
-    );
-    return res.json({ recommendation, faculties});
+
+    return res.json({ recommendation, facultyName });
   } catch (error) {
     console.log(error);
   }

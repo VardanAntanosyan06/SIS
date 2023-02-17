@@ -405,8 +405,7 @@ const getTasksCategory1 = async (req, res) => {
     const faculties = await Promise.all(
       Allfaculties.map(async (e) => {
         return await TaskModel.findAll({
-          where: { facultyName: e.facultyName.toUpperCase()},
-          include : [SubTasks]
+          where: { facultyName: e.facultyName.toUpperCase
         });
       })
     );

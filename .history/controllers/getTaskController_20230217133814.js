@@ -402,15 +402,16 @@ const getTasksCategory1 = async (req, res) => {
     const Allfaculties = await Faculty.findAll({
       attributes: ["facultyName"],
     });
-    const faculties = await Promise.all(
-      Allfaculties.map(async (e) => {
+    const  = await Promise.all(
+      obj.map(async (e) => {
         return await TaskModel.findAll({
-          where: { facultyName: e.facultyName.toUpperCase()},
-          include : [SubTasks]
+          where: { facultyName: e.activityName.toUpperCase() },
+          order: sequelize.random(),
+          limit: e.count,
         });
       })
     );
-    return res.json({ recommendation, faculties});
+    return res.json({ recommendation, facultyName });
   } catch (error) {
     console.log(error);
   }

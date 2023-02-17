@@ -406,8 +406,62 @@ const getTasksCategory1 = async (req, res) => {
       Allfaculties.map(async (e) => {
         return await TaskModel.findAll({
           where: { facultyName: e.facultyName.toUpperCase()},
-          include : [SubTasks]
-        });
+          include: [
+            {
+              model: SubTasks,
+              include: {
+                model: SubTask_per_User,
+                required: false,
+                where: { userId: user.id },
+              },
+            },
+            {
+              model: Task_per_User,
+            },
+          ],
+          
+        // });
+        tasks = tasks.map((e) => CircularJSON.stringify(e));
+  
+        const newTasks = tasks.map((_task) => {
+          let task = JSON.parse(_task);
+          let taskStatus = true;
+  
+          const userSpecificData =
+            task.Task_per_Users.length === 0
+              ? { createdAt: null, status: null, point: 0, deadline: null }
+              : task.Task_per_Users.filter((e) => +e.userId === +user.id)[0];
+  
+          task = {
+            ...task,
+            status: userSpecificData ? userSpecificData.status : null,
+            point: userSpecificData ? userSpecificData.point : null,
+            deadline: userSpecificData ? userSpecificData.deadline : null,
+            SubTasks: task.SubTasks.map((_subTask) =>
+              _subTask.SubTask_per_Users.length === 1
+                ? (() => {
+                    const _sub_task = {
+                      ..._subTask,
+                      status: _subTask.SubTask_per_Users[0].status,
+                      description: _subTask.SubTask_per_Users[0].description,
+                    };
+  
+                    delete _sub_task.SubTask_per_Users;
+                    return _sub_task;
+                  })()
+                : (() => {
+                    delete _subTask.SubTask_per_Users;
+                    return { ..._subTask, status: false, description: null };
+                  })()
+            ),
+          };
+          if (task.Task_per_Users.length > 0 && userSpecificData) {
+            taskStatus = false;
+          }
+          delete task.Task_per_Users;
+          return { ...task, isFree: taskStatus };
+        })
+
       })
     );
     return res.json({ recommendation, faculties});

@@ -406,11 +406,10 @@ const getTasksCategory1 = async (req, res) => {
       Allfaculties.map(async (e) => {
         return await TaskModel.findAll({
           where: { facultyName: e.facultyName.toUpperCase()},
-          include : [SubTasks]
         });
       })
     );
-    return res.json({ recommendation, faculties});
+    return res.json({ recommendation, faculties });
   } catch (error) {
     console.log(error);
   }
