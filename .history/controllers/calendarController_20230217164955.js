@@ -61,6 +61,7 @@ const create = async (req, res) => {
       newSubTasks.push({subTaskId:e.id,userId:user.id,status:false})  
   })
 
+console.log(newSubTasks);
      await SubTask_per_Users.bulkCreate(newSubTasks)
       return res.status(200).json(newTask);
     }

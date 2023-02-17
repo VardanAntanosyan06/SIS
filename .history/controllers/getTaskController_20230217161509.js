@@ -360,6 +360,7 @@ const deleteTask = async (req, res) => {
         subTaskId: e.id,
         userId: user.id,
       }});
+      console.log(e.id);
     });
 
     return res.json({ success: true });

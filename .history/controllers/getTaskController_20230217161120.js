@@ -3,7 +3,7 @@ const e = require("express");
 const Sequelize = require("sequelize");
 const env = process.env.NODE_ENV || "development";
 const config = require("../config/config.json")[env];
-const { QueryTypes, json, where } = require("sequelize");
+const { QueryTypes, json } = require("sequelize");
 const UserModel = require("../models").Users;
 const TaskModel = require("../models").Tasks;
 const UniversityModel = require("../models").UniversityTable;
@@ -356,10 +356,11 @@ const deleteTask = async (req, res) => {
     });
     const subTasks = await SubTasks.findAll({ where: { taskId } });
     subTasks.map(async (e) => {
-      await SubTask_per_User.destroy({where:{
-        subTaskId: e.id,
+      await subTasks.destroy({
+        subTasksId: e.id,
         userId: user.id,
-      }});
+      });
+      console.log(e.id);
     });
 
     return res.json({ success: true });

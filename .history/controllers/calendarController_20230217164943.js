@@ -57,10 +57,14 @@ const create = async (req, res) => {
      const mySubTasks = await SubTasks.findAll({where:{taskId},attributes:['id']})
 
      const newSubTasks = [];
-     mySubTasks.map((e)=>{
+     mySubTasks.map(async(e)=>{
+    const thisSubTask = await Task_per_Users.findOne({where:{taskId:e.id,userId:user.id}})
+    console.log(thisSubTask);
+      console.log("++++++++++++++++++++++++++++++++++");
       newSubTasks.push({subTaskId:e.id,userId:user.id,status:false})  
   })
 
+console.log(newSubTasks);
      await SubTask_per_Users.bulkCreate(newSubTasks)
       return res.status(200).json(newTask);
     }

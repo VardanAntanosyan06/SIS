@@ -356,10 +356,11 @@ const deleteTask = async (req, res) => {
     });
     const subTasks = await SubTasks.findAll({ where: { taskId } });
     subTasks.map(async (e) => {
-      await SubTask_per_User.destroy({where:{
-        subTaskId: e.id,
+      await SubTask_per_User.destroy(where:{
+        subTasksId: e.id,
         userId: user.id,
-      }});
+      });
+      console.log(e.id);
     });
 
     return res.json({ success: true });

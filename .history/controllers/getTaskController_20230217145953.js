@@ -3,7 +3,7 @@ const e = require("express");
 const Sequelize = require("sequelize");
 const env = process.env.NODE_ENV || "development";
 const config = require("../config/config.json")[env];
-const { QueryTypes, json, where } = require("sequelize");
+const { QueryTypes, json } = require("sequelize");
 const UserModel = require("../models").Users;
 const TaskModel = require("../models").Tasks;
 const UniversityModel = require("../models").UniversityTable;
@@ -355,11 +355,12 @@ const deleteTask = async (req, res) => {
       where: { taskId, userId: user.id },
     });
     const subTasks = await SubTasks.findAll({ where: { taskId } });
+    console.log(subTasks);
     subTasks.map(async (e) => {
-      await SubTask_per_User.destroy({where:{
-        subTaskId: e.id,
+      await SubTask_per_User.destroy({
+        subTasksId: e.id,
         userId: user.id,
-      }});
+      });
     });
 
     return res.json({ success: true });
@@ -375,80 +376,43 @@ const getTasksCategory1 = async (req, res) => {
     const user = await UserModel.findOne({
       where: { token: token.replace("Bearer ", "") },
     });
-    if (user) {
-      let tasks = await TaskModel.findAll({
-        include: [
-          {
-            model: SubTasks,
-            include: {
-              model: SubTask_per_User,
-              required: false,
-              where: { userId: user.id },
-            },
-          },
-          {
-            model: Task_per_User,
-          },
-        ],
-      });
-      // return tasks
-      tasks = tasks.map((e) => CircularJSON.stringify(e));
+    let activitiyString = user.activityName;
+    activitiyString = activitiyString
+      .replace("[", "")
+      .replace("]", "")
+      .replace(" ", "");
+    const activityList = activitiyString.split(",");
+    const obj = activityList.map((activity) => {
+      const x = activity.split("(");
+      return {
+        activityName: x[0],
+        count: +x[1].replace(")", ""),
+      };
+    });
 
-      const newTasks = tasks.map((_task) => {
-        let task = JSON.parse(_task);
-        let taskStatus = true;
-
-        const userSpecificData =
-          task.Task_per_Users.length === 0
-            ? { createdAt: null, status: null, point: 0, deadline: null }
-            : task.Task_per_Users.filter((e) => +e.userId === +user.id)[0];
-
-        task = {
-          ...task,
-          status: userSpecificData ? userSpecificData.status : null,
-          point: userSpecificData ? userSpecificData.point : null,
-          deadline: userSpecificData ? userSpecificData.deadline : null,
-          SubTasks: task.SubTasks.map((_subTask) =>
-            _subTask.SubTask_per_Users.length === 1
-              ? (() => {
-                  const _sub_task = {
-                    ..._subTask,
-                    status: _subTask.SubTask_per_Users[0].status,
-                    description: _subTask.SubTask_per_Users[0].description,
-                  };
-
-                  delete _sub_task.SubTask_per_Users;
-                  return _sub_task;
-                })()
-              : (() => {
-                  delete _subTask.SubTask_per_Users;
-                  return { ..._subTask, status: false, description: null };
-                })()
-          ),
-        };
-        if (task.Task_per_Users.length > 0 && userSpecificData) {
-          taskStatus = false;
-        }
-        delete task.Task_per_Users;
-        return { ...task, isFree: taskStatus };
-      });
-      let faculties = [];
-      let groupedTasks={}
-      newTasks.map((task)=>{
-        let facultyNames = task.facultyName;
-        if (!groupedTasks[facultyNames])
-        groupedTasks[facultyNames]=[]
-        groupedTasks[facultyNames].push(task);
-      }
-      );
-
-      
-      return res.status(200).send({ groupedTasks });
-    }
-    return res.json("user not found");
+    const recommendation = await Promise.all(
+      obj.map(async (e) => {
+        return await TaskModel.findAll({
+          where: { facultyName: e.activityName.toUpperCase() },
+          order: sequelize.random(),
+          limit: e.count,
+        });
+      })
+    );
+    const Allfaculties = await Faculty.findAll({
+      attributes: ["facultyName"],
+    });
+    const faculties = await Promise.all(
+      Allfaculties.map(async (e) => {
+        return await TaskModel.findAll({
+          where: { facultyName: e.facultyName.toUpperCase()},
+          include : [SubTasks]
+        });
+      })
+    );
+    return res.json({ recommendation, faculties});
   } catch (error) {
     console.log(error);
-    return res.json("something went wrong!");
   }
 };
 

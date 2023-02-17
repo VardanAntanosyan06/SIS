@@ -3,7 +3,7 @@ const e = require("express");
 const Sequelize = require("sequelize");
 const env = process.env.NODE_ENV || "development";
 const config = require("../config/config.json")[env];
-const { QueryTypes, json, where } = require("sequelize");
+const { QueryTypes, json } = require("sequelize");
 const UserModel = require("../models").Users;
 const TaskModel = require("../models").Tasks;
 const UniversityModel = require("../models").UniversityTable;
@@ -355,11 +355,12 @@ const deleteTask = async (req, res) => {
       where: { taskId, userId: user.id },
     });
     const subTasks = await SubTasks.findAll({ where: { taskId } });
+    console.log(subTasks);
     subTasks.map(async (e) => {
-      await SubTask_per_User.destroy({where:{
-        subTaskId: e.id,
+      await SubTask_per_User.destroy({
+        subTasksId: e.id,
         userId: user.id,
-      }});
+      });
     });
 
     return res.json({ success: true });
@@ -435,11 +436,11 @@ const getTasksCategory1 = async (req, res) => {
       let faculties = [];
       let groupedTasks={}
       newTasks.map((task)=>{
-        let facultyNames = task.facultyName;
-        if (!groupedTasks[facultyNames])
-        groupedTasks[facultyNames]=[]
-        groupedTasks[facultyNames].push(task);
+        fac
+        if (groupedTasks)
+        groupedTasks[task.facultyName].push(task);
       }
+      
       );
 
       

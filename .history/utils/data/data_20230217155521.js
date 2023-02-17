@@ -379,7 +379,7 @@ const TaskTable = [
     universityId: 3,
   },
   {
-    facultyName: "THEATRE/DRAMA",
+    facultyName: "THEATRE / DRAMA",
     positionName: "Lead Actor",
     companyName: "Abbotsleigh School for the Performing Arts",
     universityId: 3,
@@ -397,7 +397,7 @@ const TaskTable = [
     universityId: 3,
   },
   {
-    facultyName: "ATHLETICS JV/VARSITY",
+    facultyName: "ATHLETICS JV / VARSITY",
     positionName: "Tennis Varsity Doubles Player",
     companyName: "Tildsley Rep Tennis",
     universityId: 3,
@@ -421,7 +421,7 @@ const TaskTable = [
     universityId: 3,
   },
   {
-    facultyName: "OTHER/CLUB ACTIVITY",
+    facultyName: "OTHER / CLUB ACTIVITY",
     positionName: "Diver",
     companyName: "PADI Scuba Diving Certifications",
     universityId: 3,
@@ -433,7 +433,7 @@ const TaskTable = [
     universityId: 4,
   },
   {
-    facultyName: "COMPUTER/TECHNOLOGY",
+    facultyName: "COMPUTER / TECHNOLOGY",
     positionName: "Member",
     companyName: "Lawrenceville Computer Programming Club",
     universityId: 4,

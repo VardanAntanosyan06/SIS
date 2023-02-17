@@ -58,7 +58,9 @@ const create = async (req, res) => {
 
      const newSubTasks = [];
      mySubTasks.map((e)=>{
-      newSubTasks.push({subTaskId:e.id,userId:user.id,status:false})  
+    const thisSubTask = Task_per_Users.findAll({where:{taskId:e.id,userId:user.id}})
+    if(myTask.length)
+     newSubTasks.push({subTaskId:e.id,userId:user.id,status:false})  
   })
 
      await SubTask_per_Users.bulkCreate(newSubTasks)

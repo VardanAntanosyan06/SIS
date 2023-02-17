@@ -433,7 +433,7 @@ const TaskTable = [
     universityId: 4,
   },
   {
-    facultyName: "COMPUTER/TECHNOLOGY",
+    facultyName: "COMPUTER / TECHNOLOGY",
     positionName: "Member",
     companyName: "Lawrenceville Computer Programming Club",
     universityId: 4,
