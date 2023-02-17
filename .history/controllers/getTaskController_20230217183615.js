@@ -517,7 +517,11 @@ const getTasksCategory1 = async (req, res) => {
           });
           return newTasks ;
 
-          
+          return await TaskModel.findAll({
+            where: { facultyName: e.activityName.toUpperCase() },
+            order: sequelize.random(),
+            limit: e.count,
+          });
         })
       );
 

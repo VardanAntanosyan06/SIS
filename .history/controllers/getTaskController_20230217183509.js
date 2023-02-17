@@ -515,9 +515,13 @@ const getTasksCategory1 = async (req, res) => {
             delete task.Task_per_Users;
             return { ...task, isFree: taskStatus };
           });
-          return newTasks ;
+          return res.status(200).send({ newTasks });
 
-          
+          return await TaskModel.findAll({
+            where: { facultyName: e.activityName.toUpperCase() },
+            order: sequelize.random(),
+            limit: e.count,
+          });
         })
       );
 
