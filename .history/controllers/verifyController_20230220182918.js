@@ -12,9 +12,9 @@ const verify = async (req,res)=>{
             await item.save();
             return res.json({success:true})
         }
-        return res.json({success:false})
+        return res.json({success:true})
 } catch (error) {
-    console.log(error);
+    
 }
 }
 

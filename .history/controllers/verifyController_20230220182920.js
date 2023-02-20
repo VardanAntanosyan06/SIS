@@ -14,7 +14,7 @@ const verify = async (req,res)=>{
         }
         return res.json({success:false})
 } catch (error) {
-    console.log(error);
+    
 }
 }
 

@@ -10,11 +10,11 @@ const verify = async (req,res)=>{
             item.isVerified = true;
             
             await item.save();
-            return res.json({success:true})
-        }
-        return res.json({success:false})
+            return res.json*{}
+    }
+    return res.js
 } catch (error) {
-    console.log(error);
+    
 }
 }
 
