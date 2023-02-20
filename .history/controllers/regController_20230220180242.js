@@ -80,7 +80,7 @@ const reg = async (req, res) => {
         <b>if the button is not working please use the link below</b>
         <br>
        <br>
-          <b><a href='http://45.55.36.223/message/verify?token=${newEmail.token}'>Verify your email address</a></b>
+          <b><a href='http://164.90.224.111/verify?token=${newEmail.token}'>Verify your email address</a></b>
         </center>
           `,
 

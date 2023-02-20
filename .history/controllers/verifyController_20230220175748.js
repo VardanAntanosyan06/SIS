@@ -4,7 +4,7 @@ const model = require("../models").UserEmails;
 const verify = async (req,res)=>{
     const token = req.query.token
     const item = await model.findOne({where:{token}})
-    try {
+    try                                 
         
         if(item){
             item.isVerified = true;
@@ -16,6 +16,8 @@ const verify = async (req,res)=>{
         </center>
         `)
     }
+    res.redirect('http://45.55.36.223:3000/massage')
+
     return res.js
 } catch (error) {
     
