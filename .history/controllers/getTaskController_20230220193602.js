@@ -300,6 +300,7 @@ const getTasksFilter = async (req, res) => {
         ],
       },
     });
+    console.log(name);
     return res.json({ tasks });
   } catch (error) {
     console.log(error);

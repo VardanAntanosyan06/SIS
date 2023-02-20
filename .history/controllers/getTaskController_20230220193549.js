@@ -63,6 +63,7 @@ const getYourTasks = async (req, res) => {
       const myUniversity = await UniversityModel.findOne({
         where: { name: user.university },
       });
+      console.log(myUniversity);
       let tasks = await TaskModel.findAll({
         where: {
           universityId: myUniversity.id,
@@ -242,6 +243,7 @@ const getTasksInCalendar = async (req, res) => {
       if (task.Task_per_Users.length > 0 && userSpecificData) {
         taskStatus = false;
       }
+      console.log(userSpecificData);
       // delete task.Task_per_Users;
       if (taskStatus === false) {
         return { ...task, isFree: taskStatus };
@@ -300,6 +302,7 @@ const getTasksFilter = async (req, res) => {
         ],
       },
     });
+    console.log(name);
     return res.json({ tasks });
   } catch (error) {
     console.log(error);
