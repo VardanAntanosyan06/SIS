@@ -5,10 +5,10 @@ const verify = async (req,res)=>{
     const token = req.query.token
     const item = await model.findOne({where:{token}})
     try {
-        console.log(token,"++++++++++++++++++++++++++++++++++++");
+        
         if(item){
             item.isVerified = true;
-            item.token = null;
+            item.t
             await item.save();
             return res.json({success:true})
         }
