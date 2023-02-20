@@ -521,7 +521,7 @@ const getTasksCategory1 = async (req, res) => {
         })
       );
 
-      return res.status(200).send({ recommendation:recommendation[0], groupedTasks });
+      return res.status(200).send({ recommendation[0], groupedTasks });
     }
     return res.json("user not found");
   } catch (error) {
