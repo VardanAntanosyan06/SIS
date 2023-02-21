@@ -86,11 +86,11 @@ const updateEmail = async (req, res) => {
 const verify = async (req,res)=>{
   try {
     const {token} = req.body;
-    const myEmail = await 
 
-} catch (error) {
+
+  } catch (error) {
     
-}
+  }
 }
 
 module.exports = {
