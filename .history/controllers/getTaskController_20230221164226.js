@@ -211,6 +211,7 @@ const getTasksInCalendar = async (req, res) => {
         ...task,
         status: userSpecificData ? userSpecificData.status : null,
         startDate: userSpecificData ? userSpecificData.startDate : null,
+        // deadlineAtWeek:userSpecificData?userSpecificData.deadlineAtWeek:null,
         position: userSpecificData ? userSpecificData.position : null,
         days: days !== undefined ? (days > -1 ? days : null) : null,
         point: userSpecificData ? userSpecificData.point : null,
@@ -272,7 +273,7 @@ const getSubTasks = async (req, res) => {
       where: { token: token.replace("Bearer ", "") },
     });
 
-    const { subTaskId } = req.query;  
+    const { subTaskId } = req.query;
 
     const mySubTasks = await SubTask_per_User.findOne({
       where: { subTaskId, userId: user.id },
@@ -324,14 +325,11 @@ const taksDescription = async (req, res) => {
       },
       attributes: ["startDate", "point"],
     });
-    var duration = moment.duration(
-      moment().diff(myTask.startDate)
-    );
-    var days = Math.floor(duration.asDays());
-    
+    const daysDiff = moment(myTask.startDate).diff(moment(), "days");
+
     return res.json({
       taskDesc,
-      currentDay: days,
+      currentDay: daysDiff,
       currentPoint: myTask.point,
     });
   } catch (error) {
@@ -430,6 +428,7 @@ const getTasksCategory1 = async (req, res) => {
         delete task.Task_per_Users;
         return { ...task, isFree: taskStatus };
       });
+      let faculties = [];
       let groupedTasks = {};
       newTasks.map((task) => {
         let facultyNames = task.facultyName;

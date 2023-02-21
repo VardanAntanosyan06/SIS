@@ -322,16 +322,13 @@ const taksDescription = async (req, res) => {
         userId: user.id,
         taskId: id,
       },
-      attributes: ["startDate", "point"],
+      // attributes: ["startDate", "point"],
     });
-    var duration = moment.duration(
-      moment().diff(myTask.startDate)
-    );
-    var days = Math.floor(duration.asDays());
-    
+    const daysDiff = moment(myTask.startDate).diff(moment(), "days");
+    console.log(myTask);
     return res.json({
       taskDesc,
-      currentDay: days,
+      currentDay: daysDiff,
       currentPoint: myTask.point,
     });
   } catch (error) {
@@ -430,6 +427,7 @@ const getTasksCategory1 = async (req, res) => {
         delete task.Task_per_Users;
         return { ...task, isFree: taskStatus };
       });
+      let faculties = [];
       let groupedTasks = {};
       newTasks.map((task) => {
         let facultyNames = task.facultyName;

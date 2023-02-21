@@ -328,7 +328,8 @@ const taksDescription = async (req, res) => {
       moment().diff(myTask.startDate)
     );
     var days = Math.floor(duration.asDays());
-    
+    // const daysDiff = moment(myTask  .startDate).diff(moment(), "days");
+
     return res.json({
       taskDesc,
       currentDay: days,

@@ -5,6 +5,7 @@ const nodemailer = require("nodemailer");
 const randomString = crypto.randomBytes(3).toString("hex");
 const jwt = require("jsonwebtoken");
 
+
 const updateEmail = async (req, res) => {
   try {
     const { email, newEmail } = req.body;
@@ -19,11 +20,11 @@ const updateEmail = async (req, res) => {
     if (!isEmail) {
       const item = await UserEmails.create({
         email,
-        userId: user.id,
-        password: null,
-        role: "toBeSecundary",
-        token: jwt.sign({ email }, process.env.SECRET),
-      });
+        userId:user.id,
+        password:null,
+        role:"toBeSecundary",
+        token:jwt.sign({ email }, process.env.SECRET),
+      })
       const transporter = nodemailer.createTransport({
         host: "mail.privateemail.com",
         port: 465,
@@ -36,10 +37,10 @@ const updateEmail = async (req, res) => {
       const mailOptions = {
         from: "info@sisprogress.com",
         to: email,
-        subject: "Reset Email",
+        subject: "verification",
         html: `<center>
         <img src='cid:logo' style="width:450px;height:250px;" >
-        <h2>Reset Email</h2>
+        <h2>Verify your email address </h2>
         <p>
          You've entered <b>${email}</b> as the  email address for your account.
          Please verify this email address by clicking button below. 
@@ -64,34 +65,21 @@ const updateEmail = async (req, res) => {
         <br>
            <b><a href='http://45.55.36.223/message?token=${item.token}'></a></b>
          </center>`,
-        attachments: [
-          {
-            filename: "Email.png",
-            path: "./controllers/Email.png",
-            cid: "logo",
-          },
-        ],
+         attachments: [{
+          filename: 'Email.png',
+          path: './controllers/Email.png',
+          cid: 'logo' 
+     }]
       };
 
       transporter.sendMail(mailOptions);
       return res.json("email is sent");
     }
-    return res.json("Email already in use");
+    return res.json("Email already in use")
   } catch (error) {
     console.log(error);
   }
 };
-
-
-// const verify = async (req,res)=>{
-//   try {
-//     const {token} = req.body;
-
-
-//   } catch (error) {
-    
-//   }
-// }
 
 module.exports = {
   updateEmail,

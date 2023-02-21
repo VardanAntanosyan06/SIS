@@ -83,16 +83,13 @@ const updateEmail = async (req, res) => {
 };
 
 
-// const verify = async (req,res)=>{
-//   try {
-//     const {token} = req.body;
-
-
-//   } catch (error) {
+const verify = async (req,res)=>{
+  try {
+    const {token,email} = req.body;
+  } catch (error) {
     
-//   }
-// }
-
+  }
+}
 module.exports = {
   updateEmail,
 };
