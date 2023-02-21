@@ -104,7 +104,7 @@ const verify = async (req,res)=>{
     myEmail.token = jwt.sign({ email:myEmail.email }, process.env.SECRET)
 
     await myEmail.save()
-    return res.json({success:true,newEmail:myEmail.email,emailType:"Secondary"}) 
+    return res.json({success:true,newEmail:}) 
     }
     return res.json({success:false}) 
 } catch (error) {
