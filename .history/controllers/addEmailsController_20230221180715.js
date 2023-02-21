@@ -4,7 +4,7 @@ const crypto = require("crypto");
 const nodemailer = require("nodemailer");
 const randomString = crypto.randomBytes(3).toString("hex");
 const jwt = require("jsonwebtoken");
-const sequelize = require("sequelize")
+const Op = require("Op")
 
 
 const updateEmail = async (req, res) => {
@@ -97,7 +97,7 @@ const verify = async (req,res)=>{
       await UserEmails.destroy(({where:{
       userId:myEmail.userId,
       role:"Secondary",
-      token:{[sequelize.Op.ne]: token}, 
+      token:{[Op.ne]: token}, 
     }}))
     myEmail.isVerified = true,
     myEmail.role = "Secondary",

@@ -97,7 +97,7 @@ const verify = async (req,res)=>{
       await UserEmails.destroy(({where:{
       userId:myEmail.userId,
       role:"Secondary",
-      token:{[sequelize.Op.ne]: token}, 
+      token:{[sequelize.op.ne]: token}, 
     }}))
     myEmail.isVerified = true,
     myEmail.role = "Secondary",

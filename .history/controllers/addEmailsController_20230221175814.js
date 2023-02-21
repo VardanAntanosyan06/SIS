@@ -4,8 +4,6 @@ const crypto = require("crypto");
 const nodemailer = require("nodemailer");
 const randomString = crypto.randomBytes(3).toString("hex");
 const jwt = require("jsonwebtoken");
-const sequelize = require("sequelize")
-
 
 const updateEmail = async (req, res) => {
   try {
@@ -24,10 +22,7 @@ const updateEmail = async (req, res) => {
         userId: user.id,
         password: null,
         role: "toBeSecundary",
-        token: jwt.sign(
-          { email }, 
-          process.env.SECRET
-          ),
+        token: jwt.sign({ email }, process.env.SECRET),
       });
       const transporter = nodemailer.createTransport({
         host: "mail.privateemail.com",
@@ -94,11 +89,9 @@ const verify = async (req,res)=>{
     const myEmail = await UserEmails.findOne({where:{token}})
     if(myEmail){
     console.log(myEmail);
-      await UserEmails.destroy(({where:{
+    const myEmails = await UserEmails.destroy(({where:{
       userId:myEmail.userId,
-      role:"Secondary",
-      token:{[sequelize.Op.ne]: token}, 
-    }}))
+      role:"Secondary",}}))
     myEmail.isVerified = true,
     myEmail.role = "Secondary",
     myEmail.token = jwt.sign({ email:myEmail.email }, process.env.SECRET)

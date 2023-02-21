@@ -2,7 +2,7 @@ var express = require("express");
 var router = express.Router();
 const controller = require("../controllers/addEmailsController");
 
-router.post("/update", controller.updateEmail);
-router.post("/verify", controller.verify);
+router.patch("/update", controller.updateEmail);
+router.patch("/update", controller.verify);
 
 module.exports = router;
