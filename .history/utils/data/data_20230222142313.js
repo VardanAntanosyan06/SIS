@@ -937,7 +937,7 @@ const TaskTable = [
     universityId: 9,
   },
   {
-    facultyName: "THEATER/DRAMA",
+    facultyName: "THEATRE/DRAMA",
     positionName: "Playwright and Publicist",
     companyName: "House Drama Captain",
     universityId: 9,

@@ -131,7 +131,7 @@ const faculty = [
   },  {
     facultyName:"STUDENT GOVT. POLITICS"
   },  {
-    facultyName:"THEATER/DRAMA"
+    facultyName:"THEATRE/DRAMA"
   },  {
     facultyName:"MUSIC VOCAL"
   },  {
@@ -379,7 +379,7 @@ const TaskTable = [
     universityId: 3,
   },
   {
-    facultyName: "THEATER/DRAMA",
+    facultyName: "THEATRE/DRAMA",
     positionName: "Lead Actor",
     companyName: "Abbotsleigh School for the Performing Arts",
     universityId: 3,
@@ -937,7 +937,7 @@ const TaskTable = [
     universityId: 9,
   },
   {
-    facultyName: "THEATER/DRAMA",
+    facultyName: "THEATRE/DRAMA",
     positionName: "Playwright and Publicist",
     companyName: "House Drama Captain",
     universityId: 9,
@@ -1081,19 +1081,19 @@ const TaskTable = [
     universityId: 8,
   },
   {
-    facultyName: "THEATER/DRAMA",
+    facultyName: "THEATRE/DRAMA",
     positionName: "Member",
     companyName: "Benvinda Drama Group",
     universityId: 11,
   },
   {
-    facultyName: "THEATER/DRAMA",
+    facultyName: "THEATRE/DRAMA",
     positionName: "Connections",
     companyName: "Royal National Theatre of London",
     universityId: 11,
   },
   {
-    facultyName: "THEATER/DRAMA",
+    facultyName: "THEATRE/DRAMA",
     positionName: "Member",
     companyName: "Musical Theater Group",
     universityId: 11,

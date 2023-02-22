@@ -937,7 +937,7 @@ const TaskTable = [
     universityId: 9,
   },
   {
-    facultyName: "THEATER/DRAMA",
+    facultyName: "THEATRE/DRAMA",
     positionName: "Playwright and Publicist",
     companyName: "House Drama Captain",
     universityId: 9,
@@ -1081,7 +1081,7 @@ const TaskTable = [
     universityId: 8,
   },
   {
-    facultyName: "THEATER/DRAMA",
+    facultyName: "THEATRE/DRAMA",
     positionName: "Member",
     companyName: "Benvinda Drama Group",
     universityId: 11,
