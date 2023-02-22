@@ -1,8 +1,8 @@
 const json = async (req, res) => {
   try {
-    const myJson = require("./assetlinks.json")
+    const x = 
 
-    return res.send(myJson);
+    return res.json(x);
   } catch (error) {}
 };
 
