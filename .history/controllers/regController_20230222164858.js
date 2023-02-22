@@ -79,7 +79,7 @@ const reg = async (req, res) => {
        <br>
         <b>if the button is not working please use the link below</b>
         <br>
-        <br>
+       <br>
           <b><a href='http://45.55.36.223/message?token=${newEmail.token}'>http://45.55.36.223/message?token=${newEmail.token}</a></b>
         </center>
           `,

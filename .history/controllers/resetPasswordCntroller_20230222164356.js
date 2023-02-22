@@ -47,9 +47,8 @@ const sendMail = async (req, res) => {
        <br>
        <br>
         <b>if you  did not  forget your password you can safely ignore this email.</b>
-        <br>
-        <br>
-        <a href='http://45.55.36.223/changepassword?token=${user.token}'>http://45.55.36.223/changepassword?token=${user.token}</a>   
+
+        
         <br>
         </center>
           `,

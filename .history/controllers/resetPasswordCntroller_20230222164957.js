@@ -23,7 +23,7 @@ const sendMail = async (req, res) => {
       const mailOptions = {
         from: "info@sisprogress.com",
         to: email,
-        subject: "Password Reset",
+        subject: "Password",
         html: `<center>
        <img src='cid:logo' style="width:450px;height:250px;" >
        <h2>Verify your email address </h2>
