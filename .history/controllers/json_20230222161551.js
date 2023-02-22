@@ -1,0 +1,24 @@
+const myFoo = async (req, res) => {
+  try {
+    return res.json(`
+        [
+            {
+              "relation": [
+                "delegate_permission/common.handle_all_urls"
+              ],
+              "target": {
+                "namespace": "android_app",
+                "package_name": "com.sp.sis_progress",
+                "sha256_cert_fingerprints": [
+                  "82:03:8F:0F:A8:0B:0F:FB:48:2A:47:C6:E0:FE:24:7F:84:AC:ED:F4:A3:69:86:7E:B8:21:04:9A:DF:2C:0E:E9"
+                ]
+              }
+            }
+          ]
+        `);
+  } catch (error) {}
+};
+
+
+
+module.exports = []

@@ -75,7 +75,7 @@ app.use("/settings",settings)
 // app.use("/moment",momentt)
 app.use("/addEmail",addEmails)
 app.use("/contactUs",contactUs)
-app.use("/.well-known/assetlinks.json",json)
+app.use("/contactUs",js)
 
 
 // catch 404 and forward to error handler
