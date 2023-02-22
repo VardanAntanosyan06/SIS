@@ -80,7 +80,7 @@ const resetPassword = async (req, res) => {
     if (user) {
       user.password = bcrypt.hashSync(password, 10);
       user.token = jwt.sign(
-        {user_id: user.id, email:UserEmails.email},
+        {user_id: user.id, email},
         process.env.SECRET
     )
 
