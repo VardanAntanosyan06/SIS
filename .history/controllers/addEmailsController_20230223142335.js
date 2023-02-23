@@ -60,14 +60,14 @@ const updateEmail = async (req, res) => {
          text-decoration: none;
          display: inline-block;
          ">
-           <a href='http://45.55.36.223/secondarymailverify?token=${item.token}'
+           <a href='http://45.55.36.223/message?token=${item.token}'
            style="color:#fff;text-decoration-line: none;font-size:20px;">Verify your email address</a>
          </button>
         <br>
          <b>if the button is not working please use the link below</b>
          <br>
         <br>
-           <b><a href='http://45.55.36.223/secondarymailverify?token=${item.token}'>http://45.55.36.223/message?token=${item.token} </a></b>
+           <b><a href='http://45.55.36.223/message?token=${item.token}'>http://45.55.36.223/message?token=${item.token} </a></b>
          </center>`,
         attachments: [
           {
