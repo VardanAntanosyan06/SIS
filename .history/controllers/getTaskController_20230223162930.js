@@ -437,7 +437,6 @@ const getTasksCategory1 = async (req, res) => {
         groupedTasks[facultyNames].push(task);
       });
       let activitiyString = user.activityName;
-      if(activitiyString){
       activitiyString = activitiyString
         .replace("[", "")
         .replace("]", "")
@@ -450,6 +449,7 @@ const getTasksCategory1 = async (req, res) => {
           count: +x[1].replace(")", ""),
         };
       });
+     console.log();
       const recommendation = await Promise.all(
         obj.map(async (e) => {
           let tasks = await TaskModel.findAll({
@@ -518,9 +518,6 @@ const getTasksCategory1 = async (req, res) => {
       );
 
       return res.status(200).send({ recommendation:recommendation[0], groupedTasks });
-      }else{
-      return res.status(200).send({ recommendation:[], groupedTasks });
-      }
     }
     return res.json("user not found");
   } catch (error) {

@@ -519,7 +519,7 @@ const getTasksCategory1 = async (req, res) => {
 
       return res.status(200).send({ recommendation:recommendation[0], groupedTasks });
       }else{
-      return res.status(200).send({ recommendation:[], groupedTasks });
+      return res.status(200).send({ recommendation:recommendation[0], groupedTasks });
       }
     }
     return res.json("user not found");
