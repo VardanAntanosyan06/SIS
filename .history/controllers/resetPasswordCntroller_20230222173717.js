@@ -53,6 +53,7 @@ const sendMail = async (req, res) => {
         <br>
         </center>
           `,
+
         attachments: [
           {
             filename: "Password.png",
@@ -96,4 +97,3 @@ module.exports = {
   sendMail,
   resetPassword,
 };
-
