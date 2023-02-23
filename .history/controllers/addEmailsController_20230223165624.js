@@ -112,7 +112,7 @@ const verify = async (req,res)=>{
 }
 }
 
-
+  
 module.exports = {
   updateEmail,
   verify
