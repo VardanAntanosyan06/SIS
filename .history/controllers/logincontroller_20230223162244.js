@@ -77,7 +77,7 @@ const isLogined = async (req, res) => {
 
     if (user) {
       const emails = {
-        ...user.dataValues,
+        ...user.da,
         firstEmail,
         secondaryEmail
       }

@@ -76,12 +76,8 @@ const isLogined = async (req, res) => {
     });
 
     if (user) {
-      const emails = {
-        ...user.dataValues,
-        firstEmail,
-        secondaryEmail
-      }
-      return res.status(200).json(emails);
+      // console.log(firstEmail, "++++++++++++++", secondaryEmail);
+      return res.status(200).json(user, {firstEmail, secondaryEmail});
     }
     return res.status(401).json("not found");
   } catch (error) {

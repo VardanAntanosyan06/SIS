@@ -76,11 +76,11 @@ const isLogined = async (req, res) => {
     });
 
     if (user) {
-      const emails = {
-        ...user.dataValues,
+      const emails = [
+        ...user,
         firstEmail,
         secondaryEmail
-      }
+      ]
       return res.status(200).json(emails);
     }
     return res.status(401).json("not found");

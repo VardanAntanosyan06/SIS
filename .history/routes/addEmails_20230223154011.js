@@ -6,3 +6,4 @@ router.post("/update", controller.updateEmail);
 router.post("/verify", controller.verify);
 
 module.exports = router;
+    

@@ -65,6 +65,11 @@ const isLogined = async (req, res) => {
 
     const user = await UserModel.findOne({
       where: { token },
+      include: {
+        model: UserEmails,
+        attributes: ["email"],
+        where: { isVerified: true },
+      },
     });
     const secondaryEmail = await UserEmails.findOne({
       where: { userId: user.id, role: "Secondary", isVerified: true },
@@ -72,16 +77,12 @@ const isLogined = async (req, res) => {
     });
     const firstEmail = await UserEmails.findOne({
       where: { userId: user.id, role: "First", isVerified: true },
-      attributes:['email']
+      vattributes:['emailattributes:['email']attributes:['email']
     });
 
     if (user) {
-      const emails = {
-        ...user.dataValues,
-        firstEmail,
-        secondaryEmail
-      }
-      return res.status(200).json(emails);
+      console.log(firstEmail, "++++++++++++++", secondaryEmail);
+      return res.status(200).json(user, firstEmail, secondaryEmail);
     }
     return res.status(401).json("not found");
   } catch (error) {
