@@ -98,6 +98,11 @@ const a = async (req,res)=>{
     const user = await UserEmails.findOne({where:{token:null}})
 
 
+    user.token = jwt.sign(
+      {user_id: user.id, email:UserEmails.email},
+      process.env.SECRET
+  )
+
   await user.save();
 
   return res.json("okk")
@@ -108,6 +113,5 @@ const a = async (req,res)=>{
 module.exports = {
   sendMail,
   resetPassword,
-
 };
 

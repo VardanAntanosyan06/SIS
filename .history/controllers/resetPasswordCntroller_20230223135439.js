@@ -98,6 +98,8 @@ const a = async (req,res)=>{
     const user = await UserEmails.findOne({where:{token:null}})
 
 
+    user.token = 
+
   await user.save();
 
   return res.json("okk")

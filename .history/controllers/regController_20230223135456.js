@@ -36,7 +36,7 @@ const reg = async (req, res) => {
         userId:item.id,
         role:"First",
         token:jwt.sign(
-          {user_id: user.id, email},
+          {user_id: user.id, email:UserEmails.email},
           process.env.SECRET
       )
       })

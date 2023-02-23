@@ -94,20 +94,10 @@ const resetPassword = async (req, res) => {
 };
 
 const a = async (req,res)=>{
-  try {
-    const user = await UserEmails.findOne({where:{token:null}})
-
-
-  await user.save();
-
-  return res.json("okk")
-  } catch (error) {
-    
-  }
+  try
 }
 module.exports = {
   sendMail,
   resetPassword,
-
 };
 
