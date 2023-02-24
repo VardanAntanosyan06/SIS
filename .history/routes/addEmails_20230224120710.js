@@ -4,6 +4,5 @@ const controller = require("../controllers/addEmailsController");
 
 router.post("/update", controller.updateEmail);
 router.post("/verify", controller.verify);
-router.delete("/delete",controller.deleteSecundaryEmail)
-
+router.delete("/delete",c)
 module.exports = router;

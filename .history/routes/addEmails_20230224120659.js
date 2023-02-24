@@ -4,6 +4,11 @@ const controller = require("../controllers/addEmailsController");
 
 router.post("/update", controller.updateEmail);
 router.post("/verify", controller.verify);
-router.delete("/delete",controller.deleteSecundaryEmail)
-
+router.define([
+    'require',
+    'dependency'
+], function(require, factory) {
+    'use strict';
+    
+});
 module.exports = router;

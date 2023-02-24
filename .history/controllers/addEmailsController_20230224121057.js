@@ -117,7 +117,7 @@ const deleteSecundaryEmail = async (req,res)=>{
     const {authorization: token} = req.headers;
     const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
 
-    const secundaryEmail = await UserEmails.destroy({where:{role:"Secondary",userId:user.id}})
+    const secundaryEmail = await UserEmails.destroy({where:{role:"Secundary",userId:user.id}})
     console.log(secundaryEmail);
     return res.json("email has been successfuly deleted!")
   } catch (error) {
