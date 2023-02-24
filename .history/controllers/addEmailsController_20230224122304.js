@@ -5,7 +5,7 @@ const nodemailer = require("nodemailer");
 const randomString = crypto.randomBytes(3).toString("hex");
 const jwt = require("jsonwebtoken");
 const sequelize = require("sequelize")
-  
+
 
 const updateEmail = async (req, res) => {
   try {
@@ -14,15 +14,12 @@ const updateEmail = async (req, res) => {
     const user = await UserModel.findOne({
       where: { token: token.replace("Bearer ", "") },
     });
-    const myEmail = await UserEmails.findOne({where:{userId:user.id,role:"First"}})
-    console.log(myEmail,"+++++++++++++++++++++++")
+
     const isEmail = await UserEmails.findOne({
-      where: { email }, 
+      where: { email },
     });
     if (!isEmail) {
-      let item = {};
-      if(role==="Secondary"){
-        item = await UserEmails.create({
+      const item = await UserEmails.create({
         email,
         userId: user.id,
         password: null,
@@ -31,18 +28,7 @@ const updateEmail = async (req, res) => {
           { email }, 
           process.env.SECRET
           ),
-      })}else{
-          item = await UserEmails.create({
-          email,
-          userId: user.id,
-          password: myEmail.password,
-          role: "toBe"+role,
-          token: jwt.sign(
-            { email }, 
-            process.env.SECRET
-            ),
-        })
-      }  
+      });
       const transporter = nodemailer.createTransport({
         host: "mail.privateemail.com",
         port: 465,
@@ -51,8 +37,8 @@ const updateEmail = async (req, res) => {
           user: process.env.EMAIL,
           pass: process.env.PASSWORD,
         },
-      }); 
-      let mailOptions = {};
+      });
+      const mailOptions = {};
       if(role=="Secondary"){
       mailOptions = {
         from: "info@sisprogress.com",
@@ -148,20 +134,18 @@ const verify = async (req,res)=>{
   try {
     const {token} = req.body;
     const myEmail = await UserEmails.findOne({where:{token}})
-    const role = myEmail.role.split("toBe")[1]
-    console.log(myEmail.userId,role,"++++++++++++++++++++++++++++++++++);");
-    if(myEmail){  
+    if(myEmail){
       await UserEmails.destroy(({where:{
       userId:myEmail.userId,
-      role,
+      role:"Secondary",
       token:{[sequelize.Op.ne]: token}, 
     }}))
     myEmail.isVerified = true,
-    myEmail.role = role,
+    myEmail.role = "Secondary",
     myEmail.token = jwt.sign({ email:myEmail.email }, process.env.SECRET)
 
     await myEmail.save()
-    return res.json({success:true,newEmail:myEmail.email,emailType:role}) 
+    return res.json({success:true,newEmail:myEmail.email,emailType:"Secondary"}) 
     }
     return res.json({success:false}) 
 } catch (error) {

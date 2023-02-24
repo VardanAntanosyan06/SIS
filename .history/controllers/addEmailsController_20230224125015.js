@@ -14,15 +14,12 @@ const updateEmail = async (req, res) => {
     const user = await UserModel.findOne({
       where: { token: token.replace("Bearer ", "") },
     });
-    const myEmail = await UserEmails.findOne({where:{userId:user.id,role:"First"}})
-    console.log(myEmail,"+++++++++++++++++++++++")
+    const myEmail = await UserEmails.findOne({where:{}})
     const isEmail = await UserEmails.findOne({
-      where: { email }, 
+      where: { email },
     });
     if (!isEmail) {
-      let item = {};
-      if(role==="Secondary"){
-        item = await UserEmails.create({
+      const item = await UserEmails.create({
         email,
         userId: user.id,
         password: null,
@@ -31,18 +28,7 @@ const updateEmail = async (req, res) => {
           { email }, 
           process.env.SECRET
           ),
-      })}else{
-          item = await UserEmails.create({
-          email,
-          userId: user.id,
-          password: myEmail.password,
-          role: "toBe"+role,
-          token: jwt.sign(
-            { email }, 
-            process.env.SECRET
-            ),
-        })
-      }  
+      });
       const transporter = nodemailer.createTransport({
         host: "mail.privateemail.com",
         port: 465,
@@ -148,9 +134,8 @@ const verify = async (req,res)=>{
   try {
     const {token} = req.body;
     const myEmail = await UserEmails.findOne({where:{token}})
-    const role = myEmail.role.split("toBe")[1]
-    console.log(myEmail.userId,role,"++++++++++++++++++++++++++++++++++);");
-    if(myEmail){  
+    if(myEmail){
+      let role = myEmail.role.split("toBe")[1]; 
       await UserEmails.destroy(({where:{
       userId:myEmail.userId,
       role,
@@ -161,7 +146,7 @@ const verify = async (req,res)=>{
     myEmail.token = jwt.sign({ email:myEmail.email }, process.env.SECRET)
 
     await myEmail.save()
-    return res.json({success:true,newEmail:myEmail.email,emailType:role}) 
+    return res.json({success:true,newEmail:myEmail.email,emailType:"Secondary"}) 
     }
     return res.json({success:false}) 
 } catch (error) {

@@ -148,8 +148,8 @@ const verify = async (req,res)=>{
   try {
     const {token} = req.body;
     const myEmail = await UserEmails.findOne({where:{token}})
+    console.log(myEmail,"+++++++++++++++++++++++++++");
     const role = myEmail.role.split("toBe")[1]
-    console.log(myEmail.userId,role,"++++++++++++++++++++++++++++++++++);");
     if(myEmail){  
       await UserEmails.destroy(({where:{
       userId:myEmail.userId,

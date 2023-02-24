@@ -15,9 +15,9 @@ const updateEmail = async (req, res) => {
       where: { token: token.replace("Bearer ", "") },
     });
     const myEmail = await UserEmails.findOne({where:{userId:user.id,role:"First"}})
-    console.log(myEmail,"+++++++++++++++++++++++")
+
     const isEmail = await UserEmails.findOne({
-      where: { email }, 
+      where: { email },
     });
     if (!isEmail) {
       let item = {};
@@ -148,9 +148,10 @@ const verify = async (req,res)=>{
   try {
     const {token} = req.body;
     const myEmail = await UserEmails.findOne({where:{token}})
-    const role = myEmail.role.split("toBe")[1]
-    console.log(myEmail.userId,role,"++++++++++++++++++++++++++++++++++);");
-    if(myEmail){  
+    const role = myEmail.role.split("toBe")
+
+    console.log(r);
+    if(myEmail){
       await UserEmails.destroy(({where:{
       userId:myEmail.userId,
       role,
@@ -161,7 +162,7 @@ const verify = async (req,res)=>{
     myEmail.token = jwt.sign({ email:myEmail.email }, process.env.SECRET)
 
     await myEmail.save()
-    return res.json({success:true,newEmail:myEmail.email,emailType:role}) 
+    return res.json({success:true,newEmail:myEmail.email,emailType:"Secondary"}) 
     }
     return res.json({success:false}) 
 } catch (error) {

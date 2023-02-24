@@ -5,7 +5,7 @@ const nodemailer = require("nodemailer");
 const randomString = crypto.randomBytes(3).toString("hex");
 const jwt = require("jsonwebtoken");
 const sequelize = require("sequelize")
-  
+
 
 const updateEmail = async (req, res) => {
   try {
@@ -14,15 +14,12 @@ const updateEmail = async (req, res) => {
     const user = await UserModel.findOne({
       where: { token: token.replace("Bearer ", "") },
     });
-    const myEmail = await UserEmails.findOne({where:{userId:user.id,role:"First"}})
-    console.log(myEmail,"+++++++++++++++++++++++")
+
     const isEmail = await UserEmails.findOne({
-      where: { email }, 
+      where: { email },
     });
     if (!isEmail) {
-      let item = {};
-      if(role==="Secondary"){
-        item = await UserEmails.create({
+      const item = await UserEmails.create({
         email,
         userId: user.id,
         password: null,
@@ -31,18 +28,7 @@ const updateEmail = async (req, res) => {
           { email }, 
           process.env.SECRET
           ),
-      })}else{
-          item = await UserEmails.create({
-          email,
-          userId: user.id,
-          password: myEmail.password,
-          role: "toBe"+role,
-          token: jwt.sign(
-            { email }, 
-            process.env.SECRET
-            ),
-        })
-      }  
+      });
       const transporter = nodemailer.createTransport({
         host: "mail.privateemail.com",
         port: 465,
@@ -51,9 +37,9 @@ const updateEmail = async (req, res) => {
           user: process.env.EMAIL,
           pass: process.env.PASSWORD,
         },
-      }); 
-      let mailOptions = {};
-      if(role=="Secondary"){
+      });
+      const mailOptions = {};
+      if(role=="first")
       mailOptions = {
         from: "info@sisprogress.com",
         to: email,
@@ -93,47 +79,7 @@ const updateEmail = async (req, res) => {
           },
         ],
       };
-    }else{
-      mailOptions = {
-        from: "info@sisprogress.com",
-        to: email,
-        subject: "Verify Email",
-        html: `<center>
-        <img src='cid:logo' style="width:450px;height:250px;" >
-        <h2>Reset Email</h2>
-        <p>
-         You've entered <b>${email}</b> as the email address for your account.
-         Please verify this email address by clicking button below. 
-        </p>
-        <br>
-        <br>
-         <button style="background-color: blue;
-         border: none;
-         border-radius:20px;
-         color: white;
-         padding: 15px 32px;
-         text-align: center;
-         text-decoration: none;
-         display: inline-block;
-         ">
-           <a href='http://45.55.36.223/secondarymailverify?token=${item.token}'
-           style="color:#fff;text-decoration-line: none;font-size:20px;">Verify your email address</a>
-         </button>
-        <br>
-         <b>if the button is not working please use the link below</b>
-         <br>
-        <br>
-           <b><a href='http://45.55.36.223/secondarymailverify?token=${item.token}'>http://45.55.36.223/secondarymailverify?token=${item.token} </a></b>
-         </center>`,
-        attachments: [
-          {
-            filename: "Email.png",
-            path: "./controllers/Email.png",
-            cid: "logo",
-          },
-        ],
-      };
-    }
+
       transporter.sendMail(mailOptions);
       return res.json("email is sent");
     }
@@ -148,20 +94,19 @@ const verify = async (req,res)=>{
   try {
     const {token} = req.body;
     const myEmail = await UserEmails.findOne({where:{token}})
-    const role = myEmail.role.split("toBe")[1]
-    console.log(myEmail.userId,role,"++++++++++++++++++++++++++++++++++);");
-    if(myEmail){  
+    if(myEmail){
+    console.log(myEmail);
       await UserEmails.destroy(({where:{
       userId:myEmail.userId,
-      role,
+      role:"Secondary",
       token:{[sequelize.Op.ne]: token}, 
     }}))
     myEmail.isVerified = true,
-    myEmail.role = role,
+    myEmail.role = "Secondary",
     myEmail.token = jwt.sign({ email:myEmail.email }, process.env.SECRET)
 
     await myEmail.save()
-    return res.json({success:true,newEmail:myEmail.email,emailType:role}) 
+    return res.json({success:true,newEmail:myEmail.email,emailType:"Secondary"}) 
     }
     return res.json({success:false}) 
 } catch (error) {
