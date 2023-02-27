@@ -98,6 +98,8 @@ const dashboard = async (req, res) => {
         overAllProgressDone,
         overAllProgressInProgress,
         successMesange,
+        a:doneTasks.length,
+        b:Tasks.length
       });
     } else {
       return res.json("user not found!");

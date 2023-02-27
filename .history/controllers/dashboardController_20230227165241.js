@@ -36,7 +36,7 @@ const dashboard = async (req, res) => {
       const myTasks = await Task_per_User.findAll({
         where: { userId: user.id },
       });
-      const Tasks = await Task.findAll();
+      const Tasks = await Task.findAll({ where: { universityId: myUni.id } });
 
       const doneTasks = myTasks.filter((e) => e.status === "Completed");
       const inProgressTasks = myTasks.filter((e) => e.status === "In Progress");
@@ -98,6 +98,8 @@ const dashboard = async (req, res) => {
         overAllProgressDone,
         overAllProgressInProgress,
         successMesange,
+        a:doneTasks.length
+        b:Task.length
       });
     } else {
       return res.json("user not found!");
