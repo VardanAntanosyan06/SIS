@@ -116,14 +116,14 @@ const updateEmail = async (req, res) => {
          text-decoration: none;
          display: inline-block;
          ">
-           <a href='http://45.55.36.223/primaryemail?token=${item.token}'
+           <a href='http://45.55.36.223/secondarymailverify?token=${item.token}'
            style="color:#fff;text-decoration-line: none;font-size:20px;">Verify your email address</a>
          </button>
         <br>
          <b>if the button is not working please use the link below</b>
          <br>
         <br>
-           <b><a href='http://45.55.36.223/primaryemail?token=${item.token}'>http://45.55.36.223/primaryemail?token=${item.token} </a></b>
+           <b><a href='http://45.55.36.223/secondarymailverify?token=${item.token}'>http://45.55.36.223/secondarymailverify?token=${item.token} </a></b>
          </center>`,
         attachments: [
           {
@@ -149,13 +149,14 @@ const verify = async (req,res)=>{
     const {token} = req.body;
     const myEmail = await UserEmails.findOne({where:{token}})
     const role = myEmail.role.split("toBe")[1]
-    console.log(myEmail.userId,role,"++++++++++++++++++++++++++++++++++);",myEmail);
+    console.log(myEmail.userId,role,"++++++++++++++++++++++++++++++++++);");
     if(myEmail){  
       await UserEmails.destroy(({where:{
       userId:myEmail.userId,
       role,
       token:{[sequelize.Op.ne]: token}, 
     }}))
+    
     myEmail.isVerified = true,
     myEmail.role = role,
     myEmail.token = jwt.sign({ email:myEmail.email }, process.env.SECRET)

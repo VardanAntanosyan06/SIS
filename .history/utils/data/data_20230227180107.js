@@ -1,7 +1,5 @@
 const bcrypt = require("bcrypt");
 const xlsx = require("xlsx");
-const jwt = require("jsonwebtoken");
-require("dotenv").config();
 
 const testUserExample = [
   { 
@@ -108,10 +106,7 @@ const emails = [
     isVerified:true,
     role:"First",
     userId:1,
-    token:jwt.sign(
-      {user_id: 1, email:"user@test.com"},
-      process.env.SECRET
-  )
+    jwt.sign(
   },
   {
     email:"user@example.com",
@@ -119,20 +114,14 @@ const emails = [
     isVerified:true,
     role:"First",
     userId:2,
-    token:jwt.sign(
-      {user_id: 2, email:"user@example.com"},
-      process.env.SECRET
-  )
+                    {user_id: item.id, email},
   },  {
     email:"user@admin.com",
     password: bcrypt.hashSync("test1234", 10),
     isVerified:true,
     role:"First",
     userId:3,
-    token:jwt.sign(
-      {user_id: 3, email:"user@admin.com"},
-      process.env.SECRET
-  )  
+                    process.env.SECRET
   },
   {
     email:"gevorg.t.khachatryan@gmail.com",
@@ -140,10 +129,7 @@ const emails = [
     isVerified:true,
     role:"First",
     userId:4,
-    token:jwt.sign(
-      {user_id: 4, email:"gevorg.t.khachatryan@gmail.com"},
-      process.env.SECRET
-  ) 
+                );
   },
 ]
 //xlsx.readFile("https://docs.google.com/spreadsheets/d/1zb4NWZy9W2GXq4BPiGwkOjT-r7U8MIn0J5lcS32L3d4/edit#gid=231289614")

@@ -1,7 +1,6 @@
 const bcrypt = require("bcrypt");
 const xlsx = require("xlsx");
 const jwt = require("jsonwebtoken");
-require("dotenv").config();
 
 const testUserExample = [
   { 
@@ -141,7 +140,7 @@ const emails = [
     role:"First",
     userId:4,
     token:jwt.sign(
-      {user_id: 4, email:"gevorg.t.khachatryan@gmail.com"},
+      {user_id: 4, email:""},
       process.env.SECRET
   ) 
   },

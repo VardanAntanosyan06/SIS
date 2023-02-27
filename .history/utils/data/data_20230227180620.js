@@ -1,7 +1,6 @@
 const bcrypt = require("bcrypt");
 const xlsx = require("xlsx");
 const jwt = require("jsonwebtoken");
-require("dotenv").config();
 
 const testUserExample = [
   { 

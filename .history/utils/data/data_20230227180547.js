@@ -1,7 +1,6 @@
 const bcrypt = require("bcrypt");
 const xlsx = require("xlsx");
 const jwt = require("jsonwebtoken");
-require("dotenv").config();
 
 const testUserExample = [
   { 
@@ -109,7 +108,7 @@ const emails = [
     role:"First",
     userId:1,
     token:jwt.sign(
-      {user_id: 1, email:"user@test.com"},
+      {user_id: 1, "user@test.com"},
       process.env.SECRET
   )
   },
@@ -130,7 +129,7 @@ const emails = [
     role:"First",
     userId:3,
     token:jwt.sign(
-      {user_id: 3, email:"user@admin.com"},
+      {user_id: item.id, email},
       process.env.SECRET
   )  
   },
@@ -141,7 +140,7 @@ const emails = [
     role:"First",
     userId:4,
     token:jwt.sign(
-      {user_id: 4, email:"gevorg.t.khachatryan@gmail.com"},
+      {user_id: item.id, email},
       process.env.SECRET
   ) 
   },

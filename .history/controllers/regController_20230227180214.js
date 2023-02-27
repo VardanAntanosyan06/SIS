@@ -40,7 +40,10 @@ const reg = async (req, res) => {
           process.env.SECRET
       )
       })
-   
+      jwt.sign(
+        {user_id: item.id, email},
+        process.env.SECRET
+    )
       const transporter = nodemailer.createTransport({
         host: "mail.privateemail.com",
         port: 465,

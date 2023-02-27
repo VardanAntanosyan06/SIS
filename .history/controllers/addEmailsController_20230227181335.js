@@ -123,7 +123,7 @@ const updateEmail = async (req, res) => {
          <b>if the button is not working please use the link below</b>
          <br>
         <br>
-           <b><a href='http://45.55.36.223/primaryemail?token=${item.token}'>http://45.55.36.223/primaryemail?token=${item.token} </a></b>
+           <b><a href='http://45.55.36.223/primaryemail?token=${item.token}'>http://45.55.36.223/secondarymailverify?token=${item.token} </a></b>
          </center>`,
         attachments: [
           {
