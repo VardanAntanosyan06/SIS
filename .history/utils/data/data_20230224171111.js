@@ -160,7 +160,7 @@ const faculty = [
   },  {
     facultyName:"ATHLETICS JV/VARSITY"
   },  {
-    facultyName:"OTHER CLUB/ACTIVITY"
+    facultyName:"OTHER/CLUB ACTIVITY"
   },  {
     facultyName:"COMPUTER/TECHNOLOGY"
   },  {
@@ -444,7 +444,7 @@ const TaskTable = [
     universityId: 3,
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     positionName: "Diver",
     companyName: "PADI Scuba Diving Certifications",
     universityId: 3,
@@ -978,13 +978,13 @@ const TaskTable = [
     universityId: 9,
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     positionName: "Volunteer",
     companyName: "UN and EP",
     universityId: 10,
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     positionName: "AFI International Youth Ambassadorr",
     companyName: "Youth-run charity",
     universityId: 10,
@@ -1020,7 +1020,7 @@ const TaskTable = [
     universityId: 10,
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     positionName: "Participant",
     companyName: "International Courses, Programmes and Leadership",
     universityId: 10,

@@ -187,7 +187,7 @@ const isEmalFree = async (req,res)=>{
     const {email} = req.query;
 
     const user = await UserEmails.findOne({where:{email}})
-    if(user){
+\\    if(user){
       return res.json("existing email address")
     }
     return res.json({success:true})

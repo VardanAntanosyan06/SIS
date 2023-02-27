@@ -82,8 +82,7 @@ module.exports = {
         type :Sequelize.STRING
       },
       img:{
-        type :Sequelize.STRING,
-        defaultValue:"Avatar.png"
+
       },
       createdAt: {
         allowNull: false,

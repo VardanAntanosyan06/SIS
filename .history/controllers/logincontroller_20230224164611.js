@@ -81,7 +81,7 @@ const isLogined = async (req, res) => {
         firstEmail,
         secondaryEmail
       }
-      return res.status(200).json(emails).sendFile(__dirname+"/stylesheets/Avatar.png");
+      return res.status(200).json(emails).sendFile("");
     }
     return res.status(401).json("not found");
   } catch (error) {

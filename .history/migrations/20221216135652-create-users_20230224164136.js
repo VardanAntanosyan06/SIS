@@ -83,7 +83,7 @@ module.exports = {
       },
       img:{
         type :Sequelize.STRING,
-        defaultValue:"Avatar.png"
+        defaultValue:"public/stylesheets"
       },
       createdAt: {
         allowNull: false,

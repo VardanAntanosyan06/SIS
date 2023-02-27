@@ -184,21 +184,15 @@ const deleteSecundaryEmail = async (req,res)=>{
 
 const isEmalFree = async (req,res)=>{
   try {
-    const {email} = req.query;
+    const email = req.query;
 
     const user = await UserEmails.findOne({where:{email}})
-    if(user){
-      return res.json("existing email address")
-    }
-    return res.json({success:true})
   } catch (error) {
-    console.log(error);
+    
   }
 }
-
 module.exports = {
   updateEmail,
   verify,
-  deleteSecundaryEmail,
-  isEmalFree
+  deleteSecundaryEmail
 };

@@ -16,7 +16,7 @@ const testUserExample = [
     aid: false,
     legacy: false,
     area: "aboute me (for 9th)",
-    activityName: "[Art (2)]",
+    activityName: "[SOCIAL JUSTICE(2),...].toString()",
     applyingFrom: true,
     testSubmit: "[ACT,SAT].toString()/no",
     recentSchool: "my school",
@@ -40,7 +40,7 @@ const testUserExample = [
     aid: false,
     legacy: false,
     area: "aboute me (for 9th)",
-    activityName: "[Art (2)]",
+    activityName: "[SOCIAL JUSTICE(2),...].toString()",
     applyingFrom: true,
     testSubmit: "[ACT,SAT].toString()/no",
     recentSchool: "my school",
@@ -64,7 +64,7 @@ const testUserExample = [
       aid: false,
       legacy: false,
       area: "aboute me (for 9th)",
-      activityName: "[Art (2)]",
+      activityName: "[SOCIAL JUSTICE(2),...].toString()",
       applyingFrom: true,
       testSubmit: "[ACT,SAT].toString()/no",
       recentSchool: "my school",
@@ -88,7 +88,8 @@ const testUserExample = [
       aid: false,
       legacy: false,
       area: "aboute me (for 9th)",
-      activityName: "[Art (2)]",
+      activityName: "[SOCIAL JUSTICE(2),...].toString()",
+      applyingFrom: true,
       testSubmit: "[ACT,SAT].toString()/no",
       recentSchool: "my school",
       workExperience: "about my work  experience",
@@ -100,13 +101,6 @@ const testUserExample = [
 ];
 
 const emails = [
-  {
-    email:"user@test.com",
-    password: bcrypt.hashSync("test1234", 10),
-    isVerified:true,
-    role:"First",
-    userId:1
-  },
   {
     email:"user@example.com",
     password: bcrypt.hashSync("test1234", 10),
@@ -121,12 +115,12 @@ const emails = [
     userId:3
   },
   {
-    email:"gevorg.t.khachatryan@gmail.com",
+    email:"user@test.com",
     password: bcrypt.hashSync("test1234", 10),
     isVerified:true,
     role:"First",
-    userId:4
-  },
+    userId:1
+  }
 ]
 //xlsx.readFile("https://docs.google.com/spreadsheets/d/1zb4NWZy9W2GXq4BPiGwkOjT-r7U8MIn0J5lcS32L3d4/edit#gid=231289614")
 const faculty = [
@@ -160,7 +154,7 @@ const faculty = [
   },  {
     facultyName:"ATHLETICS JV/VARSITY"
   },  {
-    facultyName:"OTHER CLUB/ACTIVITY"
+    facultyName:"OTHER/CLUB ACTIVITY"
   },  {
     facultyName:"COMPUTER/TECHNOLOGY"
   },  {
@@ -444,7 +438,7 @@ const TaskTable = [
     universityId: 3,
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     positionName: "Diver",
     companyName: "PADI Scuba Diving Certifications",
     universityId: 3,
@@ -978,13 +972,13 @@ const TaskTable = [
     universityId: 9,
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     positionName: "Volunteer",
     companyName: "UN and EP",
     universityId: 10,
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     positionName: "AFI International Youth Ambassadorr",
     companyName: "Youth-run charity",
     universityId: 10,
@@ -1020,7 +1014,7 @@ const TaskTable = [
     universityId: 10,
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     positionName: "Participant",
     companyName: "International Courses, Programmes and Leadership",
     universityId: 10,

@@ -184,9 +184,10 @@ const deleteSecundaryEmail = async (req,res)=>{
 
 const isEmalFree = async (req,res)=>{
   try {
-    const {email} = req.query;
+    const email = req.query;
 
     const user = await UserEmails.findOne({where:{email}})
+    console.log();
     if(user){
       return res.json("existing email address")
     }

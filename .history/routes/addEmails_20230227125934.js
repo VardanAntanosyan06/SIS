@@ -6,5 +6,4 @@ router.post("/update", controller.updateEmail);
 router.post("/verify", controller.verify);
 router.delete("/delete",controller.deleteSecundaryEmail)
 router.get("/isFree",controller.isEmalFree)
-
 module.exports = router;
