@@ -35,6 +35,7 @@ const changeSubTaskStatus = async (req,res)=>{
                     where:{userId:user.id}
                 }
             })   
+            console.log(item.status);
             if(status!==undefined){
                 if(status===true && item.status!==true){
                     thisTask.point += thisSubtask.points
@@ -66,6 +67,7 @@ const changeSubTaskStatus = async (req,res)=>{
                     const taskPoint = await TimeTaskModel.findOne({where:{task_id:mySubTask.taskId}})
                     taskStatus = "Completed";
                     thisTask.point += taskPoint.point
+                    console.log("+++++++++++++++++++++++++++++",taskPoint.point);
                     await thisTask.save()
                 }}
                 

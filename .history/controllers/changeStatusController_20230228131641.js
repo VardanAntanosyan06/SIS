@@ -25,6 +25,7 @@ const changeSubTaskStatus = async (req,res)=>{
 
         if(item){
             item.status = status!==undefined?status:item.status;
+            item.description = description!==undefined?description:item.description;
             await item.save();
 
             const myTask = await SubTaskModel.findAll({
@@ -36,7 +37,7 @@ const changeSubTaskStatus = async (req,res)=>{
                 }
             })   
             if(status!==undefined){
-                if(status===true && item.status!==true){
+                if(status===true){
                     thisTask.point += thisSubtask.points
                     await thisTask.save()
                 }else if(status===false){
@@ -61,8 +62,7 @@ const changeSubTaskStatus = async (req,res)=>{
                 if(completedSubTasks.length<myTask.length){
                     taskStatus = "In Progress"
                 }
-                
-                if(completedSubTasks.length===myTask.length && thisTask.status!=="Completed"){
+                if(completedSubTasks.length===myTask.length){
                     const taskPoint = await TimeTaskModel.findOne({where:{task_id:mySubTask.taskId}})
                     taskStatus = "Completed";
                     thisTask.point += taskPoint.point

@@ -66,6 +66,7 @@ const changeSubTaskStatus = async (req,res)=>{
                     const taskPoint = await TimeTaskModel.findOne({where:{task_id:mySubTask.taskId}})
                     taskStatus = "Completed";
                     thisTask.point += taskPoint.point
+                    console.log("+++++++++++++++++++++++++++++",taskPoint.point);
                     await thisTask.save()
                 }}
                 
