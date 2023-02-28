@@ -22,15 +22,7 @@ const changeSubTaskStatus = async (req,res)=>{
         const item = await SubTask_per_User.findOne({where:{subTaskId,userId:user.id}});
         const thisSubtask = await SubTaskModel.findOne({where:{id:subTaskId}})
         const thisTask = await Task_per_User.findOne({where:{taskId:mySubTask.taskId,userId:user.id}})
-        if(status!==undefined){
-            if(status===true && item.status!==true){
-                thisTask.point += thisSubtask.points
-                await thisTask.save()
-            }else if(status===false){
-                thisTask.point -= thisSubtask.points;
-                await thisTask.save()
-            }
-        }
+
         if(item){
             item.status = status!==undefined?status:item.status;
             await item.save();
@@ -42,7 +34,17 @@ const changeSubTaskStatus = async (req,res)=>{
                     attributes:['status'],
                     where:{userId:user.id}
                 }
-            })   
+            })   \
+            if(status!==undefined){
+                if(status===true && item.status!==true){
+                    thisTask.point += thisSubtask.points
+                    await thisTask.save()
+                }else if(status===false){
+                    thisTask.point -= thisSubtask.points;
+                    await thisTask.save()
+                }
+            }
+
             let completedSubTasks = myTask.filter((e)=>e.SubTask_per_Users[0].status===true)
             let taskStatus = "";
             if(completedSubTasks.length>0){

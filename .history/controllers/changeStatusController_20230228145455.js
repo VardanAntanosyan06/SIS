@@ -31,6 +31,7 @@ const changeSubTaskStatus = async (req,res)=>{
                 await thisTask.save()
             }
         }
+
         if(item){
             item.status = status!==undefined?status:item.status;
             await item.save();
