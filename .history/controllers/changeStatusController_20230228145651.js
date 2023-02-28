@@ -26,6 +26,7 @@ const changeSubTaskStatus = async (req,res)=>{
 
         if(status!==undefined){
             if(status===true && item.status!==true){
+                console.log("++++++++++++++-----------------++++++++-");
                 thisTask.point += thisSubtask.points
                 await thisTask.save()
             }else if(status===false){

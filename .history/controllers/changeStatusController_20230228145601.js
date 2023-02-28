@@ -23,7 +23,7 @@ const changeSubTaskStatus = async (req,res)=>{
         const thisSubtask = await SubTaskModel.findOne({where:{id:subTaskId}})
         const thisTask = await Task_per_User.findOne({where:{taskId:mySubTask.taskId,userId:user.id}})
         console.log(item.status);
-
+        
         if(status!==undefined){
             if(status===true && item.status!==true){
                 thisTask.point += thisSubtask.points
