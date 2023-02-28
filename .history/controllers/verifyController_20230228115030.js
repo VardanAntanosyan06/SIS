@@ -9,7 +9,7 @@ const verify = async (req,res)=>{
         if(item){
             item.isVerified = true;
             item.token = jwt.sign(
-                {user_id: item.id, email:item.email},
+                {user_id: item.id, email},
                 process.env.SECRET
             );
             await item.save();
