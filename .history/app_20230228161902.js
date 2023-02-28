@@ -76,7 +76,7 @@ app.use("/settings",settings)
 // app.use("/moment",momentt)
 app.use("/addEmail",addEmails)
 app.use("/contactUs",contactUs)
-app.use("/getProfessors",getProfessors)
+app.use("/contactUs",getProfessors)
 app.use("/.well-known/assetlinks.json",json)
 
 

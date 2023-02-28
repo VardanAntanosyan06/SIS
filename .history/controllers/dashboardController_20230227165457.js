@@ -97,7 +97,7 @@ const dashboard = async (req, res) => {
         progressWithPercent,
         overAllProgressDone,
         overAllProgressInProgress,
-        successMesange, 
+        successMesange,
       });
     } else {
       return res.json("user not found!");

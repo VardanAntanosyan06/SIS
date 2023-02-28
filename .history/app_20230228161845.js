@@ -45,7 +45,7 @@ var dashboard  = require("./routes/dashboard")
 var settings  = require("./routes/settings")
 var addEmails = require("./routes/addEmails")
 var contactUs = require("./routes/contactUs")
-var getProfessors = require("./routes/getProfessors")
+var contactUs = require("./routes/")
 var json = require("./routes/json")
 // var momentt = require("./routes/moment")
 // view engine setup
@@ -76,7 +76,6 @@ app.use("/settings",settings)
 // app.use("/moment",momentt)
 app.use("/addEmail",addEmails)
 app.use("/contactUs",contactUs)
-app.use("/getProfessors",getProfessors)
 app.use("/.well-known/assetlinks.json",json)
 
 
