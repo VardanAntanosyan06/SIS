@@ -5,11 +5,11 @@ const UniversitiesModel = require("../models").Universities
 
 const getAllUniversities = async (req, res) => {
   try {
-    const Universities = await UniversitiesModel.findAll();
+    const UniversitiesModel = await UniModel.findAll();
 
     return res.json(Universities);
   } catch (error) {
-    return res.json("something went wrong");
+    return res.json("somethin went wrong");
   }
 };
 

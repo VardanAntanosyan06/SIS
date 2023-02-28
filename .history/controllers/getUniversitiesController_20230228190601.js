@@ -1,15 +1,14 @@
 
 const UniModel = require("../models").UniversityTable;
 const UserModel = require("../models").Users;
-const UniversitiesModel = require("../models").Universities
-
+const UniversitiesModel = require("../models").U
 const getAllUniversities = async (req, res) => {
   try {
-    const Universities = await UniversitiesModel.findAll();
+    const Universities = await UniModel.findAll();
 
     return res.json(Universities);
   } catch (error) {
-    return res.json("something went wrong");
+    return res.json("somethin went wrong");
   }
 };
 

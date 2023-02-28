@@ -9,7 +9,7 @@ const getAllUniversities = async (req, res) => {
 
     return res.json(Universities);
   } catch (error) {
-    return res.json("something went wrong");
+    return res.json("somethin went wrong");
   }
 };
 
