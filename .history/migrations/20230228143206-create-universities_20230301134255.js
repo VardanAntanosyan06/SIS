@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.TEXT("long")
       },
       facts: {
-        type: Sequelize.ARRAY()
+        type: Sequelize.ARRAY(Sequelize.AR)
       },
       alumni: {
         type: Sequelize.ARRAY(Sequelize.TEXT("long"))
