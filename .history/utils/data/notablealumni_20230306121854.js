@@ -89,14 +89,13 @@ const notableAlumni = [
     img: "http://drive.google.com/uc?export=view&id=1io__3CzGTQ4fng1Y0xhmtpi23X9YjDgx",
     univeristyId: 2,
   },  {
-    name:"Meryl Streep",
+    name:"",
     title: "an actress",
     description: "Meryl Streep, an actress, graduated from Yale School of Drama in 1975. She is considered one of the greatest actresses of her generation and has received numerous awards and accolades for her performances in films such as The Devil Wears Prada, Doubt, and August: Osage County.",
     img: "http://drive.google.com/uc?export=view&id=1Fm91M8M0AO05_5DCI3gUTsIEtc7yDRUy",
     univeristyId: 2,
   },  {
-    name:"Jodie Foster",
-    title: "an actress, director, and producer",
+    title: "Jodie Foster is an actress, director, and producer",
     description: "Jodie Foster is an actress, director, and producer who graduated from Yale in 1985. She is known for her roles in films such as Taxi Driver, The Accused, and The Silence of the Lambs and also for her work as a director and producer.",
     img: "http://drive.google.com/uc?export=view&id=1Gz5rzDV2K4Yyg682khqRrDVTP_IIO58i",
     univeristyId: 2,
