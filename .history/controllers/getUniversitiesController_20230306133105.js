@@ -20,10 +20,9 @@ const getAllUniversities = async (req, res) => {
 const getMyUniversity = async (req, res) => {
   try {
     const { id } = req.query;
-    console.log(id);
     const myUniversity = await UniversitiesModel.findOne({ 
       where: { id },
-      include: [NotableAlumni, Advice],
+    
     });
     if (myUniversity) {
       return res.json(myUniversity);
@@ -31,7 +30,7 @@ const getMyUniversity = async (req, res) => {
 
     return res.json("not found");
   } catch (error) {
-    console.log(error,"++++++++++++++++++++++++++++++++++++++++++++++++");
+    console.log(error);
     return res.json("something went wrong");
   }
 };

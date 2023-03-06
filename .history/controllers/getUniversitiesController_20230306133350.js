@@ -20,7 +20,6 @@ const getAllUniversities = async (req, res) => {
 const getMyUniversity = async (req, res) => {
   try {
     const { id } = req.query;
-    console.log(id);
     const myUniversity = await UniversitiesModel.findOne({ 
       where: { id },
       include: [NotableAlumni, Advice],

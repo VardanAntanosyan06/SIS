@@ -1,13 +1,16 @@
+
 const UniModel = require("../models").UniversityTable;
 const UserModel = require("../models").Users;
-const UniversitiesModel = require("../models").Universities;
-const NotableAlumni = require("../models").NotableAlumni;
-const Advice = require("../models").Advice;
+const UniversitiesModel = require("../models").Universities
+const NotableAlumni = require("../models").NotableAlumni
+const Advice = require("../models").Advice
+
 
 const getAllUniversities = async (req, res) => {
+  
   try {
     const Universities = await UniversitiesModel.findAll({
-      include: [NotableAlumni, Advice],
+      include:[NotableAlumni,Advice]
     });
 
     return res.json(Universities);
@@ -19,24 +22,20 @@ const getAllUniversities = async (req, res) => {
 
 const getMyUniversity = async (req, res) => {
   try {
-    const { id } = req.query;
-    console.log(id);
-    const myUniversity = await UniversitiesModel.findOne({ 
-      where: { id },
-      include: [NotableAlumni, Advice],
-    });
+    const {id} = req.query;
+    const myUniversity = await Universities.findOne({ where: {} });
     if (myUniversity) {
       return res.json(myUniversity);
     }
 
     return res.json("not found");
   } catch (error) {
-    console.log(error,"++++++++++++++++++++++++++++++++++++++++++++++++");
-    return res.json("something went wrong");
+    console.log(error);
+    return res.json("something went wrong")
   }
 };
 
 module.exports = {
   getAllUniversities,
-  getMyUniversity,
+  getMyUniversity
 };
