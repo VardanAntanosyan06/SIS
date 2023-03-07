@@ -277,182 +277,288 @@ const notableAlumni = [
   {
     name: "Jerry Yang",
     title: "Co-founder of Yahoo!",
-    description: "Jerry Yang: Co-founder of Yahoo!, graduated with a degree in electrical engineering from Stanford in 1995. He co-founded Yahoo! in 1995, quickly becoming one of the world's most popular and successful websites.",
+    description:
+      "Jerry Yang: Co-founder of Yahoo!, graduated with a degree in electrical engineering from Stanford in 1995. He co-founded Yahoo! in 1995, quickly becoming one of the world's most popular and successful websites.",
     img: "http://drive.google.com/uc?export=view&id=1VY1Dc6jiFqLhAmcx4W2N86OLUOowsUE0",
     univeristyId: 4,
   },
   {
     name: "Michael Bloomberg",
     title: "a businessman and politician",
-    description: "Michael Bloomberg, a businessman and politician graduated from Johns Hopkins in 1964 with a degree in electrical engineering. He went on to found Bloomberg L.P., a financial services, and mass media company, and served as the 108th Mayor of New York City.",
+    description:
+      "Michael Bloomberg, a businessman and politician graduated from Johns Hopkins in 1964 with a degree in electrical engineering. He went on to found Bloomberg L.P., a financial services, and mass media company, and served as the 108th Mayor of New York City.",
     img: "http://drive.google.com/uc?export=view&id=1he-BhvKUlBtaZ83-PBEPb0qs3DF6KFSz",
     univeristyId: 5,
   },
   {
     name: "Milton Friedman",
     title: "the economist and statistician",
-    description: "Milton Friedman, the economist and statistician, graduated from Johns Hopkins in 1932 with a PhD in economics. He is widely considered one of the most influential economists of the 20th century and was a leading advocate of free-market economics.",
+    description:
+      "Milton Friedman, the economist and statistician, graduated from Johns Hopkins in 1932 with a PhD in economics. He is widely considered one of the most influential economists of the 20th century and was a leading advocate of free-market economics.",
     img: "http://drive.google.com/uc?export=view&id=102BYehQrisBRlZ9rNSXlVN-HTIMiWdc4",
     univeristyId: 5,
-  },  {
+  },
+  {
     name: "Adam Smith",
     title: "the economist",
-    description: "Adam Smith, the economist, graduated from Johns Hopkins in 1976 with a PhD in economics. He is widely considered one of the most influential economists of all time and is best known for his work in classical economics.",
+    description:
+      "Adam Smith, the economist, graduated from Johns Hopkins in 1976 with a PhD in economics. He is widely considered one of the most influential economists of all time and is best known for his work in classical economics.",
     img: "http://drive.google.com/uc?export=view&id=1LRwCbCuGUdppVGjqzgTkwkQOuhTT0cZw",
     univeristyId: 5,
-  },  {
+  },
+  {
     name: "Jhumpa Lahiri",
     title: "the author and translator",
-    description: "Jhumpa Lahiri, the author and translator, graduated from Johns Hopkins in 1989 with a Master's degree in English. She has won numerous awards for her writing, including the Pulitzer Prize for Fiction in 2000.",
+    description:
+      "Jhumpa Lahiri, the author and translator, graduated from Johns Hopkins in 1989 with a Master's degree in English. She has won numerous awards for her writing, including the Pulitzer Prize for Fiction in 2000.",
     img: "http://drive.google.com/uc?export=view&id=1zUb21e_CHr7kR5EZhbDj9vShPZNS6EXZ",
     univeristyId: 5,
-  },  {
+  },
+  {
     name: "Ruth Bader Ginsburg",
     title: "the Associate Justice of the Supreme Court of the United States",
-    description: "Ruth Bader Ginsburg, the Associate Justice of the Supreme Court of the United States, graduated from Johns Hopkins in 1954 with a Bachelor's degree in government. She served as a judge on the Supreme Court from 1993 until she died in 2020.",
+    description:
+      "Ruth Bader Ginsburg, the Associate Justice of the Supreme Court of the United States, graduated from Johns Hopkins in 1954 with a Bachelor's degree in government. She served as a judge on the Supreme Court from 1993 until she died in 2020.",
     img: "http://drive.google.com/uc?export=view&id=1IbJjElzy9Y36kFUhiTRtWNbgDPGUXiiG",
     univeristyId: 5,
-  },  {
+  },
+  {
     name: "Steven Chu",
     title: "the physicist and professor",
-    description: "Steven Chu, the physicist and professor graduated from Johns Hopkins in 1976 with a PhD in physics. He went on to win the Nobel Prize in Physics in 1997 and served as the United States Secretary of Energy from 2009 to 2013.",
+    description:
+      "Steven Chu, the physicist and professor graduated from Johns Hopkins in 1976 with a PhD in physics. He went on to win the Nobel Prize in Physics in 1997 and served as the United States Secretary of Energy from 2009 to 2013.",
     img: "http://drive.google.com/uc?export=view&id=19iptA1SaphoSaKEWnRpFqtI-IR43yY9C",
     univeristyId: 5,
-  },  {
+  },
+  {
     name: "Paul Sarbanes",
     title: "the politician",
-    description: "Paul Sarbanes, the politician, graduated from Johns Hopkins in 1954 with a Bachelor's degree in economics. He served as a United States Senator from Maryland from 1977 to 2007.",
+    description:
+      "Paul Sarbanes, the politician, graduated from Johns Hopkins in 1954 with a Bachelor's degree in economics. He served as a United States Senator from Maryland from 1977 to 2007.",
     img: "http://drive.google.com/uc?export=view&id=1dDyRy30JRE0vHaTVOj6a3RtiOrQRoYm2",
     univeristyId: 5,
-  },  {
+  },
+  {
     name: "Martin O'Malley",
     title: "the politician",
-    description: "Martin O'Malley, the politician, graduated from Johns Hopkins in 1985 with a Bachelor's degree in arts and sciences. He served as the Governor of Maryland from 2007 to 2015.",
+    description:
+      "Martin O'Malley, the politician, graduated from Johns Hopkins in 1985 with a Bachelor's degree in arts and sciences. He served as the Governor of Maryland from 2007 to 2015.",
     img: "http://drive.google.com/uc?export=view&id=1r6TZirHir2MIA6xT0cTANJAs5APZLTGk",
     univeristyId: 5,
-  },  {
+  },
+  {
     name: "Philip Roth",
     title: "the author",
-    description: "Philip Roth, the author, graduated from Johns Hopkins in 1954 with a Bachelor's degree in English. He is widely considered one of the most influential American authors of the 20th century.",
+    description:
+      "Philip Roth, the author, graduated from Johns Hopkins in 1954 with a Bachelor's degree in English. He is widely considered one of the most influential American authors of the 20th century.",
     img: "http://drive.google.com/uc?export=view&id=1xMMNOOKz0PnC4rktFbeUP9-fGyHiHhK8",
     univeristyId: 5,
-  },   {
+  },
+  {
     name: "Richard Nixon",
     title: "the 37th President of the United States",
-    description: "Richard Nixon, the 37th President of the United States, graduated from Duke in 1937 with a law degree. He served as the President of the United States from 1969 to 1974.",
+    description:
+      "Richard Nixon, the 37th President of the United States, graduated from Duke in 1937 with a law degree. He served as the President of the United States from 1969 to 1974.",
     img: "http://drive.google.com/uc?export=view&id=1219nCrJqYbWqz4yABbWbgjBhS2WvuAIE",
     univeristyId: 6,
-  },  {
+  },
+  {
     name: "Robert F. Kennedy",
     title: "the politician and attorney",
-    description: "Robert F. Kennedy, the politician and attorney, graduated from Duke in 1951 with a law degree. He served as the United States Attorney General from 1961 to 1964 and as a United States Senator from New York from 1965 until his assassination in 1968.",
+    description:
+      "Robert F. Kennedy, the politician and attorney, graduated from Duke in 1951 with a law degree. He served as the United States Attorney General from 1961 to 1964 and as a United States Senator from New York from 1965 until his assassination in 1968.",
     img: "http://drive.google.com/uc?export=view&id=1CwZXLshBXdxeVgYW2_gixglY0a_gmgDs",
     univeristyId: 6,
-  },  {
+  },
+  {
     name: "Melinda Gates",
     title: "the philanthropist",
-    description: "Melinda Gates, the philanthropist, graduated from Duke in 1986 with a computer science and economics degree. She is the co-chair of the Bill and Melinda Gates Foundation, one of the largest private foundations in the world.",
+    description:
+      "Melinda Gates, the philanthropist, graduated from Duke in 1986 with a computer science and economics degree. She is the co-chair of the Bill and Melinda Gates Foundation, one of the largest private foundations in the world.",
     img: "http://drive.google.com/uc?export=view&id=1WeYJJM8e5e3gMZCIzcBfTadTnmjle_ch",
     univeristyId: 6,
-  },  {
+  },
+  {
     name: "Daniel Kahneman",
     title: "the psychologist and economist",
-    description: "Daniel Kahneman, the psychologist and economist, graduated from Duke in 1954 with a PhD in psychology. He is widely considered one of the most influential psychologists of the 20th century and won the Nobel Prize in Economics in 2002 for his work in behavioral economics.",
+    description:
+      "Daniel Kahneman, the psychologist and economist, graduated from Duke in 1954 with a PhD in psychology. He is widely considered one of the most influential psychologists of the 20th century and won the Nobel Prize in Economics in 2002 for his work in behavioral economics.",
     img: "http://drive.google.com/uc?export=view&id=15vesUYI66QLQuR-ixgsHG6WUuns-h_eL",
     univeristyId: 6,
-  }, {
+  },
+  {
     name: "David Rubenstein",
     title: "the businessman and philanthropist",
-    description: "David Rubenstein, the businessman and philanthropist, graduated from Duke in 1970 with a law degree. He is the co-founder and co-executive chairman of The Carlyle Group and is also known for his philanthropy, particularly in education and the arts.",
+    description:
+      "David Rubenstein, the businessman and philanthropist, graduated from Duke in 1970 with a law degree. He is the co-founder and co-executive chairman of The Carlyle Group and is also known for his philanthropy, particularly in education and the arts.",
     img: "http://drive.google.com/uc?export=view&id=1a-vcCBuTM-6xdJy7uEpTcmcU--Z5cy-8",
     univeristyId: 6,
-  }, 
+  },
   {
     name: "James B. Duke",
     title: "a businessman and philanthropist",
-    description: "James B. Duke, a businessman and philanthropist, graduated from Duke in 1892. He was the primary benefactor of the University, and his philanthropy helped establish the school as one of the leading universities in the United States.",
+    description:
+      "James B. Duke, a businessman and philanthropist, graduated from Duke in 1892. He was the primary benefactor of the University, and his philanthropy helped establish the school as one of the leading universities in the United States.",
     img: "http://drive.google.com/uc?export=view&id=1dW8sNVxh8IX3VkLmn_wLW1WsW0kJaxHR",
     univeristyId: 6,
-  },  {
+  },
+  {
     name: "William J. Clinton",
     title: "the 42nd President of the United States",
-    description: "William J. Clinton, the 42nd President of the United States, graduated from Duke in 1968 with a law degree. He served as the President of the United States from 1993 to 2001.",
+    description:
+      "William J. Clinton, the 42nd President of the United States, graduated from Duke in 1968 with a law degree. He served as the President of the United States from 1993 to 2001.",
     img: "http://drive.google.com/uc?export=view&id=1hym_FHCLJ1GKmWuzsI6bPQkVAEfQagJp",
     univeristyId: 6,
-  },  {
+  },
+  {
     name: "Robert Zemeckis",
     title: "the film director",
-    description: "Robert Zemeckis, the film director, graduated from Duke in 1973 with a degree in radio, television, and motion pictures. He is known for directing hit films such as 'Forrest Gump' and 'Back to the Future.'",
+    description:
+      "Robert Zemeckis, the film director, graduated from Duke in 1973 with a degree in radio, television, and motion pictures. He is known for directing hit films such as 'Forrest Gump' and 'Back to the Future.'",
     img: "http://drive.google.com/uc?export=view&id=1mbNjPmQZMMdpM1ENQzLSDfQUEtUZqytC",
     univeristyId: 6,
-  },  {
+  },
+  {
     name: "Michael J. Fox",
     title: "the actor",
-    description: "Michael J. Fox, the actor, graduated from Duke in 1982 with a degree in political science. He is best known for his role as Marty McFly in the 'Back to the Future' trilogy and his work as a Parkinson's disease advocate.",
+    description:
+      "Michael J. Fox, the actor, graduated from Duke in 1982 with a degree in political science. He is best known for his role as Marty McFly in the 'Back to the Future' trilogy and his work as a Parkinson's disease advocate.",
     img: "http://drive.google.com/uc?export=view&id=1WDL1ftfHgn8edH7y8G_aZERDSTtv0DbD",
     univeristyId: 6,
-  },  {
+  },
+  {
     name: "Daniel Webster",
     title: "a lawyer, politician",
-    description: "Daniel Webster, a lawyer, politician, and statesman, graduated from Dartmouth in 1801 and served as a U.S. Congressman, U.S. Senator, and U.S. Secretary of State. He was also known for his speeches and orations, particularly his famous 'Second Reply to Hayne' speech",
+    description:
+      "Daniel Webster, a lawyer, politician, and statesman, graduated from Dartmouth in 1801 and served as a U.S. Congressman, U.S. Senator, and U.S. Secretary of State. He was also known for his speeches and orations, particularly his famous 'Second Reply to Hayne' speech",
     img: "http://drive.google.com/uc?export=view&id=1bKfV3SDtuZCrsMPgzXXn3oJ2rLbC64EV",
     univeristyId: 7,
-  }, {
+  },
+  {
     name: "Theodor Geisel",
     title: "children's author and illustrator",
-    description: "Theodor Geisel, also known as Dr. Seuss, was a children's author and illustrator who graduated from Dartmouth in 1925. Dr. Seuss's books have become cultural icons, and his work continues to be widely read and enjoyed by children and adults alike.",
+    description:
+      "Theodor Geisel, also known as Dr. Seuss, was a children's author and illustrator who graduated from Dartmouth in 1925. Dr. Seuss's books have become cultural icons, and his work continues to be widely read and enjoyed by children and adults alike.",
     img: "http://drive.google.com/uc?export=view&id=1myCOYUYy7XQdbtavqY3-el_IfQAeiyHT",
     univeristyId: 7,
-  }, {
+  },
+  {
     name: "Robert Frost",
     title: "a Pulitzer Prize-winning poet",
-    description: "Robert Frost, a Pulitzer Prize-winning poet, earned an honorary degree from Dartmouth in 1939. Frost's poetry is known for its exploration of rural life and the natural world, and his work is widely studied in American literature courses.",
+    description:
+      "Robert Frost, a Pulitzer Prize-winning poet, earned an honorary degree from Dartmouth in 1939. Frost's poetry is known for its exploration of rural life and the natural world, and his work is widely studied in American literature courses.",
     img: "http://drive.google.com/uc?export=view&id=1rzH4AW99xpLklw4w7FCaSjhc7NC1wgML",
     univeristyId: 7,
-  }, {
+  },
+  {
     name: "Nelson A. Rockefeller",
     title: "the 41st Vice President of the United States",
-    description: "Nelson A. Rockefeller, the 41st Vice President of the United States, graduated from Dartmouth in 1930. He served as the Governor of New York and was a prominent figure in the Republican party, known for his liberal views and philanthropy.",
+    description:
+      "Nelson A. Rockefeller, the 41st Vice President of the United States, graduated from Dartmouth in 1930. He served as the Governor of New York and was a prominent figure in the Republican party, known for his liberal views and philanthropy.",
     img: "http://drive.google.com/uc?export=view&id=1eOEYRdntWvXPPDOmSkmMlxatvr7saQAa",
     univeristyId: 7,
-  }, {
+  },
+  {
     name: "Jeffrey Katzenberg",
     title: "a film producer and executive",
-    description: "Jeffrey Katzenberg, a film producer and executive, graduated from Dartmouth in 1974. He is known for his work as the co-founder of Dreamworks Animation, which produced films such as Shrek, Kung Fu Panda, and How to Train Your Dragon.",
+    description:
+      "Jeffrey Katzenberg, a film producer and executive, graduated from Dartmouth in 1974. He is known for his work as the co-founder of Dreamworks Animation, which produced films such as Shrek, Kung Fu Panda, and How to Train Your Dragon.",
     img: "http://drive.google.com/uc?export=view&id=1yLMuRPqw8Q0riacaX-_9hqJX-c7zXG9m",
     univeristyId: 7,
-  }, {
+  },
+  {
     name: "Mindy Kaling",
     title: "an actress, comedian, writer, and producer",
-    description: "Mindy Kaling is an actress, comedian, writer, and producer who graduated from Dartmouth in 2001. She is best known for her work as an actress, writer, and producer on the popular television show The Office.",
+    description:
+      "Mindy Kaling is an actress, comedian, writer, and producer who graduated from Dartmouth in 2001. She is best known for her work as an actress, writer, and producer on the popular television show The Office.",
     img: "http://drive.google.com/uc?export=view&id=1XkxOfLFPLjAcEV0FQ7W81noOlYRweQ5_",
     univeristyId: 7,
-  },{
+  },
+  {
     name: "Brian Williams",
     title: "journalist and television news anchor",
-    description: "Brian Williams, a journalist and television news anchor graduated from Dartmouth in 1981. Williams is known for his work as the anchor of NBC Nightly News and as a correspondent for the network's various news programs.",
+    description:
+      "Brian Williams, a journalist and television news anchor graduated from Dartmouth in 1981. Williams is known for his work as the anchor of NBC Nightly News and as a correspondent for the network's various news programs.",
     img: "http://drive.google.com/uc?export=view&id=1EFFYI56KN6u4vp21QxeXxrTJByCo1ARQ",
     univeristyId: 7,
-  },{
+  },
+  {
     name: "Peter Thiel",
     title: "businessman, philanthropist, and political activist",
-    description: "Peter Thiel, a businessman, philanthropist, and political activist, graduated from Dartmouth in 1989. Thiel is known for co-founding PayPal, an online payment system, and as an early investor in companies such as Facebook and Airbnb.",
+    description:
+      "Peter Thiel, a businessman, philanthropist, and political activist, graduated from Dartmouth in 1989. Thiel is known for co-founding PayPal, an online payment system, and as an early investor in companies such as Facebook and Airbnb.",
     img: "http://drive.google.com/uc?export=view&id=1Zddu2udoS6rCe9HvTA9olMkqlfURHgbp",
     univeristyId: 7,
-  },{
+  },
+  {
     name: "Amy Poehler",
     title: "a comedian, actress, writer, and producer",
-    description: "Amy Poehler, a comedian, actress, writer, and producer, graduated from Dartmouth in 1993. Poehler is known for her work as an actress, comedian, and writer on the television show Saturday Night Live.",
+    description:
+      "Amy Poehler, a comedian, actress, writer, and producer, graduated from Dartmouth in 1993. Poehler is known for her work as an actress, comedian, and writer on the television show Saturday Night Live.",
     img: "http://drive.google.com/uc?export=view&id=1hCCPmm5cCeP1WDXIu6LibIyQ5xJ0CHPO",
     univeristyId: 7,
-   }
+  },
   //  {
-  //   name: "",
-  //   title: "",
-  //   description: "",
+  //   name: "Barack Obama",
+  //   title: "44th President of the United States",
+  //   description: "Barack Obama, 44th President of the United States, earned a J.D. from Columbia Law School. He is the first African American President of the United States and served two terms from 2009 to 2017.",
   //   img: "http://drive.google.com/uc?export=view&id=",
   //   univeristyId: 8,
   // },{
+  //   name: "Hillary Clinton",
+  //   title: "former U.S. Secretary of State",
+  //   description: "Hillary Clinton, former U.S. Secretary of State and 2016 Democratic Presidential nominee earned a J.D. from Columbia Law School. She is the first woman to have been nominated for President by a major political party in the United States.",
+  //   img: "http://drive.google.com/uc?export=view&id=",
+  //   univeristyId: 8,
+  // }, {
+  //   name: "Ruben Harutunian",
+  //   title: "the former Special Assistant to Secretaries of State",
+  //   description: "Ruben Harutunian, the former Special Assistant to Secretaries of State Clinton and Kerry, has a B.A. in Middle East and Asian Languages and Cultures from Columbia College.",
+  //   img: "http://drive.google.com/uc?export=view&id=",
+  //   univeristyId: 8,
+  // }, {
+  //   name: "Ban Ki-moon",
+  //   title: "8th Secretary-General of the United Nations",
+  //   description: "Ban Ki-moon, 8th Secretary-General of the United Nations, who earned a Master of Public Administration from the School of International and Public Affairs",
+  //   img: "http://drive.google.com/uc?export=view&id=",
+  //   univeristyId: 8,
+  // }, {
+  //   name: "Joseph Stiglitz",
+  //   title: "Nobel laureate economist and professor at Columbia Business School",
+  //   description: "Joseph Stiglitz, Nobel laureate economist and professor at Columbia Business School, is widely recognized for his work on income inequality and globalization.",
+  //   img: "http://drive.google.com/uc?export=view&id=",
+  //   univeristyId: 8,
+  // }, {
+  //   name: "Langston Hughes",
+  //   title: "a prominent poet and writer of the Harlem Renaissance",
+  //   description: "Langston Hughes, a prominent poet and writer of the Harlem Renaissance, was known for his works about the black experience in America during the 20th century.",
+  //   img: "http://drive.google.com/uc?export=view&id=",
+  //   univeristyId: 8,
+  // }, {
+  //   name: "Edwin 'Buzz' Aldrin",
+  //   title: "astronaut and the second person to walk on the moon",
+  //   description: "Edwin 'Buzz' Aldrin, astronaut and the second person to walk on the moon earned a Doctor of Science in Astronautics from Columbia University.",
+  //   img: "http://drive.google.com/uc?export=view&id=",
+  //   univeristyId: 8,
+  // }, {
+  //   name: "Warren Buffett",
+  //   title: "business magnate and chairman of Berkshire Hathaway",
+  //   description: "Warren Buffett, business magnate and chairman of Berkshire Hathaway, attended Columbia Business School and learned under-investment legend, Benjamin Graham.",
+  //   img: "http://drive.google.com/uc?export=view&id=",
+  //   univeristyId: 8,
+  // }, {
+  //   name: "Robert A. Millikan",
+  //   title: "physicist and Nobel laureate in Physics",
+  //   description: "Robert A. Millikan, physicist and Nobel laureate in Physics, studied and later taught at Columbia University.",
+  //   img: "http://drive.google.com/uc?export=view&id=",
+  //   univeristyId: 8,
+  // }, {
+  //   name: "Ruth Bader Ginsburg",
+  //   title: "Associate Justice of the United States Supreme Court",
+  //   description: "Ruth Bader Ginsburg, Associate Justice of the United States Supreme Court, earned her LL.B from Columbia Law School.",
+  //   img: "http://drive.google.com/uc?export=view&id=",
+  //   univeristyId: 8,
+  // },  {
   //   name: "",
   //   title: "",
   //   description: "",
@@ -470,43 +576,83 @@ const notableAlumni = [
   //   description: "",
   //   img: "http://drive.google.com/uc?export=view&id=",
   //   univeristyId: 8,
-  // }, {
-  //   name: "",
-  //   title: "",
-  //   description: "",
-  //   img: "http://drive.google.com/uc?export=view&id=",
-  //   univeristyId: 8,
-  // }, {
-  //   name: "",
-  //   title: "",
-  //   description: "",
-  //   img: "http://drive.google.com/uc?export=view&id=",
-  //   univeristyId: 8,
-  // }, {
-  //   name: "",
-  //   title: "",
-  //   description: "",
-  //   img: "http://drive.google.com/uc?export=view&id=",
-  //   univeristyId: 8,
-  // }, {
-  //   name: "",
-  //   title: "",
-  //   description: "",
-  //   img: "http://drive.google.com/uc?export=view&id=",
-  //   univeristyId: 8,
-  // }, {
-  //   name: "",
-  //   title: "",
-  //   description: "",
-  //   img: "http://drive.google.com/uc?export=view&id=",
-  //   univeristyId: 8,
-  // }, {
-  //   name: "",
-  //   title: "",
-  //   description: "",
-  //   img: "http://drive.google.com/uc?export=view&id=",
-  //   univeristyId: 8,
-  // }, 
+  // },
+  {
+    name: "Warren Buffett",
+    title: "One of the most successful investors in history",
+    description:
+      "Warren Buffett: One of the most successful investors in history, Buffett graduated from the Wharton School of the University of Pennsylvania in 1951 with a Bachelor of Science in Economics.",
+    img: "http://drive.google.com/uc?export=view&id=1HeDJ18ntpQGqPomE0OpZZeTakHg7OxeK",
+    univeristyId: 10,
+  },
+  {
+    name: "Donald Trump",
+    title: "The 45th President of the United States",
+    description: "Donald Trump: The 45th President of the United States, Trump graduated from the Wharton School at UPenn in 1968 with a Bachelor of Science in Economics.",
+    img: "http://drive.google.com/uc?export=view&id=1Jv3z2Zh7yK_Im8H2XYUC-61W75QzvicO",
+    univeristyId: 10,
+  },
+  {
+    name: "Elon Musk",
+    title: "The founder and CEO of SpaceX and Tesla Motors",
+    description: "Elon Musk: The founder and CEO of SpaceX and Tesla Motors, Musk attended the University of Pennsylvania for two years before transferring to the University of Pretoria in South Africa.",
+    img: "http://drive.google.com/uc?export=view&id=1DE3f-sScGMOQVAMvQto0Hsil5xDiU816",
+    univeristyId: 10,
+  },{
+    name: "Evan Williams",
+    title: "The co-founder of Twitter",
+    description: "Evan Williams: The co-founder of Twitter, Williams graduated from the University of Nebraska in 1996 and later attended the University of Pennsylvania for one semester.",
+    img: "http://drive.google.com/uc?export=view&id=1-Vz-9qO1RusrLl8GDY1H91gL6z_wPt-K",
+    univeristyId: 10,
+  },{
+    name: "Jeff Bezos",
+    title: "The founder and CEO of Amazon",
+    description: "Jeff Bezos: The founder and CEO of Amazon, Bezos graduated from Princeton University but attended the University of Pennsylvania for undergraduate studies.",
+    img: "http://drive.google.com/uc?export=view&id=19Yb2YB7xkZ4sBHIhz8_AuAVp2XXiQE2a",
+    univeristyId: 10,
+  },{
+    name: "Judd Apatow",
+    title: "A comedian, writer, director, and producer",
+    description: "Judd Apatow: A comedian, writer, director, and producer, Apatow graduated from the University of Southern California, but he attended the University of Pennsylvania for one semester.",
+    img: "http://drive.google.com/uc?export=view&id=1x5Ad2-7ox_hchCpQBpt0oTD0dN5AQ-qH",
+    univeristyId: 10,
+  },{
+    name: "Bill Clinton",
+    title: "The 42nd President of the United States",
+    description: "Bill Clinton: The 42nd President of the United States, Clinton graduated from Georgetown University but later pursued a graduate degree at the Wharton School at UPenn.",
+    img: "http://drive.google.com/uc?export=view&id=1IGcezU5e0k96KR0CGGU-41okKmH_GMzK",
+    univeristyId: 10,
+  },{
+    name: "William S. Paley",
+    title: "A businessman and media mogul",
+    description: "William S. Paley: A businessman and media mogul, Paley was the founder and chairman of CBS, one of the world's largest and most influential broadcast media companies.",
+    img: "http://drive.google.com/uc?export=view&id=1nBkszKOKrkpgkT817UJ5NH9t2svfQ_1m",
+    univeristyId: 10,
+  },{
+    name: "J.D. Salinger",
+    title: "An American novelist",
+    description: "J.D. Salinger: An American novelist, short-story writer, and reclusive author of The Catcher in the Rye, one of the most popular and controversial novels of the 20th century.",
+    img: "http://drive.google.com/uc?export=view&id=1ytPTvjo6N1HFKkI6IYQU1LlykT6IxfHE",
+    univeristyId: 10,
+  },{
+    name: "M. Night Shyamalan",
+    title: "A filmmaker and screenwriter",
+    description: "M. Night Shyamalan: A filmmaker and screenwriter, Shyamalan graduated from the University of Pennsylvania's Annenberg School for Communication with a degree in film.",
+    img: "http://drive.google.com/uc?export=view&id=1eoRpgs35nAAmMe1Gi8GEVp0ikAIX0unW",
+    univeristyId: 10,
+  },{
+    name: "John Legend",
+    title: "A singer, songwriter and actor",
+    description: "John Legend: A singer, songwriter, and actor, Legend graduated from the University of Pennsylvania in 1999 with a Bachelor of Arts in English. He is a multiple Grammy award-winning artist and has also won an Academy Award, Golden Globe and Emmy.",
+    img: "http://drive.google.com/uc?export=view&id=1ujeDFCCqDCVhWHxpa8vo4O2aZbGiPx7g",
+    univeristyId: 10,
+  },{
+    name: "Noam Chomsky",
+    title: "A linguist, philosopher, and political commentator",
+    description: "Noam Chomsky: A linguist, philosopher, and political commentator, Chomsky received his PhD in Linguistics from the University of Pennsylvania in 1955. He is one of the most influential and widely read intellectuals of our time.",
+    img: "http://drive.google.com/uc?export=view&id=1kVgCvjEHpaAriiLdGdLbh7ATBdj0KzzB",
+    univeristyId: 10,
+  },
 ];
 
 module.exports = {
