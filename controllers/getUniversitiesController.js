@@ -10,7 +10,7 @@ const getAllUniversities = async (req, res) => {
     const Universities = await UniversitiesModel.findAll({
       where: {
         id: {
-          [Op.or]: [{ [Op.ne]: 8 }, { [Op.ne]: 9 }],
+          [Op.and]: [{ [Op.ne]: 8 }, { [Op.ne]: 9 }],
         },
       },
       include: [NotableAlumni, Advice],
