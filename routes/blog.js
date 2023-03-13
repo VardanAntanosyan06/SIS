@@ -23,6 +23,6 @@ const controller = require("../controllers/blogController");
  *         description: not found
  */
 
-router.post("/", controller.addPost);
-
+// router.post("/", controller.addPost);
+router.get("/",controller.getBlogs)
 module.exports = router;

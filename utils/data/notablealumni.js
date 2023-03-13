@@ -247,7 +247,7 @@ const notableAlumni = [
     title: "Nike's co-founder",
     description:
       "Phil Knight, Nike's co-founder, earned a master's degree in business administration from Stanford in 1962. He co-founded Blue Ribbon Sports, which later became Nike, one of the world's most successful and iconic brands.",
-    img: "http://drive.google.com/uc?export=view&id=",
+    img: "http://drive.google.com/uc?export=view&id=13pz-yugehZPmtggBC5fPowLI2A3dc76n",
     univeristyId: 4,
   },
   {
@@ -255,7 +255,7 @@ const notableAlumni = [
     title: "The 31st President of the United States",
     description:
       "Herbert Hoover: The 31st President of the United States, earned a degree in geology from Stanford in 1895. He had a successful career as a mining engineer before entering politics, serving as President from 1929 to 1933.",
-    img: "http://drive.google.com/uc?export=view&id=13pz-yugehZPmtggBC5fPowLI2A3dc76n",
+    img: "http://drive.google.com/uc?export=view&id=1sdaacMMvYi-eoM8dqKn_pKWOJmWSZ3dA",
     univeristyId: 4,
   },
   {
