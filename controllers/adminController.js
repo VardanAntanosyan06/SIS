@@ -1,12 +1,16 @@
 const express = require("express")
 const app = express()
+const bcrypt = require("bcrypt")
 const AdminBroExpress = require("@admin-bro/express");
 const AdminBroSequelize = require("@admin-bro/sequelize");
+const AdminModel = require("../models").Admin
 const Users = require("../models").Users;
 const Blogs = require("../models").Blogs;
-const Admin = require("../models").Admin;
+require("dotenv").config()
+const bodyParser = require("body-parser")
+app.use(bodyParser.json());
 
-const { buildAuthenticatedRouter } = require("admin-bro-expressjs");
+// const { buildAuthenticatedRouter } = require("admin-bro-expressjs");
 
 const AdminBro = require("admin-bro");
 AdminBro.registerAdapter(AdminBroSequelize);
@@ -19,39 +23,22 @@ const adminBro = new AdminBro({
     companyName: "SIS Admin",
     softwareBrothers: false,
   },
+  dashboard: {
+    component: AdminBro.bundle("../public/stylesheets/AdminDashBoard.jsx")
+  },
 });
-const buildAdminRouter = (admin) => {
-  const router = buildAuthenticatedRouter(admin, {
-    cookieName: "admin-bro",
-    cookiePassword: "superlongandcomplicatedname",
-    authenticate: async (email, password) => {
-      const IsAdmin = await Admin.findOne({ email });
 
-      if (Admin) {
-        return IsAdmin.toJSON();
-      }
-      return null;
-    },
-  });
-  return router;
-};
-
-
-const ADMIN = {
-  email: "admin@example.com",
-  password: "test1234",
-};
 const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
-  cookieName: process.env.ADMIN_COOKIE_NAME || 'admin-bro',
-  cookiePassword: process.env.ADMIN_COOKIE_PASS || 'supersecret-and-long-password-for-a-cookie-in-the-browser',
+  cookieName: process.env.ADMIN_COOKIE_NAME,
+  cookiePassword: process.env.ADMIN_COOKIE_PASS,
   authenticate: async (email, password) => {
-    if (email === ADMIN.email && password === ADMIN.password) {
-      return ADMIN
+    const user = await AdminModel.findOne({where:{email}})
+    if (user && (await bcrypt.compareSync(password, user.password))) {
+      return user
     }
     return null
   }
 })
-
 
 module.exports = {
   adminBro,

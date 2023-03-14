@@ -38,9 +38,9 @@ const universities = [
       "Various organizations consistently rank Yale among the top universities in the United States and the world.",
       "The university has notable alums, including 5 U.S. Presidents, 19 Nobel laureates, and many other notable figures in fields such as politics, business, law, and the arts.",
     ],
-    img: "http://drive.google.com/uc?export=view&id=1ZO0FXSm9IQ32L9HhS8yU2MvQ7JDfkLBP",
+    img: "http://drive.google.com/uc?export=view&id=1r96jKyMSa97Vk6Pm-eVBoVIAIkWGhhDw",
     imgMin:
-      "http://drive.google.com/uc?export=view&id=1ntdrGKUlzU--4c-oO822vKh6F9bFWbec",
+      "http://drive.google.com/uc?export=view&id=1l5cKlbIGtmPYiK_omBZCXhcFkTL1PvJH",
   },
   {
     name: "Princeton University",
