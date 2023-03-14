@@ -1,8 +1,11 @@
+const express = require("express")
+const app = express()
 const AdminBroExpress = require("@admin-bro/express");
 const AdminBroSequelize = require("@admin-bro/sequelize");
 const Users = require("../models").Users;
 const Blogs = require("../models").Blogs;
 const Admin = require("../models").Admin;
+
 const { buildAuthenticatedRouter } = require("admin-bro-expressjs");
 
 const AdminBro = require("admin-bro");
@@ -30,13 +33,27 @@ const buildAdminRouter = (admin) => {
       return null;
     },
   });
-
   return router;
 };
-const adminRouter = AdminBroExpress.buildRouter(adminBro);
-buildAdminRouter(adminBro);
+
+
+const ADMIN = {
+  email: "admin@example.com",
+  password: "test1234",
+};
+const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
+  cookieName: process.env.ADMIN_COOKIE_NAME || 'admin-bro',
+  cookiePassword: process.env.ADMIN_COOKIE_PASS || 'supersecret-and-long-password-for-a-cookie-in-the-browser',
+  authenticate: async (email, password) => {
+    if (email === ADMIN.email && password === ADMIN.password) {
+      return ADMIN
+    }
+    return null
+  }
+})
+
 
 module.exports = {
   adminBro,
-  adminRouter,
+  router,
 };

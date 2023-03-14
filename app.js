@@ -10,8 +10,9 @@ const https = require("https");
 const swaggerJSDOC = require("swagger-jsdoc");
 const swaggerUI = require("swagger-ui-express");
 const AdminBro = require("admin-bro");
+const bodyParser = require("body-parser")
 
-const adminRouter = require("./controllers/adminController").adminRouter
+const adminRouter = require("./controllers/adminController").router
 const adminBro = require("./controllers/adminController").adminBro
 
 const options = {
@@ -49,7 +50,6 @@ var addEmails = require("./routes/addEmails");
 var contactUs = require("./routes/contactUs");
 var getProfessors = require("./routes/getProfessors");
 var blog = require("./routes/blog");
-var json = require("./routes/json");
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -77,12 +77,12 @@ app.use("/dashboard", dashboard);
 app.use("/settings", settings);
 app.use("/addEmail", addEmails);
 app.use("/contactUs", contactUs);
-app.use("/.well-known/assetlinks.json", json);
 app.use("/getProfessors", getProfessors);
 app.use("/blog", blog);
-app.use(adminBro.options.rootPath, adminRouter);
 
-// catch 404 and forward to error handler
+app.use(adminBro.options.rootPath, adminRouter);
+app.use(bodyParser.json());
+
 app.use(function (req, res, next) {
   next(createError(404));
 });
