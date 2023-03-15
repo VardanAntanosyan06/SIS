@@ -196,10 +196,12 @@ const getTasksInCalendar = async (req, res) => {
         }
       }
       if (userSpecificData) {
+        const now = moment().format('YYYY MM DD')
+        const startDate = moment(userSpecificData.startDate).format('YYYY MM DD');
         var duration = moment.duration(
-          moment().diff(userSpecificData.startDate)
-        );
-        var days = Math.floor(duration.asDays());
+         moment(now).diff(startDate)
+          );
+        var days = Math.ceil(duration.asDays());
       }
       task = {
         ...task,
