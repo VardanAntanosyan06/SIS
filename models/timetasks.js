@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     task_id: DataTypes.INTEGER,
     taskSpentWeek: DataTypes.STRING,
     taskSpentDays: DataTypes.STRING,
-    point: DataTypes.DECIMAL
+    point: DataTypes.FLOAT
   }, {
     sequelize,
     modelName: 'timeTasks',

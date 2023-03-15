@@ -68,7 +68,7 @@ const changeSubTaskStatus = async (req,res)=>{
                     thisTask.point += +taskPoint.point
                     await thisTask.save()
                 }}
-                
+                console.log(thisTask.point,typeof(thisTask.point),"+++++++++++++++++++++++++++++++++++++++++++++++++++++++");
             }
             if(taskStatus!==""){
                 thisTask.status = taskStatus
