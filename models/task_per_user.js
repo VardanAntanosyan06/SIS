@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     deadlineAtWeek:DataTypes.STRING,
     deadline:DataTypes.DATE,
     position:DataTypes.INTEGER,
-    point:DataTypes.INTEGER,
+    point:DataTypes.FLOAT,
     description:DataTypes.STRING
   }, {
     sequelize,
