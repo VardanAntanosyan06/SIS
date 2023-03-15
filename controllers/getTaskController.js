@@ -319,8 +319,9 @@ const taksDescription = async (req, res) => {
       attributes: ["startDate", "point"],
     });
     var duration = moment.duration(
-      moment().diff(myTask.startDate)
+      moment().format('YYYY MM DD').diff(moment(myTask.startDate).format('YYYY MM DD'))
     );
+    console.log(duration,"-----",moment(),"///////////////////",moment().format('YYYY MM DD'),"+++++++",myTask.startDate);
     var days = Math.ceil(duration.asDays());
     
     return res.json({
