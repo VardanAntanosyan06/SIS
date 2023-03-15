@@ -22,7 +22,6 @@ const changeSubTaskStatus = async (req,res)=>{
         const item = await SubTask_per_User.findOne({where:{subTaskId,userId:user.id}});
         const thisSubtask = await SubTaskModel.findOne({where:{id:subTaskId}})
         const thisTask = await Task_per_User.findOne({where:{taskId:mySubTask.taskId,userId:user.id}})
-        console.log(item.status);
 
         if(status!==undefined){
             if(status===true && item.status!==true){
@@ -68,7 +67,6 @@ const changeSubTaskStatus = async (req,res)=>{
                     thisTask.point += +taskPoint.point
                     await thisTask.save()
                 }}
-                console.log(thisTask.point,typeof(thisTask.point),"+++++++++++++++++++++++++++++++++++++++++++++++++++++++");
             }
             if(taskStatus!==""){
                 thisTask.status = taskStatus
@@ -76,8 +74,9 @@ const changeSubTaskStatus = async (req,res)=>{
                 thisTask.save();
             }
             return res.json(myTask)
-            }    
+        }    
             
+        console.log(thisTask.point,typeof(thisTask.point),"+++++++++++++++++++++++++++++++++++++++++++++++++++++++");
             
         return res.status(404).json("not found")
     } catch (error) {
