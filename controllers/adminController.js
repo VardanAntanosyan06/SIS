@@ -10,8 +10,6 @@ require("dotenv").config()
 const bodyParser = require("body-parser")
 app.use(bodyParser.json());
 
-// const { buildAuthenticatedRouter } = require("admin-bro-expressjs");
-
 const AdminBro = require("admin-bro");
 AdminBro.registerAdapter(AdminBroSequelize);
 
