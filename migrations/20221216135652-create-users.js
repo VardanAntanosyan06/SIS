@@ -83,7 +83,7 @@ module.exports = {
       },
       img:{
         type :Sequelize.STRING,
-        defaultValue:"Avatar.png"
+        defaultValue:"http://drive.google.com/uc?export=view&id=1wxS-nchqrzzFuMY3Wa60T7pAgl1HhdAP"
       },
       createdAt: {
         allowNull: false,

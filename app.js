@@ -53,10 +53,13 @@ var addEmails = require("./routes/addEmails");
 var contactUs = require("./routes/contactUs");
 var getProfessors = require("./routes/getProfessors");
 var blog = require("./routes/blog");
+var uploadImage = require("./routes/uploadImage");
+const fileUpload = require("express-fileupload");
 const { bindComplete } = require("pg-protocol/dist/messages");
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
+app.use(fileUpload());
 
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 
@@ -83,7 +86,7 @@ app.use("/addEmail", addEmails);
 app.use("/contactUs", contactUs);
 app.use("/getProfessors", getProfessors);
 app.use("/blog", blog);
-
+app.use("/uploadImage", uploadImage);
 
 app.use(function (req, res, next) {
   next(createError(404));

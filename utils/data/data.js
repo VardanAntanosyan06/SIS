@@ -305,7 +305,7 @@ const TaskTable = [
     universityId: 1,
   },
   {
-    facultyName: "PUBLICATION/JOURNALISM",
+    facultyName: "JOURNALISM/PUBLICATION",
     positionName: "Society of Freelance Journalistsk",
     companyName: "Group Co-leader",
     universityId: 1,
@@ -828,7 +828,7 @@ const TaskTable = [
     universityId: 7,
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY ",
+    facultyName: "OTHER CLUB/ACTIVITY",
     positionName: "Co-founder and President",
     companyName: "Transfer Student Club",
     universityId: 7,
@@ -1020,13 +1020,13 @@ const TaskTable = [
     universityId: 10,
   },
   {
-    facultyName: "STUDENTS GOVT. POLITICS",
+    facultyName: "STUDENT GOVT. POLITICS",
     positionName: "SRC Prefect",
     companyName: "Students Representative Council",
     universityId: 10,
   },
   {
-    facultyName: "ACADEMICS",
+    facultyName: "ACADEMIC",
     positionName: "Publisher",
     companyName: "Fictocritical Thesis Publishing Club",
     universityId: 10,
