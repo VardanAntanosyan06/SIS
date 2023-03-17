@@ -37,5 +37,6 @@ router.get("/AllUniversities",controller.getAllUniversities)
  */
 
 router.get("/myUniversity",controller.getMyUniversity)
+router.get("/userUniversity",controller.getUserUniversity)
 
 module.exports = router;

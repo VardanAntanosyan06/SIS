@@ -15,7 +15,7 @@ const getAllUniversities = async (req, res) => {
       },
       include: [NotableAlumni, Advice],
     });
- 
+
     return res.json(Universities);
   } catch (error) {
     console.log(error);
@@ -26,7 +26,7 @@ const getAllUniversities = async (req, res) => {
 const getMyUniversity = async (req, res) => {
   try {
     const { id } = req.query;
-    console.log(id);
+
     const myUniversity = await UniversitiesModel.findOne({
       where: { id },
       include: [NotableAlumni, Advice],
@@ -37,12 +37,25 @@ const getMyUniversity = async (req, res) => {
 
     return res.json("not found");
   } catch (error) {
-    console.log(error, "++++++++++++++++++++++++++++++++++++++++++++++++");
-    return res.json("something went wrong");
+    return res.status(500).json("something went wrong");
   }
 };
 
+const getUserUniversity = async (req, res) => {
+  try {
+    const { authorization: token } = req.headers;
+    const user = await UserModel.findOne({
+      where: { token: token.replace("Bearer ", "") },
+    });
+    const myUni = await UniModel.findOne({where:{name:user.university}})
+
+    return res.json(myUni)
+  } catch (error) {
+    return res.status(404).json("something went wrong")
+  }
+};
 module.exports = {
   getAllUniversities,
   getMyUniversity,
+  getUserUniversity
 };
