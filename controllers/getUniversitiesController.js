@@ -15,7 +15,7 @@ const getAllUniversities = async (req, res) => {
       },
       include: [NotableAlumni, Advice],
     });
-
+ 
     return res.json(Universities);
   } catch (error) {
     console.log(error);

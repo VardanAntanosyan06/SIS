@@ -18,6 +18,7 @@ const universities = [
     img: "http://drive.google.com/uc?export=view&id=1tt01LOPexKFu6GU5O6Md2lU72TYd8MAV",
     imgMin:
       "http://drive.google.com/uc?export=view&id=11q3K7cKuC7MAManqKP3wgdL2WEy03ldM",
+    location: "Cambridge, MA, United States",
   },
   {
     name: "Yale University",
@@ -41,6 +42,7 @@ const universities = [
     img: "http://drive.google.com/uc?export=view&id=1r96jKyMSa97Vk6Pm-eVBoVIAIkWGhhDw",
     imgMin:
       "http://drive.google.com/uc?export=view&id=1l5cKlbIGtmPYiK_omBZCXhcFkTL1PvJH",
+    location: "New Haven, CT, United States",
   },
   {
     name: "Princeton University",
@@ -62,6 +64,7 @@ const universities = [
     img: "http://drive.google.com/uc?export=view&id=1RZDHy1kWVmf4NxhaXtLZmXWGx83U-AlB",
     imgMin:
       "http://drive.google.com/uc?export=view&id=1odCPC15aCfc1oVqeVwls36w8DPTMdUfP",
+    location: "Princeton, NJ, United States",
   },
   {
     name: "Stanford University",
@@ -83,6 +86,7 @@ const universities = [
     img: "http://drive.google.com/uc?export=view&id=10_tTqJDu32MutQNWMICCELJWljmJGspf",
     imgMin:
       "http://drive.google.com/uc?export=view&id=1gBxTtrhiBTSKtrRYOwhUr6yDzf-CLYhk",
+    location: "Stanford, CA, United States",
   },
   {
     name: "Johns Hopkins University",
@@ -103,6 +107,7 @@ const universities = [
     img: "http://drive.google.com/uc?export=view&id=1ZkB848-yA15Bgh7fzNDK6rgynX2YSuJu",
     imgMin:
       "http://drive.google.com/uc?export=view&id=1L3BDai4G8Sj6SGJj6Gb77srKJ-UCTI3S",
+    location: "Stanford, CA, United States",
   },
   {
     name: "Duke University",
@@ -123,6 +128,7 @@ const universities = [
     img: "http://drive.google.com/uc?export=view&id=1xWsfW629sfMJkgYOq2FolYI1MYedo1Zj",
     imgMin:
       "http://drive.google.com/uc?export=view&id=1Cv4o8U2_PT1Mt-LTr6F8Zr5v41mGXPu8",
+    location: "Durham, NC, United States",
   },
   {
     name: "Dartmouth University",
@@ -144,6 +150,7 @@ const universities = [
     img: "http://drive.google.com/uc?export=view&id=1qrHxqCOeA7-0t6cfnIQ9MnC8PDG8VK0F",
     imgMin:
       "http://drive.google.com/uc?export=view&id=1SRX-K8fzcAqMCsQFMF0eZb_fA6FFGTUo",
+    location: "Hanover, NH, United States",
   },
   {
     name: "Columbia University",
@@ -164,6 +171,7 @@ const universities = [
     img: "http://drive.google.com/uc?export=view&id=1ZkB848-yA15Bgh7fzNDK6rgynX2YSuJu",
     imgMin:
       "http://drive.google.com/uc?export=view&id=1J6riLHmUqo42z6kZfJXdOPcaNjFWn6XR",
+    location: "New York, NY, United States",
   },
   {
     name: "University of Chicago",
@@ -185,6 +193,7 @@ const universities = [
     img: "http://drive.google.com/uc?export=view&id=1Vsg3tur_DbBBuqrxcT7PNy7CZRgjlTGD",
     imgMin:
       "http://drive.google.com/uc?export=view&id=1Yd6WALEPSJyvOVr2a7xciDlpYENmbzJC",
+      location:"Chicago, IL, United States"
   },
   {
     name: "University of Pennsylvania",
@@ -207,6 +216,7 @@ const universities = [
     img: "http://drive.google.com/uc?export=view&id=1Vsg3tur_DbBBuqrxcT7PNy7CZRgjlTGD",
     imgMin:
       "http://drive.google.com/uc?export=view&id=1TChuh-MnEWsE3sgLaVTEyqP9IWPSlbF2",
+    location:"Philadelphia, PA, United States"
   },
 ];
 

@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
     history: DataTypes.STRING,
     facts: DataTypes.ARRAY(DataTypes.STRING),
     img: DataTypes.STRING,
-    imgMin: DataTypes.STRING
+    imgMin: DataTypes.STRING,
+    location:DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Universities',
