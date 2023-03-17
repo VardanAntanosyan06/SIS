@@ -9,12 +9,13 @@ const Blogs = require("../models").Blogs;
 require("dotenv").config()
 const bodyParser = require("body-parser")
 app.use(bodyParser.json());
+const ContactUs = require("../models").ContactUs;
 
 const AdminBro = require("admin-bro");
 AdminBro.registerAdapter(AdminBroSequelize);
 
 const adminBro = new AdminBro({
-  resources: [Blogs, Users],
+  resources: [Blogs, Users,ContactUs],
   rootPath: "/admin",
   branding: {
     logo: "http://drive.google.com/uc?export=view&id=1ADjM3Bt86sUwMMCaV-b2sPV1KPI-wLkI",

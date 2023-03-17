@@ -17,7 +17,7 @@ const universities = [
     ],
     img: "http://drive.google.com/uc?export=view&id=1tt01LOPexKFu6GU5O6Md2lU72TYd8MAV",
     imgMin:
-      "http://drive.google.com/uc?export=view&id=11q3K7cKuC7MAManqKP3wgdL2WEy03ldM",
+      "http://drive.google.com/uc?export=view&id=1OE3INn_NZvQe01L2aNWSZCmEf-Ko76Y_",
     location: "Cambridge, MA, United States",
   },
   {
@@ -41,7 +41,7 @@ const universities = [
     ],
     img: "http://drive.google.com/uc?export=view&id=1r96jKyMSa97Vk6Pm-eVBoVIAIkWGhhDw",
     imgMin:
-      "http://drive.google.com/uc?export=view&id=1l5cKlbIGtmPYiK_omBZCXhcFkTL1PvJH",
+      "http://drive.google.com/uc?export=view&id=1rzhBR_8TjzN1G9XGxLVuKvA_7pN36Fkw",
     location: "New Haven, CT, United States",
   },
   {
@@ -63,7 +63,7 @@ const universities = [
     ],
     img: "http://drive.google.com/uc?export=view&id=1RZDHy1kWVmf4NxhaXtLZmXWGx83U-AlB",
     imgMin:
-      "http://drive.google.com/uc?export=view&id=1odCPC15aCfc1oVqeVwls36w8DPTMdUfP",
+      "http://drive.google.com/uc?export=view&id=1cGWtWWbC1bcW_Y7IhHWMdQ7op5BqBC5a",
     location: "Princeton, NJ, United States",
   },
   {
@@ -85,7 +85,7 @@ const universities = [
     ],
     img: "http://drive.google.com/uc?export=view&id=10_tTqJDu32MutQNWMICCELJWljmJGspf",
     imgMin:
-      "http://drive.google.com/uc?export=view&id=1gBxTtrhiBTSKtrRYOwhUr6yDzf-CLYhk",
+      "http://drive.google.com/uc?export=view&id=1WVjS5KW2GtfQwwGyI4PTJI3a8tpL4JkO",
     location: "Stanford, CA, United States",
   },
   {
@@ -106,7 +106,7 @@ const universities = [
     ],
     img: "http://drive.google.com/uc?export=view&id=1ZkB848-yA15Bgh7fzNDK6rgynX2YSuJu",
     imgMin:
-      "http://drive.google.com/uc?export=view&id=1L3BDai4G8Sj6SGJj6Gb77srKJ-UCTI3S",
+      "http://drive.google.com/uc?export=view&id=1zl8hjw3OYQN2rIebgrcB9lGPxsNnGaDt",
     location: "Stanford, CA, United States",
   },
   {
@@ -127,7 +127,7 @@ const universities = [
     ],
     img: "http://drive.google.com/uc?export=view&id=1xWsfW629sfMJkgYOq2FolYI1MYedo1Zj",
     imgMin:
-      "http://drive.google.com/uc?export=view&id=1Cv4o8U2_PT1Mt-LTr6F8Zr5v41mGXPu8",
+      "http://drive.google.com/uc?export=view&id=195rP4uiXd99ldr-7Xj6vglPmSqkTRlLX",
     location: "Durham, NC, United States",
   },
   {
@@ -149,7 +149,7 @@ const universities = [
     ],
     img: "http://drive.google.com/uc?export=view&id=1qrHxqCOeA7-0t6cfnIQ9MnC8PDG8VK0F",
     imgMin:
-      "http://drive.google.com/uc?export=view&id=1SRX-K8fzcAqMCsQFMF0eZb_fA6FFGTUo",
+      "http://drive.google.com/uc?export=view&id=1RStIgfFOj9nFKqyWuL9BXnhtMMfJKWyN",
     location: "Hanover, NH, United States",
   },
   {
@@ -170,7 +170,7 @@ const universities = [
     ],
     img: "http://drive.google.com/uc?export=view&id=1ZkB848-yA15Bgh7fzNDK6rgynX2YSuJu",
     imgMin:
-      "http://drive.google.com/uc?export=view&id=1J6riLHmUqo42z6kZfJXdOPcaNjFWn6XR",
+      "http://drive.google.com/uc?export=view&id=114qVKHCMDtqtB9N7sU-FcmtUbpXZwKcK",
     location: "New York, NY, United States",
   },
   {
@@ -192,7 +192,7 @@ const universities = [
     ],
     img: "http://drive.google.com/uc?export=view&id=1Vsg3tur_DbBBuqrxcT7PNy7CZRgjlTGD",
     imgMin:
-      "http://drive.google.com/uc?export=view&id=1Yd6WALEPSJyvOVr2a7xciDlpYENmbzJC",
+      "http://drive.google.com/uc?export=view&id=1jiTD4UMdnmgC7eQTbic5Fu-lk4ZbbheO",
       location:"Chicago, IL, United States"
   },
   {
@@ -215,7 +215,7 @@ const universities = [
     ],
     img: "http://drive.google.com/uc?export=view&id=1Vsg3tur_DbBBuqrxcT7PNy7CZRgjlTGD",
     imgMin:
-      "http://drive.google.com/uc?export=view&id=1TChuh-MnEWsE3sgLaVTEyqP9IWPSlbF2",
+      "http://drive.google.com/uc?export=view&id=1thTqR4yQf4NsUySyY936mytVisWkaUf7",
     location:"Philadelphia, PA, United States"
   },
 ];
