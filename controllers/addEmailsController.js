@@ -189,7 +189,7 @@ const isEmailFree = async (req,res)=>{
       return res.status(403).json("existing email address")
     }
     
-    return res.status(200).json({success:true})
+    return res.status(200).json("Free")
   } catch (error) {
     console.log(error);
   }
