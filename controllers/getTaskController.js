@@ -387,7 +387,6 @@ const getTasksCategory1 = async (req, res) => {
           },
         ],
       });
-      // return tasks
       tasks = tasks.map((e) => CircularJSON.stringify(e));
 
       const newTasks = tasks.map((_task) => {
@@ -448,8 +447,8 @@ const getTasksCategory1 = async (req, res) => {
           count: +x[1].replace(")", ""),
         };
       });
-      console.log(obj);
-      const recommendation = await Promise.all(
+      const result = [];
+      await Promise.all(
         obj.map(async (e) => {
           let tasks = await TaskModel.findAll({
             where: { facultyName: e.activityName.toUpperCase()},
@@ -470,7 +469,7 @@ const getTasksCategory1 = async (req, res) => {
             ],
           });
           tasks = tasks.map((e) => CircularJSON.stringify(e));
-
+          // console.log({tasks});
           const newTasks = tasks.map((_task) => {
             let task = JSON.parse(_task);
             let taskStatus = true;
@@ -506,16 +505,17 @@ const getTasksCategory1 = async (req, res) => {
             if (task.Task_per_Users.length > 0 && userSpecificData) {
               taskStatus = false;
             }
+            result.push(task)
             delete task.Task_per_Users;
             return { ...task, isFree: taskStatus };
           });
           return newTasks ;
 
-          
+
         })
       );
 
-      return res.status(200).send({ recommendation:recommendation[0], groupedTasks,obj });
+      return res.status(200).send({ recommendation:result, groupedTasks,});
       }else{
       return res.status(200).send({ recommendation:[], groupedTasks });
       }
