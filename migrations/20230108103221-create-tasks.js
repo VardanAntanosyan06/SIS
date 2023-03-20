@@ -20,7 +20,10 @@ module.exports = {
       },
       universityId: {
         type: Sequelize.INTEGER
-      }
+      },
+      img: {
+        type: Sequelize.STRING
+      },
     });
   },
   async down(queryInterface, Sequelize) {

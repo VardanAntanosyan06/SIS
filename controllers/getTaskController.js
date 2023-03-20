@@ -436,22 +436,23 @@ const getTasksCategory1 = async (req, res) => {
       });
       let activitiyString = user.activityName;
       if(activitiyString){
-      activitiyString = activitiyString
+        activitiyString = activitiyString
         .replace("[", "")
         .replace("]", "")
-        .replace(" ", "");
+        .trim()
       const activityList = activitiyString.split(",");
       const obj = activityList.map((activity) => {
         const x = activity.split("(");
         return {
-          activityName: x[0],
+          activityName: x[0].trim(),
           count: +x[1].replace(")", ""),
         };
       });
+      console.log(obj);
       const recommendation = await Promise.all(
         obj.map(async (e) => {
           let tasks = await TaskModel.findAll({
-            where: { facultyName: e.activityName.toUpperCase() },
+            where: { facultyName: e.activityName.toUpperCase()},
             order: sequelize.random(),
             limit: e.count,
             include: [
@@ -468,7 +469,6 @@ const getTasksCategory1 = async (req, res) => {
               },
             ],
           });
-
           tasks = tasks.map((e) => CircularJSON.stringify(e));
 
           const newTasks = tasks.map((_task) => {
@@ -515,7 +515,7 @@ const getTasksCategory1 = async (req, res) => {
         })
       );
 
-      return res.status(200).send({ recommendation:recommendation[0], groupedTasks });
+      return res.status(200).send({ recommendation:recommendation[0], groupedTasks,obj });
       }else{
       return res.status(200).send({ recommendation:[], groupedTasks });
       }
