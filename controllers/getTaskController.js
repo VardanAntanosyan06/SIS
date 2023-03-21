@@ -196,11 +196,11 @@ const getTasksInCalendar = async (req, res) => {
         }
       }
       if (userSpecificData) {
-        const now = moment().format('YYYY MM DD')
-        const startDate = moment(userSpecificData.startDate).format('YYYY MM DD');
-        var duration = moment.duration(
-         moment(now).diff(startDate)
-          );
+        const now = moment().format("YYYY MM DD");
+        const startDate = moment(userSpecificData.startDate).format(
+          "YYYY MM DD"
+        );
+        var duration = moment.duration(moment(now).diff(startDate));
         var days = Math.ceil(duration.asDays());
       }
       task = {
@@ -268,7 +268,7 @@ const getSubTasks = async (req, res) => {
       where: { token: token.replace("Bearer ", "") },
     });
 
-    const { subTaskId } = req.query;  
+    const { subTaskId } = req.query;
 
     const mySubTasks = await SubTask_per_User.findOne({
       where: { subTaskId, userId: user.id },
@@ -320,13 +320,11 @@ const taksDescription = async (req, res) => {
       },
       attributes: ["startDate", "point"],
     });
-    const now = moment().format('YYYY MM DD')
-    const startDate = moment(myTask.startDate).format('YYYY MM DD');
-    var duration = moment.duration(
-     moment(now).diff(startDate)
-      );
+    const now = moment().format("YYYY MM DD");
+    const startDate = moment(myTask.startDate).format("YYYY MM DD");
+    var duration = moment.duration(moment(now).diff(startDate));
     var days = Math.ceil(duration.asDays());
-    
+
     return res.json({
       taskDesc,
       currentDay: days,
@@ -434,87 +432,93 @@ const getTasksCategory1 = async (req, res) => {
         groupedTasks[facultyNames].push(task);
       });
       let activitiyString = user.activityName;
-      if(activitiyString){
+      if (activitiyString) {
         activitiyString = activitiyString
-        .replace("[", "")
-        .replace("]", "")
-        .trim()
-      const activityList = activitiyString.split(",");
-      const obj = activityList.map((activity) => {
-        const x = activity.split("(");
-        return {
-          activityName: x[0].trim(),
-          count: +x[1].replace(")", ""),
-        };
-      });
-      const result = [];
-      await Promise.all(
-        obj.map(async (e) => {
-          let tasks = await TaskModel.findAll({
-            where: { facultyName: e.activityName.toUpperCase()},
-            order: sequelize.random(),
-            limit: e.count,
-            include: [
-              {
-                model: SubTasks,
-                include: {
-                  model: SubTask_per_User,
-                  required: false,
-                  where: { userId: user.id },
+          .replace("[", "")
+          .replace("]", "")
+          .trim();
+        const activityList = activitiyString.split(",");
+        const obj = activityList.map((activity) => {
+          const x = activity.split("(");
+          return {
+            activityName: x[0].trim(),
+            count: +x[1].replace(")", ""),
+          };
+        });
+        let recommendation = await Promise.all(
+          obj.map(async (e) => {
+            let tasks = await TaskModel.findAll({
+              where: { facultyName: e.activityName.toUpperCase() },
+              order: sequelize.random(),
+              limit: e.count,
+              include: [
+                {
+                  model: SubTasks,
+                  include: {
+                    model: SubTask_per_User,
+                    required: false,
+                    where: { userId: user.id },
+                  },
                 },
-              },
-              {
-                model: Task_per_User,
-              },
-            ],
-          });
-          tasks = tasks.map((e) => CircularJSON.stringify(e));
-          const newTasks = tasks.map((_task) => {
-            let task = JSON.parse(_task);
-            let taskStatus = true;
+                {
+                  model: Task_per_User,
+                },
+              ],
+            });
+            tasks = tasks.map((e) => CircularJSON.stringify(e));
+            const newTasks = tasks.map((_task) => {
+              let task = JSON.parse(_task);
+              let taskStatus = true;
 
-            const userSpecificData =
-              task.Task_per_Users.length === 0
-                ? { createdAt: null, status: null, point: 0, deadline: null }
-                : task.Task_per_Users.filter((e) => +e.userId === +user.id)[0];
+              const userSpecificData =
+                task.Task_per_Users.length === 0
+                  ? { createdAt: null, status: null, point: 0, deadline: null }
+                  : task.Task_per_Users.filter(
+                      (e) => +e.userId === +user.id
+                    )[0];
 
-            task = {
-              ...task,
-              status: userSpecificData ? userSpecificData.status : null,
-              point: userSpecificData ? userSpecificData.point : null,
-              deadline: userSpecificData ? userSpecificData.deadline : null,
-              SubTasks: task.SubTasks.map((_subTask) =>
-                _subTask.SubTask_per_Users.length === 1
-                  ? (() => {
-                      const _sub_task = {
-                        ..._subTask,
-                        status: _subTask.SubTask_per_Users[0].status,
-                        description: _subTask.SubTask_per_Users[0].description,
-                      };
+              task = {
+                ...task,
+                status: userSpecificData ? userSpecificData.status : null,
+                point: userSpecificData ? userSpecificData.point : null,
+                deadline: userSpecificData ? userSpecificData.deadline : null,
+                SubTasks: task.SubTasks.map((_subTask) =>
+                  _subTask.SubTask_per_Users.length === 1
+                    ? (() => {
+                        const _sub_task = {
+                          ..._subTask,
+                          status: _subTask.SubTask_per_Users[0].status,
+                          description:
+                            _subTask.SubTask_per_Users[0].description,
+                        };
 
-                      delete _sub_task.SubTask_per_Users;
-                      return _sub_task;
-                    })()
-                  : (() => {
-                      delete _subTask.SubTask_per_Users;
-                      return { ..._subTask, status: false, description: null };
-                    })()
-              ),
-            };
-            if (task.Task_per_Users.length > 0 && userSpecificData) {
-              taskStatus = false;
-            }
-            delete task.Task_per_Users;
-            return { ...task, isFree: taskStatus };
-          });
-          result.push(newTasks) 
-          return newTasks ;
-        })
-      );
-
-      return res.status(200).send({ recommendation:result, groupedTasks,});
-      }else{
-      return res.status(200).send({ recommendation:[], groupedTasks });
+                        delete _sub_task.SubTask_per_Users;
+                        return _sub_task;
+                      })()
+                    : (() => {
+                        delete _subTask.SubTask_per_Users;
+                        return {
+                          ..._subTask,
+                          status: false,
+                          description: null,
+                        };
+                      })()
+                ),
+              };
+              if (task.Task_per_Users.length > 0 && userSpecificData) {
+                taskStatus = false;
+              }
+              delete task.Task_per_Users;
+              return { ...task, isFree: taskStatus };
+            });
+            // result.push(newTasks)
+            return newTasks;
+          })
+        );
+        recommendation = recommendation.map(e=> e[0]);
+        return res.status(200).send({ recommendation, groupedTasks });
+      } else {
+        return res.status(200).send({ recommendation: [], groupedTasks });
       }
     }
     return res.json("user not found");
