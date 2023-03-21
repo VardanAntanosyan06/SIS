@@ -5,56 +5,100 @@ const UserEmails = require("../models").UserEmails;
 const jwt = require("jsonwebtoken");
 const { token } = require("morgan");
 require("dotenv").config();
+const moment = require("moment");
 
 const UserModel = require("../models").Users;
 const reg = async (req, res) => {
   try {
     const {
-      fullName,email,password,phone,age,country,grade,university,academicProgram,study,termOption,planType,aid,legacy,area,applyingFrom,testSubmit,recentSchool,achievements,admission,activityName,workExperience,addinfo,moreInfo,
+      fullName,
+      email,
+      password,
+      phone,
+      age,
+      country,
+      grade,
+      university,
+      academicProgram,
+      study,
+      termOption,
+      planType,
+      aid,
+      legacy,
+      area,
+      applyingFrom,
+      testSubmit,
+      recentSchool,
+      achievements,
+      admission,
+      activityName,
+      workExperience,
+      addinfo,
+      moreInfo,
     } = req.body;
     const user = await UserModel.findOne({
-      include:{
-      model:UserEmails,
-      where:{email}
-    }});
+      include: {
+        model: UserEmails,
+        where: { email },
+      },
+    });
 
-  
     if (!user) {
-      const isMail = await UserEmails.findOne({where:{email}})
+      const isMail = await UserEmails.findOne({ where: { email } });
       console.log(isMail);
 
       const hashEmail = bcrypt.hashSync(email, 10);
       console.log(hashEmail);
       const hashPassword = bcrypt.hashSync(password, 10);
 
-      const item = await UserModel.create({fullName,phone,age,country,grade,university,academicProgram,study,termOption,planType,aid,legacy,area,applyingFrom,testSubmit,recentSchool,achievements,admission,activityName,workExperience,addinfo,moreInfo}); 
-      
+      const item = await UserModel.create({
+        fullName,
+        phone,
+        age,
+        country,
+        grade,
+        university,
+        academicProgram,
+        study,
+        termOption,
+        planType,
+        aid,
+        legacy,
+        area,
+        applyingFrom,
+        testSubmit,
+        recentSchool,
+        achievements,
+        admission,
+        activityName,
+        workExperience,
+        addinfo,
+        moreInfo,
+      });
 
-      const newEmail = await UserEmails.create({
+      await UserEmails.create({
         email,
-        password:hashPassword,
-        userId:item.id,
-        role:"First",
-        token:jwt.sign( 
-          {user_id: item.id, email},
-          process.env.SECRET
-      )
-      })
-   
-      return res.status(200).json({success:true});
+        password: hashPassword,
+        userId: item.id,
+        role: "First",
+        token: jwt.sign({ user_id: item.id, email }, process.env.SECRET),
+        tokenCreatedAt: moment(),
+      });
+
+      return res.status(200).json({ success: true });
     } else {
       return res.status(403).json("user alredy exit");
     }
   } catch (error) {
-    console.log(error)  
+    console.log(error);
   }
 };
 
-const sendMail = async (req,res)=>{
+const sendMail = async (req, res) => {
   try {
-    const {email} = req.body;
-    const userEmail = await UserEmails.findOne({where:{email}})
-    
+    const { email } = req.body;
+    const userEmail = await UserEmails.findOne({ where: { email } });
+
     const transporter = nodemailer.createTransport({
       host: "mail.privateemail.com",
       port: 465,
@@ -68,8 +112,7 @@ const sendMail = async (req,res)=>{
       from: "info@sisprogress.com",
       to: email,
       subject: "verification",
-      html:
-     `<center>
+      html: `<center>
      <img src='cid:logo' style="width:450px;height:250px;" >
      <h2>Verify your email address </h2>
      <p>
@@ -97,20 +140,22 @@ const sendMail = async (req,res)=>{
         <b><a href='https://sisprogress.com/message?token=${userEmail.token}'>https://sisprogress.com/message?token=${userEmail.token}</a></b>
       </center>
         `,
-        attachments: [{
-          filename: 'Email.png',
-          path: './controllers/Email.png',
-          cid: 'logo' 
-     }]
+      attachments: [
+        {
+          filename: "Email.png",
+          path: "./controllers/Email.png",
+          cid: "logo",
+        },
+      ],
     };
     transporter.sendMail(mailOptions);
 
-    return res.status(200).json({success:true});
+    return res.status(200).json({ success: true });
   } catch (error) {
-      return res.status(500).json("something went wrong");
+    return res.status(500).json("something went wrong");
   }
-}
+};
 module.exports = {
   reg,
-  sendMail
+  sendMail,
 };
