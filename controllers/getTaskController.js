@@ -514,9 +514,15 @@ const getTasksCategory1 = async (req, res) => {
             return newTasks;
           })
         );
-        recommendation = recommendation.map((e) => e[0]);
-        recommendation = recommendation.filter(e=> e!==undefined)
-        return res.status(200).send({ recommendation, groupedTasks });
+        recommendation = recommendation.filter((e) => e !== undefined);
+        recommendation = recommendation.filter((e) => e);
+        var newArr = [];
+
+        for (var i = 0; i < recommendation.length; i++) {
+          newArr = newArr.concat(recommendation[i]);
+        }
+
+        return res.status(200).send({recommendation:newArr, groupedTasks, obj });
       } else {
         const { authorization: token } = req.headers;
         const user = await UserModel.findOne({
@@ -525,10 +531,9 @@ const getTasksCategory1 = async (req, res) => {
         const myUni = await UniversityModel.findOne({
           where: { name: user.university },
         });
+
         recommendation = await TaskModel.findAll({
           where: { universityId: myUni.id },
-          order: sequelize.random(),
-          limit: e.count,
           include: [
             {
               model: SubTasks,
@@ -586,8 +591,8 @@ const getTasksCategory1 = async (req, res) => {
           delete task.Task_per_Users;
           return { ...task, isFree: taskStatus };
         });
-        newTasks = newTasks.filter(e=> e!==undefined)
-        return res.status(200).send({recommendation:newTasks, groupedTasks });
+        newTasks = newTasks.filter((e) => e !== undefined);
+        return res.status(200).send({ recommendation: newTasks, groupedTasks });
       }
     }
     return res.json("user not found");
@@ -597,19 +602,19 @@ const getTasksCategory1 = async (req, res) => {
   }
 };
 
-const getActivities = async (req,res)=>{
+const getActivities = async (req, res) => {
   try {
     let activities = await TaskModel.findAll({
-      attributes:['facultyName']
-    })
-    activities = activities.map(e=>e.facultyName)
-    const unique_names = [...new Set(activities)]
-    return res.json(unique_names)
+      attributes: ["facultyName"],
+    });
+    activities = activities.map((e) => e.facultyName);
+    const unique_names = [...new Set(activities)];
+    return res.json(unique_names);
   } catch (error) {
     console.log(error);
     return res.json("something went wrong!");
   }
-}
+};
 module.exports = {
   getTasksFilter,
   getYourTasks,
@@ -620,5 +625,5 @@ module.exports = {
   getRestTask,
   deleteTask,
   getTasksCategory1,
-  getActivities
+  getActivities,
 };
