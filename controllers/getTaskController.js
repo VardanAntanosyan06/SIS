@@ -588,7 +588,7 @@ const getTasksCategory1 = async (req, res) => {
           delete task.Task_per_Users;
           return { ...task, isFree: taskStatus };
         });
-        newTasks = newTasks.filter(e=> e!==null)
+        newTasks = newTasks.filter(e=> e!==undefined)
         return res.status(200).send({recommendation:newTasks, groupedTasks });
       }
     }
