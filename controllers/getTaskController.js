@@ -515,7 +515,7 @@ const getTasksCategory1 = async (req, res) => {
           })
         );
         recommendation = recommendation.map((e) => e[0]);
-        recommendation = recommendation.filter(e=> e!==null)
+        recommendation = recommendation.filter(e=> e!==undefined)
         return res.status(200).send({ recommendation, groupedTasks });
       } else {
         const { authorization: token } = req.headers;
