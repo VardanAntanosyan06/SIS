@@ -599,12 +599,12 @@ const getTasksCategory1 = async (req, res) => {
 
 const getActivities = async (req,res)=>{
   try {
-    const activities = await TaskModel.findAll({
-      distinct:false,
+    let activities = await TaskModel.findAll({
       attributes:['facultyName']
     })
-
-    return res.json(activities)
+    activities = activities.map(e=>e.facultyName)
+    const unique_names = [...new Set(activities)]
+    return res.json(unique_names)
   } catch (error) {
     console.log(error);
     return res.json("something went wrong!");
