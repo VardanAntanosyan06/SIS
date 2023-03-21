@@ -511,14 +511,83 @@ const getTasksCategory1 = async (req, res) => {
               delete task.Task_per_Users;
               return { ...task, isFree: taskStatus };
             });
-            // result.push(newTasks)
             return newTasks;
           })
         );
-        recommendation = recommendation.map(e=> e[0]);
+        recommendation = recommendation.map((e) => e[0]);
         return res.status(200).send({ recommendation, groupedTasks });
       } else {
-        return res.status(200).send({ recommendation: [], groupedTasks });
+        const { authorization: token } = req.headers;
+        const user = await UserModel.findOne({
+          where: { token: token.replace("Bearer ", "") },
+        });
+        const myUni = await UniversityModel.findOne({
+          where: { name: user.university },
+        });
+
+        // recommendation = await TaskModel.findAll({where:{universityId:myUni.id}})
+        recommendation = await TaskModel.findAll({
+          where: { universityId: myUni.id },
+          order: sequelize.random(),
+          limit: e.count,
+          include: [
+            {
+              model: SubTasks,
+              include: {
+                model: SubTask_per_User,
+                required: false,
+                where: { userId: user.id },
+              },
+            },
+            {
+              model: Task_per_User,
+            },
+          ],
+        });
+        recommendation = recommendation.map((e) => CircularJSON.stringify(e));
+        const newTasks = recommendation.map((_task) => {
+          let task = JSON.parse(_task);
+          let taskStatus = true;
+
+          const userSpecificData =
+            task.Task_per_Users.length === 0
+              ? { createdAt: null, status: null, point: 0, deadline: null }
+              : task.Task_per_Users.filter((e) => +e.userId === +user.id)[0];
+
+          task = {
+            ...task,
+            status: userSpecificData ? userSpecificData.status : null,
+            point: userSpecificData ? userSpecificData.point : null,
+            deadline: userSpecificData ? userSpecificData.deadline : null,
+            SubTasks: task.SubTasks.map((_subTask) =>
+              _subTask.SubTask_per_Users.length === 1
+                ? (() => {
+                    const _sub_task = {
+                      ..._subTask,
+                      status: _subTask.SubTask_per_Users[0].status,
+                      description: _subTask.SubTask_per_Users[0].description,
+                    };
+
+                    delete _sub_task.SubTask_per_Users;
+                    return _sub_task;
+                  })()
+                : (() => {
+                    delete _subTask.SubTask_per_Users;
+                    return {
+                      ..._subTask,
+                      status: false,
+                      description: null,
+                    };
+                  })()
+            ),
+          };
+          if (task.Task_per_Users.length > 0 && userSpecificData) {
+            taskStatus = false;
+          }
+          delete task.Task_per_Users;
+          return { ...task, isFree: taskStatus };
+        });
+        return res.status(200).send({recommendation:newTasks, groupedTasks });
       }
     }
     return res.json("user not found");
