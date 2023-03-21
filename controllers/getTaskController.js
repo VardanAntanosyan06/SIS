@@ -515,6 +515,7 @@ const getTasksCategory1 = async (req, res) => {
           })
         );
         recommendation = recommendation.map((e) => e[0]);
+        recommendation = recommendation.filter(e=> e!==null)
         return res.status(200).send({ recommendation, groupedTasks });
       } else {
         const { authorization: token } = req.headers;
@@ -587,6 +588,7 @@ const getTasksCategory1 = async (req, res) => {
           delete task.Task_per_Users;
           return { ...task, isFree: taskStatus };
         });
+        newTasks = newTasks.filter(e=> e!==null)
         return res.status(200).send({recommendation:newTasks, groupedTasks });
       }
     }
@@ -597,6 +599,19 @@ const getTasksCategory1 = async (req, res) => {
   }
 };
 
+const getActivities = async (req,res)=>{
+  try {
+    const activities = await TaskModel.findAll({
+      distinct:false,
+      attributes:['facultyName']
+    })
+
+    return res.json(activities)
+  } catch (error) {
+    console.log(error);
+    return res.json("something went wrong!");
+  }
+}
 module.exports = {
   getTasksFilter,
   getYourTasks,
@@ -607,4 +622,5 @@ module.exports = {
   getRestTask,
   deleteTask,
   getTasksCategory1,
+  getActivities
 };

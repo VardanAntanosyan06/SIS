@@ -67,6 +67,7 @@ router.get("/description",getTasks.taksDescription)
 router.get("/rest",getTasks.getRestTask)
 router.delete("/delete",getTasks.deleteTask)
 router.get("/Category1",getTasks.getTasksCategory1)
+router.get("/activities",getTasks.getActivities)
 
 module.exports = router;
 
