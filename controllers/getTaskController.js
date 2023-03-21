@@ -469,7 +469,6 @@ const getTasksCategory1 = async (req, res) => {
             ],
           });
           tasks = tasks.map((e) => CircularJSON.stringify(e));
-          // console.log({tasks});
           const newTasks = tasks.map((_task) => {
             let task = JSON.parse(_task);
             let taskStatus = true;
@@ -505,13 +504,11 @@ const getTasksCategory1 = async (req, res) => {
             if (task.Task_per_Users.length > 0 && userSpecificData) {
               taskStatus = false;
             }
-            result.push(task)
             delete task.Task_per_Users;
             return { ...task, isFree: taskStatus };
           });
+          result.push(newTasks) 
           return newTasks ;
-
-
         })
       );
 
