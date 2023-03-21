@@ -525,8 +525,6 @@ const getTasksCategory1 = async (req, res) => {
         const myUni = await UniversityModel.findOne({
           where: { name: user.university },
         });
-
-        // recommendation = await TaskModel.findAll({where:{universityId:myUni.id}})
         recommendation = await TaskModel.findAll({
           where: { universityId: myUni.id },
           order: sequelize.random(),
@@ -546,7 +544,7 @@ const getTasksCategory1 = async (req, res) => {
           ],
         });
         recommendation = recommendation.map((e) => CircularJSON.stringify(e));
-        const newTasks = recommendation.map((_task) => {
+        let newTasks = recommendation.map((_task) => {
           let task = JSON.parse(_task);
           let taskStatus = true;
 
