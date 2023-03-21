@@ -107,6 +107,7 @@ const regController = require("../controllers/regController")
  */
 
 router.post("/",regController.reg)
+router.post("/sendMail",regController.sendMail)
 
 
 module.exports = router;

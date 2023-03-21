@@ -539,7 +539,7 @@ const getTasksCategory1 = async (req, res) => {
               model: SubTasks,
               include: {
                 model: SubTask_per_User,
-                required: false,
+                required: true,
                 where: { userId: user.id },
               },
             },
