@@ -37,7 +37,8 @@ module.exports = (sequelize, DataTypes) => {
     addinfo: DataTypes.BOOLEAN,
     moreInfo: DataTypes.STRING,
     token:DataTypes.STRING,
-    img:DataTypes.STRING
+    img:DataTypes.STRING,
+    aaaa:DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Users',

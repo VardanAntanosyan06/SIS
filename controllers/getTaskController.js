@@ -178,6 +178,7 @@ const getTasksInCalendar = async (req, res) => {
     const newTasks = tasks.map((_task) => {
       let task = JSON.parse(_task);
       let taskStatus = true;
+                       
       const userSpecificData =
         task.Task_per_Users.length === 0
           ? { createdAt: null, status: null }
@@ -522,7 +523,9 @@ const getTasksCategory1 = async (req, res) => {
           newArr = newArr.concat(recommendation[i]);
         }
 
-        return res.status(200).send({recommendation:newArr, groupedTasks, obj });
+        return res
+          .status(200)
+          .send({ recommendation: newArr, groupedTasks, obj });
       } else {
         const { authorization: token } = req.headers;
         const user = await UserModel.findOne({

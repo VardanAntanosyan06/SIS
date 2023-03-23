@@ -3,7 +3,7 @@
     "username": "postgres",
     "password": "vv",
     "database": "sis",
-    "host": "164.90.224.111",
+    "host": "165.232.74.168",
     "dialect": "postgres"
   },
   "test": {
@@ -16,7 +16,7 @@
   "production": {
     "username": "postgres",
     "password": "vv",
-    "database": "sisProduction",
+    "database": "sis",
     "host": "164.90.224.111",
     "dialect": "postgres"
   }
