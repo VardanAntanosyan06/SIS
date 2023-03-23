@@ -16,7 +16,7 @@
   "production": {
     "username": "postgres",
     "password": "vv",
-    "database": "sis",
+    "database": "sis production",
     "host": "164.90.224.111",
     "dialect": "postgres"
   }
