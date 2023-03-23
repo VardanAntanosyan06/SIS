@@ -2,7 +2,7 @@
   "development": {
     "username": "postgres",
     "password": "vv",
-    "database": "sis development",
+    "database": "SISDevelomment",
     "host": "165.232.74.168",
     "dialect": "postgres"
   },
@@ -16,7 +16,7 @@
   "production": {
     "username": "postgres",
     "password": "vv",
-    "database": "sis production",
+    "database": "SISProduction",
     "host": "164.90.224.111",
     "dialect": "postgres"
   }
