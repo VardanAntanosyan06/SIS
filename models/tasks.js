@@ -25,7 +25,8 @@ module.exports = (sequelize, DataTypes) => {
     positionName: DataTypes.STRING,
     companyName: DataTypes.STRING,
     universityId: DataTypes.INTEGER,
-    img:DataTypes.STRING
+    imgWeb:DataTypes.STRING,
+    imgMobile:DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Tasks',

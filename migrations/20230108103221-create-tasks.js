@@ -21,7 +21,10 @@ module.exports = {
       universityId: {
         type: Sequelize.INTEGER
       },
-      img: {
+      imgWeb: {
+        type: Sequelize.STRING
+      },
+      imgMobile: {
         type: Sequelize.STRING
       },
     });
