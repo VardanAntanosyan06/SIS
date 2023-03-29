@@ -35,23 +35,24 @@ const add = async (req, res) => {
     });
     if (file1 || file2) {
       const foo = async (fileObject) => {
-        const bufferStream = new stream.PassThrough();
-        bufferStream.end(fileObject.data);
-
-        const { data } = await google
-          .drive({ version: "v3", auth })
-          .files.create({
-            media: {
-              mimeType: fileObject.mimeType,
-              body: bufferStream,
-            },
-
-            requestBody: {
-              name: fileObject.name,
-              parents: ["19Wlo24OlZUBM7YvIRrllLRNZG7IPHvJx"],
-            },
-             fields: "id,name",
-          });
+        const arr = await Promise.all(fileObject.map(async(e) => {
+          const bufferStream = new stream.PassThrough();
+          bufferStream.end(e.data);
+          let {data} = await google
+            .drive({ version: "v3", auth })
+            .files.create({
+              media: {
+                mimeType: e.mimeType,
+                body: bufferStream,
+              },
+              requestBody: {
+                name: e.name,
+                parents: ["19Wlo24OlZUBM7YvIRrllLRNZG7IPHvJx"],
+              },
+              fields: "id,name",
+            });
+            return(data);
+        }))
 
         FinancialAidUser.create({
           fullName,
@@ -65,46 +66,26 @@ const add = async (req, res) => {
           counselorEmail,
           question1,
           question2,
-          file1: `http://drive.google.com/uc?export=view&id=${data.id}`,
+          file1: `http://drive.google.com/uc?export=view&id=${arr[0].id}`,
+          file2: `http://drive.google.com/uc?export=view&id=${arr[1].id}`,
         });
-        return res.status(200).json({ success: true,data });
+        return res.status(200).json({ success: true });
       };
-      foo(file1);
+      foo([file1, file2]);
     } else {
-      const foo = async (fileObject) => {
-        const bufferStream = new stream.PassThrough();
-        bufferStream.end(fileObject.data);
-
-        const { data } = await google
-          .drive({ version: "v3", auth })
-          .files.create({
-            media: {
-              mimeType: fileObject.mimeType,
-              body: bufferStream,
-            },
-
-            requestBody: {
-              name: fileObject.name,
-              parents: ["19Wlo24OlZUBM7YvIRrllLRNZG7IPHvJx"],
-            },
-            fields: "id,name",
-          });
-
-        FinancialAidUser.create({
-          fullName,
-          email,
-          phone,
-          country,
-          school,
-          applicantName,
-          ApplicantEmail,
-          ApplicantGrade,
-          ApplicantGPA,
-          question,
-        });
-        return res.status(200).json({ success: true,data});
-      };
-      foo(file1);
+      FinancialAidUser.create({
+        fullName,
+        email,
+        phone,
+        country,
+        school,
+        applicantName,
+        ApplicantEmail,
+        ApplicantGrade,
+        ApplicantGPA,
+        question,
+      });
+      return res.status(200).json({ success: true, data });
     }
   } catch (error) {
     console.log(error);
@@ -112,7 +93,6 @@ const add = async (req, res) => {
   }
 };
 
-
 module.exports = {
-    add
-}
+  add,
+};

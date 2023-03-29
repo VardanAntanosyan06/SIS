@@ -1,11 +1,11 @@
 'use strict';
 
-const TaskTable = require("../utils/data/data").TaskTable
+const Tasks = require("../utils/data/tasks").Tasks
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    return queryInterface.bulkInsert('Tasks',TaskTable)
+    return queryInterface.bulkInsert('Tasks',Tasks)
   },
 
   async down (queryInterface, Sequelize) {
