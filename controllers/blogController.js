@@ -3,6 +3,9 @@ const BlogModel = require("../models").Blogs;
 const { google } = require("googleapis");
 const fs = require("fs");
 const stream = require("stream");
+const { sequelize } = require("../models");
+
+const {Op} = require("sequelize");
 
 // const addPost = async (req, res) => {
 //   try {
@@ -45,27 +48,40 @@ const stream = require("stream");
 //   }
 // };
 
-
-const getBlogs = async (req,res)=>{
-    try {
-        const {id} = req.query;
-        let Blogs;
-        if(id){
-          Blogs = await BlogModel.findOne({
-            where:{id},
-            attributes:['html'],
-          });
-        }else{
-          Blogs = await BlogModel.findAll({
-            attributes: { exclude: ["html"] },
-          });
-        }
-        return res.json({Blogs})
-    } catch (error) {
-        console.log(error);
+const getBlogs = async (req, res) => {
+  try {
+    const { id } = req.query;
+    let Blogs;
+    if (id) {
+      Blogs = await BlogModel.findOne({
+        where: { id },
+        order: sequelize.random(),
+      });
+    } else {
+      Blogs = await BlogModel.findAll({
+        attributes: { exclude: ["html"] },
+      });
     }
-}
+    return res.json({ Blogs });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const getOtherBlogs = async (req, res) => {
+  try {
+    const id = req.query.id;
+    let Blogs = await BlogModel.findAll({
+      where:{id:{[Op.ne]:id}}, 
+      order: sequelize.random(),
+      attributes: { exclude: ["html"] },
+    });
+    return res.json({ Blogs });
+  } catch (error) {
+    console.log(error);
+  }
+};
 module.exports = {
-  // addPost,
-  getBlogs
+  getBlogs,
+  getOtherBlogs,
 };
