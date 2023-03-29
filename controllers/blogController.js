@@ -75,8 +75,9 @@ const getOtherBlogs = async (req, res) => {
       where:{id:{[Op.ne]:id}}, 
       order: sequelize.random(),
       attributes: { exclude: ["html"] },
+      limit:3
     });
-    return res.json({ Blogs });
+    return res.json(Blogs);
   } catch (error) {
     console.log(error);
   }
