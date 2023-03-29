@@ -24,7 +24,6 @@ const add = async (req, res) => {
       ApplicantGPA,
       question,
     } = req.body;
-    const { file1, file2 } = req.files;
 
     const keyPath = "controllers/upbeat-airfoil-379410-ffc79425eb65.json";
     const scopes = ["https://www.googleapis.com/auth/drive"];
@@ -33,7 +32,7 @@ const add = async (req, res) => {
       keyFile: keyPath,
       scopes,
     });
-    if (file1 || file2) {
+    if (req.files) {
       const foo = async (fileObject) => {
         const arr = await Promise.all(fileObject.map(async(e) => {
           const bufferStream = new stream.PassThrough();
@@ -71,7 +70,7 @@ const add = async (req, res) => {
         });
         return res.status(200).json({ success: true });
       };
-      foo([file1, file2]);
+      foo([req.files.file1, req.files.file2]);
     } else {
       FinancialAidUser.create({
         fullName,
@@ -85,7 +84,7 @@ const add = async (req, res) => {
         ApplicantGPA,
         question,
       });
-      return res.status(200).json({ success: true, data });
+      return res.status(200).json({ success: true });
     }
   } catch (error) {
     console.log(error);

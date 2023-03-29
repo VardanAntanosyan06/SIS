@@ -61,7 +61,7 @@ const getBlogs = async (req, res) => {
         nextUp = await BlogModel.findAll({
           where:{id:{[Op.ne]:id}}, 
           order: sequelize.random(),
-          attributes: { exclude: ["html"] },
+          attributes: { exclude: ["html","description"] },
           limit:3
         })
     } else {
