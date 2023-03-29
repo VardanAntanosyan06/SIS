@@ -52,37 +52,29 @@ const getBlogs = async (req, res) => {
   try {
     const { id } = req.query;
     let Blogs;
+    let nextUp;
+
     if (id) {
       Blogs = await BlogModel.findOne({
         where: { id },
-        order: sequelize.random(),
       });
+        nextUp = await BlogModel.findAll({
+          where:{id:{[Op.ne]:id}}, 
+          order: sequelize.random(),
+          attributes: { exclude: ["html"] },
+          limit:3
+        })
     } else {
       Blogs = await BlogModel.findAll({
         attributes: { exclude: ["html"] },
       });
     }
-    return res.json({ Blogs });
+    return res.json({ Blogs,nextUp });
   } catch (error) {
     console.log(error);
   }
 };
 
-const getOtherBlogs = async (req, res) => {
-  try {
-    const id = req.query.id;
-    let Blogs = await BlogModel.findAll({
-      where:{id:{[Op.ne]:id}}, 
-      order: sequelize.random(),
-      attributes: { exclude: ["html"] },
-      limit:3
-    });
-    return res.json(Blogs);
-  } catch (error) {
-    console.log(error);
-  }
-};
 module.exports = {
   getBlogs,
-  getOtherBlogs,
 };
