@@ -20,7 +20,9 @@ module.exports = (sequelize, DataTypes) => {
     country: DataTypes.STRING,
     grade: DataTypes.INTEGER,
     university:DataTypes.STRING,
-    academicProgram:DataTypes.STRING,
+    academicProgramFirst:DataTypes.STRING,
+    academicProgramSecond:DataTypes.STRING,
+    academicProgramThird:DataTypes.STRING,
     study:DataTypes.STRING,
     termOption:DataTypes.STRING,
     planType: DataTypes.STRING,
@@ -38,7 +40,6 @@ module.exports = (sequelize, DataTypes) => {
     moreInfo: DataTypes.STRING,
     token:DataTypes.STRING,
     img:DataTypes.STRING,
-    aaaa:DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Users',

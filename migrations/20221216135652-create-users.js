@@ -1,6 +1,6 @@
 "use strict";
 
-const { STRING } = require('sequelize');
+const { STRING } = require("sequelize");
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -14,89 +14,97 @@ module.exports = {
       },
       fullName: {
         type: Sequelize.STRING,
-      }, 
-      phone:{
+      },
+      phone: {
         type: Sequelize.STRING,
       },
-      age:{
+      age: {
         type: Sequelize.DATE,
       },
       country: {
-        type:Sequelize.STRING
+        type: Sequelize.STRING,
       },
       grade: {
         type: Sequelize.INTEGER,
       },
-      university:{
-        type:Sequelize.STRING
+      university: {
+        type: Sequelize.STRING,
       },
-      academicProgram: {
-        type :Sequelize.STRING
+      academicProgramFirst: {
+        type: Sequelize.STRING,
       },
-      study:{
-        type:Sequelize.STRING
+      academicProgramSecond: {
+        type: Sequelize.STRING,
       },
-      termOption:{
-        type:Sequelize.STRING
+      academicProgramThird: {
+        type: Sequelize.STRING,
       },
-      planType:{
-        type:Sequelize.STRING
+      study: {
+        type: Sequelize.STRING,
+      },
+      termOption: {
+        type: Sequelize.STRING,
+      },
+      planType: {
+        type: Sequelize.STRING,
       },
       aid: {
-        type:Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
       },
       legacy: {
-        type : Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
       },
-      area:{
-        type:Sequelize.STRING
+      area: {
+        type: Sequelize.STRING,
       },
-      applyingFrom:{
-        type:Sequelize.BOOLEAN
+      applyingFrom: {
+        type: Sequelize.BOOLEAN,
       },
       testSubmit: {
-        type :Sequelize.STRING
+        type: Sequelize.STRING,
       },
       recentSchool: {
-        type:Sequelize.STRING
+        type: Sequelize.STRING,
       },
-      achievements:{
-        type:Sequelize.BOOLEAN
+      achievements: {
+        type: Sequelize.BOOLEAN,
       },
-      admission:{
-        type:Sequelize.BOOLEAN
+      admission: {
+        type: Sequelize.BOOLEAN,
       },
       activityName: {
-        type:Sequelize.STRING
-      }, 
+        type: Sequelize.STRING,
+      },
       workExperience: {
-        type :Sequelize.STRING
+        type: Sequelize.STRING,
       },
       addinfo: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
       },
       moreInfo: {
-        type:Sequelize.STRING
+        type: Sequelize.STRING,
       },
-      token:{
-        type :Sequelize.STRING
+      token: {
+        type: Sequelize.STRING,
       },
-      img:{
-        type :Sequelize.STRING,
-        defaultValue:"http://drive.google.com/uc?export=view&id=1T4h9d1wyGy-apEyrTW_D6C1UvdLSE166"
+      img: {
+        type: Sequelize.STRING,
+        defaultValue:
+          "http://drive.google.com/uc?export=view&id=1T4h9d1wyGy-apEyrTW_D6C1UvdLSE166",
       },
-      aaaa:{
-        type :Sequelize.STRING,
-        defaultValue:"http://drive.google.com/uc?export=view&id=1T4h9d1wyGy-apEyrTW_D6C1UvdLSE166"
+      aaaa: {
+        type: Sequelize.STRING,
+        defaultValue:
+          "http://drive.google.com/uc?export=view&id=1T4h9d1wyGy-apEyrTW_D6C1UvdLSE166",
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   async down(queryInterface, Sequelize) {
