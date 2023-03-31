@@ -67,12 +67,12 @@ const isLogined = async (req, res) => {
       where: { token },
     });
     const secondaryEmail = await UserEmails.findOne({
-      where: { userId: user.id, role: "Secondary", isVerified: true },
-      attributes:['email']
+      where: { userId: user.id, role: "Secondary"},
+      attributes:['email','isVerified']
     });
     const firstEmail = await UserEmails.findOne({
-      where: { userId: user.id, role: "First", isVerified: true },
-      attributes:['email']
+      where: { userId: user.id, role: "First"},
+      attributes:['email','isVerified']
     });
 
     if (user) {

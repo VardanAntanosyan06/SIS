@@ -15,6 +15,7 @@ const change = async (req, res) => {
       academicProgram,
       study,
     } = req.body;
+    const { authorization: token } = req.headers;
     const user = await UserModel.findOne({
       where: { token: token.replace("Bearer ", "") },
       include: [UserEmails],
@@ -27,13 +28,13 @@ const change = async (req, res) => {
       user.age = age !== undefined ? age : user.age;
       user.grade = grade !== undefined ? grade : user.grade;
       user.university = university !== undefined ? university : user.university;
-      user.academicProgram =
-        academicProgram !== undefined ? academicProgram : user.academicProgram;
+      // user.academicProgram =
+      //   academicProgram !== undefined ? academicProgram : user.academicProgram;
       user.study = study !== undefined ? study : user.study;
       await user.save();
-      return res.stats(200).json({ success: true });
+      return res.status(200).json({ success: true });
     }
-    return res.stats(404).json("user not found!");
+    return res.status(404).json("user not found!");
   } catch (error) {
     console.log(error);
     return res.status(500).json("something went wrong");

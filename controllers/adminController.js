@@ -25,6 +25,9 @@ const adminBro = new AdminBro({
   dashboard: {
     component: AdminBro.bundle("../public/stylesheets/AdminDashBoard.jsx")
   },
+  // components: {
+  //   show: AdminBro.bundle('../public/stylesheets/show.jsx'),
+  // }
 });
 
 const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
