@@ -1,7 +1,7 @@
 // const getfilelist = require("google-drive-getfilelist");
 // const { google } = require("googleapis");
 // const TaskTable = require("../utils/data/data").TaskTable;
-// const fs = require("fs");
+const fs = require("fs");
 // const { log } = require("console");
 
 // const topFolderIdforWeb = "1XkZYszcam3WEdobHoS3Yy2byWUyipslQ"; // Please set the top folder ID.
@@ -46,7 +46,9 @@ const pdf2html = require('pdf2html');
 const myFoo = async ()=>{
 const html = await pdf2html.html('controllers/Blog Post 1.pdf');
 
-console.log(html);
+    fs.writeFile("controllers/test.html",html,(err)=>{
+        err?console.log(err):console.log("ok");
+    })
 }
 
-// myFoo();
+myFoo();

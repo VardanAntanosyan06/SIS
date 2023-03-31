@@ -23,13 +23,18 @@ const change = async (req, res) => {
       include: [UserEmails],
     });
     if (user) {
+      if(university){
+        user.university = university;
+        user.academicProgramFirst = null
+        user.academicProgramSecond = null
+        user.academicProgramThird = null
+      }
       user.fullName = fullName !== undefined ? fullName : user.fullName;
       user.phone = phone !== undefined ? phone : user.phone;
       user.country = country !== undefined ? country : user.country;
       user.email = email !== undefined ? email : user.email;
       user.age = age !== undefined ? age : user.age;
       user.grade = grade !== undefined ? grade : user.grade;
-      user.university = university !== undefined ? university : user.university;
       user.academicProgramFirst =
         academicProgramFirst !== undefined
           ? academicProgramFirst
