@@ -36,19 +36,40 @@ const fs = require("fs");
 //         console.error(err);
 //       }
 //     });
-    
+
 //   }
 // );
 
+// const pdf2html = require('pdf2html');
 
-const pdf2html = require('pdf2html');
+// const myFoo = async ()=>{
+// const html = await pdf2html.html('controllers/Blog Post 1.pdf');
 
-const myFoo = async ()=>{
-const html = await pdf2html.html('controllers/Blog Post 1.pdf');
+//     fs.writeFile("controllers/test.html",html,(err)=>{
+//         err?console.log(err):console.log("ok");
+//     })
+// }
 
-    fs.writeFile("controllers/test.html",html,(err)=>{
-        err?console.log(err):console.log("ok");
-    })
-}
+// myFoo();
 
-myFoo();
+const xlsx = require("xlsx");
+
+const file = xlsx.readFile("public/stylesheets/SIS_DB (2).xlsx");
+
+let data = [];
+
+// read(filename) {
+//     const wb = xlsx.readFile(filename);
+//     for (let i = 0, l = wb.SheetNames.length; i < l; i += 1) {
+//      this.processSheet(wb.Sheets[wb.SheetNames[i]]);
+//     }
+//    }
+// }
+
+// data.map((e) =>
+//   fs.writeFile("controllers/test.html", e, (err) => {
+//     err ? console.log(err) : console.log("ok");
+//   })
+// );
+
+console.log(data);

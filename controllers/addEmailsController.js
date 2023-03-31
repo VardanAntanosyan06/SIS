@@ -1,47 +1,43 @@
-  const UserEmails = require("../models").UserEmails;
+const UserEmails = require("../models").UserEmails;
 const UserModel = require("../models").Users;
 const crypto = require("crypto");
 const nodemailer = require("nodemailer");
 const randomString = crypto.randomBytes(3).toString("hex");
 const jwt = require("jsonwebtoken");
-const sequelize = require("sequelize")
-  
+const sequelize = require("sequelize");
 
 const updateEmail = async (req, res) => {
   try {
-    const { email,role } = req.body;
+    const { email, role } = req.body;
     const { authorization: token } = req.headers;
     const user = await UserModel.findOne({
       where: { token: token.replace("Bearer ", "") },
     });
-    const myEmail = await UserEmails.findOne({where:{userId:user.id,role:"First"}})
+    const myEmail = await UserEmails.findOne({
+      where: { userId: user.id, role: "First" },
+    });
     const isEmail = await UserEmails.findOne({
-      where: { email }, 
+      where: { email },
     });
     if (!isEmail) {
       let item = {};
-      if(role==="Secondary"){
+      if (role === "Secondary") {
         item = await UserEmails.create({
-        email,
-        userId: user.id,
-        password: null,
-        role: "toBe"+role,
-        token: jwt.sign(
-          { email }, 
-          process.env.SECRET
-          ),
-      })}else{
-          item = await UserEmails.create({
+          email,
+          userId: user.id,
+          password: null,
+          role: "toBe" + role,
+          token: jwt.sign({ email }, process.env.SECRET),
+        });
+      } else {
+        item = await UserEmails.create({
           email,
           userId: user.id,
           password: myEmail.password,
-          role: "toBe"+role,
-          token: jwt.sign(
-            { email }, 
-            process.env.SECRET
-            ),
-        })
-      }  
+          role: "toBe" + role,
+          token: jwt.sign({ email }, process.env.SECRET),
+        });
+      }
       const transporter = nodemailer.createTransport({
         host: "mail.privateemail.com",
         port: 465,
@@ -50,14 +46,14 @@ const updateEmail = async (req, res) => {
           user: process.env.EMAIL,
           pass: process.env.PASSWORD,
         },
-      }); 
+      });
       let mailOptions = {};
-      if(role=="Secondary"){
-      mailOptions = {
-        from: "info@sisprogress.com",
-        to: email,
-        subject: "Verify Secondary Email",
-        html: `<center>
+      if (role == "Secondary") {
+        mailOptions = {
+          from: "info@sisprogress.com",
+          to: email,
+          subject: "Verify Secondary Email",
+          html: `<center>
         <img src='cid:logo' style="width:450px;height:250px;" >
         <h2>Reset Email</h2>
         <p>
@@ -84,20 +80,20 @@ const updateEmail = async (req, res) => {
         <br>
            <b><a href='https://sisprogress.com/secondarymailverify?token=${item.token}'>https://sisprogress.com/secondarymailverify?token=${item.token} </a></b>
          </center>`,
-        attachments: [
-          {
-            filename: "Email.png",
-            path: "./controllers/Email.png",
-            cid: "logo",
-          },
-        ],
-      };
-    }else{
-      mailOptions = {
-        from: "info@sisprogress.com",
-        to: email,
-        subject: "Verify Email",
-        html: `<center>
+          attachments: [
+            {
+              filename: "Email.png",
+              path: "./controllers/Email.png",
+              cid: "logo",
+            },
+          ],
+        };
+      } else {
+        mailOptions = {
+          from: "info@sisprogress.com",
+          to: email,
+          subject: "Verify Email",
+          html: `<center>
         <img src='cid:logo' style="width:450px;height:250px;" >
         <h2>Reset Email</h2>
         <p>
@@ -124,15 +120,15 @@ const updateEmail = async (req, res) => {
         <br>
            <b><a href='https://sisprogress.com/primaryemail?token=${item.token}'>https://sisprogress.com/primaryemail?token=${item.token} </a></b>
          </center>`,
-        attachments: [
-          {
-            filename: "Email.png",
-            path: "./controllers/Email.png",
-            cid: "logo",
-          },
-        ],
-      };
-    }
+          attachments: [
+            {
+              filename: "Email.png",
+              path: "./controllers/Email.png",
+              cid: "logo",
+            },
+          ],
+        };
+      }
       transporter.sendMail(mailOptions);
       return res.json("email is sent");
     }
@@ -142,62 +138,76 @@ const updateEmail = async (req, res) => {
   }
 };
 
-
-const verify = async (req,res)=>{
+const verify = async (req, res) => {
   try {
-    const {token} = req.body;
-    const myEmail = await UserEmails.findOne({where:{token}})
-    if(myEmail){  
-      const role = myEmail.role.split("toBe")[1]
-      await UserEmails.destroy(({where:{
-      userId:myEmail.userId,
-      role,
-      token:{[sequelize.Op.ne]: token},   
-    }}))
-    myEmail.isVerified = true,
-    myEmail.role = role,
-    myEmail.token = jwt.sign({ email:myEmail.email }, process.env.SECRET)
+    const { token } = req.body;
+    const myEmail = await UserEmails.findOne({ where: { token } });
+    if (myEmail) {
+      const role = myEmail.role.split("toBe")[1];
+      await UserEmails.destroy({
+        where: {
+          userId: myEmail.userId,
+          role,
+          token: { [sequelize.Op.ne]: token },
+        },
+      });
+      (myEmail.isVerified = true),
+        (myEmail.role = role),
+        (myEmail.token = jwt.sign(
+          { email: myEmail.email },
+          process.env.SECRET
+        ));
 
-    await myEmail.save()
-    return res.json({success:true,newEmail:myEmail.email,emailType:role}) 
+      await myEmail.save();
+      return res.json({
+        success: true,
+        newEmail: myEmail.email,
+        emailType: role,
+      });
     }
-    return res.json({success:false}) 
-} catch (error) {
-      console.log(error);
-}
-}
+    return res.json({ success: false });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-const deleteSecondaryEmail = async (req,res)=>{
+const deleteSecondaryEmail = async (req, res) => {
   try {
-    const {authorization: token} = req.headers;
-    const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
-
-    const secondaryEmail = await UserEmails.destroy({where:{role:"Secondary",userId:user.id}})
+    const { authorization: token } = req.headers;
+    const user = await UserModel.findOne({
+      where: { token: token.replace("Bearer ", "") },
+    });
+    const secondaryEmail = await UserEmails.destroy({
+      where: {
+        [Op.or]: [{ role: "Secondary" }, { role: "toBeSecondary" }],
+        userId: user.id,
+      },
+    });
     console.log(secondaryEmail);
-    return res.json("email has been successfuly deleted!")
+    return res.json("email has been successfuly deleted!");
   } catch (error) {
     console.log(error);
   }
-}
+};
 
-const isEmailFree = async (req,res)=>{
+const isEmailFree = async (req, res) => {
   try {
-    const {email} = req.query;
+    const { email } = req.query;
 
-    const user = await UserEmails.findOne({where:{email}})
-    if(user){
-      return res.status(403).json("existing email address")
+    const user = await UserEmails.findOne({ where: { email } });
+    if (user) {
+      return res.status(403).json("existing email address");
     }
-    
-    return res.status(200).json("Free")
+
+    return res.status(200).json("Free");
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 module.exports = {
   updateEmail,
   verify,
   deleteSecondaryEmail,
-  isEmailFree
+  isEmailFree,
 };
