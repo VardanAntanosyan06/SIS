@@ -179,7 +179,7 @@ const deleteSecondaryEmail = async (req, res) => {
     });
     const secondaryEmail = await UserEmails.destroy({
       where: {
-        [Op.or]: [{ role: "Secondary" }, { role: "toBeSecondary" }],
+        [sequelize.Op.or]: [{ role: "Secondary" }, { role: "toBeSecondary" }],
         userId: user.id,
       },
     });

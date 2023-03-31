@@ -2,6 +2,7 @@
 // const { google } = require("googleapis");
 // const TaskTable = require("../utils/data/data").TaskTable;
 const fs = require("fs");
+const { JSON } = require("sequelize");
 // const { log } = require("console");
 
 // const topFolderIdforWeb = "1XkZYszcam3WEdobHoS3Yy2byWUyipslQ"; // Please set the top folder ID.
@@ -54,22 +55,18 @@ const fs = require("fs");
 
 const xlsx = require("xlsx");
 
-const file = xlsx.readFile("public/stylesheets/SIS_DB (2).xlsx");
+const file = xlsx.readFile("public/stylesheets/SIS_DB (3).xlsx");
 
 let data = [];
 
-// read(filename) {
-//     const wb = xlsx.readFile(filename);
-//     for (let i = 0, l = wb.SheetNames.length; i < l; i += 1) {
-//      this.processSheet(wb.Sheets[wb.SheetNames[i]]);
-//     }
-//    }
-// }
+// const sheets = file.SheetNames;
 
-// data.map((e) =>
-//   fs.writeFile("controllers/test.html", e, (err) => {
-//     err ? console.log(err) : console.log("ok");
-//   })
-// );
+const temp = xlsx.utils.sheet_to_json(file.Sheets[file.SheetNames[3]]);
+temp.forEach((res) => {
+  data.push(res);
+});
+data = JSON.parse(data)
 
-console.log(data);
+fs.appendFileSync("controllers/test.html", JSON.stringify(data), (err) => {
+  err ? console.log(err) : console.log("ok");
+});
