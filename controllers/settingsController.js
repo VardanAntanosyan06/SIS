@@ -83,7 +83,7 @@ const changePassword = async (req, res) => {
           return res.status(401).json("password cannot be empty!");
         }
       } else {
-        return res.status(401).json("invalid current password");
+        return res.json("invalid current password");
       }
     }
     return res.status(404).json("user not found");

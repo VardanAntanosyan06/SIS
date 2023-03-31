@@ -83,7 +83,7 @@ const isLogined = async (req, res) => {
       }
       return res.status(200).json(emails);
     }
-    return res.status(401).json("not found");
+    return res.status(404).json("not found");
   } catch (error) {
     console.log(error);
   }
