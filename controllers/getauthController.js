@@ -41,12 +41,12 @@
 // );
 
 
-// const pdf2html = require('pdf2html');
+const pdf2html = require('pdf2html');
 
-// const myFoo = async ()=>{
-// const html = await pdf2html.html('controllers/sample.pdf');
+const myFoo = async ()=>{
+const html = await pdf2html.html('controllers/Blog Post 1.pdf');
 
-// console.log(html);
-// }
+console.log(html);
+}
 
 // myFoo();
