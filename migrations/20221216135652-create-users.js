@@ -39,6 +39,9 @@ module.exports = {
       academicProgramThird: {
         type: Sequelize.STRING,
       },
+      academicProgramFourth : {
+        type: Sequelize.STRING
+      },
       study: {
         type: Sequelize.STRING,
       },

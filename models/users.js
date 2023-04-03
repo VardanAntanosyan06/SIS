@@ -23,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     academicProgramFirst:DataTypes.STRING,
     academicProgramSecond:DataTypes.STRING,
     academicProgramThird:DataTypes.STRING,
+    academicProgramFourth:DataTypes.STRING,
     study:DataTypes.STRING,
     termOption:DataTypes.STRING,
     planType: DataTypes.STRING,
