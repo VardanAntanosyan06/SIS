@@ -1,16 +1,14 @@
-"use strict";
+'use strict';
 
-/** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  up: function (queryInterface, Sequelize) {
-    // logic for transforming into the new state
-    return queryInterface.addColumn("Users", "trainingDate", {
-      type: Sequelize.STRING,
+  up: async (queryInterface, Sequelize) => {
+    await queryInterface.addColumn('Users', 'trainingDate', {
+      type: Sequelize.DATE,
+      allowNull: true,
     });
   },
 
-  down: function (queryInterface, Sequelize) {
-    // logic for reverting the changes
-    return queryInterface.removeColumn("trainingDate");
-  },
+  down: async (queryInterface, Sequelize) => {
+    await queryInterface.removeColumn('Users', 'trainingDate');
+  }
 };

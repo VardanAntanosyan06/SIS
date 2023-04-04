@@ -24,7 +24,7 @@ const create = async (req, res) => {
          ]
         });
 
-        console.log(myTasks.length,myTasks);
+        // console.log(myTasks.length,myTasks);
         if(myTasks.length===0){
           user.trainingDate = moment();
 

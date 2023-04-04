@@ -41,6 +41,7 @@ module.exports = (sequelize, DataTypes) => {
     moreInfo: DataTypes.STRING,
     token:DataTypes.STRING,
     img:DataTypes.STRING,
+    trainingDate:DataTypes.DATE
   }, {
     sequelize,
     modelName: 'Users',
