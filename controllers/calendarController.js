@@ -14,7 +14,6 @@ const create = async (req, res) => {
   try {
     const {taskId,startDate,position} =req.body;
     const deadlineAtWeek = await TimeTaskModel.findOne({where:{task_id:taskId}})
-
     
       let myTasks = await Task_per_Users.findAll({
       where:{
@@ -25,6 +24,9 @@ const create = async (req, res) => {
          ]
         });
 
+        if(myTasks.length===0){
+          user.trainingDate = moment();
+        }
         myTasks = myTasks.filter((e)=>e.startDate.toISOString().slice(0,10) === startDate.slice(0,10))
         if(myTasks.filter((el)=>el.taskId === taskId).length>0){
           return res.json("task already exist")

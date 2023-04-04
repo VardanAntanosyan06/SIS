@@ -24,9 +24,15 @@ const dashboard = async (req, res) => {
     });
     myUni = await UniversityModel.findOne({ where: { name: user.university } });
     if (user) {
-      let difference =
-        new Date().getTime() - new Date(user.createdAt).getTime();
-      let TrainingDays = Math.ceil(difference / (1000 * 3600 * 24));
+      let difference;
+      if(user.trainingDate){
+       difference =  new Date().getTime() - new Date(user.trainingDate).getTime()
+      }
+      let TrainingDays = 0;
+
+      if(difference){
+        TrainingDays = Math.ceil(difference / (1000 * 3600 * 24));
+      }
       const totalPoints = await myUni.dreamPointMin;
       const RandomGreetingMessages = await GreetingMessages.findOne({
         order: sequelize.random(),
