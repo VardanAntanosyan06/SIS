@@ -24,8 +24,11 @@ const create = async (req, res) => {
          ]
         });
 
+        console.log(myTasks.length,myTasks);
         if(myTasks.length===0){
           user.trainingDate = moment();
+
+          user.save();
         }
         myTasks = myTasks.filter((e)=>e.startDate.toISOString().slice(0,10) === startDate.slice(0,10))
         if(myTasks.filter((el)=>el.taskId === taskId).length>0){
