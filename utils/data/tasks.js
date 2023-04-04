@@ -30,7 +30,7 @@ const Tasks = [
       "http://drive.google.com/uc?export=view&id=1IRfcSDjpFsmARoXVnuEYCqfQuHr-ZFRn",
   },
   {
-    facultyName: "PUBLICATION/JOURNALISM",
+    facultyName: "JOURNALISM/PUBLICATION",
     companyName: "Group Co-leader",
     positionName: "Society of Freelance Journalists",
     universityId: 1,
@@ -211,7 +211,7 @@ const Tasks = [
       "http://drive.google.com/uc?export=view&id=1WLwmpUYqSSGhmsRHTId6PD_IKfrOI4UW",
   },
   {
-    facultyName: "THEATRE/DRAMA",
+    facultyName: "THEATER/DRAMA",
     companyName: "Knox School Academy of Performing Arts",
     positionName: "Lead Actor",
     universityId: 3,
@@ -221,7 +221,7 @@ const Tasks = [
       "http://drive.google.com/uc?export=view&id=16XUCCizOrWBErBmMEhwXN425rCAXvwM-",
   },
   {
-    facultyName: "THEATRE/DRAMA",
+    facultyName: "THEATER/DRAMA",
     companyName: "Abbotsleigh School for the Performing Arts",
     positionName: "Lead Actor",
     universityId: 3,
@@ -381,7 +381,7 @@ const Tasks = [
       "http://drive.google.com/uc?export=view&id=1mGS35x62P9uvZxM3aXO34c3iIfRkLn4L",
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     companyName: "Int. Student Association",
     positionName: "VP of Community Service",
     universityId: 4,
@@ -641,7 +641,7 @@ const Tasks = [
       "http://drive.google.com/uc?export=view&id=1Fx3bkoW_8xY7mmm8VHiQRW8v5hShTMzo",
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     companyName: "College Awareness Club",
     positionName: "President & Founder",
     universityId: 7,
@@ -781,7 +781,7 @@ const Tasks = [
       "http://drive.google.com/uc?export=view&id=1pCw6BmeqkONiQ-mH0y8TNkspkFoTLeCM",
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     companyName: "House Poetry Competition",
     positionName: "Writer",
     universityId: 6,
@@ -911,7 +911,7 @@ const Tasks = [
       "http://drive.google.com/uc?export=view&id=13yDFaocGBWlqu_l5fIlhw0uH23FRYfYz",
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     companyName: "Transfer Student Club",
     positionName: "Co-founder and President",
     universityId: 7,
@@ -1171,7 +1171,7 @@ const Tasks = [
       "http://drive.google.com/uc?export=view&id=1qdd7u2v2Nnvn-8e9F_dX6jY57EJChe5i",
   },
   {
-    facultyName: "THEATRE/DRAMA",
+    facultyName: "THEATER/DRAMA",
     companyName: "House Drama Captain",
     positionName: "Playwright and Publicist",
     universityId: 9,
@@ -1231,7 +1231,7 @@ const Tasks = [
       "http://drive.google.com/uc?export=view&id=17g2rYEeg1aPDXOB2gGAB2InwYP5ZMeSk",
   },
   {
-    facultyName: "STUDENTS GOVT. POLITICS",
+    facultyName: "STUDENT GOVT. POLITICS",
     companyName: "Students Representative Council",
     positionName: "SRC Prefect",
     universityId: 10,
@@ -1401,7 +1401,7 @@ const Tasks = [
       "http://drive.google.com/uc?export=view&id=1_IC4QqpenAtbaCkUdYlaoP-mbAWVDO07",
   },
   {
-    facultyName: "THEATRE/DRAMA",
+    facultyName: "THEATER/DRAMA",
     companyName: "Benvinda Drama Group",
     positionName: "Member",
     universityId: 11,
@@ -1411,7 +1411,7 @@ const Tasks = [
       "http://drive.google.com/uc?export=view&id=1dO1FcdkXClwBEPXJUIuboahxk19cBAu1",
   },
   {
-    facultyName: "THEATRE/DRAMA",
+    facultyName: "THEATER/DRAMA",
     companyName: "Royal National Theatre of London",
     positionName: "Connections",
     universityId: 11,
@@ -1421,7 +1421,7 @@ const Tasks = [
       "http://drive.google.com/uc?export=view&id=1gw7OxMFgPIlwIdj-bNyP4i4y3GNCy05u",
   },
   {
-    facultyName: "THEATRE/DRAMA",
+    facultyName: "THEATER/DRAMA",
     companyName: "Musical Theater Group",
     positionName: "Member",
     universityId: 11,

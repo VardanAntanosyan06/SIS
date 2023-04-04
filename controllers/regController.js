@@ -1,10 +1,11 @@
+const express = require("express");
+const app = express();
 const nodemailer = require("nodemailer");
 var bcrypt = require("bcrypt");
 const { where } = require("sequelize");
 const UserEmails = require("../models").UserEmails;
 const jwt = require("jsonwebtoken");
-const { token } = require("morgan");
-require("dotenv").config();
+
 const moment = require("moment");
 
 const UserModel = require("../models").Users;
@@ -132,8 +133,7 @@ const sendMail = async (req, res) => {
       padding: 15px 32px;
       text-align: center;
       text-decoration: none;
-      display: inline-block;
-      ">
+      display: inline-block">
         <a href='https://sisprogress.com/message?token=${userEmail.token}'
         style="color:#fff;text-decoration-line: none;font-size:20px;">Verify your email address</a>
       </button>

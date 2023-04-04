@@ -27,7 +27,7 @@ const dashboard = async (req, res) => {
       let difference =
         new Date().getTime() - new Date(user.createdAt).getTime();
       let TrainingDays = Math.ceil(difference / (1000 * 3600 * 24));
-      const totalPoints = await myUni.sefetyPointMin;
+      const totalPoints = await myUni.dreamPointMin;
       const RandomGreetingMessages = await GreetingMessages.findOne({
         order: sequelize.random(),
         limit: 1,
@@ -43,7 +43,7 @@ const dashboard = async (req, res) => {
       const LateDoneTasks = myTasks.filter((e) => e.status === "Late Done");
       const overdueTasks = myTasks.filter((e) => e.status === "Overdue");
 
-      const safetyPoints = myUni.sefetyPointMin;
+      const safetyPoints = myUni.dreamPointMin;
       const safetyPointsExtra = (safetyPoints * 30) / 100;
       let myPoints = 0;
       myTasks.forEach((el) => {

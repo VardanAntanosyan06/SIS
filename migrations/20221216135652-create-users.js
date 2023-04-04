@@ -95,11 +95,6 @@ module.exports = {
         defaultValue:
           "http://drive.google.com/uc?export=view&id=1T4h9d1wyGy-apEyrTW_D6C1UvdLSE166",
       },
-      aaaa: {
-        type: Sequelize.STRING,
-        defaultValue:
-          "http://drive.google.com/uc?export=view&id=1T4h9d1wyGy-apEyrTW_D6C1UvdLSE166",
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
