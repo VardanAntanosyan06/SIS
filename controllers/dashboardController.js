@@ -55,10 +55,11 @@ const dashboard = async (req, res) => {
       const safetyPointsExtra = (safetyPoints * 30) / 100;
       let myPoints = 0;
 
+      console.log(myNotificationAboutTask);
       myTasks.forEach((el) => {
         if (myPoints <= safetyPointsExtra) {
           myPoints += el.point;
-        }else if(myNotificationAboutTask.length<0){
+        }else if(myNotificationAboutTask.length===0){
           Notifications.create({
             userId:user.id,
             notificationTitle:"The Dream Point has been reached successfully !",
