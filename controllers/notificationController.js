@@ -11,6 +11,7 @@ const getNotifications = async (req, res) => {
 
     const notifications = await Notifications.findAll({
       where: { userId: user.id },
+      attributes: { exclude: ["userId","createdAt","updatedAt"] },
     });
 
     return res.json({ notifications });
