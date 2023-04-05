@@ -50,8 +50,25 @@ const dashboard = async (req, res) => {
       const inProgressTasks = myTasks.filter((e) => e.status === "In Progress");
       const LateDoneTasks = myTasks.filter((e) => e.status === "Late Done");
       const overdueTasks = myTasks.filter((e) => e.status === "Overdue");
-      const myNotificationAboutTask = await Notifications.findAll({where:{userId:user.id,notificationTitle:"Congrats on Maxing Extracurricular Task Points in 'Dream' Stage! ",notification:'Extra tasks count towards SIS after transition to "Target" stage. Focus on other categories to progress'}})
-      const notificationCount = await Notifications.findAll({where:{userId:user.id,notificationTitle:"Congrats on Maxing Extracurricular Task Points in 'Dream' Stage!",notification:"Extra tasks count towards SIS after transition to 'Target' stage. Focus on other categories to progress",read:false}})
+      const myNotificationAboutTask = await Notifications.findAll({
+        where: {
+          userId: user.id,
+          notificationTitle:
+            "Congrats on Maxing Extracurricular Task Points in 'Dream' Stage!",
+          notification:
+            "Extra tasks count towards SIS after transition to 'Target' stage. Focus on other categories to progress.",
+        },
+      });
+      const notificationCount = await Notifications.findAll({
+        where: {
+          userId: user.id,
+          notificationTitle:
+            "Congrats on Maxing Extracurricular Task Points in 'Dream' Stage!",
+          notification:
+            "Extra tasks count towards SIS after transition to 'Target' stage. Focus on other categories to progress.",
+          read: false,
+        },
+      });
       const safetyPoints = myUni.dreamPointMin;
       const safetyPointsExtra = (safetyPoints * 30) / 100;
       let myPoints = 0;
@@ -62,13 +79,15 @@ const dashboard = async (req, res) => {
           myPoints += el.point;
         }
       });
-      if(myNotificationAboutTask.length===0){
+      if (myNotificationAboutTask.length === 0) {
         Notifications.create({
-          userId:user.id,
-          notificationTitle:"Congrats on Maxing Extracurricular Task Points in 'Dream' Stage!",
-          notification:"Extra tasks count towards SIS after transition to 'Target' stage. Focus on other categories to progress.",
-          read:false
-        })
+          userId: user.id,
+          notificationTitle:
+            "Congrats on Maxing Extracurricular Task Points in 'Dream' Stage!",
+          notification:
+            "Extra tasks count towards SIS after transition to 'Target' stage. Focus on other categories to progress.",
+          read: false,
+        });
       }
       const completedTask = await Task_per_User.findAll({
         where: { userId: user.id, status: "Completed" },
@@ -76,11 +95,12 @@ const dashboard = async (req, res) => {
       const completed = completedTask.length;
 
       let extraculicular = 0;
-      if((Math.round((myPoints / safetyPointsExtra) * 100 * 10) / 10)>100){
+      if (Math.round((myPoints / safetyPointsExtra) * 100 * 10) / 10 > 100) {
         extraculicular = 100;
-      }else{
-        extraculicular = Math.round((myPoints / safetyPointsExtra) * 100 * 10) / 10;
-      }    
+      } else {
+        extraculicular =
+          Math.round((myPoints / safetyPointsExtra) * 100 * 10) / 10;
+      }
       const progressWithPercent =
         Math.round((myPoints / safetyPoints) * 100 * 10) / 10;
       const overAllProgressDone =
@@ -122,7 +142,7 @@ const dashboard = async (req, res) => {
         overAllProgressDone,
         overAllProgressInProgress,
         successMesange,
-        notificationCount:notificationCount.length
+        notificationCount: notificationCount.length,
       });
     } else {
       return res.json("user not found!");
