@@ -5,6 +5,7 @@ const Task_per_User = require("../models").Task_per_User;
 const SuccessMessages = require("../models").SuccessMessages;
 const Task = require("../models").Tasks;
 const GreetingMessages = require("../models").GreetingMessages;
+const Notifications = require("../models").Notifications;
 const Sequelize = require("sequelize");
 const process = require("process");
 const env = process.env.NODE_ENV || "development";
@@ -49,7 +50,7 @@ const dashboard = async (req, res) => {
       const inProgressTasks = myTasks.filter((e) => e.status === "In Progress");
       const LateDoneTasks = myTasks.filter((e) => e.status === "Late Done");
       const overdueTasks = myTasks.filter((e) => e.status === "Overdue");
-
+      const myNotificationAboutTask = await Notifications.findAll({where:{userId:user.id,notificationTitle:"The Dream Point has been reached successfully !"}})
       const safetyPoints = myUni.dreamPointMin;
       const safetyPointsExtra = (safetyPoints * 30) / 100;
       let myPoints = 0;
@@ -57,6 +58,12 @@ const dashboard = async (req, res) => {
       myTasks.forEach((el) => {
         if (myPoints <= safetyPointsExtra) {
           myPoints += el.point;
+        }else if(myNotificationAboutTask.length<0){
+          Notifications.create({
+            userId:user.id,
+            notificationTitle:"The Dream Point has been reached successfully !",
+            read:false
+          })
         }
       });
 
