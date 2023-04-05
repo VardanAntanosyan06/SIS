@@ -105,7 +105,7 @@ const dashboard = async (req, res) => {
       if((Math.round((myPoints / safetyPoints) * 100 * 10) / 10)>30){
         progressWithPercent = 30
       }else{
-        progressWithPercent = progressWithPercent
+        progressWithPercent = Math.round((myPoints / safetyPoints) * 100 * 10) / 10
       }
       const overAllProgressDone =
         Math.round((doneTasks.length / Tasks.length) * 100 * 10) / 10;
