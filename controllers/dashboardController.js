@@ -52,10 +52,11 @@ const dashboard = async (req, res) => {
       const safetyPoints = myUni.dreamPointMin;
       const safetyPointsExtra = (safetyPoints * 30) / 100;
       let myPoints = 0;
-      myTasks.forEach((el) => {
-        console.log(myPoints,safetyPointsExtra);
-        myPoints<=safetyPointsExtra ? myPoints += el.point:null
-      });
+      while(myPoints<=safetyPointsExtra){
+        let i = 0;
+        myPoints += myTasks[i].point
+        i++;
+      }
 
       const completedTask = await Task_per_User.findAll({
         where: { userId: user.id, status: "Completed" },
