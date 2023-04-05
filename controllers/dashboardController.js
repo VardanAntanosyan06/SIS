@@ -25,12 +25,13 @@ const dashboard = async (req, res) => {
     myUni = await UniversityModel.findOne({ where: { name: user.university } });
     if (user) {
       let difference;
-      if(user.trainingDate){
-       difference =  new Date().getTime() - new Date(user.trainingDate).getTime()
+      if (user.trainingDate) {
+        difference =
+          new Date().getTime() - new Date(user.trainingDate).getTime();
       }
       let TrainingDays = 0;
 
-      if(difference){
+      if (difference) {
         TrainingDays = Math.ceil(difference / (1000 * 3600 * 24));
       }
       const totalPoints = await myUni.dreamPointMin;
@@ -52,10 +53,12 @@ const dashboard = async (req, res) => {
       const safetyPoints = myUni.dreamPointMin;
       const safetyPointsExtra = (safetyPoints * 30) / 100;
       let myPoints = 0;
-      while(myPoints<=safetyPointsExtra){
-        let i = 0;
-        myPoints += myTasks[i].point
-        i++;
+      if (myTasks) {
+        while (myPoints <= safetyPointsExtra) {
+          let i = 0;
+          myPoints += myTasks[i].point;
+          i++;
+        }
       }
 
       const completedTask = await Task_per_User.findAll({
@@ -105,7 +108,7 @@ const dashboard = async (req, res) => {
         progressWithPercent,
         overAllProgressDone,
         overAllProgressInProgress,
-        successMesange, 
+        successMesange,
       });
     } else {
       return res.json("user not found!");
