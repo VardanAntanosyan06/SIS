@@ -98,22 +98,7 @@ module.exports = {
       trainingDate : {
         type: Sequelize.DATE,
       },
-      pointForDream:{
-        type:Sequelize.FLOAT,
-        allowNull:false,
-        defaultValue:0
-      },
-      pointForTarget:{
-        type:Sequelize.FLOAT,
-        allowNull:false,
-        defaultValue:0
-      },
-      pointForSafety:{
-        type:Sequelize.FLOAT,
-        allowNull:false,
-        defaultValue:0
-      },
-       createdAt: {
+      createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
       },
