@@ -53,7 +53,7 @@ const dashboard = async (req, res) => {
       const safetyPoints = myUni.dreamPointMin;
       const safetyPointsExtra = (safetyPoints * 30) / 100;
       let myPoints = 0;
-      if (myTasks) {
+      if (myTasks.length>0) {
         while (myPoints <= safetyPointsExtra) {
           let i = 0;
           myPoints += myTasks[i].point;
