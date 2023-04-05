@@ -74,7 +74,6 @@ const dashboard = async (req, res) => {
       const safetyPointsExtra = (safetyPoints * 30) / 100;
       let myPoints = 0;
 
-      console.log(myNotificationAboutTask);
       myTasks.forEach((el) => {
         if (myPoints <= safetyPointsExtra) {
           myPoints += el.point;
@@ -89,7 +88,6 @@ const dashboard = async (req, res) => {
             "Extra tasks count towards SIS after transition to 'Target' stage. Focus on other categories to progress.",
           read: false,
         });
-        myPoints = safetyPointsExtra
       }
       const completedTask = await Task_per_User.findAll({
         where: { userId: user.id, status: "Completed" },
@@ -141,7 +139,7 @@ const dashboard = async (req, res) => {
         myPoints,
         RandomGreetingMessages,
         progressWithPercent,
-        overAllProgressDone,
+        overAllProgressDone:overAllProgressDone>30?overAllProgressDone=30:overAllProgressDone,
         overAllProgressInProgress,
         successMesange,
         notificationCount: notificationCount.length,
