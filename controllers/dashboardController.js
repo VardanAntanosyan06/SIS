@@ -101,8 +101,12 @@ const dashboard = async (req, res) => {
         extraculicular =
           Math.round((myPoints / safetyPointsExtra) * 100 * 10) / 10;
       }
-      const progressWithPercent =
-        Math.round((myPoints / safetyPoints) * 100 * 10) / 10;
+      let progressWithPercent;
+      if((Math.round((myPoints / safetyPoints) * 100 * 10) / 10)>30){
+        progressWithPercent = 30
+      }else{
+        progressWithPercent = progressWithPercent
+      }
       const overAllProgressDone =
         Math.round((doneTasks.length / Tasks.length) * 100 * 10) / 10;
       const overAllProgressInProgress =
@@ -138,7 +142,7 @@ const dashboard = async (req, res) => {
         extraculicular,
         myPoints,
         RandomGreetingMessages,
-        progressWithPercent:progressWithPercent>30?progressWithPercent=30:progressWithPercent,
+        progressWithPercent,
         overAllProgressDone,
         overAllProgressInProgress,
         successMesange,
