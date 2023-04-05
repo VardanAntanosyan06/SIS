@@ -56,6 +56,9 @@ var getProfessors = require("./routes/getProfessors");
 var blog = require("./routes/blog");
 var FinancialAid = require("./routes/FinancialAid");
 var uploadImage = require("./routes/uploadImage");
+var notification = require("./routes/notification");
+
+
 const fileUpload = require("express-fileupload");
 const { bindComplete } = require("pg-protocol/dist/messages");
 
@@ -90,6 +93,7 @@ app.use("/getProfessors", getProfessors);
 app.use("/blog", blog);
 app.use("/uploadImage", uploadImage);
 app.use("/FinancialAid",FinancialAid)
+app.use("/notification",notification)
 
 app.use(function (req, res, next) {
   next(createError(404));

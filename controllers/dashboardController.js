@@ -51,6 +51,7 @@ const dashboard = async (req, res) => {
       const LateDoneTasks = myTasks.filter((e) => e.status === "Late Done");
       const overdueTasks = myTasks.filter((e) => e.status === "Overdue");
       const myNotificationAboutTask = await Notifications.findAll({where:{userId:user.id,notificationTitle:"The Dream Point has been reached successfully !",notification:"test"}})
+      const notificationCount = await Notifications.findAll({where:{userId:user.id,notificationTitle:"The Dream Point has been reached successfully !",notification:"test",read:false}})
       const safetyPoints = myUni.dreamPointMin;
       const safetyPointsExtra = (safetyPoints * 30) / 100;
       let myPoints = 0;
@@ -121,7 +122,7 @@ const dashboard = async (req, res) => {
         overAllProgressDone,
         overAllProgressInProgress,
         successMesange,
-        notificationCount:myNotificationAboutTask.length
+        notificationCount:notificationCount.length
       });
     } else {
       return res.json("user not found!");
