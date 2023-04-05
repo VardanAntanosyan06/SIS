@@ -50,8 +50,8 @@ const dashboard = async (req, res) => {
       const inProgressTasks = myTasks.filter((e) => e.status === "In Progress");
       const LateDoneTasks = myTasks.filter((e) => e.status === "Late Done");
       const overdueTasks = myTasks.filter((e) => e.status === "Overdue");
-      const myNotificationAboutTask = await Notifications.findAll({where:{userId:user.id,notificationTitle:"Congrats on Maxing Extracurricular Task Points in 'Dream' Stage!",notification:"Extra tasks count towards SIS after transition to 'Target' stage. Focus on other categories to progress."}})
-      const notificationCount = await Notifications.findAll({where:{userId:user.id,notificationTitle:"The Dream Point has been reached successfully !",notification:"Extra tasks count towards SIS after transition to 'Target' stage. Focus on other categories to progress.",read:false}})
+      const myNotificationAboutTask = await Notifications.findAll({where:{userId:user.id,notificationTitle:"Congrats on Maxing Extracurricular Task Points in 'Dream' Stage! ",notification:'Extra tasks count towards SIS after transition to "Target" stage. Focus on other categories to progress'}})
+      const notificationCount = await Notifications.findAll({where:{userId:user.id,notificationTitle:"Congrats on Maxing Extracurricular Task Points in 'Dream' Stage!",notification:"Extra tasks count towards SIS after transition to 'Target' stage. Focus on other categories to progress",read:false}})
       const safetyPoints = myUni.dreamPointMin;
       const safetyPointsExtra = (safetyPoints * 30) / 100;
       let myPoints = 0;
