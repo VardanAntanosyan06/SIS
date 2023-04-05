@@ -101,7 +101,7 @@ const dashboard = async (req, res) => {
         extraculicular =
           Math.round((myPoints / safetyPointsExtra) * 100 * 10) / 10;
       }
-      let progressWithPercent;
+      let progressWithPercent = 0;
       if((Math.round((myPoints / safetyPoints) * 100 * 10) / 10)>30){
         progressWithPercent = 30
       }else{
