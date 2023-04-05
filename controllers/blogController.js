@@ -35,15 +35,21 @@ const getBlogs = async (req, res) => {
   }
 };
 
-// const addBlog = async (req,res)=>{
-//   try {
-//
-//   }catch (err){
-//     console.log(err)
-//     return res.json("something")
-//   }
-// }
+const addBlog = async (req,res)=>{
+  try {
+    const {authorname,title,UserName,contactEmail,phone,topic,twitter,personalLink} = req.body
+    
+    if(req.files){
+      const {blogs,images} = req.files;
+    }
+
+    return res.json({success:true})
+  }catch (err){
+    console.log(err)
+  }
+}
 
 module.exports = {
   getBlogs,
+  addBlog
 };

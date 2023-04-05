@@ -25,5 +25,6 @@ const controller = require("../controllers/blogController");
 
 // router.post("/", controller.addPost);
 router.get("/",controller.getBlogs)
+router.post("/add",controller.addBlog)
 
 module.exports = router;
