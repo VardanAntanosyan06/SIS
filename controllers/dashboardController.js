@@ -65,8 +65,12 @@ const dashboard = async (req, res) => {
       });
       const completed = completedTask.length;
 
-      const extraculicular =
-        Math.round((myPoints / safetyPointsExtra) * 100 * 10) / 10;
+      const extraculicular = 0;
+      if((Math.round((myPoints / safetyPointsExtra) * 100 * 10) / 10)>100){
+        extraculicular = 100;
+      }else{
+        extraculicular = Math.round((myPoints / safetyPointsExtra) * 100 * 10) / 10;
+      }    
       const progressWithPercent =
         Math.round((myPoints / safetyPoints) * 100 * 10) / 10;
       const overAllProgressDone =
