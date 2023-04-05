@@ -8,6 +8,7 @@ const GreetingMessages = require("../models").GreetingMessages;
 const Notifications = require("../models").Notifications;
 const Sequelize = require("sequelize");
 const process = require("process");
+const { SocketAddress } = require("net");
 const env = process.env.NODE_ENV || "development";
 const config = require(__dirname + "/../config/config.json")[env];
 
@@ -79,7 +80,7 @@ const dashboard = async (req, res) => {
           myPoints += el.point;
         }
       });
-      if (myNotificationAboutTask.length === 0) {
+      if (myNotificationAboutTask.length === 0 && myPoints>=safetyPointsExtra) {
         Notifications.create({
           userId: user.id,
           notificationTitle:
