@@ -27,7 +27,7 @@ const readNotification = async (req, res) => {
     const user = await UserModel.findOne({
       where: { token: token.replace("Bearer ", "") },
     });
-    const notification = await Notifications.findAll({
+    const notification = await Notifications.findOne({
       where: { userId: user.id, id },
     });
 
