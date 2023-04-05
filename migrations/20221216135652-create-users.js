@@ -95,6 +95,9 @@ module.exports = {
         defaultValue:
           "http://drive.google.com/uc?export=view&id=1T4h9d1wyGy-apEyrTW_D6C1UvdLSE166",
       },
+      trainingDate : {
+        type: Sequelize.DATE,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

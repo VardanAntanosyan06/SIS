@@ -1,1 +1,0 @@
-const Proffessors = require("../models").Proffessors
