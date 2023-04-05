@@ -39,6 +39,9 @@ module.exports = (sequelize, DataTypes) => {
     workExperience: DataTypes.STRING,
     addinfo: DataTypes.BOOLEAN,
     moreInfo: DataTypes.STRING,
+    pointForDream:DataTypes.FLOAT,
+    pointForTarget:DataTypes.FLOAT,
+    pointForSafety:DataTypes.FLOAT,
     token:DataTypes.STRING,
     img:DataTypes.STRING,
     trainingDate:DataTypes.DATE

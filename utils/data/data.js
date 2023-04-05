@@ -303,7 +303,7 @@ const UniversityTable = [
   {
     name: "University of Pennsylvania",
     dreamPointMin: 305,
-    targetPointMin: 3350,
+    targetPointMin: 350,
     sefetyPointMin: 375,
   },
   // {

@@ -53,7 +53,7 @@ const dashboard = async (req, res) => {
       const safetyPointsExtra = (safetyPoints * 30) / 100;
       let myPoints = 0;
       myTasks.forEach((el) => {
-        myPoints += el.point;
+        myPoints<=safetyPointsExtra ? myPoints += el.point:null
       });
 
       const completedTask = await Task_per_User.findAll({
