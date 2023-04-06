@@ -235,8 +235,8 @@ const successMessages = [
   {
     status: "Good",
     textPart1:
-      "With our cutting-edge technology, you are on your way to securing a spot at your dream university soon. We hope to see you rise to an Excellent level soon ",
-    textPart2: "Keep up the good work. Sky's the limit, so Prepare Different.",
+      "With our cutting-edge technology, you are on your way to securing a spot at your dream university soon. We hope to see you rise to an 'Excellent' level shortly. ",
+    textPart2: "Keep up the good work. The sky's the limit, so continue to 'Prepare Different' with us.",
   },
   {
     status: "Unsatisfactory",
