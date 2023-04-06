@@ -70,8 +70,7 @@ const dashboard = async (req, res) => {
           read: false,
         },
       });
-      const safetyPoints = myUni.dreamPointMin;
-      const safetyPointsExtra = (safetyPoints * 30) / 100;
+      const safetyPointsExtra = (totalPoints * 30) / 100;
       let myPoints = 0;
 
       myTasks.forEach((el) => {
