@@ -88,6 +88,7 @@ const dashboard = async (req, res) => {
             "Extra tasks count towards SIS after transition to 'Target' stage. Focus on other categories to progress.",
           read: false,
         });
+        myPoints = safetyPointsExtra;
       }
       const completedTask = await Task_per_User.findAll({
         where: { userId: user.id, status: "Completed" },
