@@ -37,10 +37,12 @@ const getBlogs = async (req, res) => {
 
 const addBlog = async (req,res)=>{
   try {
-    const {authorname,title,UserName,contactEmail,phone,topic,twitter,personalLink} = req.body
     
     if(req.files){
       const {blogs,images} = req.files;
+      const {authorname,title,UserName,contactEmail,phone,topic,twitter,personalLink} = req.body
+    }else{
+      return res.status(404).json('This field is required')
     }
 
     return res.json({success:true})

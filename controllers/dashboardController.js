@@ -78,7 +78,10 @@ const dashboard = async (req, res) => {
           myPoints += el.point;
         }
       });
-      if (myNotificationAboutTask.length === 0 && myPoints>=safetyPointsExtra) {
+      if (
+        myNotificationAboutTask.length === 0 &&
+        myPoints >= safetyPointsExtra
+      ) {
         Notifications.create({
           userId: user.id,
           notificationTitle:
@@ -88,10 +91,10 @@ const dashboard = async (req, res) => {
           read: false,
         });
       }
-      if(myPoints>safetyPointsExtra){
-        myPoints = safetyPointsExtra
+      if (myPoints > safetyPointsExtra) {
+        myPoints = safetyPointsExtra;
       }
-      
+
       const completedTask = await Task_per_User.findAll({
         where: { userId: user.id, status: "Completed" },
       });
@@ -105,10 +108,11 @@ const dashboard = async (req, res) => {
           Math.round((myPoints / safetyPointsExtra) * 100 * 10) / 10;
       }
       let progressWithPercent = 0;
-      if((Math.round((myPoints / totalPoints) * 100 * 10) / 10)>30){
-        progressWithPercent = 30
-      }else{
-        progressWithPercent = Math.round((myPoints / totalPoints) * 100 * 10) / 10
+      if (Math.round((myPoints / totalPoints) * 100 * 10) / 10 > 30) {
+        progressWithPercent = 30;
+      } else {
+        progressWithPercent =
+          Math.round((myPoints / totalPoints) * 100 * 10) / 10;
       }
       const overAllProgressDone =
         Math.round((doneTasks.length / Tasks.length) * 100 * 10) / 10;
@@ -150,7 +154,7 @@ const dashboard = async (req, res) => {
         overAllProgressInProgress,
         successMesange,
         notificationCount: notificationCount.length,
-        safetyPointsExtra
+        safetyPointsExtra,
       });
     } else {
       return res.json("user not found!");

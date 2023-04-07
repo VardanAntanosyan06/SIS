@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       feedback: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT("long")
       },
       createdAt: {
         allowNull: false,
