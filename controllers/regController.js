@@ -143,12 +143,32 @@ const sendMail = async (req, res) => {
       <br>
         <b><a href='https://sisprogress.com/message?token=${userEmail.token}'>https://sisprogress.com/message?token=${userEmail.token}</a></b>
       </center>
+      <br>
+      <br>
+      <br>
+      <center>
+
+      <img  src='cid:SISlogo' />
+      <br>
+      <p style='color:#8C8C8C;'>Copyright© 2023 SIS Progress, All rights reserved. You have expressed interest in or supported SIS Progress.</p>
+      <span style='color:#8C8C8C;'>Our mailing address is</span>
+
+      <a href='https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSGLdqJpVPMGCFHQZXRljQjDczTJpzSxnxCrfjsQwRhFPPVRncHqjzjPlgcqRRZhgWPGZwJB'>info@sisprogress.com</a>
+      
+      <p style='color:#8C8C8C;font-size:18px;'>Want to change how you receive these emails? </p>
+      <p style='color:#8C8C8C;'>You can update your preferences or unsubscribe</p>
+      </center>
         `,
       attachments: [
         {
           filename: "Email.png",
           path: "./controllers/Email.png",
           cid: "logo",
+        },
+        {
+          filename: "Email.png",
+          path: "./controllers/LOGO_Email.png",
+          cid: "SISlogo",
         },
       ],
     };

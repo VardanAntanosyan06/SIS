@@ -35,6 +35,7 @@ const add = async (req, res) => {
     if (req.files) {
       const foo = async (fileObject) => {
         const arr = await Promise.all(fileObject.map(async(e) => {
+          console.log(e.data);
           const bufferStream = new stream.PassThrough();
           bufferStream.end(e.data);
           let {data} = await google
@@ -69,7 +70,7 @@ const add = async (req, res) => {
           file2: `http://drive.google.com/uc?export=view&id=${arr[1].id}`,
         });
         // console.log()
-        return res.status(200).json({ success: true,files:"AAAAAAAAAAAAAAAA" });
+        return res.status(200).json({ success: true });
       };
       foo([req.files.file1, req.files.file2]);
     } else {
