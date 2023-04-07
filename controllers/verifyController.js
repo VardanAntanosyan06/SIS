@@ -27,8 +27,9 @@ const verify = async (req, res) => {
         item.tokenCreatedAt = moment();
         return res.status(403).json("token timeout!");
       }
+    }else{
+      return res.status(404).json("user does not exist");
     }
-    return res.status(404).json("user does not exist");
   } catch (error) {
     console.log(error);
   }
