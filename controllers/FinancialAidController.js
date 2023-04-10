@@ -69,7 +69,6 @@ const add = async (req, res) => {
           file1: `http://drive.google.com/uc?export=view&id=${arr[0].id}`,
           file2: `http://drive.google.com/uc?export=view&id=${arr[1].id}`,
         });
-        // console.log()
         return res.status(200).json({ success: true });
       };
       foo([req.files.file1, req.files.file2]);
