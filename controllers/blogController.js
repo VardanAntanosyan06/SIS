@@ -37,7 +37,7 @@ const getBlogs = async (req, res) => {
 
 const addBlog = async (req, res) => {
   try {
-    console.log(req.body);
+    console.log(req.body,req.body.blogs,req.body.images);
     if (req.files) {
     const { blogs, images } = req.files;
     const {
