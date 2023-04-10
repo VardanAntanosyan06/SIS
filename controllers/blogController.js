@@ -4,7 +4,7 @@ const { google } = require("googleapis");
 const fs = require("fs");
 const stream = require("stream");
 const { sequelize } = require("../models");
-
+const formidable = require("formidable");
 const { Op } = require("sequelize");
 const { cache } = require("ejs");
 
@@ -37,23 +37,28 @@ const getBlogs = async (req, res) => {
 
 const addBlog = async (req, res) => {
   try {
-    console.log(req.body,"+++++++++++++++++++++",req.body.blogs,"+++++++++++++++++++++",req.body.images,"+++++++++++++++++++++",req.files,typeof (req.body.images));
     if (req.files) {
-    const { blogs, images } = req.files;
-    const {
-      authorname,
-      title,
-      UserName,
-      contactEmail,
-      phone,
-      topic,
-      twitter,
-      personalLink,
-    } = req.body;
-    return res.json({ success: true });
-    }else{
-     return res.status(404).json("This field is required");
-     }
+      const {
+        authorname,
+        title,
+        UserName,
+        contactEmail,
+        phone,
+        topic,
+        twitter,
+        personalLink,
+      } = req.body;
+
+      const form = new formidable.IncomingForm();
+      form.parse(req, function (err, fields, files) {
+        let oldPath = files.profilePic.filepath;
+        console.log(oldPath);
+      });
+
+      return res.json({ success: true });
+    } else {
+      return res.status(404).json("This field is required");
+    }
   } catch (err) {
     console.log(err);
   }
