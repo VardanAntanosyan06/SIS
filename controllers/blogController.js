@@ -37,23 +37,23 @@ const getBlogs = async (req, res) => {
 
 const addBlog = async (req, res) => {
   try {
-    // if (req.files && req.files.file1.length > 0 && req.files.file2 > 0) {
-      const { blogs, images } = req.files;
-      const {
-        authorname,
-        title,
-        UserName,
-        contactEmail,
-        phone,
-        topic,
-        twitter,
-        personalLink,
-      } = req.body;
-      return res.json({ success: true });
-      // else
-      // return res.status(404).json("This field is required");
-      // }
-    } catch (err) {
+    if (req.files) {
+    const { blogs, images } = req.files;
+    const {
+      authorname,
+      title,
+      UserName,
+      contactEmail,
+      phone,
+      topic,
+      twitter,
+      personalLink,
+    } = req.body;
+    return res.json({ success: true });
+    }else{
+     return res.status(404).json("This field is required");
+     }
+  } catch (err) {
     console.log(err);
   }
 };
