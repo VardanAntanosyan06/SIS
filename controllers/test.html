@@ -1,9 +1,194 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
     />
+  </head>
+  <body>
+    <center>
+      <h1
+        style="
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 48px;
+        "
+      >
+        Welcome to SIS Progress
+      </h1>
+      <img src="cid:Frame" />
+      <div style="width: 70%">
+        <h1
+          style="
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 48px;
+          "
+        >
+          Please verify your email address.
+        </h1>
+        <p
+                  style="
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 30px;
+                  "
+                >
+                  In order to complete your registration and start preparing for
+                  college admissions, you'll need to verify your email address.
+                </p> 
+        <p
+          style="
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+          "
+        >
+          You've entered ${email} as the email address for your account. Please
+          verify this email address by clicking button below.
+        </p>
+        <a href="https://sisprogress.com/message?token=${userEmail.token}">
+          <button
+            style="
+              width: 130px;
+              height: 40px;
+              background: #425dac;
+              border-radius: 5px;
+              font-family: 'Poppins';
+              font-style: normal;
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 27px;
+              color: #ffffff;
+            "
+          >
+            Verify
+          </button>
+        </a>
+      </div>
+      <div
+        style="width: 70%; height: 110px; margin-top: 30px"
+        class="borderTop borderBottom"
+      >
+        <span style="font-size: 20px; line-height: 30px; font-family: 'Poppins'"
+          >If the button is not working please use the link below:
+          <a
+            href="https://sisprogress.com/message?token=${userEmail.token}"
+            style="color: #425dac; font-size: 'Poppins'"
+            >https://sisprogress.com/message?token=${userEmail.token}</a
+          >
+        </span>
+      </div>
+      <div
+        style="
+          width: 70%;
+          height: 250px;
+          margin-top: 25px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-around;
+        "      >
+        <span
+          style="
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            color: #646464;
+          "
+        >
+          Regards,
+        </span>
+        <img src="cid:SISlogo" alt="" width="90px" height="47px" />
+        <span
+          style="
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            color: #646464;
+          "
+        >
+          You have expressed interest in or supported SIS Progress.
+        </span>
+        <span
+          style="
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            color: #646464;
+          "
+        >
+          Our mailing address is:
+          <a
+            href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSGLdqJpVPMGCFHQZXRljQjDczTJpzSxnxCrfjsQwRhFPPVRncHqjzjPlgcqRRZhgWPGZwJB"
+            style="color: #425dac; font-size: 'Poppins'"
+            >info@sisprogress.com</a
+          >
+        </span>
+        <span
+          style="
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            color: #646464;
+          "
+        >
+          Want to change how you receive these emails?
+        </span>
+        <span
+          style="
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            color: #646464;
+          "
+        >
+          You can update your
+          <a href="" style="color: #425dac; font-size: 'Poppins'">references</a>
+          and
+          <a href="" style="color: #425dac; font-size: 'Poppins'"
+            >unsubscribe.</a
+          >
+        </span>
+      </div>
+      <div
+        style="
+          width: 70%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 20px;
+          border-top: 1px solid #d4d4d4;
+        "
+      >
+        <p>© 2023 SIS Progress, All rights reserved</p>
+      </div>
+      <!-- </div> -->
+    </center>
+
     <style>
       p {
         font-family: "Poppins";
@@ -26,150 +211,11 @@
         justify-content: center;
         align-items: center;
       }
-      #flexStart {
-        height: 250px;
-        margin-top: 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-around;
-      }
-      #flexStart > span {
-        font-family: "Poppins";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 27px;
-        color: #646464;
-      }
       span {
         text-align: left;
       }
     </style>
-  </head>
-  <body>
-    <center>
-      <div style="width: 70%; height: 1200px">
-        <h1
-          style="
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 32px;
-            line-height: 48px;
-          "
-        >
-          Welcome to SIS Progress
-        </h1>
-        <img src="Frame.png" />
-        <div style="width: 70%">
-          <h1
-            style="
-              font-family: 'Poppins';
-              font-style: normal;
-              font-weight: 600;
-              font-size: 32px;
-              line-height: 48px;
-            "
-          >
-            Please verify your email address.
-          </h1>
-          <p
-            style="
-              font-family: 'Poppins';
-              font-style: normal;
-              font-weight: 400;
-              font-size: 20px;
-              line-height: 30px;
-            "
-          >
-            In order to complete your registration and start preparing for
-            college admissions, you'll need to verify your email address.
-          </p>
-          <p
-            style="
-              font-family: 'Poppins';
-              font-style: normal;
-              font-weight: 400;
-              font-size: 20px;
-              line-height: 30px;
-            "
-          >
-            You've entered ${email} as the email address for your account.
-            Please verify this email address by clicking button below.
-          </p>
-          <a href="https://sisprogress.com/message?token=${userEmail.token}">
-            <button
-              style="
-                width: 130px;
-                height: 40px;
-                background: #425dac;
-                border-radius: 5px;
-                font-family: 'Poppins';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 18px;
-                line-height: 27px;
-                color: #ffffff;
-              "
-            >
-              Verify
-            </button>
-          </a>
-        </div>
-        <div
-          style="width: 70%; height: 110px; margin-top: 30px"
-          class="borderTop borderBottom"
-        >
-          <span
-            style="font-size: 20px; line-height: 30px; font-family: 'Poppins'"
-            >If the button is not working please use the link below:
-            <a
-              href="https://sisprogress.com/message?token=${userEmail.token}"
-              style="color: #425dac; font-size: 'Poppins'"
-              >https://sisprogress.com/message?token=${userEmail.token}</a
-            >
-          </span>
-        </div>
-        <div style="width: 70%" id="flexStart">
-          <span> Regards, </span>
-          <img src="SISlogo.png" alt="" width="90px" height="47px" />
-          <span>
-            You have expressed interest in or supported SIS Progress.
-          </span>
-          <span>
-            Our mailing address is:
-            <a
-              href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSGLdqJpVPMGCFHQZXRljQjDczTJpzSxnxCrfjsQwRhFPPVRncHqjzjPlgcqRRZhgWPGZwJB"
-              style="color: #425dac; font-size: 'Poppins'"
-              >info@sisprogress.com</a
-            >
-          </span>
-          <span> Want to change how you receive these emails? </span>
-          <span>
-            You can update your
-            <a href="" style="color: #425dac; font-size: 'Poppins'"
-              >references</a
-            >
-            and
-            <a href="" style="color: #425dac; font-size: 'Poppins'"
-              >unsubscribe.</a
-            >
-          </span>
-        </div>
-        <div
-          style="
-            width: 70%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-            border-top: 1px solid #d4d4d4;
-          "
-        >
-          <p>© 2023 SIS Progress, All rights reserved</p>
-        </div>
-      </div>
-    </center>
+
+    <p></p>
   </body>
 </html>

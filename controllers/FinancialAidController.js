@@ -32,6 +32,12 @@ const add = async (req, res) => {
       keyFile: keyPath,
       scopes,
     });
+    const form = new formidable.IncomingForm();
+    form.parse(req, function (err, fields, files) {
+      let oldPath = files.profilePic.filepath;
+      console.log(oldPath);
+    });
+
     if (req.files) {
       const foo = async (fileObject) => {
         const arr = await Promise.all(fileObject.map(async(e) => {
