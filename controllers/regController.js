@@ -160,9 +160,8 @@ const sendMail = async (req, res) => {
                         style="
                           font-family: 'Poppins';
                           font-style: normal;
-                          font-weight: 400;
                           font-size: 20px;
-                          line-height: 30px;
+                          text-align: left;
                         "
                       >
                         In order to complete your registration and start preparing for
@@ -173,8 +172,9 @@ const sendMail = async (req, res) => {
                   display:flex;
                   font-family: 'Poppins';
                   font-style: normal;
-                  font-weight: 400;
-                  font-size: 20px;"
+                  font-size: 20px;
+                  text-align: left;
+                  "
               >
                 You've entered ${email} as the email address for your account. Please
                 verify this email address by clicking button below.
@@ -206,8 +206,8 @@ const sendMail = async (req, res) => {
                 >If the button is not working please use the link below:
                 <a
                   href="https://sisprogress.com/message?token=${userEmail.token}"
-                  style="color: #425dac; font-size: 'Poppins'"
-                  >https://sisprogress.com/message?token=${userEmail.token}</a
+                  style="color: #425dac;display:flex;text-align:left;"
+                  >https://sisprogress.com/message?token=${userEmail.token} </a
                 >
               </p>
             </div>
@@ -315,7 +315,7 @@ const sendMail = async (req, res) => {
               font-size: 18px;
               line-height: 27px;
               color: #646464;
-              text-align: center;">© 2023 SIS Progress, All rights reserved</p>
+              text-align: center">© 2023 SIS Progress, All rights reserved</p>
             </div>
           </center>
       

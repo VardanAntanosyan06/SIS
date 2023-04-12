@@ -1,0 +1,9 @@
+EMAIL="your email address"
+PASSWORD="your email password"
+PORT=port 
+SECRET="secret!!!"
+ADMIN_COOKIE_NAME = "ADMIN_COOKIE_NAME"
+ADMIN_COOKIE_PASS = "ADMIN_COOKIE_PASS"
+NODE_ENV = "development"
+
+NODE_TLS_REJECT_UNAUTHORIZED = '0'

@@ -100,6 +100,7 @@ router.get("/logOut",loginController.logOut)
 router.post("/isLogined",loginController.isLogined)
 
 router.get("/get",loginController.getUser)
+router.patch("/deleteAccount",loginController.deleteAccount)
 
 
 module.exports = router;
