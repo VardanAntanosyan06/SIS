@@ -80,8 +80,9 @@ const isLogined = async (req, res) => {
         attributes: ["email", "isVerified"],
       });
 
-      let be = false;
-      if(user.img=="http://drive.google.com/uc?export=view&id=1T4h9d1wyGy-apEyrTW_D6C1UvdLSE166")be = true
+      let be = "no";
+      
+      if(user.img=="http://drive.google.com/uc?export=view&id=1T4h9d1wyGy-apEyrTW_D6C1UvdLSE166")be = "yes"
       const emails = {
         ...user.dataValues,
         firstEmail,
