@@ -64,7 +64,7 @@ const changePassword = async (req, res) => {
     const { authorization: token } = req.headers;
 
     const user = await UserModel.findOne({
-      where: { token: token.replace("Bearer ", "") },
+      where: { token: token.replace("Bearer ", "")},
     });
     if (user) {
       const UserEmail = await UserEmails.findOne({

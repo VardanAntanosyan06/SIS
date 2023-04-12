@@ -16,7 +16,7 @@ const login = async (req, res) => {
         where: { email },
       },
     });
-
+    
     if (
       user &&
       user.UserEmails[0].isVerified &&
@@ -139,13 +139,13 @@ const deleteAccount = async (req, res) => {
           <p style="font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 20px;line-height: 30px;display: flex;align-items: center;letter-spacing: -0.02em;color: #0D0D0D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
           <p style="font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 20px;line-height: 30px;display: flex;align-items: center;letter-spacing: -0.02em;color: #0D0D0D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
 
+          <a href=" ">
           <button style="width:190px;height:50px; background-color:#425DAC;border-radius: 5px;font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;letter-spacing: -0.02em;color: #FFFFFF;">Confirm</button>
-          
+          <a>
           <div style="width:70%;">
           <p style="font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;display: flex;align-items: center;text-align: center;letter-spacing: -0.02em;color: #646464;text-align:center">This link will be active for 5 days. </p>
           </div>
           </div>
-
 
           <div
           style="
@@ -255,6 +255,8 @@ const deleteAccount = async (req, res) => {
         ],
       };
       transporter.sendMail(mailOptions);
+      user.deleteTime = moment();
+      user.save();
 
       return res.status(200).json({ success: true });
     }
@@ -264,6 +266,7 @@ const deleteAccount = async (req, res) => {
     return res.status(500).json("something went wrong");
   }
 };
+
 module.exports = {
   login,
   logOut,

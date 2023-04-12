@@ -10,7 +10,11 @@ const moment = require("moment")
 
 const create = async (req, res) => {
   const {authorization: token} = req.headers;
-  const user = await UserModel.findOne({where:{token: token.replace('Bearer ', '')}})
+  const user = await UserModel.findOne(
+    {
+      where: { token: token.replace("Bearer ", "")},
+  
+  })
   try {
     const {taskId,startDate,position} =req.body;
     const deadlineAtWeek = await TimeTaskModel.findOne({where:{task_id:taskId}})

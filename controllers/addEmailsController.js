@@ -11,7 +11,7 @@ const updateEmail = async (req, res) => {
     const { email, role } = req.body;
     const { authorization: token } = req.headers;
     const user = await UserModel.findOne({
-      where: { token: token.replace("Bearer ", "") },
+      where: { token: token.replace("Bearer ", "")},
     });
     const myEmail = await UserEmails.findOne({
       where: { userId: user.id, role: "First" },
@@ -175,7 +175,7 @@ const deleteSecondaryEmail = async (req, res) => {
   try {
     const { authorization: token } = req.headers;
     const user = await UserModel.findOne({
-      where: { token: token.replace("Bearer ", "") },
+      where: { token: token.replace("Bearer ", "")},
     });
     const secondaryEmail = await UserEmails.destroy({
       where: {

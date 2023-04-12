@@ -4,6 +4,8 @@ const controller = require("../controllers/verifyController")
 
 
 router.get("/",controller.verify)
+router.patch("/delete",controller.deleteUser)
+
 
 
 module.exports = router;

@@ -46,12 +46,10 @@ const reg = async (req, res) => {
       },
     });
 
-    if (!user) {
+    if (!user || user.isActive === false) {
       const isMail = await UserEmails.findOne({ where: { email } });
-      console.log(isMail);
 
       const hashEmail = bcrypt.hashSync(email, 10);
-      console.log(hashEmail);
       const hashPassword = bcrypt.hashSync(password, 10);
 
       const item = await UserModel.create({

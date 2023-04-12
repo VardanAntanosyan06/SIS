@@ -1,6 +1,7 @@
 const { google } = require("googleapis");
 const fs = require("fs");
 const stream = require("stream");
+const { use } = require("passport");
 const UserModel = require("../models").Users;
 
 const uploadFile = async (req, res) => {
@@ -48,6 +49,40 @@ const uploadFile = async (req, res) => {
     return res.status(500).json("somehting wnet wrong");
   }
 };
+
+
+
+const deleteImg = async (req,res)=>{
+  try {
+    const { authorization: token } = req.headers;
+    const user = await UserModel.findOne({
+      where: { token: token.replace("Bearer ", "") },
+    });
+    const keyPath = "controllers/upbeat-airfoil-379410-ffc79425eb65.json";
+    const scopes = ["https://www.googleapis.com/auth/drive"];
+
+    const auth = await new google.auth.GoogleAuth({
+      keyFile: keyPath,
+      scopes,
+    });
+
+    console.log(user);
+    const drive = google.drive({ version: 'v3', auth }); // Authenticating drive API
+    const fileId = user.img.split("id=")[1]
+    drive.files
+      .delete({
+        fileId,
+      })
+      user.img = "http://drive.google.com/uc?export=view&id=1T4h9d1wyGy-apEyrTW_D6C1UvdLSE166"
+      user.save();
+      
+      res.status(200).json({success:true})
+  } catch (error) {
+    console.log(error);
+    return res.json("something went wrong")
+  }
+}  
 module.exports = {
   uploadFile,
+  deleteImg
 };
