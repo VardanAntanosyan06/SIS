@@ -80,12 +80,16 @@ const isLogined = async (req, res) => {
         attributes: ["email", "isVerified"],
       });
 
+      let be = false;
+      if(user.img=="http://drive.google.com/uc?export=view&id=1T4h9d1wyGy-apEyrTW_D6C1UvdLSE166")be = true
       const emails = {
         ...user.dataValues,
         firstEmail,
         secondaryEmail,
+        be
       };
-      return res.status(200).json(emails);
+   
+        return res.status(200).json(emails)
     }
     return res.status(404).send("not found");
   } catch (error) {
