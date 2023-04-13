@@ -46,7 +46,7 @@ const reg = async (req, res) => {
       },
     });
 
-    if (!user && !user.DeletedUser || user.DeletedUser.isVerified === false) {
+    if (!user && !user.DeletedUser && user.DeletedUser.isVerified === false) {
       const hashPassword = bcrypt.hashSync(password, 10);
 
       const item = await UserModel.create({
