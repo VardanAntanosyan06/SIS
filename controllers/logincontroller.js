@@ -5,6 +5,8 @@ const UserEmails = require("../models").UserEmails;
 const { Op, where } = require("sequelize");
 const crypto = require("crypto");
 const nodemailer = require("nodemailer");
+const moment = require("moment");
+const DeletedUsers = require("../models").DeletedUsers
 
 const login = async (req, res) => {
   try {
@@ -15,13 +17,12 @@ const login = async (req, res) => {
         model: UserEmails,
         where: { email },
       },
-    });
-    
+    }); 
     if (
       user &&
       user.UserEmails[0].isVerified &&
-      (await bcrypt.compareSync(password, user.UserEmails[0].password))
-    ) {
+      (await bcrypt.compareSync(password, user.UserEmails[0].password)) &&
+      !user.DeletedUser || user.DeletedUser.isVerified === false) {
       if (user.token) {
         token = user.token;
       } else {
@@ -66,8 +67,9 @@ const isLogined = async (req, res) => {
 
     const user = await UserModel.findOne({
       where: { token },
+      include:[DeletedUsers]
     });
-    if (user) {
+    if (user && !user.DeletedUser || user.DeletedUser.isVerified === false) {
       const secondaryEmail = await UserEmails.findOne({
         where: {
           userId: user.id,
@@ -143,7 +145,7 @@ const deleteAccount = async (req, res) => {
           <p style="font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 20px;line-height: 30px;display: flex;align-items: center;letter-spacing: -0.02em;color: #0D0D0D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
           <p style="font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 20px;line-height: 30px;display: flex;align-items: center;letter-spacing: -0.02em;color: #0D0D0D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
 
-          <a href=" ">
+          <a href="https://sisprogress.com/deletemessage?token=${user.token}">
           <button style="width:190px;height:50px; background-color:#425DAC;border-radius: 5px;font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;letter-spacing: -0.02em;color: #FFFFFF;">Confirm</button>
           <a>
           <div style="width:70%;">
@@ -259,9 +261,13 @@ const deleteAccount = async (req, res) => {
         ],
       };
       transporter.sendMail(mailOptions);
-      user.deleteTime = moment();
-      user.save();
 
+     await DeletedUsers.create({
+        userId:user.id,
+        deleteTime:moment(),
+        isVerified:false
+      })
+      
       return res.status(200).json({ success: true });
     }
     return res.status(403).json("invalid password");

@@ -1,7 +1,8 @@
 const model = require("../models").UserEmails;
-const Usermodel = require("../models").Users;
+const UserModel = require("../models").Users;
 const jwt = require("jsonwebtoken");
 const moment = require("moment");
+const DeletedUsers = require("../models").DeletedUsers;
 
 const verify = async (req, res) => {
   const token = req.query.token;
@@ -28,7 +29,7 @@ const verify = async (req, res) => {
         item.tokenCreatedAt = moment();
         return res.status(403).json("token timeout!");
       }
-    }else{
+    } else {
       return res.status(404).json("user does not exist");
     }
   } catch (error) {
@@ -37,37 +38,23 @@ const verify = async (req, res) => {
 };
 
 const deleteUser = async (req, res) => {
-  const token = req.query.token;
-  const item = await Usermodel.findOne({ where: { token } });
   try {
-    if (item) {
-      if (
-        item.isVerified === false &&
-        moment().diff(item.deleteTime, "days") <= 5
-      ) {
-        item.isActive = false;
-        item.token = null;
-        item.deleteTime = null;
-        item.UserEmails[0].token = null;
-        item.UserEmails?item.UserEmails[0].token = null:null;
-        await item.save();
-        return res.status(200).json({ success: true });
-      } else {
-        item.token = jwt.sign(
-          { user_id: item.id, email: item.email },
-          process.env.SECRET
-        );
-        item.deleteTime = moment();
-        return res.status(403).json("token timeout!");
-      }
-    }else{
-      return res.status(404).json("user does not exist");
+    const { token } = req.body;
+
+    const user = await UserModel.findOne({
+      where: { token },
+      include:[DeletedUsers]
+    });
+    if (user && user.DeletedUsers) {
+        user.DeletedUsers.isVerified = true
+        user.save();
     }
-  } catch (error) {
-    console.log(error);
-  }
+
+    return res.status(200).json("user not found!");
+  } catch (error) {}
 };
+
 module.exports = {
   verify,
-  deleteUser
+  deleteUser,
 };
