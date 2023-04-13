@@ -18,14 +18,12 @@ const login = async (req, res) => {
         where: { email },
       },
     }); 
-    console.log();
     if (
       user &&
       user.UserEmails[0].isVerified &&
-      (await bcrypt.compareSync(password, user.UserEmails[0].password))
-      &&
-       !user.DeletedUser && user.DeletedUser.isVerified === false) {
-
+      (await bcrypt.compareSync(password, user.UserEmails[0].password))){
+      //&&
+      // !user.DeletedUser || user.DeletedUser.isVerified === false) {
       if (user.token) {
         token = user.token;
       } else {
