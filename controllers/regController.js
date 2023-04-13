@@ -46,10 +46,7 @@ const reg = async (req, res) => {
       },
     });
 
-    if (!user || user.isActive === false) {
-      const isMail = await UserEmails.findOne({ where: { email } });
-
-      const hashEmail = bcrypt.hashSync(email, 10);
+    if (!user && !user.DeletedUser || user.DeletedUser.isVerified === false) {
       const hashPassword = bcrypt.hashSync(password, 10);
 
       const item = await UserModel.create({

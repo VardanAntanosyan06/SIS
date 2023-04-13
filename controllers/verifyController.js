@@ -40,18 +40,29 @@ const verify = async (req, res) => {
 const deleteUser = async (req, res) => {
   try {
     const { token } = req.body;
-
     const user = await UserModel.findOne({
       where: { token },
-      include:[DeletedUsers]
+      include: [DeletedUsers],
     });
-    if (user && user.DeletedUsers) {
-        user.DeletedUsers.isVerified = true
-        user.save();
-    }
+    if (user){
+    if(user.DeletedUser && (moment().diff(user.DeletedUser.deleteTime, "days") <= 5)) {
+      user.DeletedUser.isVerified = true;
+      user.DeletedUser.deleteTime = null;
+      user.token = null;
 
-    return res.status(200).json("user not found!");
-  } catch (error) {}
+      user.DeletedUser.save();
+      user.save()
+      return res.json({ success: true });
+    }else {
+      return res.status(403).json("token timeout!")
+    }}
+    else{
+      return res.status(404).json("user not found!");
+    }
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json("something went wrong")
+  }
 };
 
 module.exports = {
