@@ -16,7 +16,6 @@ const login = async (req, res) => {
       include: {
         model: UserEmails,
         where: { email },
-        model:DeletedUsers
       },
     }); 
     if (
@@ -70,7 +69,7 @@ const isLogined = async (req, res) => {
       where: { token },
       include:[DeletedUsers]
     });
-    if (user && !user.DeletedUser || user.DeletedUser.isVerified === false) {
+    if (user) {
       const secondaryEmail = await UserEmails.findOne({
         where: {
           userId: user.id,
@@ -146,7 +145,7 @@ const deleteAccount = async (req, res) => {
           <p style="font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 20px;line-height: 30px;display: flex;align-items: center;letter-spacing: -0.02em;color: #0D0D0D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
           <p style="font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 20px;line-height: 30px;display: flex;align-items: center;letter-spacing: -0.02em;color: #0D0D0D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
 
-          <a href="https://sisprogress.com/deletemessage?token=${user.token}">
+          <a href="https://sisprogress.com/deletemessage">
           <button style="width:190px;height:50px; background-color:#425DAC;border-radius: 5px;font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;letter-spacing: -0.02em;color: #FFFFFF;">Confirm</button>
           <a>
           <div style="width:70%;">
