@@ -16,6 +16,7 @@ const login = async (req, res) => {
       include: {
         model: UserEmails,
         where: { email },
+        model:DeletedUsers
       },
     }); 
     if (
