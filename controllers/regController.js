@@ -170,7 +170,7 @@ const sendMail = async (req, res) => {
                   text-align: left;
                   "
               >
-                You've entered <span>${email}</span> as the email address for your account. Please
+                You've entered ${email.toString()} as the email address for your account. Please
                 verify this email address by clicking button below.
               </p>
               <a href="https://sisprogress.com/message?token=${userEmail.token}">
