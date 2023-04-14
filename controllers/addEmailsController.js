@@ -198,7 +198,7 @@ const isEmailFree = async (req, res) => {
     const user = await UserModel.findOne({
       include: [{ model: UserEmails, where: { email } }, DeletedUsers],
     });
-    if (user && user.DeletedUser && user.DeletedUser.isVerified === true) {
+    if (user || (user.DeletedUser && user.DeletedUser.isVerified === true)) {
       return res.status(403).json("existing email address");
     }
 
