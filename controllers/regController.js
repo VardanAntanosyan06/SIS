@@ -44,7 +44,7 @@ const reg = async (req, res) => {
       include:[{model:UserEmails,where:{email}},DeletedUsers]
     }); 
     
-    if (!user &&  (!user.DeletedUser || user.DeletedUser.isVerified === false)) {
+    if (!user ||  (!user.DeletedUser || user.DeletedUser.isVerified === false)) {
       const hashPassword = bcrypt.hashSync(password, 10);
 
       const item = await UserModel.create({
@@ -96,7 +96,7 @@ const sendMail = async (req, res) => {
   try {
     const { email } = req.body;
     const userEmail = await UserEmails.findOne({ where: { email } });
-
+    console.log(userEmail);
     const transporter = nodemailer.createTransport({
       host: "mail.privateemail.com",
       port: 465,
