@@ -12,9 +12,11 @@ const login = async (req, res) => {
   try {
     const { email, password } = req.body;
     let token;
-    const user = await UserModel.findOne({
-      include:[{model:UserEmails,where:{email}},DeletedUsers]
-    }); 
+    const allUserEmails = await UserModel.findAll({include:[{model:UserEmails,where:{email}},DeletedUsers]});
+    const user = allUserEmails.filter((e)=>e.DeletedUser===null || e.DeletedUser.isVerified===false)[0];
+    // const user = await UserModel.findOne({
+    //   include:[{model:UserEmails,where:{email}},DeletedUsers]
+    // }); 
     if (
       user && user.UserEmails &&
       user.UserEmails[0].isVerified &&

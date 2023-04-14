@@ -96,9 +96,7 @@ const sendMail = async (req, res) => {
   try {
     const { email } = req.body;
     const allUserEmails = await UserModel.findAll({include:[{model:UserEmails,where:{email}},DeletedUsers]});
-    console.log(allUserEmails.DeletedUser);
     const user = allUserEmails.filter((e)=>e.DeletedUser===null || e.DeletedUser.isVerified===false)[0];
-    console.log(user);
     const userEmail = await UserEmails.findOne({where:{userId:user.id,email}})
     const transporter = nodemailer.createTransport({
       host: "mail.privateemail.com",
