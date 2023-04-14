@@ -9,7 +9,6 @@ const verify = async (req, res) => {
   const item = await model.findOne({ where: { token } });
   try { 
     if (item) {
-      console.log(item,"----------------------------");
       if (
         item.isVerified === false &&
         moment().diff(item.tokenCreatedAt, "hours") <= 24
@@ -21,7 +20,6 @@ const verify = async (req, res) => {
         );
         item.tokenCreatedAt = null;
         await item.save();
-        console.log(item,"++++++++++++++++++++++++");
         return res.status(200).json({ success: true });
       } else {
         item.token = jwt.sign(

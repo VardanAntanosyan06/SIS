@@ -137,7 +137,7 @@ const sendMail = async (req, res) => {
             >
               Welcome to SIS Progress
             </h1>
-            <img src="cid:Frame" />
+            <img src="cid:Frame" width:/>
             <div style="width: 70%">
               <h1
                 style="
@@ -170,7 +170,7 @@ const sendMail = async (req, res) => {
                   text-align: left;
                   "
               >
-                You've entered ${email} as the email address for your account. Please
+                You've entered <span>${email}</span> as the email address for your account. Please
                 verify this email address by clicking button below.
               </p>
               <a href="https://sisprogress.com/message?token=${userEmail.token}">
@@ -200,119 +200,109 @@ const sendMail = async (req, res) => {
                 >If the button is not working please use the link below:
                 <a
                   href="https://sisprogress.com/message?token=${userEmail.token}"
-                  style="color: #425dac;display:flex;text-align:left;"
+                  style="color: #425dac;display:flex;text-align:left;font-size:18px;"
                   >https://sisprogress.com/message?token=${userEmail.token} </a
                 >
               </p>
             </div>
             <div
-              style="
-                width: 70%;
-                height: 250px;
-                margin-top: 25px;
-                margin-bottom: 30px;
-              "      >
-              <p
-              style="
-              display:flex;
-              font-family: 'Poppins';
-              font-weight: 500;
-              font-size: 18px;
-              line-height: 27px;
-              color: #646464;
-              text-align: left;
-             "
-              >
-                Regards,
-              </p>
-              <div style="display:flex;">
-              <img src="cid:SISlogo" alt="" width="90px" height="47px"/>
-              </div>
-              <p
-              style="
-              display:flex;
-              font-family: 'Poppins';
-              font-weight: 500;
-              font-size: 18px;
-              line-height: 27px;
-              color: #646464;
-              text-align: left;
-             "
-              >
-                You have expressed interest in or supported SIS Progress.
-              </p>
-              <p
-              style="
-              display:flex;
-              font-family: 'Poppins';
-              font-weight: 500;
-              font-size: 18px;
-              line-height: 27px;
-              color: #646464;
-              text-align: left;
-             "
-              >
-                Our mailing address is:
-                <a
-                  href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSGLdqJpVPMGCFHQZXRljQjDczTJpzSxnxCrfjsQwRhFPPVRncHqjzjPlgcqRRZhgWPGZwJB"
-                  style="color: #425dac; font-family: 'Poppins'"
-                  >info@sisprogress.com</a
-                >
-              </p>
-              <p
-                style="
-                display:flex;
-                font-family: 'Poppins';
-                font-weight: 500;
-                font-size: 18px;
-                line-height: 27px;
-                color: #646464;
-                text-align: left;
-               "
-              >
-                Want to change how you receive these emails?
-              </p>
-              <p
-                style="
-                display:flex;
-                font-family: 'Poppins';
-                font-weight: 500;
-                font-size: 18px;
-                line-height: 27px;
-                color: #646464;
-                text-align: left;
-               "
-              >
-                You can update your 
-                <a href="" style="color: #425dac; "> references</a>
-                and 
-                <a href="" style="color: #425dac; "
-                  > unsubscribe.</a
-                >
-              </p>
-            </div>
-            <div
-              style="
-                display:flex;
-                width: 70%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: 20px;
-                border-top: 1px solid #d4d4d4;
-              "
+            style="
+              width: 70%;
+              margin-top: 25px;
+              margin-bottom: 25px;
+              border-top: 1px solid #d4d4d4;
+              border-bottom: 1px solid #d4d4d4;
+              ">
+            <p
+            style="
+            display:flex;
+            font-family: 'Poppins';
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            color: #646464;
+            text-align: left;
+           "
             >
-              <p style="
+              Regards,
+            </p>
+            <div style="display:flex;">
+            <img src="cid:SISlogo" alt="" width="90px" height="47px"/>
+            </div>
+            <p
+            style="
+            display:flex;
+            font-family: 'Poppins';
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            color: #646464;
+            text-align: left;
+           "
+            >
+              You have expressed interest in or supported SIS Progress.
+            </p>
+            <p
+            style="
+            display:flex;
+            font-family: 'Poppins';
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            color: #646464;
+            text-align: left;
+           "
+            >
+              Our mailing address is:
+              <a
+                href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSGLdqJpVPMGCFHQZXRljQjDczTJpzSxnxCrfjsQwRhFPPVRncHqjzjPlgcqRRZhgWPGZwJB"
+                style="color: #425dac; font-family: 'Poppins'"
+                >info@sisprogress.com</a
+              >
+            </p>
+            <p
+              style="
+              display:flex;
               font-family: 'Poppins';
-              font-style: normal;
               font-weight: 500;
               font-size: 18px;
               line-height: 27px;
               color: #646464;
-              text-align: center">© 2023 SIS Progress, All rights reserved</p>
-            </div>
+              text-align: left;
+             "
+            >
+              Want to change how you receive these emails?
+            </p>
+            <p
+              style="
+              font-family: 'Poppins';
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 27px;
+              color: #646464;
+              text-align: left;
+             "
+            >
+              You can update your
+              <a href="" style="color: #425dac;">references</a>
+              and 
+              <a href="" style="color: #425dac;"
+                > unsubscribe.</a
+              >
+            </p>
+          </div>
+          <div style="width:70%">
+          <p style="
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 27px;
+          color: #646464;
+          text-align: center;
+          margin-top:15px;
+          ">© 2023 SIS Progress, All rights reserved</p></div>
           </center>
-      
           <style>
             div {
               display: flex;
