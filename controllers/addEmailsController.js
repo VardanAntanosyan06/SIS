@@ -1,5 +1,6 @@
 const UserEmails = require("../models").UserEmails;
 const UserModel = require("../models").Users;
+const DeletedUsers = require("../models").DeletedUsers
 const crypto = require("crypto");
 const nodemailer = require("nodemailer");
 const randomString = crypto.randomBytes(3).toString("hex");
