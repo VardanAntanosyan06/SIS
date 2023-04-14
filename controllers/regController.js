@@ -128,7 +128,7 @@ const sendMail = async (req, res) => {
           <center>
             <h1
               style="
-                font-family: 'Poppins';
+                
                 font-style: normal;
                 font-weight: 600;
                 font-size: 32px;
@@ -137,11 +137,12 @@ const sendMail = async (req, res) => {
             >
               Welcome to SIS Progress
             </h1>
-            <img src="cid:Frame" width:/>
+            
+            <img src="cid:Frame" alt="" style="width:300px;height:192px;"/>
             <div style="width: 70%">
               <h1
                 style="
-                  font-family: 'Poppins';
+                  
                   font-style: normal;
                   font-weight: 600;
                   font-size: 32px;
@@ -152,7 +153,7 @@ const sendMail = async (req, res) => {
               </h1>
               <p
                         style="
-                          font-family: 'Poppins';
+                          
                           font-style: normal;
                           font-size: 20px;
                           text-align: left;
@@ -163,14 +164,13 @@ const sendMail = async (req, res) => {
                       </p> 
               <p
                 style="
-                  display:flex;
-                  font-family: 'Poppins';
+                  
                   font-style: normal;
                   font-size: 20px;
                   text-align: left;
                   "
               >
-                You've entered ${email.toString()} as the email address for your account. Please
+                You've entered ${email} as the email address for your account. Please
                 verify this email address by clicking button below.
               </p>
               <a href="https://sisprogress.com/message?token=${userEmail.token}">
@@ -180,7 +180,7 @@ const sendMail = async (req, res) => {
                     height: 40px;
                     background: #425dac;
                     border-radius: 5px;
-                    font-family: 'Poppins';
+                    border:none;
                     font-style: normal;
                     font-weight: 500;
                     font-size: 18px;
@@ -196,12 +196,12 @@ const sendMail = async (req, res) => {
               style="width: 70%; height: 110px; margin-top: 30px"
               style="border-top: 1px solid #d4d4d4;border-bottom: 1px solid #d4d4d4;"
             >
-              <p style="font-size: 20px; line-height: 30px; font-family: 'Poppins'"
+              <p style="font-size: 20px; line-height: 30px;text-align:left;"
                 >If the button is not working please use the link below:
                 <a
                   href="https://sisprogress.com/message?token=${userEmail.token}"
-                  style="color: #425dac;display:flex;text-align:left;font-size:18px;"
-                  >https://sisprogress.com/message?token=${userEmail.token} </a
+                  style="color: #425dac;text-align:left;font-size:18px;"
+                  >https://sisprogress.com/message?token=${userEmail.token}</a
                 >
               </p>
             </div>
@@ -216,7 +216,7 @@ const sendMail = async (req, res) => {
             <p
             style="
             display:flex;
-            font-family: 'Poppins';
+            
             font-weight: 500;
             font-size: 18px;
             line-height: 27px;
@@ -232,7 +232,7 @@ const sendMail = async (req, res) => {
             <p
             style="
             display:flex;
-            font-family: 'Poppins';
+            
             font-weight: 500;
             font-size: 18px;
             line-height: 27px;
@@ -245,7 +245,7 @@ const sendMail = async (req, res) => {
             <p
             style="
             display:flex;
-            font-family: 'Poppins';
+            
             font-weight: 500;
             font-size: 18px;
             line-height: 27px;
@@ -256,14 +256,14 @@ const sendMail = async (req, res) => {
               Our mailing address is:
               <a
                 href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSGLdqJpVPMGCFHQZXRljQjDczTJpzSxnxCrfjsQwRhFPPVRncHqjzjPlgcqRRZhgWPGZwJB"
-                style="color: #425dac; font-family: 'Poppins'"
+                style="color: #425dac;"
                 >info@sisprogress.com</a
               >
             </p>
             <p
               style="
               display:flex;
-              font-family: 'Poppins';
+              
               font-weight: 500;
               font-size: 18px;
               line-height: 27px;
@@ -275,7 +275,7 @@ const sendMail = async (req, res) => {
             </p>
             <p
               style="
-              font-family: 'Poppins';
+              
               font-weight: 500;
               font-size: 18px;
               line-height: 27px;
@@ -293,7 +293,7 @@ const sendMail = async (req, res) => {
           </div>
           <div style="width:70%">
           <p style="
-          font-family: 'Poppins';
+          
           font-style: normal;
           font-weight: 500;
           font-size: 18px;
