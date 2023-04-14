@@ -44,7 +44,7 @@ const reg = async (req, res) => {
       include:[{model:UserEmails,where:{email}},DeletedUsers]
     }); 
     
-    if (!user ||  (!user.DeletedUser || user.DeletedUser.isVerified === false)) {
+    if (!user ||  (user.DeletedUser && user.DeletedUser.isVerified === true)) {
       const hashPassword = bcrypt.hashSync(password, 10);
 
       const item = await UserModel.create({
@@ -85,7 +85,7 @@ const reg = async (req, res) => {
 
       return res.status(200).json({ success: true });
     } else {
-      return res.status(403).json("user alredy exit");
+      return res.status(403).json("user alredy exist");
     }
   } catch (error) {
     console.log(error);
