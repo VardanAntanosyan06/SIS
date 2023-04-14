@@ -97,8 +97,8 @@ const sendMail = async (req, res) => {
     const { email } = req.body;
     const allUserEmails = await UserModel.findAll({include:[{model:UserEmails,where:{email}},DeletedUsers]});
     console.log(allUserEmails.DeletedUser);
-    const userEmail = allUserEmails.filter((e)=>e.DeletedUser===null || e.DeletedUser.isVerified===false)[0];
-    console.log(userEmail);
+    const user = allUserEmails.filter((e)=>e.DeletedUser===null || e.DeletedUser.isVerified===false)[0];
+    console.log(user);
     const transporter = nodemailer.createTransport({
       host: "mail.privateemail.com",
       port: 465,
@@ -174,7 +174,7 @@ const sendMail = async (req, res) => {
                 You've entered ${email} as the email address for your account. Please
                 verify this email address by clicking button below.
               </p>
-              <a href="https://sisprogress.com/message?token=${userEmail.token}">
+              <a href="https://sisprogress.com/message?token=${user.userEmails[0].token}">
                 <button
                   style="
                     width: 130px;
@@ -200,9 +200,9 @@ const sendMail = async (req, res) => {
               <p style="font-size: 20px; line-height: 30px; font-family: 'Poppins'"
                 >If the button is not working please use the link below:
                 <a
-                  href="https://sisprogress.com/message?token=${userEmail.token}"
+                  href="https://sisprogress.com/message?token=${user.userEmails[0].token}"
                   style="color: #425dac;display:flex;text-align:left;"
-                  >https://sisprogress.com/message?token=${userEmail.token} </a
+                  >https://sisprogress.com/message?token=${user.userEmails[0].token} </a
                 >
               </p>
             </div>
