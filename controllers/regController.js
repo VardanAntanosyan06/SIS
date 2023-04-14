@@ -95,7 +95,7 @@ const reg = async (req, res) => {
 const sendMail = async (req, res) => {
   try {
     const { email } = req.body;
-    const allUserEmails = await UserEmails.findAll({ where: { email },include:{model:DeletedUsers} });
+    const allUserEmails = await UserModel.findAll({include:[{model:UserEmails,where:{email}},DeletedUsers]});
     console.log(allUserEmails);
     const userEmail = allUserEmails.filter((e)=>e.deleteUser===null ||e.DeletedUser.isVerified===false)[0]
     const transporter = nodemailer.createTransport({
