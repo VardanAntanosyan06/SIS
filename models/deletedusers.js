@@ -23,11 +23,11 @@ module.exports = (sequelize, DataTypes) => {
     timestamps:false
   });
 
-  const Users = sequelize.define("Users")
+  // const Users = sequelize.define("Users")
 
-  DeletedUsers.hasOne(Users,{
-    foreignKey:'id'
-  })
+  // DeletedUsers.hasOne(Users,{
+  //   foreignKey:'userId'
+  // })
   
   return DeletedUsers;
 };

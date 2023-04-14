@@ -5,8 +5,9 @@ var bcrypt = require("bcrypt");
 const { where } = require("sequelize");
 const UserEmails = require("../models").UserEmails;
 const jwt = require("jsonwebtoken");
-
+const DeletedUsers = require("../models").DeletedUsers
 const moment = require("moment");
+const { deleteUser } = require("./verifyController");
 
 const UserModel = require("../models").Users;
 const reg = async (req, res) => {
@@ -40,16 +41,10 @@ const reg = async (req, res) => {
       moreInfo,
     } = req.body;
     const user = await UserModel.findOne({
-      include: {
-        model: UserEmails,
-        where: { email },
-      },
-    });
-
-    if (!user) {
-      const isMail = await UserEmails.findOne({ where: { email } });
-
-      const hashEmail = bcrypt.hashSync(email, 10);
+      include:[{model:UserEmails,where:{email}},DeletedUsers]
+    }); 
+    
+    if (!user &&  (!user.DeletedUser || user.DeletedUser.isVerified === false)) {
       const hashPassword = bcrypt.hashSync(password, 10);
 
       const item = await UserModel.create({

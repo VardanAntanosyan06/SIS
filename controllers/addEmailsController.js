@@ -11,7 +11,7 @@ const updateEmail = async (req, res) => {
     const { email, role } = req.body;
     const { authorization: token } = req.headers;
     const user = await UserModel.findOne({
-      where: { token: token.replace("Bearer ", "")},
+      where: { token: token.replace("Bearer ", "") },
     });
     const myEmail = await UserEmails.findOne({
       where: { userId: user.id, role: "First" },
@@ -175,7 +175,7 @@ const deleteSecondaryEmail = async (req, res) => {
   try {
     const { authorization: token } = req.headers;
     const user = await UserModel.findOne({
-      where: { token: token.replace("Bearer ", "")},
+      where: { token: token.replace("Bearer ", "") },
     });
     const secondaryEmail = await UserEmails.destroy({
       where: {
@@ -194,8 +194,10 @@ const isEmailFree = async (req, res) => {
   try {
     const { email } = req.query;
 
-    const user = await UserEmails.findOne({ where: { email } });
-    if (user) {
+    const user = await UserModel.findOne({
+      include: [{ model: UserEmails, where: { email } }, DeletedUsers],
+    });
+    if (user && user.DeletedUser && user.DeletedUser.isVerified === true) {
       return res.status(403).json("existing email address");
     }
 

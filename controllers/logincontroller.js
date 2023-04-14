@@ -13,17 +13,14 @@ const login = async (req, res) => {
     const { email, password } = req.body;
     let token;
     const user = await UserModel.findOne({
-      include: {
-        model: UserEmails,
-        where: { email },
-      },
+      include:[{model:UserEmails,where:{email}},DeletedUsers]
     }); 
     if (
-      user &&
+      user && user.UserEmails &&
       user.UserEmails[0].isVerified &&
-      (await bcrypt.compareSync(password, user.UserEmails[0].password))){
-      //&&
-      // !user.DeletedUser || user.DeletedUser.isVerified === false) {
+      (await bcrypt.compareSync(password, user.UserEmails[0].password))
+      &&
+      (!user.DeletedUser || user.DeletedUser.isVerified === false)) {
       if (user.token) {
         token = user.token;
       } else {
@@ -109,7 +106,8 @@ const getUser = async (req, res) => {
 
     return res.json(user);
   } catch (error) {
-    return res.json("something went wrong"), console.log(error);
+    console.log(error);
+    return res.json("something went wrong")
   }
 };
 
@@ -148,7 +146,7 @@ const deleteAccount = async (req, res) => {
 
           <a href="https://sisprogress.com/deletemessage">
           <button style="width:190px;height:50px; background-color:#425DAC;border-radius: 5px;font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;letter-spacing: -0.02em;color: #FFFFFF;">Confirm</button>
-          <a>
+          </a>
           <div style="width:70%;">
           <p style="font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;display: flex;align-items: center;text-align: center;letter-spacing: -0.02em;color: #646464;text-align:center">This link will be active for 5 days. </p>
           </div>
