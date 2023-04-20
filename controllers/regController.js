@@ -180,7 +180,7 @@ const sendMail = async (req, res) => {
                     height: 40px;
                     background: #425dac;
                     border-radius: 5px;
-                    border:none;
+                    border:none;  
                     font-style: normal;
                     font-weight: 500;
                     font-size: 18px;

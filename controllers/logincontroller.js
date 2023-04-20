@@ -152,7 +152,7 @@ const deleteAccount = async (req, res) => {
           <div style="width:70%;">
           <p style="font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;display: flex;align-items: center;text-align: center;letter-spacing: -0.02em;color: #646464;text-align:center">This link will be active for 5 days. </p>
           </div>
-          </div>
+          </div>  
 
           <div
           style="
@@ -223,7 +223,7 @@ const deleteAccount = async (req, res) => {
             Want to change how you receive these emails?
           </p>
           <p
-            style="
+            style=
             font-family: 'Poppins';
             font-weight: 500;
             font-size: 18px;

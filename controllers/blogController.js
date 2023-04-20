@@ -37,28 +37,21 @@ const getBlogs = async (req, res) => {
 
 const addBlog = async (req, res) => {
   try {
-    if (req.files) {
-      const {
-        authorname,
-        title,
-        UserName,
-        contactEmail,
-        phone,
-        topic,
-        twitter,
-        personalLink,
-      } = req.body;
+    const {
+      authorname,
+      title,
+      UserName,
+      contactEmail,
+      phone,
+      topic,
+      twitter,
+      personalLink,
+      blogs,
+      images,
+    } = req.body;
 
-      const form = new formidable.IncomingForm();
-      form.parse(req, function (err, fields, files) {
-        let oldPath = files.profilePic.filepath;
-        console.log(oldPath);
-      });
-
-      return res.json({ success: true });
-    } else {
-      return res.status(404).json("This field is required");
-    }
+    console.log(blogs, images);
+    return res.json({ success: true });
   } catch (err) {
     console.log(err);
   }
