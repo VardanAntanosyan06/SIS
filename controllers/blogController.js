@@ -44,7 +44,7 @@ const addBlog = async (req, res) => {
     const {
       authorname,
       title,
-      UserName,
+      userName,
       contactEmail,
       phone,
       topic,
@@ -103,11 +103,10 @@ const addBlog = async (req, res) => {
       return {data:data.name,id:"http://drive.google.com/uc?export=view&id="+data.id};
    }));
    
-   toBeBlogs.create({
+   await toBeBlogs.create({
     authorname,
     title,
-    UserName,
-    contactEmail,
+    userName,
     phone,
     topic,
     twitter,
