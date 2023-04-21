@@ -31,7 +31,7 @@ const adminBro = new AdminBro({
 });
 
 const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
-  cookieName: process.env.ADMIN_COOKIE_NAME,
+  cookppieName: process.env.ADMIN_COOKIE_NAME,
   cookiePassword: process.env.ADMIN_COOKIE_PASS,
   authenticate: async (email, password) => {
     const user = await AdminModel.findOne({where:{email}})

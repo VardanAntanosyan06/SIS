@@ -1,5 +1,8 @@
+const express = require("express");
+const app = express();
 const xlsx = require("xlsx");
 const BlogModel = require("../models").Blogs;
+
 const { google } = require("googleapis");
 const fs = require("fs");
 const stream = require("stream");
@@ -7,6 +10,10 @@ const { sequelize } = require("../models");
 const formidable = require("formidable");
 const { Op } = require("sequelize");
 const { cache } = require("ejs");
+const FormData = require("form-data");
+const multer = require("multer");
+
+app.use(multer().any());
 
 const getBlogs = async (req, res) => {
   try {
@@ -49,8 +56,33 @@ const addBlog = async (req, res) => {
       blogs,
       images,
     } = req.body;
+    console.log(images);
+    // const bufferStream = new stream.PassThrough();
+    // bufferStream.end(images);
+    // const keyPath = "controllers/upbeat-airfoil-379410-ffc79425eb65.json";
+    //   const scopes = ["https://www.googleapis.com/auth/drive"];
 
-    console.log(blogs, images);
+    //   const auth = await new google.auth.GoogleAuth({
+    //     keyFile: keyPath,
+    //     scopes,
+    //   });
+    //   // const formData = new FormData()
+    //   // formData.append('img',images)
+
+    //   const { data } = await google
+    //     .drive({ version: "v3", auth })
+    //     .files.create({
+    //       media: {
+    //         mimeType: images.mimeType,
+    //         body: bufferStream,
+    //       },
+
+    //       requestBody: {
+    //         name: images.name,
+    //         parents: ["1KnEWAeNDvyYmI-Qz4LvRIAKhuIXQcHvW"],
+    //       },
+    //       fields: "id,name",
+    //     });
     return res.json({ success: true });
   } catch (err) {
     console.log(err);
