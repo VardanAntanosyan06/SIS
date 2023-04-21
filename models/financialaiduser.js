@@ -25,8 +25,8 @@ module.exports = (sequelize, DataTypes) => {
     counselorEmail: DataTypes.STRING,
     question1: DataTypes.STRING,
     question2: DataTypes.STRING,
-    file1: DataTypes.STRING,
-    file2: DataTypes.STRING
+    file1: DataTypes.ARRAY(DataTypes.STRING),
+    file2: DataTypes.ARRAY(DataTypes.STRING)
   }, {
     sequelize,
     modelName: 'FinancialAidUser',

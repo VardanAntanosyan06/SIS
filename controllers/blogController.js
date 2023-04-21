@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const xlsx = require("xlsx");
 const BlogModel = require("../models").Blogs;
-
+const toBeBlogs = require("../models").toBeBlogs;
 const { google } = require("googleapis");
 const fs = require("fs");
 const stream = require("stream");
@@ -50,37 +50,72 @@ const addBlog = async (req, res) => {
       topic,
       twitter,
       personalLink,
-      blogs,
-      images,
     } = req.body;
-    console.log(images);
-    // const bufferStream = new stream.PassThrough();
-    // bufferStream.end(images);
-    // const keyPath = "controllers/upbeat-airfoil-379410-ffc79425eb65.json";
-    //   const scopes = ["https://www.googleapis.com/auth/drive"];
 
-    //   const auth = await new google.auth.GoogleAuth({
-    //     keyFile: keyPath,
-    //     scopes,
-    //   });
-    //   // const formData = new FormData()
-    //   // formData.append('img',images)
+    const {blogs,images} = req.files
 
-    //   const { data } = await google
-    //     .drive({ version: "v3", auth })
-    //     .files.create({
-    //       media: {
-    //         mimeType: images.mimeType,
-    //         body: bufferStream,
-    //       },
+    const keyPath = "controllers/upbeat-airfoil-379410-ffc79425eb65.json";
+      const scopes = ["https://www.googleapis.com/auth/drive"];
 
-    //       requestBody: {
-    //         name: images.name,
-    //         parents: ["1KnEWAeNDvyYmI-Qz4LvRIAKhuIXQcHvW"],
-    //       },
-    //       fields: "id,name",
-    //     });
-    return res.json({ success: true });
+      const auth = await new google.auth.GoogleAuth({
+        keyFile: keyPath,
+        scopes,
+      });
+
+     let NewImages =  await Promise.all(images.map(async (e)=>{
+      const bufferStream = new stream.PassThrough();
+      bufferStream.end(e.data);
+        const { data } = await google
+        .drive({ version: "v3", auth })
+        .files.create({
+          media: {
+            mimeType: e.mimeType,
+            body: bufferStream,
+          },
+
+          requestBody: {
+            name: e.name,
+            parents: ["1hzdBtjI_lMzQfzT0ugmbqHuWJd5N070s"],
+          },
+          fields: "id,name",
+        });
+        return {data:data.name,id:"http://drive.google.com/uc?export=view&id="+data.id};
+     }))
+
+     let NewBlogs = await Promise.all(blogs.map(async (e)=>{
+      const bufferStream = new stream.PassThrough();
+      bufferStream.end(e.data);
+
+      const { data } = await google
+      .drive({ version: "v3", auth })
+      .files.create({
+        media: {
+          mimeType: e.mimeType,
+          body: bufferStream,
+        },
+
+        requestBody: {
+          name: e.name,
+          parents: ["1hzdBtjI_lMzQfzT0ugmbqHuWJd5N070s"],
+        },
+        fields: "id,name",
+      });
+      return {data:data.name,id:"http://drive.google.com/uc?export=view&id="+data.id};
+   }));
+   
+   toBeBlogs.create({
+    authorname,
+    title,
+    UserName,
+    contactEmail,
+    phone,
+    topic,
+    twitter,
+    personalLink,
+    blogs:NewBlogs,
+    images:NewBlogs
+  })
+    return res.json({ success: true});
   } catch (err) {
     console.log(err);
   }

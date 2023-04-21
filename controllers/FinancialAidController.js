@@ -36,7 +36,7 @@ const add = async (req, res) => {
     if (req.files) {
       const foo = async (fileObject) => {
         const arr = await Promise.all(fileObject.map(async(e) => {
-          console.log(e.data);
+          console.log(e);
           const bufferStream = new stream.PassThrough();
           bufferStream.end(e.data);
           let {data} = await google
