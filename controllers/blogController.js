@@ -11,9 +11,6 @@ const formidable = require("formidable");
 const { Op } = require("sequelize");
 const { cache } = require("ejs");
 const FormData = require("form-data");
-const multer = require("multer");
-
-app.use(multer().any());
 
 const getBlogs = async (req, res) => {
   try {
