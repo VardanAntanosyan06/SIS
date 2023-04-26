@@ -244,11 +244,7 @@ const deleteAccount = async (req, res) => {
        "
         >
           Our mailing address is:
-          <a
-            href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSGLdqJpVPMGCFHQZXRljQjDczTJpzSxnxCrfjsQwRhFPPVRncHqjzjPlgcqRRZhgWPGZwJB"
-            style="color: #425dac;"
-            >info@sisprogress.com</a
-          >
+          <a href="mailto:info@sisprogress.com" target="_blank">info@sisprogress.com<wbr></a>
         </p>
         <p
           style="
@@ -415,7 +411,7 @@ const deactivate = async (req, res) => {
         >
           Our mailing address is:
  
-          <a href="mailto:info@sisprogress.com" target="_blank">info@sisprogress.com<wbr>com</a>
+          <a href="mailto:info@sisprogress.com" target="_blank">info@sisprogress.com<wbr></a>
         </p>
         <p
           style="
