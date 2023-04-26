@@ -49,7 +49,8 @@ const updateEmail = async (req, res) => {
         },
       });
       let mailOptions = {};
-      if (role == "Secondary") {
+      if (role === "Secondary") {
+        console.log("SecondarySecondarySecondarySecondarySecondarySecondarySecondarySecondary");
         mailOptions = {
           from: "info@sisprogress.com",
           to: email,
