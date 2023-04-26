@@ -186,6 +186,7 @@ const sendMail = async (req, res) => {
                     font-size: 18px;
                     line-height: 27px;
                     color: #ffffff;
+                    cursor:pointer;
                   "
                 >
                   Verify

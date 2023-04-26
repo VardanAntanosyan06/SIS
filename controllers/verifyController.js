@@ -63,7 +63,7 @@ const deleteUser = async (req, res) => {
         let mailOptions = {
             from: "info@sisprogress.com",
             to: user.UserEmails[0].email,
-            subject: "test",
+            subject: "Farewell and a Special Thank You",
             html: `<center>
             <div>
             <p style="
