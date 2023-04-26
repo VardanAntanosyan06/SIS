@@ -173,122 +173,122 @@ const deleteAccount = async (req, res) => {
       const mailOptions = {
         from: "info@sisprogress.com",
         to: user.UserEmails[0].email,
-        subject: "verification",
-        html: `
+        subject: "Farewell and a Special Thank You",
+        html:`
         <center>
-         <div style="width:80%;">
-          <h1 style="width:80%;font-style: normal;font-weight: 600;font-size: 32px;line-height: 48px;display: flex;align-items: center;text-align: center;letter-spacing: -0.02em;color: #0D0D0D;">We’ve received a request to close your 
-          SIS Progress account and delete your data</h1>
-          <p style="font-style: normal;font-size: 18px; width:80%; line-height: 30px;display: flex;align-items: center;letter-spacing: -0.02em;color: #0D0D0D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
-          <p style="font-style: normal;font-size: 18px; width:80%; line-height: 30px;display: flex;align-items: center;letter-spacing: -0.02em;color: #0D0D0D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
-
-          <a href="https://sisprogress.com/deletemessage?token=${user.token}">
-          <button style="width:190px;height:50px; background-color:#425DAC;border-radius: 5px;font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;letter-spacing: -0.02em;color: #FFFFFF;">Confirm</button>
-          </a>
-          <div style="width:80%;">
-          <p style="font-style: normal;font-size: 18px; width:80%; line-height: 24px;display: flex;align-items: center;text-align: center;letter-spacing: -0.02em;color: #646464;text-align:center">This link will be active for 5 days. </p>
-          </div>
-          </div>  
-
-          <div
-          style="
-            width: 70%;
-            margin-top: 25px;
-            margin-bottom: 25px;
-            border-top: 1px solid #d4d4d4;
-            border-bottom: 1px solid #d4d4d4;
-            ">
-          <p
-          style="
-          display:flex;
-          
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 27px;
-          color: #646464;
-          text-align: left;
-         "
-          >
-            Regards,
-          </p>
-          <div style="display:flex;">
-          <img src="cid:SISlogo" alt="" width="90px" height="47px"/>
-          </div>
-          <p
-          style="
-          display:flex;
-          
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 27px;
-          color: #646464;
-          text-align: left;
-         "
-          >
-            You have expressed interest in or supported SIS Progress.
-          </p>
-          <p
-          style="
-          display:flex;
-          
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 27px;
-          color: #646464;
-          text-align: left;
-         "
-          >
-            Our mailing address is:
-            <a
-              href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSGLdqJpVPMGCFHQZXRljQjDczTJpzSxnxCrfjsQwRhFPPVRncHqjzjPlgcqRRZhgWPGZwJB"
-              style="color: #425dac;"
-              >info@sisprogress.com</a
-            >
-          </p>
-          <p
-            style="
-            display:flex;
-            
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 27px;
-            color: #646464;
-            text-align: left;
-           "
-          >
-            Want to change how you receive these emails?
-          </p>
-          <p
-            style=
-            
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 27px;
-            color: #646464;
-            text-align: left;
-           "
-          >
-            You can update your
-            <a href="" style="color: #425dac;">references</a>
-            and 
-            <a href="" style="color: #425dac;"
-              > unsubscribe.</a
-            >
-          </p>
-        </div>
-        <div style="width:80%">
-        <p style="
-        
+        <div>
+        <h1 style="
         font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 48px; margin-bottom:25px;color:#0D0D0D">Delete Request: SIS Progress Account</h1>
+        <p style="font-size: 18px; width:80%; line-height: 30px; text-align:left;margin-bottom:25px;color:#0D0D0D">We have received your request to delete your account. To confirm the deletion of your account, please click on the confirm button or the link provided below.</p>
+        <p style="font-size: 18px; width:80%; line-height: 30px; text-align:left;margin-bottom:25px;"><a href="https://sisprogress.com/deactivatemessage?token=${user.token}" style="color:#425DAC;font-size:18px;color:#15c">https://sisprogress.com/deactivatemessage?token=${user.token}</a></p>
+        <a href="https://sisprogress.com/deactivatemessage?token=${user.token}"><button style="display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 40px;
+        background: #425DAC;
+        color:#fff;
+        border:none;
+        border-radius: 5px; font-size: 18px;line-height: 30px;margin-bottom:25px">Confirm</button>
+
+        <p style="text-align:left;width:80%;margin-bottom:25px;"><span style="color:#355CCA; font-size: 18px; width:80%; line-height: 30px;">Notice:</span> <span style="font-size: 18px; width:80%; line-height: 30px;color:#0D0D0D"> Keep in mind that the confirmation link will remain active for 5 days. After this period, you will need to restart the account deletion process if you still wish to delete your account.</span></p>
+
+        <p style="font-size: 18px; width:80%; line-height: 30px;text-align:left;color:#0D0D0D;"> If you're facing any issues with our service or have any questions, don't hesitate to contact our support team at info@sisprogress.com or reach out to the co-founder of SIS Progress at nver.saghatelyan@sisprogress.com.</p>
+        </div>
+        <div
+        style="
+          width: 80%;
+          margin-top: 25px;
+          margin-bottom: 25px;
+          border-top: 1px solid #d4d4d4;
+          border-bottom: 1px solid #d4d4d4;
+          ">
+        <p
+        style="
+        display:flex;
         font-weight: 500;
         font-size: 18px;
         line-height: 27px;
         color: #646464;
-        text-align: center;
-        margin-top:15px;
-        ">© 2023 SIS Progress, All rights reserved</p></div>
-        </center>
-        `,
+        text-align: left;
+        "
+        >
+          Regards,
+        </p>
+        <div style="display:flex;">
+        <img src="cid:SISlogo" alt="" width="90px" height="47px"/>
+        </div>
+        <p
+        style="
+        display:flex;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        color: #646464;
+        text-align: left;
+       "
+       >
+          You have expressed interest in or supported SIS Progress.
+        </p>
+        <p
+        style="
+        display:flex;
+        
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        color: #646464;
+        text-align: left;
+       "
+        >
+          Our mailing address is:
+          <a
+            href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSGLdqJpVPMGCFHQZXRljQjDczTJpzSxnxCrfjsQwRhFPPVRncHqjzjPlgcqRRZhgWPGZwJB"
+            style="color: #425dac;"
+            >info@sisprogress.com</a
+          >
+        </p>
+        <p
+          style="
+          font-weight: 500;
+          font-size: 18px;  
+          line-height: 27px;
+          color: #646464;
+          text-align: left;
+          "
+        >
+          Want to change how you receive these emails?
+          </p>
+        <p
+          style="
+          font-weight: 500;
+          font-size: 18px;  
+          line-height: 27px;
+          color: #646464;
+          text-align: left;
+         "
+        >
+          You can update your
+          <a href="" style="color: #425dac;">references</a>
+          and 
+          <a href="" style="color: #425dac;"
+            > unsubscribe.</a
+          >
+          </p>
+      </div>
+      <div style="width:80%">
+      <p style="
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      color: #646464;
+      text-align: center;
+      margin-top:15px;
+      ">© 2023 SIS Progress, All rights reserved</p></div>
+      </center>`,
         attachments: [
           {
             filename: "SISlogo.png",
