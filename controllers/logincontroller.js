@@ -173,7 +173,7 @@ const deleteAccount = async (req, res) => {
       const mailOptions = {
         from: "info@sisprogress.com",
         to: user.UserEmails[0].email,
-        subject: "Farewell and a Special Thank You",
+        subject: "SIS Progress: Are you sure you want to confirm your account deletion?",
         html:`
         <center>
         <div>
