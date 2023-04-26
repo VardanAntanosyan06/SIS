@@ -224,7 +224,7 @@ const deactiveUser = async (req, res) => {
         let mailOptions = {
             from: "info@sisprogress.com",
             to: user.UserEmails[0].email,
-            subject: "test",
+            subject: " We Hope to See You Again Soon!",
             html: `<center>
             <div>
             <p style="
