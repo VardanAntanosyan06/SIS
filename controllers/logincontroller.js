@@ -9,6 +9,7 @@ const moment = require("moment");
 const DeletedUsers = require("../models").DeletedUsers;
 const DeactivatedUsers = require("../models").DeactivatedUsers;
 const DeletionReasone = require("../models").DeletionReasonel
+const DeactivationReasone = require("../models").DeactivationReasone
 
 const login = async (req, res) => {
   try {
@@ -489,19 +490,27 @@ const deactivate = async (req, res) => {
 
 const deletionReasone = async (req, res) => {
   try {
-    const { reasone } = req.body;
+    const { reasone,type } = req.body;
     const { authorization: token } = req.headers;
     const user = await UserModel.findOne({
       where: { token: token.replace("Bearer ", "") },
     });
-    DeletionReasone.create({
+    if (type="Delete") {   
+      await DeletionReasone.create({
+        userId:user.id,
+        reasone
+      })
+      return res.json({success:true})
+    }
+    await DeactivationReasone.create({
       userId:user.id,
       reasone
     })
     return res.json({success:true})
-
-  } catch (error) {}
-};
+    } catch (error) {
+      console.log(error);
+    }
+  };
 module.exports = {
   login,
   logOut,
