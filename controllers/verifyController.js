@@ -101,8 +101,9 @@ const deactiveUser = async (req, res) => {
           mailOptions = {
             from: "info@sisprogress.com",
             to: email,
-            subject: "Verify Secondary Email",
-            html: ``,
+            subject: "Account Deactivation - We Hope to See You Again Soon!",
+            html: `<h1>Text: Dear ${user.fullName},</h1> <p>We noticed that you've chosen to deactivate your account for a month. We appreciate the time you've spent with us as part of our college admissions consulting community and understand that sometimes a break is needed.</p>`,
+
             attachments: [
               {
                 filename: "Email.png",
