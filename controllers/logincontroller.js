@@ -495,7 +495,7 @@ const deletionReasone = async (req, res) => {
     const user = await UserModel.findOne({
       where: { token: token.replace("Bearer ", "") },
     });
-    if (type="Delete") {   
+    if (type==="Delete") {   
       await DeletionReasone.create({
         userId:user.id,
         reasone
@@ -511,6 +511,7 @@ const deletionReasone = async (req, res) => {
       console.log(error);
     }
   };
+
 module.exports = {
   login,
   logOut,
@@ -518,5 +519,5 @@ module.exports = {
   getUser,
   deleteAccount,
   deactivate,
-  deletionReasone
+  deletionReasone,
 };

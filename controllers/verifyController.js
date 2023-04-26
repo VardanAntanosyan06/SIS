@@ -77,6 +77,7 @@ const deactiveUser = async (req, res) => {
       include: [DeactivatedUsers],
     });
     if (user) {
+
       if (
         user.DeactivatedUser &&
         moment().diff(user.DeactivatedUser.deactivateTime, "days") <= 5
@@ -85,6 +86,73 @@ const deactiveUser = async (req, res) => {
         user.DeactivatedUser.deactivateTime = moment();
 
         user.DeactivatedUser.save();
+
+        const transporter = nodemailer.createTransport({
+          host: "mail.privateemail.com",
+          port: 465,
+          secure: true,
+          auth: {
+            user: process.env.EMAIL,
+            pass: process.env.PASSWORD,
+          },
+        });
+        let mailOptions = {};
+        if (role == "Secondary") {
+          mailOptions = {
+            from: "info@sisprogress.com",
+            to: email,
+            subject: "Verify Secondary Email",
+            html: ``,
+            attachments: [
+              {
+                filename: "Email.png",
+                path: "./controllers/Email.png",
+                cid: "logo",
+              },
+            ],
+          };
+        } else {
+          mailOptions = {
+            from: "info@sisprogress.com",
+            to: email,
+            subject: "Verify Email",
+            html: `<center>
+          <img src='cid:logo' style="width:450px;height:250px;" >
+          <h2>Reset Email</h2>
+          <p>
+           You've entered <b>${email}</b> as the email address for your account.
+           Please verify this email address by clicking button below. 
+          </p>
+          <br>
+          <br>
+           <button style="background-color: blue;
+           border: none;
+           border-radius:20px;
+           color: white;
+           padding: 15px 32px;
+           text-align: center;
+           text-decoration: none;
+           display: inline-block;
+           ">
+             <a href='https://sisprogress.com/primaryemail?token=${item.token}'
+             style="color:#fff;text-decoration-line: none;font-size:20px;">Verify your email address</a>
+           </button>
+          <br>
+           <b>if the button is not working please use the link below</b>
+           <br>
+          <br>
+             <b><a href='https://sisprogress.com/primaryemail?token=${item.token}'>https://sisprogress.com/primaryemail?token=${item.token} </a></b>
+           </center>`,
+            attachments: [
+              {
+                filename: "Email.png",
+                path: "./controllers/Email.png",
+                cid: "logo",
+              },
+            ],
+          };
+        }
+        transporter.sendMail(mailOptions);
         return res.json({ success: true });
       } else {
         return res.status(403).json("token timeout!");
