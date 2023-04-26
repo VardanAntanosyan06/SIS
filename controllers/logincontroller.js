@@ -8,7 +8,7 @@ const nodemailer = require("nodemailer");
 const moment = require("moment");
 const DeletedUsers = require("../models").DeletedUsers;
 const DeactivatedUsers = require("../models").DeactivatedUsers;
-const DeletionReasone = require("../models").DeletionReasonel
+const DeletionReasone = require("../models").DeletionReasone
 const DeactivationReasone = require("../models").DeactivationReasone
 
 const login = async (req, res) => {
