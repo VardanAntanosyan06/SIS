@@ -6,33 +6,63 @@ const { Op, where } = require("sequelize");
 const crypto = require("crypto");
 const nodemailer = require("nodemailer");
 const moment = require("moment");
-const DeletedUsers = require("../models").DeletedUsers
-const DeactivatedUsers = require("../models").DeactivatedUsers
+const DeletedUsers = require("../models").DeletedUsers;
+const DeactivatedUsers = require("../models").DeactivatedUsers;
+const DeletionReasone = require("../models").DeletionReasonel
 
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
     let token;
-    const allUserEmails = await UserModel.findAll({include:[{model:UserEmails,where:{email}},DeletedUsers]});
-    const user = allUserEmails.filter((e)=>e.DeletedUser===null || e.DeletedUser.isVerified===false)[0];
-    // const user = await UserModel.findOne({
-    //   include:[{model:UserEmails,where:{email}},DeletedUsers]
-    // }); 
-    if (
-      user && user.UserEmails &&
-      user.UserEmails[0].isVerified &&
-      (await bcrypt.compareSync(password, user.UserEmails[0].password))
-      &&
-      (!user.DeletedUser || user.DeletedUser.isVerified === false)) {
-      if (user.token) {
-        token = user.token;
-      } else {
-        token = jwt.sign({ user_id: user.id, email }, process.env.SECRET);
-        user.token = token;
-        user.save();
-      }
+    const allUserEmails = await UserModel.findAll({
+      include: [
+        { model: UserEmails, where: { email } },
+        DeletedUsers,
+        DeactivatedUsers,
+      ],
+    });
+    const user = allUserEmails.filter(
+      (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
+    )[0];
 
-      return res.status(200).json({ token: user.token, success: true });
+    if (
+      user &&
+      user.UserEmails &&
+      user.UserEmails[0].isVerified &&
+      (await bcrypt.compareSync(password, user.UserEmails[0].password)) &&
+      (!user.DeletedUser || user.DeletedUser.isVerified === false)
+    ) {
+      if (
+        user.DeactivatedUser !== null &&
+        user.DeactivatedUser.isVerified === true &&
+        moment().diff(user.DeactivatedUser.deactivateTime, "days") >= 30
+      ) {
+        await DeletedUsers.destroy({
+          where: { userId: user.id },
+        });
+
+        await DeletedUsers.create({
+          userId: user.id,
+          deleteTime: moment(),
+          isVerified: true,
+        });
+        user.token = null;
+
+        await user.save();
+        await DeactivatedUsers.destroy({ where: { userId: user.id } });
+        return res.status(403).json("invalid email or password");
+      } else {
+        await DeactivatedUsers.destroy({ where: { userId: user.id } });
+        if (user.token) {
+          token = user.token;
+        } else {
+          token = jwt.sign({ user_id: user.id, email }, process.env.SECRET);
+          user.token = token;
+          user.save();
+        }
+
+        return res.status(200).json({ token: user.token, success: true });
+      }
     }
     return res.status(403).json("invalid email or password");
   } catch (error) {
@@ -68,7 +98,7 @@ const isLogined = async (req, res) => {
 
     const user = await UserModel.findOne({
       where: { token },
-      include:[DeletedUsers]
+      include: [DeletedUsers],
     });
     if (user) {
       const secondaryEmail = await UserEmails.findOne({
@@ -84,15 +114,19 @@ const isLogined = async (req, res) => {
       });
 
       let be = false;
-      if(user.img=="http://drive.google.com/uc?export=view&id=1T4h9d1wyGy-apEyrTW_D6C1UvdLSE166")be = true
+      if (
+        user.img ==
+        "http://drive.google.com/uc?export=view&id=1T4h9d1wyGy-apEyrTW_D6C1UvdLSE166"
+      )
+        be = true;
       const emails = {
         ...user.dataValues,
         firstEmail,
         secondaryEmail,
-        be
+        be,
       };
-   
-        return res.status(200).json(emails)
+
+      return res.status(200).json(emails);
     }
     return res.status(404).send("not found");
   } catch (error) {
@@ -110,7 +144,7 @@ const getUser = async (req, res) => {
     return res.json(user);
   } catch (error) {
     console.log(error);
-    return res.json("something went wrong")
+    return res.json("something went wrong");
   }
 };
 
@@ -263,17 +297,17 @@ const deleteAccount = async (req, res) => {
         ],
       };
       transporter.sendMail(mailOptions);
-    
-    await DeletedUsers.destroy({
-      where:{userId:user.id}
-    })
-    
-     await DeletedUsers.create({
-        userId:user.id,
-        deleteTime:moment(),
-        isVerified:false
-      })
-      
+
+      await DeletedUsers.destroy({
+        where: { userId: user.id },
+      });
+
+      await DeletedUsers.create({
+        userId: user.id,
+        deleteTime: moment(),
+        isVerified: false,
+      });
+
       return res.status(200).json({ success: true });
     }
     return res.status(403).json("invalid password");
@@ -307,7 +341,8 @@ const deactivate = async (req, res) => {
       const mailOptions = {
         from: "info@sisprogress.com",
         to: user.UserEmails[0].email,
-        subject: "SIS Progress: Are you sure you want to confirm your account deactivation?",
+        subject:
+          "SIS Progress: Are you sure you want to confirm your account deactivation?",
         html: `
         <center>
         <div>
@@ -432,17 +467,17 @@ const deactivate = async (req, res) => {
         ],
       };
       transporter.sendMail(mailOptions);
-    
-    await DeactivatedUsers.destroy({
-      where:{userId:user.id}
-    })
-    
-     await DeactivatedUsers.create({
-       userId:user.id,
-        deactivateTime:moment(),
-        isVerified:false
-      })
-      
+
+      await DeactivatedUsers.destroy({
+        where: { userId: user.id },
+      });
+
+      await DeactivatedUsers.create({
+        userId: user.id,
+        deactivateTime: moment(),
+        isVerified: false,
+      });
+
       return res.status(200).json({ success: true });
     }
     return res.status(403).json("invalid password");
@@ -452,11 +487,27 @@ const deactivate = async (req, res) => {
   }
 };
 
+const deletionReasone = async (req, res) => {
+  try {
+    const { reasone } = req.body;
+    const { authorization: token } = req.headers;
+    const user = await UserModel.findOne({
+      where: { token: token.replace("Bearer ", "") },
+    });
+    DeletionReasone.create({
+      userId:user.id,
+      reasone
+    })
+    return res.json({success:true})
+
+  } catch (error) {}
+};
 module.exports = {
   login,
   logOut,
   isLogined,
   getUser,
   deleteAccount,
-  deactivate
+  deactivate,
+  deletionReasone
 };

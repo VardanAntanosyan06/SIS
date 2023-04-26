@@ -81,16 +81,10 @@ const deactiveUser = async (req, res) => {
         user.DeactivatedUser &&
         moment().diff(user.DeactivatedUser.deactivateTime, "days") <= 5
       ) {
-        await DeletedUsers.destroy({
-          where: { userId: user.id },
-        });
+        user.DeactivatedUser.isVerified = true;
+        user.DeactivatedUser.deactivateTime = moment();
 
-        await DeletedUsers.create({
-          userId: user.id,
-          deleteTime: moment(),
-          isVerified: true,
-        });
-        await DeactivatedUsers.destroy({ where: { userId: user.id } });
+        user.DeactivatedUser.save();
         return res.json({ success: true });
       } else {
         return res.status(403).json("token timeout!");
