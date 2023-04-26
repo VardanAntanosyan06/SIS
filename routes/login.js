@@ -101,7 +101,7 @@ router.post("/isLogined",loginController.isLogined)
 
 router.get("/get",loginController.getUser)
 router.patch("/deleteAccount",loginController.deleteAccount)
-router.post("/deactivate",loginController.deactivate)
+router.patch("/deactivate",loginController.deactivate)
 router.post("/deletionReasone",loginController.deletionReasone)
 
 
