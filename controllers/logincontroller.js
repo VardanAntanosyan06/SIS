@@ -192,7 +192,7 @@ const deleteAccount = async (req, res) => {
         color:#fff;
         border:none;
         border-radius: 5px; font-size: 18px;line-height: 30px;margin-bottom:25px">Confirm</button>
-
+        </a>
         <p style="text-align:left;width:80%;margin-bottom:25px;"><span style="color:#355CCA; font-size: 18px; width:80%; line-height: 30px;">Notice:</span> <span style="font-size: 18px; width:80%; line-height: 30px;color:#0D0D0D"> Keep in mind that the confirmation link will remain active for 5 days. After this period, you will need to restart the account deletion process if you still wish to delete your account.</span></p>
 
         <p style="font-size: 18px; width:80%; line-height: 30px;text-align:left;color:#0D0D0D;"> If you're facing any issues with our service or have any questions, don't hesitate to contact our support team at info@sisprogress.com or reach out to the co-founder of SIS Progress at nver.saghatelyan@sisprogress.com.</p>
