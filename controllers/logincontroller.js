@@ -352,8 +352,8 @@ const deactivate = async (req, res) => {
         font-size: 32px;
         line-height: 48px; margin-bottom:25px;color:#0D0D0D">Deactivate Request: SIS Progress Account</h1>
         <p style="font-size: 18px; width:80%; line-height: 30px; text-align:left;margin-bottom:25px;color:#0D0D0D">We have received your request to deactivate your account. To confirm the deactivation of your account, please click on the confirm button or the link provided below.</p>
-        <p style="font-size: 18px; width:80%; line-height: 30px; text-align:left;margin-bottom:25px;"><a style="color:#425DAC;font-size:18px;color:#15c">${user.token}</a></p>
-        <button style="display: flex;
+        <p style="font-size: 18px; width:80%; line-height: 30px; text-align:left;margin-bottom:25px;"><a href="https://sisprogress.com/deactivatemessage?token=${user.token}" style="color:#425DAC;font-size:18px;color:#15c">https://sisprogress.com/deactivatemessage?token=${user.token}</a></p>
+        <a href="https://sisprogress.com/deactivatemessage?token=${user.token}"><button style="display: flex;
         justify-content: center;
         align-items: center;
         padding: 8px 40px;
