@@ -54,8 +54,13 @@ module.exports = (sequelize, DataTypes) => {
   const SubTask_per_User = sequelize.define("SubTask_per_User");
   const UserEmails = sequelize.define("UserEmails");
   const DeletedUsers = sequelize.define("DeletedUsers")
+  const DeactivatedUsers = sequelize.define("DeactivatedUsers")
 
   Users.hasOne(DeletedUsers,{
+    foreignKey:"userId"
+  })
+
+  Users.hasOne(DeactivatedUsers,{
     foreignKey:"userId"
   })
 

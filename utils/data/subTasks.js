@@ -1482,6 +1482,116 @@ const subtasks = [
     taskId: 150,
     name: "Organize games/exercises that are carried out by at least 30 other volunteers",
     points: 1,
+  },
+  {
+    taskId: 151,
+    name: "Deliver financial oversight and advice to corporate stakeholders to improve strategic planning",
+    points: 3,
+  },
+  {
+    taskId: 151,
+    name: "Craft promotional materials in English",
+    points: 2,
+  },  {
+    taskId: 152,
+    name: "Conduct research with distinguished economists",
+    points: 4,
+  },  {
+    taskId: 152,
+    name: "Attend banking and economic conferences",
+    points: 1,
+  },  {
+    taskId: 152,
+    name: "Moderate debates on prominent social issues",
+    points: 2,
+  },  {
+    taskId: 153,
+    name: "Conduct research linked to Armenia's socio-economic modernization",
+    points: 3,
+  },  {
+    taskId: 153,
+    name: "Write business affairs reports",
+    points: 2,
+  },  {
+    taskId: 153,
+    name: "Receive the Outstanding Research Award",
+    points: 2,
+  },  {
+    taskId: 154,
+    name: "Conduct educational research in order to find innovative perspectives on how to solve Armenia's current economic challengess",
+    points: 3,
+  },  {
+    taskId: 154,
+    name: "Author at least three journal articles",
+    points: 3,
+  },  {
+    taskId: 155,
+    name: "Recruit 50+",
+    points: 2,
+  },  {
+    taskId: 155,
+    name: "Attend weekly problem-solving sessions",
+    points: 1,
+  },  {
+    taskId: 155,
+    name: "Invite guest speakers",
+    points: 1,
+  },  {
+    taskId: 155,
+    name: "Raise $600 for maths interactive books for the school library",
+    points: 2,
+  },  {
+    taskId: 156,
+    name: "Captain team of 15 in multiple national maths contests",
+    points: 4,
+  },  {
+    taskId: 156,
+    name: "Qualify for National Maths Olympiad in Y10",
+    points: 1,
+  },  {
+    taskId: 156,
+    name: "Attend the high Gold Intermediate Maths Challenge in Y11",
+    points: 1,
+  },  {
+    taskId: 157,
+    name: "Analyze price discrimination's impact on Yerevan's major supermarket chains",
+    points: 2.5,
+  },  {
+    taskId: 157,
+    name: "Write a final paper on the evolution of coordinated finances",
+    points: 4,
+  },  {
+    taskId: 158,
+    name: "Organise parliamentary debate simulations",
+    points: 2,
+  },  {
+    taskId: 158,
+    name: "Moderate workshops to 100+ students",
+    points: 3,
+  },  {
+    taskId: 158,
+    name: "Host university professors",
+    points: 1.5,
+  },  {
+    taskId: 159,
+    name: "Welcome guests at the Autorara Humanitarian Initiative events",
+    points: 0.5,
+  },  {
+    taskId: 159,
+    name: "Help raise $X towards humanitarian projects worldwide",
+    points: 1.5,
+  },  {
+    taskId: 160,
+    name: "Attend regular meetings",
+    points: 0.5,
+  },  {
+    taskId: 160,
+    name: "Perform 40 hours of community service per year",
+    points: 1,
+  },  {
+    taskId: 160,
+    name: "Organize school events such as Seminar Day",
+    points: 1.5,
   }
 ];
 

@@ -3,11 +3,12 @@ const UserModel = require("../models").Users;
 const jwt = require("jsonwebtoken");
 const moment = require("moment");
 const DeletedUsers = require("../models").DeletedUsers;
+const DeactivatedUsers = require("../models").DeactivatedUsers;
 
 const verify = async (req, res) => {
   const token = req.query.token;
   const item = await model.findOne({ where: { token } });
-  try { 
+  try {
     if (item) {
       if (
         item.isVerified === false &&
@@ -44,28 +45,67 @@ const deleteUser = async (req, res) => {
       where: { token },
       include: [DeletedUsers],
     });
-    if (user){
-    if(user.DeletedUser && (moment().diff(user.DeletedUser.deleteTime, "days") <= 5)) {
-      user.DeletedUser.isVerified = true;
-      user.DeletedUser.deleteTime = null;
-      user.token = null;
+    if (user) {
+      if (
+        user.DeletedUser &&
+        moment().diff(user.DeletedUser.deleteTime, "days") <= 5
+      ) {
+        user.DeletedUser.isVerified = true;
+        user.DeletedUser.deleteTime = null;
+        user.token = null;
 
-      user.DeletedUser.save();
-      user.save()
-      return res.json({ success: true });
-    }else {
-      return res.status(403).json("token timeout!")
-    }}
-    else{
+        user.DeletedUser.save();
+        user.save();
+        return res.json({ success: true });
+      } else {
+        return res.status(403).json("token timeout!");
+      }
+    } else {
       return res.status(404).json("user not found!");
     }
   } catch (error) {
     console.log(error);
-    return res.status(500).json("something went wrong")
+    return res.status(500).json("something went wrong");
+  }
+};
+
+const deactiveUser = async (req, res) => {
+  try {
+    const { token } = req.body;
+    const user = await UserModel.findOne({
+      where: { token },
+      include: [DeactivatedUsers],
+    });
+    if (user) {
+      if (
+        user.DeactivatedUser &&
+        moment().diff(user.DeactivatedUser.deactivateTime, "days") <= 5
+      ) {
+        await DeletedUsers.destroy({
+          where: { userId: user.id },
+        });
+
+        await DeletedUsers.create({
+          userId: user.id,
+          deleteTime: moment(),
+          isVerified: true,
+        });
+        await DeactivatedUsers.destroy({ where: { userId: user.id } });
+        return res.json({ success: true });
+      } else {
+        return res.status(403).json("token timeout!");
+      }
+    } else {
+      return res.status(404).json("user not found!");
+    }
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json("something went wrong");
   }
 };
 
 module.exports = {
   verify,
   deleteUser,
+  deactiveUser
 };

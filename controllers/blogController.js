@@ -45,76 +45,87 @@ const addBlog = async (req, res) => {
       authorname,
       title,
       userName,
-      contactEmail,
+      userEmail,
       phone,
       topic,
       twitter,
       personalLink,
     } = req.body;
 
-    const {blogs,images} = req.files
+    const { blogs, images } = req.files;
 
     const keyPath = "controllers/upbeat-airfoil-379410-ffc79425eb65.json";
-      const scopes = ["https://www.googleapis.com/auth/drive"];
+    const scopes = ["https://www.googleapis.com/auth/drive"];
 
-      const auth = await new google.auth.GoogleAuth({
-        keyFile: keyPath,
-        scopes,
-      });
+    const auth = await new google.auth.GoogleAuth({
+      keyFile: keyPath,
+      scopes,
+    });
 
-     let NewImages =  await Promise.all(images.map(async (e)=>{
-      const bufferStream = new stream.PassThrough();
-      bufferStream.end(e.data);
+    let NewImages = await Promise.all(
+      images.map(async (e) => {
+        const bufferStream = new stream.PassThrough();
+        bufferStream.end(e.data);
         const { data } = await google
-        .drive({ version: "v3", auth })
-        .files.create({
-          media: {
-            mimeType: e.mimeType,
-            body: bufferStream,
-          },
+          .drive({ version: "v3", auth })
+          .files.create({
+            media: {
+              mimeType: e.mimeType,
+              body: bufferStream,
+            },
 
-          requestBody: {
-            name: e.name,
-            parents: ["1hzdBtjI_lMzQfzT0ugmbqHuWJd5N070s"],
-          },
-          fields: "id,name",
-        });
-        return {data:data.name,id:"http://drive.google.com/uc?export=view&id="+data.id};
-     }))
+            requestBody: {
+              name: e.name,
+              parents: ["1hzdBtjI_lMzQfzT0ugmbqHuWJd5N070s"],
+            },
+            fields: "id,name",
+          });
+        return {
+          data: data.name,
+          id: "http://drive.google.com/uc?export=view&id=" + data.id,
+        };
+      })
+    );
 
-     let NewBlogs = await Promise.all(blogs.map(async (e)=>{
-      const bufferStream = new stream.PassThrough();
-      bufferStream.end(e.data);
+    let NewBlogs = await Promise.all(
+      blogs.map(async (e) => {
+        const bufferStream = new stream.PassThrough();
+        bufferStream.end(e.data);
 
-      const { data } = await google
-      .drive({ version: "v3", auth })
-      .files.create({
-        media: {
-          mimeType: e.mimeType,
-          body: bufferStream,
-        },
+        const { data } = await google
+          .drive({ version: "v3", auth })
+          .files.create({
+            media: {
+              mimeType: e.mimeType,
+              body: bufferStream,
+            },
 
-        requestBody: {
-          name: e.name,
-          parents: ["1hzdBtjI_lMzQfzT0ugmbqHuWJd5N070s"],
-        },
-        fields: "id,name",
-      });
-      return {data:data.name,id:"http://drive.google.com/uc?export=view&id="+data.id};
-   }));
-   
-   await toBeBlogs.create({
-    authorname,
-    title,
-    userName,
-    phone,
-    topic,
-    twitter,
-    personalLink,
-    blogs:NewBlogs,
-    images:NewBlogs
-  })
-    return res.json({ success: true});
+            requestBody: {
+              name: e.name,
+              parents: ["1hzdBtjI_lMzQfzT0ugmbqHuWJd5N070s"],
+            },
+            fields: "id,name",
+          });
+        return {
+          data: data.name,
+          id: "http://drive.google.com/uc?export=view&id=" + data.id,
+        };
+      })
+    );
+
+    await toBeBlogs.create({
+      authorname,
+      title,
+      userName,
+      userEmail,
+      phone,
+      topic,
+      twitter,
+      personalLink,
+      blogs: NewBlogs,
+      images: NewBlogs,
+    });
+    return res.json({ success: true });
   } catch (err) {
     console.log(err);
   }

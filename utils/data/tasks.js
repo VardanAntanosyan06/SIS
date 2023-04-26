@@ -1500,6 +1500,98 @@ const Tasks = [
     imgWeb:
       "http://drive.google.com/uc?export=view&id=1oHKhGtZSD6M9sPAhm2EisqeoIbaxMlhX",
   },
+  {
+    facultyName: "INTERNSHIP",
+    companyName: "Yeremyan Projects",
+    positionName: "Intern",
+    universityId: 11,
+    imgMobile:
+      "http://drive.google.com/uc?export=view&id=1EdH--Xnl26xk39l11ftVOIKzhmmxMfPp",
+    imgWeb:
+      "http://drive.google.com/uc?export=view&id=1qmpyQBiQOGs4YSepqZfcSCQ7J4hM8Boj",
+  },
+  {
+    facultyName: "CAREER ORIENTED",
+    companyName: "Association of Accountants of Armenia",
+    positionName: "Member",
+    universityId: 11,
+    imgMobile:
+      "http://drive.google.com/uc?export=view&id=11uT1UG3upuKWy8_o6AggEx8nHidHKtX7",
+    imgWeb:
+      "http://drive.google.com/uc?export=view&id=1xD6BmyLL_mbajmGlH2geLFFLNK__C1tk",
+  },  {
+    facultyName: "RESEARCH",
+    companyName: "Yerkir Strategic Programming Foundation",
+    positionName: "Researcher",
+    universityId: 11,
+    imgMobile:
+      "http://drive.google.com/uc?export=view&id=1qtMi79qVPnYUk4gne78yR3RUZnVUM4Jl",
+    imgWeb:
+      "http://drive.google.com/uc?export=view&id=1OhkhXbNen_vL9g-NCyx_jO1SiWkIyab_",
+  },  {
+    facultyName: "JOURNALISM/PUBLICATION",
+    companyName: "Yerkir Editorial",
+    positionName: "Researcher",
+    universityId: 11,
+    imgMobile:
+      "http://drive.google.com/uc?export=view&id=1RbW0tBXCiQnX7GTPEsoNeRVKto0oXGPM",
+    imgWeb:
+      "http://drive.google.com/uc?export=view&id=1N9zvtss0fYx3W3yZVDVo1APjzb1uVKZy",
+  },  {
+    facultyName: "ACADEMIC",
+    companyName: "Maths Problem Solving Society",
+    positionName: "Founder & Co-Leader",
+    universityId: 11,
+    imgMobile:
+      "http://drive.google.com/uc?export=view&id=1zcHx8jgpNYSRo7gd9AeNIMl8to4U0YUh",
+    imgWeb:
+      "http://drive.google.com/uc?export=view&id=1kClB9LEBC2JbcVLqY47aPCmc20Dp7kzZ",
+  },  {
+    facultyName: "ACADEMIC",
+    companyName: "School's Olympiad Team",
+    positionName: "Member",
+    universityId: 11,
+    imgMobile:
+      "http://drive.google.com/uc?export=view&id=1aBRDmrXhJjz4dxhXgYYsHnRO4ZZ5WUTO",
+    imgWeb:
+      "http://drive.google.com/uc?export=view&id=1EQC9hHP8yWq73H4Vdye3l1tgPUKZmrxn",
+  },  {
+    facultyName: "RESEARCH",
+    companyName: "Quantum College",
+    positionName: "Research Assistant",
+    universityId: 11,
+    imgMobile:
+      "http://drive.google.com/uc?export=view&id=1QGlsNbYr3k8JvigIzADXSTz-1EqhB6SP",
+    imgWeb:
+      "http://drive.google.com/uc?export=view&id=1NJgmIU0sR2WlS7O0C4WClidqv7YLzx5h",
+  },  {
+    facultyName: "DEBATE/SPEECH",
+    companyName: "College Debate Club",
+    positionName: "Co-Founder",
+    universityId: 11,
+    imgMobile:
+      "http://drive.google.com/uc?export=view&id=1shj3r1wN6SHRekMkSrPkalp27rVco7ar",
+    imgWeb:
+      "http://drive.google.com/uc?export=view&id=1-9A7a_BtYjCvD4s-nUhqBt7o19TNsfg_",
+  },  {
+    facultyName: "Volunteer",
+    companyName: "Aurora Humanitarian Initiative",
+    positionName: "Volunteer",
+    universityId: 11,
+    imgMobile:
+      "http://drive.google.com/uc?export=view&id=1Bxl63n4WHCMNZJGicN6X40PFdvKp5PnT",
+    imgWeb:
+      "http://drive.google.com/uc?export=view&id=1UY2pA9PKMFJuRt8asfG7s7WkkH0ksm9Z",
+  },  {
+    facultyName: "Volunteer",
+    companyName: "National Honours Society",
+    positionName: "Voluntary member",
+    universityId: 11,
+    imgMobile:
+      "http://drive.google.com/uc?export=view&id=1nm5p-lWvz8yE9nQ2k6VsokiX2meDKYNz",
+    imgWeb:
+      "http://drive.google.com/uc?export=view&id=1MJBxQMw_8vsT1M9h0fob8sKBcX-zWWNA",
+  },
 ];
 
 module.exports = {
