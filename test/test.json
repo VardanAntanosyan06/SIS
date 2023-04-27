@@ -1,0 +1,1243 @@
+[
+  {
+    "FACULTY_NAME": "SOCIAL JUSTICE",
+    "COMPANY_NAME": "Cancer Action Network",
+    "POSITION_NAME": "Sec. and Spokesperson",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 1,
+    "__EMPTY_1": "SOCIAL JUSTICE",
+    "__EMPTY_2": "SOCIAL JUSTICE"
+  },
+  {
+    "FACULTY_NAME": "RESEARCH",
+    "COMPANY_NAME": "Australian Educational Research, University of Newcastle",
+    "POSITION_NAME": "Student Researcher",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 2,
+    "__EMPTY_1": "RESEARCH",
+    "__EMPTY_2": "RESEARCH"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Cancer Council  New South Wales",
+    "POSITION_NAME": "Youth Ambassador",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 3,
+    "__EMPTY_1": "COMMUNITY SERVICE",
+    "__EMPTY_2": "COMMUNITY SERVICE"
+  },
+  {
+    "FACULTY_NAME": "PUBLICATION/JOURNALISM",
+    "COMPANY_NAME": "Group Co-leader",
+    "POSITION_NAME": "Society of Freelance Journalists",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 4,
+    "__EMPTY_1": "PUBLICATION/JOURNALISM",
+    "__EMPTY_2": "PUBLICATION/JOURNALISM"
+  },
+  {
+    "FACULTY_NAME": "SOCIAL JUSTICE",
+    "COMPANY_NAME": "Oaktree (largest youth. led org).",
+    "POSITION_NAME": "Community Leader",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 5,
+    "__EMPTY_1": "DEBATE/SPEECH",
+    "__EMPTY_2": "DEBATE/SPEECH"
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "(MHS Speaking Club) ",
+    "POSITION_NAME": "Club Leader",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 6,
+    "__EMPTY_1": "ACADEMIC",
+    "__EMPTY_2": "ACADEMIC"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Newcastle Youth Council\n",
+    "POSITION_NAME": "Deputy Mayor",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 7,
+    "__EMPTY_1": "INTERNSHIP",
+    "__EMPTY_2": "INTERNSHIP"
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "MHS Debate Team",
+    "POSITION_NAME": "Leader",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 8,
+    "__EMPTY_1": "SCIENCE/MATH",
+    "__EMPTY_2": "SCIENCE/MATH"
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Harvard Summer School (7 week programs)\n",
+    "POSITION_NAME": "Student",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 9,
+    "__EMPTY_1": "RELIGIOUS",
+    "__EMPTY_2": "RELIGIOUS"
+  },
+  {
+    "FACULTY_NAME": "INTERNSHIP",
+    "COMPANY_NAME": "Minister for Environment & Heritage",
+    "POSITION_NAME": "Intern",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 10,
+    "__EMPTY_1": "DANCE",
+    "__EMPTY_2": "DANCE"
+  },
+  {
+    "FACULTY_NAME": "RESEARCH",
+    "COMPANY_NAME": "American Heritage Student Research Program",
+    "POSITION_NAME": "Student Researcher",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 11,
+    "__EMPTY_1": "STUDENT GOVT. POLITICS",
+    "__EMPTY_2": "STUDENT GOVT. POLITICS"
+  },
+  {
+    "FACULTY_NAME": "RESEARCH",
+    "COMPANY_NAME": "MIT Research Science Institute Summer Program",
+    "POSITION_NAME": "Researcher",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 12,
+    "__EMPTY_1": "THEATRE/DRAMA",
+    "__EMPTY_2": "THEATRE/DRAMA"
+  },
+  {
+    "FACULTY_NAME": "SOCIAL JUSTICE",
+    "COMPANY_NAME": "Butterfly Project (Genocide awareness educational initiative)",
+    "POSITION_NAME": "Director and Archive Founder",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 13,
+    "__EMPTY_1": "MUSIC VOCAL",
+    "__EMPTY_2": "MUSIC VOCAL"
+  },
+  {
+    "FACULTY_NAME": "SOCIAL JUSTICE",
+    "COMPANY_NAME": "Dreams of Hope (Pen Pal program)",
+    "POSITION_NAME": "Founder and Director",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 14,
+    "__EMPTY_1": "ATHLETICS JV/VARSITY",
+    "__EMPTY_2": "ATHLETICS JV/VARSITY"
+  },
+  {
+    "FACULTY_NAME": "SCIENCE/MATH",
+    "COMPANY_NAME": "AHS Sigma Xi (Research Honors Society) ",
+    "POSITION_NAME": "Vice President",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 15,
+    "__EMPTY_1": "OTHER/CLUB ACTIVITY",
+    "__EMPTY_2": "OTHER/CLUB ACTIVITY"
+  },
+  {
+    "FACULTY_NAME": "SOCIAL JUSTICE",
+    "COMPANY_NAME": "Tikkun Olam (Jewish cultural group)\n",
+    "POSITION_NAME": "Co-President",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 16,
+    "__EMPTY_1": "COMPUTER/TECHNOLOGY",
+    "__EMPTY_2": "COMPUTER/TECHNOLOGY"
+  },
+  {
+    "FACULTY_NAME": "RELIGIOUS",
+    "COMPANY_NAME": "Our Lady of Health Mission League ",
+    "POSITION_NAME": "Migration Mass Activities Coordinator",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 17,
+    "__EMPTY_1": "THEATER/DRAMA",
+    "__EMPTY_2": "THEATER/DRAMA"
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "AHS Model UN",
+    "POSITION_NAME": "Exec Board & Social, Humanitarian & Cultural Chair",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 18,
+    "__EMPTY_1": "JOURNALISM/PUBLICATION",
+    "__EMPTY_2": "JOURNALISM/PUBLICATION"
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "AHS English Honors Society Organized nationa",
+    "POSITION_NAME": "President",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 19,
+    "__EMPTY_1": "OTHER CLUB/ACTIVITY",
+    "__EMPTY_2": "OTHER CLUB/ACTIVITY"
+  },
+  {
+    "FACULTY_NAME": "DANCE",
+    "COMPANY_NAME": "Temple of Dance (Dance school) ",
+    "POSITION_NAME": "Bharatanatyam Dancer",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 20,
+    "__EMPTY_1": "MUSIC INSTRUMENTAL",
+    "__EMPTY_2": "MUSIC INSTRUMENTAL"
+  },
+  {
+    "FACULTY_NAME": "STUDENT GOVT. POLITICS",
+    "COMPANY_NAME": "Student Government",
+    "POSITION_NAME": "Prefect, House Captain, Peer Support Leader",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 21,
+    "__EMPTY_1": "SCHOOL SPIRIT",
+    "__EMPTY_2": "SCHOOL SPIRIT"
+  },
+  {
+    "FACULTY_NAME": "THEATRE/DRAMA",
+    "COMPANY_NAME": "Knox School Academy of Performing Arts",
+    "POSITION_NAME": "Lead Actor",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 22,
+    "__EMPTY_1": "ATHLETICS CLUB",
+    "__EMPTY_2": "ATHLETICS CLUB"
+  },
+  {
+    "FACULTY_NAME": "THEATRE/DRAMA",
+    "COMPANY_NAME": "Abbotsleigh School for the Performing Arts",
+    "POSITION_NAME": "Lead Actor",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 23,
+    "__EMPTY_1": "WORK",
+    "__EMPTY_2": "WORK"
+  },
+  {
+    "FACULTY_NAME": "DANCE",
+    "COMPANY_NAME": "‘Abbotsleigh Crew’ School of Competitive Dance",
+    "POSITION_NAME": "Team Member",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 24,
+    "__EMPTY_1": "ART",
+    "__EMPTY_2": "ART"
+  },
+  {
+    "FACULTY_NAME": "MUSIC VOCAL",
+    "COMPANY_NAME": "Jazz Ensemble, Chamber Choir",
+    "POSITION_NAME": "Member of Choir",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 25,
+    "__EMPTY_1": "CAREER ORIENTED",
+    "__EMPTY_2": "CAREER ORIENTED"
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "Tildsley Rep Tennis",
+    "POSITION_NAME": "Tennis Varsity Doubles Player",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 26,
+    "__EMPTY_1": "CULTURAL",
+    "__EMPTY_2": "CULTURAL"
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "Basketball Varsity Second Team ",
+    "POSITION_NAME": "Shooting Guard",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 27,
+    "__EMPTY_1": "ENVIRONMENTAL",
+    "__EMPTY_2": "ENVIRONMENTAL"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Habitat for Humanity Fiji",
+    "POSITION_NAME": "Volunteer",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 28,
+    "__EMPTY_1": "STUDENTS GOVT. POLITICS",
+    "__EMPTY_2": "STUDENTS GOVT. POLITICS"
+  },
+  {
+    "FACULTY_NAME": "STUDENT GOVT. POLITICS",
+    "COMPANY_NAME": "Petition for Women in Government",
+    "POSITION_NAME": "Advocator",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 29,
+    "__EMPTY_1": "FOREIGN EXCHANGE",
+    "__EMPTY_2": "FOREIGN EXCHANGE"
+  },
+  {
+    "FACULTY_NAME": "OTHER/CLUB ACTIVITY",
+    "COMPANY_NAME": "PADI Scuba Diving Certifications",
+    "POSITION_NAME": "Diver",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 30
+  },
+  {
+    "FACULTY_NAME": "MUSIC VOCAL",
+    "COMPANY_NAME": "Allegro Council (Music Council)",
+    "POSITION_NAME": "Co-President",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 31
+  },
+  {
+    "FACULTY_NAME": "COMPUTER/TECHNOLOGY",
+    "COMPANY_NAME": "Lawrenceville Computer Programming Club",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 32
+  },
+  {
+    "FACULTY_NAME": "MUSIC VOCAL",
+    "COMPANY_NAME": "Rouge Acapella Group",
+    "POSITION_NAME": "Co-President",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 33
+  },
+  {
+    "FACULTY_NAME": "COMPUTER/TECHNOLOGY",
+    "COMPANY_NAME": "Lawrenceville 24H Pass System",
+    "POSITION_NAME": "Software Developer",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 34
+  },
+  {
+    "FACULTY_NAME": "MUSIC VOCAL",
+    "COMPANY_NAME": "Lawrentians Choir",
+    "POSITION_NAME": "Singer (Alto)",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 35
+  },
+  {
+    "FACULTY_NAME": "THEATER/DRAMA",
+    "COMPANY_NAME": "Various School Musicals",
+    "POSITION_NAME": "Cast Member",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 36
+  },
+  {
+    "FACULTY_NAME": "JOURNALISM/PUBLICATION",
+    "COMPANY_NAME": "Working Title (Literary Magazine)",
+    "POSITION_NAME": "Managing Editor",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 37
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "Lawrenceville JV Softball",
+    "POSITION_NAME": "Softball Team Captain",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 38
+  },
+  {
+    "FACULTY_NAME": "OTHER CLUB/ACTIVITY",
+    "COMPANY_NAME": "Int. Student Association",
+    "POSITION_NAME": "VP of Community Service",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 39
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "JV Girls Basketball",
+    "POSITION_NAME": "Basketball Team Manager",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 40
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Best Buddies International (WY Chapter)",
+    "POSITION_NAME": "President",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 41
+  },
+  {
+    "FACULTY_NAME": "MUSIC INSTRUMENTAL",
+    "COMPANY_NAME": "Chicago Youth Symphony Orchestra",
+    "POSITION_NAME": "Violinist",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 42
+  },
+  {
+    "FACULTY_NAME": "SCHOOL SPIRIT",
+    "COMPANY_NAME": "WY Freshmen Mentors",
+    "POSITION_NAME": "President",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 43
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS CLUB",
+    "COMPANY_NAME": "IK Gymnastics Chicago",
+    "POSITION_NAME": "Gymnastics Captain",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 44
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Heartland Alliance Human Care",
+    "POSITION_NAME": "ESL Tutor",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 45
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "NJHS (WY Chapter)",
+    "POSITION_NAME": "President",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 46
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Misericordia Home",
+    "POSITION_NAME": "Junior Exec. Board Officer",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 47
+  },
+  {
+    "FACULTY_NAME": "WORK",
+    "COMPANY_NAME": "IK Gymnastics",
+    "POSITION_NAME": "Gymnastics Coach",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 48
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Yale Young Global Scholars",
+    "POSITION_NAME": "Student",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 49
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "WY Varsity Sailing Team",
+    "POSITION_NAME": "Sailing Founding Member",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 50
+  },
+  {
+    "FACULTY_NAME": "JOURNALISM/PUBLICATION",
+    "COMPANY_NAME": "The Picador (School Newspaper)",
+    "POSITION_NAME": "Creative Editor",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 51
+  },
+  {
+    "FACULTY_NAME": "ART",
+    "COMPANY_NAME": "MUSE Exhibition (Hanoi)",
+    "POSITION_NAME": "Vice Organizer",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 52
+  },
+  {
+    "FACULTY_NAME": "INTERNSHIP",
+    "COMPANY_NAME": "TienPhong.vn (VN News)",
+    "POSITION_NAME": "Economics Column Intern",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 53
+  },
+  {
+    "FACULTY_NAME": "THEATER/DRAMA",
+    "COMPANY_NAME": "Fragments (Musical)",
+    "POSITION_NAME": "Composer, Writer, Producer",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 54
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Share Org. (Sex Ed. Nonprofit)",
+    "POSITION_NAME": "Co-founder",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 55
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Camp Blast (Children's camp)",
+    "POSITION_NAME": "Volunteer Mentor",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 56
+  },
+  {
+    "FACULTY_NAME": "JOURNALISM/PUBLICATION",
+    "COMPANY_NAME": "Shades of Hanoi (Magazine)",
+    "POSITION_NAME": "Reporter & Photographer",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 57
+  },
+  {
+    "FACULTY_NAME": "THEATER/DRAMA",
+    "COMPANY_NAME": "Bring it On & All Shook Up (Musicals)",
+    "POSITION_NAME": "Actress",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 58
+  },
+  {
+    "FACULTY_NAME": "SOCIAL JUSTICE",
+    "COMPANY_NAME": "Annual Student-Led Conferences",
+    "POSITION_NAME": "Leader",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 59
+  },
+  {
+    "FACULTY_NAME": "MUSIC VOCAL",
+    "COMPANY_NAME": "HolderNotes (A-capella)",
+    "POSITION_NAME": "Soprano Vocalist",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 60
+  },
+  {
+    "FACULTY_NAME": "INTERNSHIP",
+    "COMPANY_NAME": "Congresswoman office",
+    "POSITION_NAME": "Intern",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 61
+  },
+  {
+    "FACULTY_NAME": "CAREER ORIENTED",
+    "COMPANY_NAME": "The Barrio Impact (Ed.Nonprofit)",
+    "POSITION_NAME": "Dir. of Outreach",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 62
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "MDCHS Quiz Bowl Team",
+    "POSITION_NAME": "Captain & President",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 63
+  },
+  {
+    "FACULTY_NAME": "INTERNSHIP",
+    "COMPANY_NAME": "Ammar Campa-Najjar Campaign",
+    "POSITION_NAME": "Intern & Office Manager",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 64
+  },
+  {
+    "FACULTY_NAME": "OTHER CLUB/ACTIVITY",
+    "COMPANY_NAME": "College Awareness Club",
+    "POSITION_NAME": "President & Founder",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 65
+  },
+  {
+    "FACULTY_NAME": "INTERNSHIP",
+    "COMPANY_NAME": "Bilateral Safety Corridor Coalition",
+    "POSITION_NAME": "Intern",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 66
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "MDCHS Crusaders Varsity Lacrosse",
+    "POSITION_NAME": "Lacrosse Defenseman",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 67
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "Speech & Debate Club",
+    "POSITION_NAME": "Vice President",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 68
+  },
+  {
+    "FACULTY_NAME": "RELIGIOUS",
+    "COMPANY_NAME": "Ambassador for Christ Corps",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 69
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "National Ocean Sciences Bowl.",
+    "POSITION_NAME": "Team B Captain",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 70
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Fun Maths Problem Solving Society",
+    "POSITION_NAME": "Founder & Leader",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 71
+  },
+  {
+    "FACULTY_NAME": "STUDENT GOVT. POLITICS",
+    "COMPANY_NAME": "Dulwich College",
+    "POSITION_NAME": "Y13 Vice-Captain",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 72
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Foundation Schools Maths Competition",
+    "POSITION_NAME": "Organizer",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 73
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Physics Society",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 74
+  },
+  {
+    "FACULTY_NAME": "CULTURAL",
+    "COMPANY_NAME": "Russian Culture Society",
+    "POSITION_NAME": "Founder & Co-Leader",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 75
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Various Maths Competitions",
+    "POSITION_NAME": "Competitor",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 76
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "City Heights E-ACT Academy",
+    "POSITION_NAME": "Reading/Maths Mentor",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 77
+  },
+  {
+    "FACULTY_NAME": "JOURNALISM/PUBLICATION",
+    "COMPANY_NAME": "DC Mathematica (Annual publication)",
+    "POSITION_NAME": "Senior Editor",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 78
+  },
+  {
+    "FACULTY_NAME": "OTHER CLUB/ACTIVITY",
+    "COMPANY_NAME": "House Poetry Competition",
+    "POSITION_NAME": "Writer",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 79
+  },
+  {
+    "FACULTY_NAME": "RELIGIOUS",
+    "COMPANY_NAME": "Religion, Theology, Ethics Society",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 80
+  },
+  {
+    "FACULTY_NAME": "RESEARCH",
+    "COMPANY_NAME": "Research on Diet and Skin Health",
+    "POSITION_NAME": "Research Assistant",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 81
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Stepping Stone Mission",
+    "POSITION_NAME": "Volunteer",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 82
+  },
+  {
+    "FACULTY_NAME": "CULTURAL",
+    "COMPANY_NAME": "Origami Club",
+    "POSITION_NAME": "Founder and President",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 83
+  },
+  {
+    "FACULTY_NAME": "STUDENT GOVT. POLITICS",
+    "COMPANY_NAME": "Student Government Association",
+    "POSITION_NAME": "President",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 84
+  },
+  {
+    "FACULTY_NAME": "SCIENCE/MATH",
+    "COMPANY_NAME": "Math Team",
+    "POSITION_NAME": "Captain",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 85
+  },
+  {
+    "FACULTY_NAME": "INTERNSHIP",
+    "COMPANY_NAME": "Newnan Dermatology Institute",
+    "POSITION_NAME": "Intern",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 86
+  },
+  {
+    "FACULTY_NAME": "RELIGIOUS",
+    "COMPANY_NAME": "Worship Team",
+    "POSITION_NAME": "Audio Technician",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 87
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "Harvard Pre-College Program",
+    "POSITION_NAME": "Selected Participant",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 88
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Key Club",
+    "POSITION_NAME": "Chairman of Community Service",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 89
+  },
+  {
+    "FACULTY_NAME": "SCIENCE/MATH",
+    "COMPANY_NAME": "Mu Alpha Theta",
+    "POSITION_NAME": "President",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 90
+  },
+  {
+    "FACULTY_NAME": "INTERNSHIP",
+    "COMPANY_NAME": "CHN Academy of Sciences",
+    "POSITION_NAME": "Microbio Research Intern",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 91
+  },
+  {
+    "FACULTY_NAME": "OTHER CLUB/ACTIVITY",
+    "COMPANY_NAME": "Transfer Student Club",
+    "POSITION_NAME": "Co-founder and President",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 92
+  },
+  {
+    "FACULTY_NAME": "SCIENCE/MATH",
+    "COMPANY_NAME": "Math Team",
+    "POSITION_NAME": "Captain",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 93
+  },
+  {
+    "FACULTY_NAME": "SCIENCE/MATH",
+    "COMPANY_NAME": "Science Olympiad Team",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 94
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "National Honors Society",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 95
+  },
+  {
+    "FACULTY_NAME": "SCIENCE/MATH",
+    "COMPANY_NAME": "Stanford Pre-Collegiate Summer Institutes",
+    "POSITION_NAME": "Student",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 96
+  },
+  {
+    "FACULTY_NAME": "MUSIC INSTRUMENTAL",
+    "COMPANY_NAME": "School orchestra",
+    "POSITION_NAME": "Violinist",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 97
+  },
+  {
+    "FACULTY_NAME": "COMPUTER/TECHNOLOGY",
+    "COMPANY_NAME": "Robotics Team",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 98
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Key Club",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 99
+  },
+  {
+    "FACULTY_NAME": "WORK",
+    "COMPANY_NAME": "Freelance",
+    "POSITION_NAME": "Private Chinese Tutor",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 100
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Eduklase Online Education Info Portal",
+    "POSITION_NAME": "Founder",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 101
+  },
+  {
+    "FACULTY_NAME": "CAREER ORIENTED",
+    "COMPANY_NAME": "HK Youth Law & Current Affairs Association",
+    "POSITION_NAME": "VP",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 102
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "School MUN Club",
+    "POSITION_NAME": "President",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 103
+  },
+  {
+    "FACULTY_NAME": "SCIENCE/MATH",
+    "COMPANY_NAME": "Dyelectricity Science Research Team",
+    "POSITION_NAME": "Team Leader",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 104
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "School Mock Trial team",
+    "POSITION_NAME": "Captain",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 105
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Kalliope Organization Committee",
+    "POSITION_NAME": "Cancer Action Network",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 106
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "TEDx Youth@AISHK",
+    "POSITION_NAME": "Speaker",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 107
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Stanford Summer Humanities Institute",
+    "POSITION_NAME": "Participant",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 108
+  },
+  {
+    "FACULTY_NAME": "ENVIRONMENTAL",
+    "COMPANY_NAME": "HK Youth Environmental Summit",
+    "POSITION_NAME": "Organizing Committee member",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 109
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "Crossroads Foundation",
+    "POSITION_NAME": "Volunteer",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 110
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "IYOW Charity Converts",
+    "POSITION_NAME": "Founder and Director",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 111
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "Victorian State Squad for Debating",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 112
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "Middle School and Senior School",
+    "POSITION_NAME": "Debating Captain",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 113
+  },
+  {
+    "FACULTY_NAME": "JOURNALISM/PUBLICATION",
+    "COMPANY_NAME": "Various publications",
+    "POSITION_NAME": "Writer and Editor",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 114
+  },
+  {
+    "FACULTY_NAME": "ART",
+    "COMPANY_NAME": "Visual Arts",
+    "POSITION_NAME": "IB artists",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 115
+  },
+  {
+    "FACULTY_NAME": "MUSIC INSTRUMENTAL",
+    "COMPANY_NAME": "Piano and Viola",
+    "POSITION_NAME": "Musician",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 116
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Local Community Service",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 117
+  },
+  {
+    "FACULTY_NAME": "THEATRE/DRAMA",
+    "COMPANY_NAME": "House Drama Captain",
+    "POSITION_NAME": "Playwright and Publicist",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 118
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS CLUB",
+    "COMPANY_NAME": "Badminton",
+    "POSITION_NAME": "Player",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 119
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Hand Up Australia Udaipur",
+    "POSITION_NAME": "Volunteer",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 120
+  },
+  {
+    "FACULTY_NAME": "OTHER/CLUB ACTIVITY",
+    "COMPANY_NAME": "UN and EP",
+    "POSITION_NAME": "AFI International Youth Ambassador",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 121
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Youth-run charity",
+    "POSITION_NAME": "President and Founder",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 122
+  },
+  {
+    "FACULTY_NAME": "INTERNSHIP",
+    "COMPANY_NAME": "One Belt One Road Initiative",
+    "POSITION_NAME": "MEP EP Internship",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 123
+  },
+  {
+    "FACULTY_NAME": "STUDENTS GOVT. POLITICS",
+    "COMPANY_NAME": "Students Representative Council",
+    "POSITION_NAME": "SRC Prefect",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 124
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Fictocritical Thesis Publishing Club",
+    "POSITION_NAME": "Publisher",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 125
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "Debating Competitions and Trinity College Diploma",
+    "POSITION_NAME": "Public Speaker",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 126
+  },
+  {
+    "FACULTY_NAME": "OTHER/CLUB ACTIVITY",
+    "COMPANY_NAME": "International Courses, Programmes and Leadership",
+    "POSITION_NAME": "Participant",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 127
+  },
+  {
+    "FACULTY_NAME": "MUSIC INSTRUMENTAL",
+    "COMPANY_NAME": "Lead Cellist, Organ, Piano, Flute, Harpsichord",
+    "POSITION_NAME": "Player",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 128
+  },
+  {
+    "FACULTY_NAME": "CAREER ORIENTED",
+    "COMPANY_NAME": "Minister for Women’s Affairs",
+    "POSITION_NAME": "Youth Parliament member",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 129
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "Fencing, Sports and Activities",
+    "POSITION_NAME": "Participant",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 130
+  },
+  {
+    "FACULTY_NAME": "STUDENT GOVT. POLITICS",
+    "COMPANY_NAME": "High School",
+    "POSITION_NAME": "Senior Prefect (School Captain)",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 131
+  },
+  {
+    "FACULTY_NAME": "MUSIC INSTRUMENTAL",
+    "COMPANY_NAME": "High School Orchestra",
+    "POSITION_NAME": "Music Captain",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 132
+  },
+  {
+    "FACULTY_NAME": "MUSIC INSTRUMENTAL",
+    "COMPANY_NAME": "School Orchestra",
+    "POSITION_NAME": "Assistant Concertmaster",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 133
+  },
+  {
+    "FACULTY_NAME": "MUSIC VOCAL",
+    "COMPANY_NAME": "Senior A Cappella Group",
+    "POSITION_NAME": "Tenor in ‘Grammar Phones’",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 134
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "Cross Country",
+    "POSITION_NAME": "Cross Country Captain",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 135
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "Power Forward in First/Second Squad",
+    "POSITION_NAME": "Basketball Player",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 136
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "Track and field / Sprints /Middle Distance",
+    "POSITION_NAME": "Championship School Representative",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 137
+  },
+  {
+    "FACULTY_NAME": "FOREIGN EXCHANGE",
+    "COMPANY_NAME": "Paris/Sydney",
+    "POSITION_NAME": "Participant",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 138
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "Debating A Team / Mooting Team (High School)",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 139
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Australian Chamber Orchestra Music Education Program",
+    "POSITION_NAME": "Violinist",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 140
+  },
+  {
+    "FACULTY_NAME": "THEATRE/DRAMA",
+    "COMPANY_NAME": "Benvinda Drama Group",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 141
+  },
+  {
+    "FACULTY_NAME": "THEATRE/DRAMA",
+    "COMPANY_NAME": "Royal National Theatre of London",
+    "POSITION_NAME": "Connections",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 142
+  },
+  {
+    "FACULTY_NAME": "THEATRE/DRAMA",
+    "COMPANY_NAME": "Musical Theater Group",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 143
+  },
+  {
+    "FACULTY_NAME": "SOCIAL JUSTICE",
+    "COMPANY_NAME": "Coletivo Maria Quitéria",
+    "POSITION_NAME": "President and Co-founder",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 144
+  },
+  {
+    "FACULTY_NAME": "CULTURAL",
+    "COMPANY_NAME": "Brazilian Leadership Bootcamp",
+    "POSITION_NAME": "Participant",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 145
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "Model UN",
+    "POSITION_NAME": "Delegate, Secretary, and Chair",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 146
+  },
+  {
+    "FACULTY_NAME": "STUDENT GOVT. POLITICS",
+    "COMPANY_NAME": "Student Council",
+    "POSITION_NAME": "Senior Year Representative",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 147
+  },
+  {
+    "FACULTY_NAME": "STUDENT GOVT. POLITICS",
+    "COMPANY_NAME": "Political Commission",
+    "POSITION_NAME": "Founder and Spokeswoman",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 148
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Fraternity Experience Program",
+    "POSITION_NAME": "Charity Outreach",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 149
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Association of Hospital das Clínicas",
+    "POSITION_NAME": "Volunteer",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 150
+  },
+  {
+    "FACULTY_NAME": "INTERNSHIP",
+    "COMPANY_NAME": "Yeremyan Projects",
+    "POSITION_NAME": "Intern",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 151
+  },
+  {
+    "FACULTY_NAME": "CAREER ORIENTED",
+    "COMPANY_NAME": "Association of Accountants of Armenia",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 152
+  },
+  {
+    "FACULTY_NAME": "RESEARCH",
+    "COMPANY_NAME": "Yerkir Strategic Programming Foundation",
+    "POSITION_NAME": "Researcher",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 153
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Maths Problem Solving Society",
+    "POSITION_NAME": "Founder & Co-Leader",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 155
+  },
+  {
+    "FACULTY_NAME": "JOURNALISM/PUBLICATION",
+    "COMPANY_NAME": "Yerkir Editorial",
+    "POSITION_NAME": "Researcher",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 154
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "School's Olympiad Team",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 156
+  },
+  {
+    "FACULTY_NAME": "RESEARCH",
+    "COMPANY_NAME": "Quantum College",
+    "POSITION_NAME": "Research Assistant",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 157
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "College Debate Club",
+    "POSITION_NAME": "Co-Founder",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 158
+  },
+  {
+    "FACULTY_NAME": "VOLUNTEER",
+    "COMPANY_NAME": "Aurora Humanitarian Initiative",
+    "POSITION_NAME": "Volunteer",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 159
+  },
+  {
+    "FACULTY_NAME": "VOLUNTEER",
+    "COMPANY_NAME": "National Honours Society",
+    "POSITION_NAME": "Voluntary member",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 160
+  },
+  {
+    "FACULTY_NAME": "SCIENCE/MATH",
+    "COMPANY_NAME": "Math club",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 161
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Physics Club",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 162
+  },
+  {
+    "FACULTY_NAME": "COMPUTER/TECHNOLOGY",
+    "COMPANY_NAME": "Programming club",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 163
+  },
+  {
+    "FACULTY_NAME": "JOURNALISM/PUBLICATION",
+    "COMPANY_NAME": "Yerkir Foundation",
+    "POSITION_NAME": "Managing Editor",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 164
+  },
+  {
+    "FACULTY_NAME": "OTHER CLUB/ACTIVITY",
+    "COMPANY_NAME": "Chess Club",
+    "POSITION_NAME": "Founding member",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 165
+  },
+  {
+    "FACULTY_NAME": "OTHER CLUB/ACTIVITY",
+    "COMPANY_NAME": "Math Club",
+    "POSITION_NAME": "Tutor",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 166
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Competitive College Club (EducationUSA Armenia)",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 167
+  },
+  {
+    "FACULTY_NAME": "OTHER CLUB/ACTIVITY",
+    "COMPANY_NAME": "'DARK' Company",
+    "POSITION_NAME": "Volunteer",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 168
+  },
+  {
+    "FACULTY_NAME": "DANCE",
+    "COMPANY_NAME": "'Harq' Armenian folk dance ensemble",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 169
+  }
+]

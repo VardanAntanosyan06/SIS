@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     id:{type:DataTypes.INTEGER,primaryKey:true},
     taskId: DataTypes.INTEGER,
     name: DataTypes.STRING,
-    points: DataTypes.INTEGER,
+    points: DataTypes.FLOAT,
   }, {
     sequelize,
     modelName: 'SubTasks',

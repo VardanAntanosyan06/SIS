@@ -1,4 +1,4 @@
-const timeTasks = [
+[
   { task_id: 1, taskSpentWeek: "up to 6 weeks", taskSpentDays: 42, point: 3 },
   { task_id: 1, taskSpentWeek: "7-9 weeks", taskSpentDays: 63, point: 2 },
   { task_id: 1, taskSpentWeek: "10-12 weeks", taskSpentDays: 84, point: 1 },
@@ -1865,7 +1865,3 @@ const timeTasks = [
     point: 1.5,
   },
 ];
-
-module.exports = {
-  timeTasks,
-};

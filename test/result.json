@@ -1,0 +1,1581 @@
+[
+  {
+    "FACULTY_NAME": "SOCIAL JUSTICE",
+    "COMPANY_NAME": "Cancer Action Network",
+    "POSITION_NAME": "Sec. and Spokesperson",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 1,
+    "__EMPTY_1": "SOCIAL JUSTICE",
+    "__EMPTY_2": "SOCIAL JUSTICE",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=149q3eQX8UOkuRq73D7W0kkWZLOXkRC3P",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1kCZNag4Ow1imTw7y3NfPwKC8aHYoGN4W"
+  },
+  {
+    "FACULTY_NAME": "RESEARCH",
+    "COMPANY_NAME": "Australian Educational Research, University of Newcastle",
+    "POSITION_NAME": "Student Researcher",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 2,
+    "__EMPTY_1": "RESEARCH",
+    "__EMPTY_2": "RESEARCH",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1YpdXkWvEBoakHXy_02E8wl4pnRWY39mx",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1hi8dZnThMmoPaFjx409wPRYDWMj2REUz"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Cancer Council  New South Wales",
+    "POSITION_NAME": "Youth Ambassador",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 3,
+    "__EMPTY_1": "COMMUNITY SERVICE",
+    "__EMPTY_2": "COMMUNITY SERVICE",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1WwoFdybgmB2XSptCGQcuKZ3OUWICLHYr",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=15VndUQNor6Wmz3uV7GR6zNjbyQLSHaKF"
+  },
+  {
+    "FACULTY_NAME": "PUBLICATION/JOURNALISM",
+    "COMPANY_NAME": "Group Co-leader",
+    "POSITION_NAME": "Society of Freelance Journalists",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 4,
+    "__EMPTY_1": "PUBLICATION/JOURNALISM",
+    "__EMPTY_2": "PUBLICATION/JOURNALISM",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=15nY1Vywwvo-q4MGz3I6RHLeanyI4g3dV",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1jFs-ChGzZhpR0F70gOqEawM-jEiWWXJP"
+  },
+  {
+    "FACULTY_NAME": "SOCIAL JUSTICE",
+    "COMPANY_NAME": "Oaktree (largest youth. led org).",
+    "POSITION_NAME": "Community Leader",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 5,
+    "__EMPTY_1": "DEBATE/SPEECH",
+    "__EMPTY_2": "DEBATE/SPEECH",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=10xF22DH9cf8510z7R9yC5lsTYwlZPCLt",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1w3RXx6cO5euBt13ifImY42dEAIslmwVD"
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "(MHS Speaking Club) ",
+    "POSITION_NAME": "Club Leader",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 6,
+    "__EMPTY_1": "ACADEMIC",
+    "__EMPTY_2": "ACADEMIC",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1lazfADA2LtAgtQdy25pcXSJkFa7jf6OI",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1uIbh2BRaj8p236AeDMwzOxKvHIr-hzyX"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Newcastle Youth Council\n",
+    "POSITION_NAME": "Deputy Mayor",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 7,
+    "__EMPTY_1": "INTERNSHIP",
+    "__EMPTY_2": "INTERNSHIP",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1A78y0i1W_PtWCTFRdwbxhbsHd7YFog3c",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1fvptHFEJreSVTEwbjey2O1vvPpug6Gvu"
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "MHS Debate Team",
+    "POSITION_NAME": "Leader",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 8,
+    "__EMPTY_1": "SCIENCE/MATH",
+    "__EMPTY_2": "SCIENCE/MATH",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1xZRdGtFPGoeCvAgCOOpshpgtgsiIEPjy",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1FXgrdbnoYkmmRwHgJEIKo13ojPXYVH7S"
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Harvard Summer School (7 week programs)\n",
+    "POSITION_NAME": "Student",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 9,
+    "__EMPTY_1": "RELIGIOUS",
+    "__EMPTY_2": "RELIGIOUS",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1vjgmCDT2sFe5MsbSGaEQAxmdo5jW7HTn",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1VGFOE_DnOpNfbO3EMGVTV4WJgRakKcLS"
+  },
+  {
+    "FACULTY_NAME": "INTERNSHIP",
+    "COMPANY_NAME": "Minister for Environment & Heritage",
+    "POSITION_NAME": "Intern",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 10,
+    "__EMPTY_1": "DANCE",
+    "__EMPTY_2": "DANCE",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1oDKOO0_2Zk4NDsCyiUPdhEZ1wWpdOx6E",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1GkCSm2CKc6kV-4lQBCfWqSPVKQfd96FC"
+  },
+  {
+    "FACULTY_NAME": "RESEARCH",
+    "COMPANY_NAME": "American Heritage Student Research Program",
+    "POSITION_NAME": "Student Researcher",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 11,
+    "__EMPTY_1": "STUDENT GOVT. POLITICS",
+    "__EMPTY_2": "STUDENT GOVT. POLITICS",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1W-GrkxOlWT-0eCmk_sZCIly7o0RxcnkG",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1wi8oPVU4Qyl4vXx7sYqou19YeEySp4K6"
+  },
+  {
+    "FACULTY_NAME": "RESEARCH",
+    "COMPANY_NAME": "MIT Research Science Institute Summer Program",
+    "POSITION_NAME": "Researcher",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 12,
+    "__EMPTY_1": "THEATRE/DRAMA",
+    "__EMPTY_2": "THEATRE/DRAMA",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1nQybqp3gxyCbIO7Ue_jQ1JzMZ7sBEv3E",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1Hs_GNLW98cVvxEbvNTI-HGQ1CFn6gTve"
+  },
+  {
+    "FACULTY_NAME": "SOCIAL JUSTICE",
+    "COMPANY_NAME": "Butterfly Project (Genocide awareness educational initiative)",
+    "POSITION_NAME": "Director and Archive Founder",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 13,
+    "__EMPTY_1": "MUSIC VOCAL",
+    "__EMPTY_2": "MUSIC VOCAL",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1PNofi8gJhiJ6Zwu3T1_bZOn-9R74vBEc",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1XZu_qatCLhY2xTDB2dka4hX36tRKE-iu"
+  },
+  {
+    "FACULTY_NAME": "SOCIAL JUSTICE",
+    "COMPANY_NAME": "Dreams of Hope (Pen Pal program)",
+    "POSITION_NAME": "Founder and Director",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 14,
+    "__EMPTY_1": "ATHLETICS JV/VARSITY",
+    "__EMPTY_2": "ATHLETICS JV/VARSITY",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1tGaVxm-RE49eU5HDi0H4IpZ12yWuHUiH",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1rKH5D1MoGBpDA9orTz-y0CrpoFR-MU5E"
+  },
+  {
+    "FACULTY_NAME": "SCIENCE/MATH",
+    "COMPANY_NAME": "AHS Sigma Xi (Research Honors Society) ",
+    "POSITION_NAME": "Vice President",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 15,
+    "__EMPTY_1": "OTHER/CLUB ACTIVITY",
+    "__EMPTY_2": "OTHER/CLUB ACTIVITY",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1VtBfm1x1_BQSm1KKCEGnHjvupe-krY5y",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1PbDAbp2FkIcU300atsF7m8kG9vcYXoDG"
+  },
+  {
+    "FACULTY_NAME": "SOCIAL JUSTICE",
+    "COMPANY_NAME": "Tikkun Olam (Jewish cultural group)\n",
+    "POSITION_NAME": "Co-President",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 16,
+    "__EMPTY_1": "COMPUTER/TECHNOLOGY",
+    "__EMPTY_2": "COMPUTER/TECHNOLOGY",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1bW7e3uqypSTcnsxEdQutX61OkNAQVgij",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1ATLVO145w0fA4IFdkh1p31YDVY6MdcNi"
+  },
+  {
+    "FACULTY_NAME": "RELIGIOUS",
+    "COMPANY_NAME": "Our Lady of Health Mission League ",
+    "POSITION_NAME": "Migration Mass Activities Coordinator",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 17,
+    "__EMPTY_1": "THEATER/DRAMA",
+    "__EMPTY_2": "THEATER/DRAMA",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1Fes3bODcGxeUpe1Svl2ELqKcphWn-T2T",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1x8iLLqBOZtmmSqRpErB8iBu8qfXn8pyH"
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "AHS Model UN",
+    "POSITION_NAME": "Exec Board & Social, Humanitarian & Cultural Chair",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 18,
+    "__EMPTY_1": "JOURNALISM/PUBLICATION",
+    "__EMPTY_2": "JOURNALISM/PUBLICATION",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=13rIwH5-XZ4sZUS58uG7zxRt6icleax7Q",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1wsvnfGkuhaKdSZstJUCpoXTIUbdsNG7k"
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "AHS English Honors Society Organized nationa",
+    "POSITION_NAME": "President",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 19,
+    "__EMPTY_1": "OTHER CLUB/ACTIVITY",
+    "__EMPTY_2": "OTHER CLUB/ACTIVITY",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1IelWMTwurROjOBXcv3YByvxd9vf1y6AF",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=10D6BqTHslk7rdHLATts3iHUyES6a670Z"
+  },
+  {
+    "FACULTY_NAME": "DANCE",
+    "COMPANY_NAME": "Temple of Dance (Dance school) ",
+    "POSITION_NAME": "Bharatanatyam Dancer",
+    "UNIVERSITY_ID": 2,
+    "EXT_TASK_ID": 20,
+    "__EMPTY_1": "MUSIC INSTRUMENTAL",
+    "__EMPTY_2": "MUSIC INSTRUMENTAL",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1XbErVr8Lxhsr_OZiD82p3kreSOjD0fs3",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1A9paOfPSpBvRuVEnM59vv9Fun7F2SVfR"
+  },
+  {
+    "FACULTY_NAME": "STUDENT GOVT. POLITICS",
+    "COMPANY_NAME": "Student Government",
+    "POSITION_NAME": "Prefect, House Captain, Peer Support Leader",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 21,
+    "__EMPTY_1": "SCHOOL SPIRIT",
+    "__EMPTY_2": "SCHOOL SPIRIT",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1cAjXmQeMqGJB2WXE8tLyQnLn1YbNKhfp",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1kgbZ0ziQYao3aLLWM20zw0aacG1W6w06"
+  },
+  {
+    "FACULTY_NAME": "THEATRE/DRAMA",
+    "COMPANY_NAME": "Knox School Academy of Performing Arts",
+    "POSITION_NAME": "Lead Actor",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 22,
+    "__EMPTY_1": "ATHLETICS CLUB",
+    "__EMPTY_2": "ATHLETICS CLUB",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1yR-L4QnsNA27chEle1LaA7YzrYwmW2kY",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=14ZRszmydS0WGnGfTUJKs7a_-IA4Knsep"
+  },
+  {
+    "FACULTY_NAME": "THEATRE/DRAMA",
+    "COMPANY_NAME": "Abbotsleigh School for the Performing Arts",
+    "POSITION_NAME": "Lead Actor",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 23,
+    "__EMPTY_1": "WORK",
+    "__EMPTY_2": "WORK",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=17M9ZnuZsIgPBh_SMZZHS5K4p2simiiqE",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1nn0n2FLH8f2jB3THA3Z5VTYu5Y577PSi"
+  },
+  {
+    "FACULTY_NAME": "DANCE",
+    "COMPANY_NAME": "‘Abbotsleigh Crew’ School of Competitive Dance",
+    "POSITION_NAME": "Team Member",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 24,
+    "__EMPTY_1": "ART",
+    "__EMPTY_2": "ART",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=189MlQV8H5TRBsLB1xh_xPm1krsJ25xhu",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1jFjpCIRSMqR2Dw8fmJIjkbetjjemdKuU"
+  },
+  {
+    "FACULTY_NAME": "MUSIC VOCAL",
+    "COMPANY_NAME": "Jazz Ensemble, Chamber Choir",
+    "POSITION_NAME": "Member of Choir",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 25,
+    "__EMPTY_1": "CAREER ORIENTED",
+    "__EMPTY_2": "CAREER ORIENTED",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1zObrOslSOy4xNtyU0FzCtySBgRfYuKF1",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1ZxADYl59zeCCTkpGeNKtm6E03AZYEJqu"
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "Tildsley Rep Tennis",
+    "POSITION_NAME": "Tennis Varsity Doubles Player",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 26,
+    "__EMPTY_1": "CULTURAL",
+    "__EMPTY_2": "CULTURAL",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1rcOATffBOEUnPoHTNsj1bSOmjSbCnGYp",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1nvknuO8plw9SMP2MSLDKKg9_DgyTqd_6"
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "Basketball Varsity Second Team ",
+    "POSITION_NAME": "Shooting Guard",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 27,
+    "__EMPTY_1": "ENVIRONMENTAL",
+    "__EMPTY_2": "ENVIRONMENTAL",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1n7Rqc1KfZhVnu0c_GvFH29pOerHyhOhk",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1ZsYCFz0uspEPfp9Y2jc0LQGatiVFM-gV"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Habitat for Humanity Fiji",
+    "POSITION_NAME": "Volunteer",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 28,
+    "__EMPTY_1": "STUDENTS GOVT. POLITICS",
+    "__EMPTY_2": "STUDENTS GOVT. POLITICS",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1-oroKFkXKptpZz5FRRHS0HyrmlX8m2XD",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1eVFkcMQ7FYfP6PicvhOJe8InVaDq1sIg"
+  },
+  {
+    "FACULTY_NAME": "STUDENT GOVT. POLITICS",
+    "COMPANY_NAME": "Petition for Women in Government",
+    "POSITION_NAME": "Advocator",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 29,
+    "__EMPTY_1": "FOREIGN EXCHANGE",
+    "__EMPTY_2": "FOREIGN EXCHANGE",
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1eZ_vE2oblVS--gFfQYb8ioYyaGp-y6oF",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1ibaJBpzRuvzTawgHYtF-kNTF-qrc0g65"
+  },
+  {
+    "FACULTY_NAME": "OTHER/CLUB ACTIVITY",
+    "COMPANY_NAME": "PADI Scuba Diving Certifications",
+    "POSITION_NAME": "Diver",
+    "UNIVERSITY_ID": 3,
+    "EXT_TASK_ID": 30,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1c9Ur6vgu9WBtLIl5bf6UgYd2Qz-ENUsc",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1Rb2HIMkYMJ202vYZEgGkd4bAFSUPrC5Q"
+  },
+  {
+    "FACULTY_NAME": "MUSIC VOCAL",
+    "COMPANY_NAME": "Allegro Council (Music Council)",
+    "POSITION_NAME": "Co-President",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 31,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1tlRBrCDVBLsHkLKq_lK2zwIn9Fjbo_dQ",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1n9AAvAj-pw95hRBE3Z0fixgEzLwjxCYo"
+  },
+  {
+    "FACULTY_NAME": "COMPUTER/TECHNOLOGY",
+    "COMPANY_NAME": "Lawrenceville Computer Programming Club",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 32,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1lRjF8nW-7gzs849uzDseFYCBVp6__tm_",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1hMQLO75VGjrqpcZqworf8RdtzW66b676"
+  },
+  {
+    "FACULTY_NAME": "MUSIC VOCAL",
+    "COMPANY_NAME": "Rouge Acapella Group",
+    "POSITION_NAME": "Co-President",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 33,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1VIpGQ4sSbkHet3wHyij99TRgf8YkBM0c",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1ohzXk5nrkHQOk5_sicPj3DkbNBhN9uT9"
+  },
+  {
+    "FACULTY_NAME": "COMPUTER/TECHNOLOGY",
+    "COMPANY_NAME": "Lawrenceville 24H Pass System",
+    "POSITION_NAME": "Software Developer",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 34,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1IAXzhydiY3mlAuxrKbFKtbdd_zS3-vJJ",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=19Nh7cIRkY1w51jvNzpbmhc-ZksF0R354"
+  },
+  {
+    "FACULTY_NAME": "MUSIC VOCAL",
+    "COMPANY_NAME": "Lawrentians Choir",
+    "POSITION_NAME": "Singer (Alto)",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 35,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1boGopJq3AtoBzUZm6lAkLPYU7YqNsVnv",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1FjIyVG_WPdeBvnQ8bMQcNl03p09nuXoF"
+  },
+  {
+    "FACULTY_NAME": "THEATER/DRAMA",
+    "COMPANY_NAME": "Various School Musicals",
+    "POSITION_NAME": "Cast Member",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 36,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1C5_vAlUPIqHJTgSIX3anUjwz0s8Zti0-",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1eRanVGS4uiclFv9JUDdapPHnIUe_UQRR"
+  },
+  {
+    "FACULTY_NAME": "JOURNALISM/PUBLICATION",
+    "COMPANY_NAME": "Working Title (Literary Magazine)",
+    "POSITION_NAME": "Managing Editor",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 37,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1lynG7dTbTCHixeMuQsrNrkMxOdZ5y_DL",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1kbeg8O3NSqKyRhUbzQfyfu_SpHNt7mll"
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "Lawrenceville JV Softball",
+    "POSITION_NAME": "Softball Team Captain",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 38,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1UbOTR5dYVaJ81CyB4ggcePU57_NBUWWq",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1K0ad5f8qizGbnXjltLpYo7QndnJzXQJj"
+  },
+  {
+    "FACULTY_NAME": "OTHER CLUB/ACTIVITY",
+    "COMPANY_NAME": "Int. Student Association",
+    "POSITION_NAME": "VP of Community Service",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 39,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1HVtQL6uASFa0DE3lrUhAfMJI6DxaW5tN",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1JiidwEc8Tc0Ok1lRmk9X8_IbW112M8hw"
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "JV Girls Basketball",
+    "POSITION_NAME": "Basketball Team Manager",
+    "UNIVERSITY_ID": 4,
+    "EXT_TASK_ID": 40,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1CLiQo2OILxG0oRiMRuMQv12w3fhlDyeF",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1m_sWY1Z8TMZc5STBd7-nLoX0OAJq_1GH"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Best Buddies International (WY Chapter)",
+    "POSITION_NAME": "President",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 41,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1Gn33n0ufMQkqf7BW941lBq0FgIGVUD7f",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1WOw5UetWVFOKcvliZPWf87aSGc5o4Hq_"
+  },
+  {
+    "FACULTY_NAME": "MUSIC INSTRUMENTAL",
+    "COMPANY_NAME": "Chicago Youth Symphony Orchestra",
+    "POSITION_NAME": "Violinist",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 42,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1sksErRouEVldCtWU_Q0qX5kfl2maGqhA",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1c-4AsWmwGWI1JsGJMdAfX-sjVFNTMsHI"
+  },
+  {
+    "FACULTY_NAME": "SCHOOL SPIRIT",
+    "COMPANY_NAME": "WY Freshmen Mentors",
+    "POSITION_NAME": "President",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 43,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1UUcHcNAv0CUfGMXJPhXPJKpzUY56BjNv",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1_x08ghnD_5C6MkvxsvGP39pKxzIHECfP"
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS CLUB",
+    "COMPANY_NAME": "IK Gymnastics Chicago",
+    "POSITION_NAME": "Gymnastics Captain",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 44,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1UbruboiuU_slNGYzbbcorZJx0PVrbVv2",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1vCoYHTEcyKlwIF3Oicuj2NWyQ0XYHlBd"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Heartland Alliance Human Care",
+    "POSITION_NAME": "ESL Tutor",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 45,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1WI7BI3Zb64ayy_Eq3UjJY5D15n2W-hZC",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1IPVaBIDYFESOJwAXEVTYOItj5ilmkVwM"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "NJHS (WY Chapter)",
+    "POSITION_NAME": "President",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 46,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1t8Q43AiJ4Bc4TeI2sQfRTwLdhPoBvjWQ",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1kqAgT7ejb5_EYycDSLqz-zbS60L0IVQs"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Misericordia Home",
+    "POSITION_NAME": "Junior Exec. Board Officer",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 47,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1F1Nf4W1Up01CdGU1bOELv-dHuaq-nzoo",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1UqMEerb60O7CUscVDBFL22RX4Tl1kqS8"
+  },
+  {
+    "FACULTY_NAME": "WORK",
+    "COMPANY_NAME": "IK Gymnastics",
+    "POSITION_NAME": "Gymnastics Coach",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 48,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1JrLUgTkM3yrxnzeP0r4DdL7oA6ido6xM",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1DH8yKr3BlbOUt9E4HVRHcZrVJ1EWPBHK"
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Yale Young Global Scholars",
+    "POSITION_NAME": "Student",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 49,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1blF6Okb6Ydb-d_A1QibQKPuu7KbI5f_C",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1-FPW3lij6r7EM3PbNdB6TNyGcj7JqNIL"
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "WY Varsity Sailing Team",
+    "POSITION_NAME": "Sailing Founding Member",
+    "UNIVERSITY_ID": 5,
+    "EXT_TASK_ID": 50,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1enyxgIz66cmIV-cOMSq3DcKOE8TuX1iH",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1nUswwa8LC_HB9J1snyZi1fgbpPE2MWET"
+  },
+  {
+    "FACULTY_NAME": "JOURNALISM/PUBLICATION",
+    "COMPANY_NAME": "The Picador (School Newspaper)",
+    "POSITION_NAME": "Creative Editor",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 51,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1WfqobvEvKJlUUEG1xS3VR9aLZRM9ROJD",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1lcLfqiUZGTGTiRv_zvUEJg9OwmCQhYBb"
+  },
+  {
+    "FACULTY_NAME": "ART",
+    "COMPANY_NAME": "MUSE Exhibition (Hanoi)",
+    "POSITION_NAME": "Vice Organizer",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 52,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1zUxhr5DLL44rMDFnPk63T0U2fpHZknt1",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=103jGQYPHNd0KC5mw1ggic_lgIkpCfZN3"
+  },
+  {
+    "FACULTY_NAME": "INTERNSHIP",
+    "COMPANY_NAME": "TienPhong.vn (VN News)",
+    "POSITION_NAME": "Economics Column Intern",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 53,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1B6xYWV227gSSgjMY2NAPZhadBrzDAK-x",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=16cUR_P_cA_MyXCAiwn1nOmUpJwNPNSon"
+  },
+  {
+    "FACULTY_NAME": "THEATER/DRAMA",
+    "COMPANY_NAME": "Fragments (Musical)",
+    "POSITION_NAME": "Composer, Writer, Producer",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 54,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1M7g0PEUxM7BOiRvAW-X-vFyzDeI5ThLZ",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1_Mc68NOCjFUEUk2IMGFpzUoJU3qwnF4O"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Share Org. (Sex Ed. Nonprofit)",
+    "POSITION_NAME": "Co-founder",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 55,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1BGl-ytFZmN7xmEnqqEFpdUzO7N6SNKY6",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1KBo6co-231pR1t47v4wfiksdGI0EuLDJ"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Camp Blast (Children's camp)",
+    "POSITION_NAME": "Volunteer Mentor",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 56,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1yw3Q1Yv0wJhXn9cVzs2X8qfne41f7F9T",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1jnq9xrGaWZmNHfmtS-ZEClSqlat8jdqT"
+  },
+  {
+    "FACULTY_NAME": "JOURNALISM/PUBLICATION",
+    "COMPANY_NAME": "Shades of Hanoi (Magazine)",
+    "POSITION_NAME": "Reporter & Photographer",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 57,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1OoHCZwQUosRfl81t2x6r1CJbYg6fxbEW",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=19gEBSTqzWaZVAsXM8_w8q15Kwcky5Jdz"
+  },
+  {
+    "FACULTY_NAME": "THEATER/DRAMA",
+    "COMPANY_NAME": "Bring it On & All Shook Up (Musicals)",
+    "POSITION_NAME": "Actress",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 58,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1UXyJHFO0xzWwar2mOKeA1brIyNURMOGD",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1UOCV9RfVE1UJbaIZQIJRK1oaSEGo1744"
+  },
+  {
+    "FACULTY_NAME": "SOCIAL JUSTICE",
+    "COMPANY_NAME": "Annual Student-Led Conferences",
+    "POSITION_NAME": "Leader",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 59,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1AHohHBDw-YYB0LUHl0hpb__KKTT6E2JN",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1pW8Me1DtVLgTxfZQrQA4MzVcBrkQt30I"
+  },
+  {
+    "FACULTY_NAME": "MUSIC VOCAL",
+    "COMPANY_NAME": "HolderNotes (A-capella)",
+    "POSITION_NAME": "Soprano Vocalist",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 60,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1PxUbgsDCk5pnKvAzVRdtb8pA-cvhoo8h",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1eTb4MoR3UlYdw8BwZlvTMB5_Au1E2_8z"
+  },
+  {
+    "FACULTY_NAME": "INTERNSHIP",
+    "COMPANY_NAME": "Congresswoman office",
+    "POSITION_NAME": "Intern",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 61,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1szkcGbUG0uTpsrL2ODZqyqEPE5Uf_VyC",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1XqFjikAmMd8SvNfEv93WyzR_EKO8lH32"
+  },
+  {
+    "FACULTY_NAME": "CAREER ORIENTED",
+    "COMPANY_NAME": "The Barrio Impact (Ed.Nonprofit)",
+    "POSITION_NAME": "Dir. of Outreach",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 62,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1WxpGzDm1mcBvkl4iiqzRihxhJycjQuWX",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1XNNZjAzSfSFV6-PRoaSq6BFTogFOQSPo"
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "MDCHS Quiz Bowl Team",
+    "POSITION_NAME": "Captain & President",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 63,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1337G4f9ky2hODWj6cSgNPO6mllODX4XS",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1ODEhj9z11aZ9nYZZq1Gr1asy1VNU5FY4"
+  },
+  {
+    "FACULTY_NAME": "INTERNSHIP",
+    "COMPANY_NAME": "Ammar Campa-Najjar Campaign",
+    "POSITION_NAME": "Intern & Office Manager",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 64,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=16iaamAjIyUdxvwP5tt-BxB4q4ZsnDwNE",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1fkiRUsIZL_Hl2zGnCcMwNpOGSaTB5FGh"
+  },
+  {
+    "FACULTY_NAME": "OTHER CLUB/ACTIVITY",
+    "COMPANY_NAME": "College Awareness Club",
+    "POSITION_NAME": "President & Founder",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 65,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1k9kZ8myYkKXiTRyx1BpECt23YcKAFQGX",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1e1Yndk-de2Tp3S4VtMSzTDIQrbIpHEcj"
+  },
+  {
+    "FACULTY_NAME": "INTERNSHIP",
+    "COMPANY_NAME": "Bilateral Safety Corridor Coalition",
+    "POSITION_NAME": "Intern",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 66,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1Sqp2Obh2-0NoaLpOPS_GsNCHiabkf9cb",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=11PyLDOzrTfe5vfgbfPdqg7_dLZ23Ynva"
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "MDCHS Crusaders Varsity Lacrosse",
+    "POSITION_NAME": "Lacrosse Defenseman",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 67,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=14D-w_VksAPuipy9EVMQFEc-NI-pqE3gC",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1MEeo5Hq24a4CN1vHHCljhPuugB7FLXJN"
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "Speech & Debate Club",
+    "POSITION_NAME": "Vice President",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 68,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1gyYYsPQbD_rDrUimNJaYvIqofJri5Pgd",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1bH9QNcSqwEC2y6LJFlhTFapIRnZ44tR4"
+  },
+  {
+    "FACULTY_NAME": "RELIGIOUS",
+    "COMPANY_NAME": "Ambassador for Christ Corps",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 69,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1zEjRF_iD4upOMt5gXcPD4neViwBClL73",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1znZQAhaWRwGInJ1ePPiJhQ1SX3FpkUl0"
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "National Ocean Sciences Bowl.",
+    "POSITION_NAME": "Team B Captain",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 70,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1QCrGZ5Dwj2hRV4NvTUmhSqhknMzGvDla",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1JdncR0YdRaF2fnHLBoEw2ZU4LWJFL38l"
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Fun Maths Problem Solving Society",
+    "POSITION_NAME": "Founder & Leader",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 71,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1Awbe8VQbo7_mdOa41XZGk9E60xY7vBjA",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1EMp-mJdZv7cDo6qVLfEL2qNmJ3OqsTFN"
+  },
+  {
+    "FACULTY_NAME": "STUDENT GOVT. POLITICS",
+    "COMPANY_NAME": "Dulwich College",
+    "POSITION_NAME": "Y13 Vice-Captain",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 72,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=17iQJCZiNst7zy1DeF3h1ZsvIIvFHVI5h",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1ktDLgdbeiiPICwhr0ZDSYGYs0DGM3Rzp"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Foundation Schools Maths Competition",
+    "POSITION_NAME": "Organizer",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 73,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1TchPhj5oUiYnJXXceTMmBKE7YFQsta4N",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1z0_P7lIRW8RTx0kJDtwf8OBZyfKFQxGR"
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Physics Society",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 74,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1S5oya-FQrqMhTPnVt2PL_8PXg5mIS5HK",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=111w6-fFo16AHcPwhC1jPh7QOQUou_CFy"
+  },
+  {
+    "FACULTY_NAME": "CULTURAL",
+    "COMPANY_NAME": "Russian Culture Society",
+    "POSITION_NAME": "Founder & Co-Leader",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 75,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=19EVpzEsxu5UjHuQCvrwnWGLSJEaPx0_9",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1um7cre2FouaiXCCtXJC-J_wdl1jvoNbi"
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Various Maths Competitions",
+    "POSITION_NAME": "Competitor",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 76,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1ZLRyia7em6c6K29XcTZnCH_IE3sRGyYi",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1LyzjdEHVJ5o1AqCSNFkOylkrzQPD4XsN"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "City Heights E-ACT Academy",
+    "POSITION_NAME": "Reading/Maths Mentor",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 77,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1qzHtj2VoOQ-cIdsqUDCuMa3VtsujZEdN",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1cLyLIZJkxQHXwhhAnpRgq4zzH2C7a-g1"
+  },
+  {
+    "FACULTY_NAME": "JOURNALISM/PUBLICATION",
+    "COMPANY_NAME": "DC Mathematica (Annual publication)",
+    "POSITION_NAME": "Senior Editor",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 78,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1s7NTQngPoGk1l9eW6adPBRLeRPZghiKn",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1YNYsbu2HAlkgCaKdplKZ7uhPCixIL9WW"
+  },
+  {
+    "FACULTY_NAME": "OTHER CLUB/ACTIVITY",
+    "COMPANY_NAME": "House Poetry Competition",
+    "POSITION_NAME": "Writer",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 79,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1odY6dv0UuuuyDkNEYgyPfEJARiYQFFCK",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1ib8nUY_FO3gRlKy4DFmBHz26eRhjzN4Q"
+  },
+  {
+    "FACULTY_NAME": "RELIGIOUS",
+    "COMPANY_NAME": "Religion, Theology, Ethics Society",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 6,
+    "EXT_TASK_ID": 80,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1D-DeDzDTAheCW7uWhqs6ia2r38RWCPjm",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=10VvUgXI6WVktKGCWWxOiWKZxPU0pbY6G"
+  },
+  {
+    "FACULTY_NAME": "RESEARCH",
+    "COMPANY_NAME": "Research on Diet and Skin Health",
+    "POSITION_NAME": "Research Assistant",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 81,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1WHNp96pKJGIY_MNT9JjTK2Hw1gx-InXk",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1BKduNRkqvhq0UnLXjgNY0UvP_KfmUwyy"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Stepping Stone Mission",
+    "POSITION_NAME": "Volunteer",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 82,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1CfjuNQ7c9y1ahquzlEty-2_USy7_xaw-",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1U9pPs5VDe7rN8e53eyCGb_dJUuKUo0J7"
+  },
+  {
+    "FACULTY_NAME": "CULTURAL",
+    "COMPANY_NAME": "Origami Club",
+    "POSITION_NAME": "Founder and President",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 83,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1F2NknGVm61PnNVHgawvr5MJvZRh5Ehp7",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1MQT4g94s26oAL3CXjXUw15Fi0VZ01xZZ"
+  },
+  {
+    "FACULTY_NAME": "STUDENT GOVT. POLITICS",
+    "COMPANY_NAME": "Student Government Association",
+    "POSITION_NAME": "President",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 84,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1_eMkZCWmlOu18vK5LeKJE57phLcIuPxy",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1QkMNC6gNNazLDYpuyHAYgL0DafsWWy8l"
+  },
+  {
+    "FACULTY_NAME": "SCIENCE/MATH",
+    "COMPANY_NAME": "Math Team",
+    "POSITION_NAME": "Captain",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 85,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=19D0jONkua-6o6j1B8rC-P4_LKHsbPjdM",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1Q4AtSLl7UuJ_W6m3sszJjhTuMe_G9qge"
+  },
+  {
+    "FACULTY_NAME": "INTERNSHIP",
+    "COMPANY_NAME": "Newnan Dermatology Institute",
+    "POSITION_NAME": "Intern",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 86,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1wlqeNpYwR-ZeY6-BQifE6JkTiUUUi1pZ",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=15T7avoHLwBV3VRfZI2nsJUzDIDR28FCS"
+  },
+  {
+    "FACULTY_NAME": "RELIGIOUS",
+    "COMPANY_NAME": "Worship Team",
+    "POSITION_NAME": "Audio Technician",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 87,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=121fK0KHONU4-qFeq5jUJ_nL1I-h17K3_",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=14eF-Frn1IG_go_9lqASKCs4VT1wXeifm"
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "Harvard Pre-College Program",
+    "POSITION_NAME": "Selected Participant",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 88,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1VoJSb6YimOUKscwFjKmdGMpCRGaTpcO4",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1ZvEKpU1wcfdylVNOCld3tbtQJwTgqpJi"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Key Club",
+    "POSITION_NAME": "Chairman of Community Service",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 89,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1swOpMSOuxKdqH-dDnJRjOGD0Ok1r7vY5",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1UD8UL9GwwbWN8yGphgKTH9oZCFLg4bUa"
+  },
+  {
+    "FACULTY_NAME": "SCIENCE/MATH",
+    "COMPANY_NAME": "Mu Alpha Theta",
+    "POSITION_NAME": "President",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 90,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1NLDKmrOum8Gs1K7Y-q5kX2u-TYVcZpv9",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=12qXKby5yJTtXiCc-X_xANQVaSJupORNG"
+  },
+  {
+    "FACULTY_NAME": "INTERNSHIP",
+    "COMPANY_NAME": "CHN Academy of Sciences",
+    "POSITION_NAME": "Microbio Research Intern",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 91,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1xHGeot82sjhBVaXQcB8no29hHRnaxaZ7",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1KFyc-qnFtbUdLe30QlA7B0j7gFN8mx4r"
+  },
+  {
+    "FACULTY_NAME": "OTHER CLUB/ACTIVITY",
+    "COMPANY_NAME": "Transfer Student Club",
+    "POSITION_NAME": "Co-founder and President",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 92,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1y43H5tz-4kQPvHrYqjbuQH2wz9cY1S9n",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1L7Lw9E0NHoRnoDzq7sG-UAXm2rYlJgAv"
+  },
+  {
+    "FACULTY_NAME": "SCIENCE/MATH",
+    "COMPANY_NAME": "Math Team",
+    "POSITION_NAME": "Captain",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 93,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1urePP7DYTBw9wrSpctSRkY2XWj-SP1KZ",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=13iJmbBHRJsof-t00yZjKBOCpczFS7xFk"
+  },
+  {
+    "FACULTY_NAME": "SCIENCE/MATH",
+    "COMPANY_NAME": "Science Olympiad Team",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 94,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1G65MZ_JdrhYomkkPgu4oPAqJl6t9L1h4",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=19Ugslp_QHNom8SbZn29plBXDhE226w2A"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "National Honors Society",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 95,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=18wNGCK3E_twbaEi_X1cJvP5gTs8SyECf",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1KyHPFLK9ABVs5yYviuSpe9r077lsials"
+  },
+  {
+    "FACULTY_NAME": "SCIENCE/MATH",
+    "COMPANY_NAME": "Stanford Pre-Collegiate Summer Institutes",
+    "POSITION_NAME": "Student",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 96,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1suz_FUYCzraZdfjOPtyu1I--we_ZZL71",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1dstMqHtTUizXckSR9wPgt47yboUJvVbL"
+  },
+  {
+    "FACULTY_NAME": "MUSIC INSTRUMENTAL",
+    "COMPANY_NAME": "School orchestra",
+    "POSITION_NAME": "Violinist",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 97,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1HPzyu6h0Lb7d6w0-7EKxQE7RrsRvX6cd",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=13Kx2DffhjqdfF9FluomA5ad_483b9-z6"
+  },
+  {
+    "FACULTY_NAME": "COMPUTER/TECHNOLOGY",
+    "COMPANY_NAME": "Robotics Team",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 98,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1W_F9LGHybqVSlxFPapHEId63TIhgbcNt",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=15gQBlLj4RIGLqDl-0tsO2DdqUB3hM2FQ"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Key Club",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 99,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1N3CAiHHQdn3vmtbBumlu5UMh545MZRvS",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1sD8fcpC-qbkK5HWRW3oO-MFPdDX4v4US"
+  },
+  {
+    "FACULTY_NAME": "WORK",
+    "COMPANY_NAME": "Freelance",
+    "POSITION_NAME": "Private Chinese Tutor",
+    "UNIVERSITY_ID": 7,
+    "EXT_TASK_ID": 100,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=11UjFrKfIo6ENMwJZoisymohYNqgGXEGH",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1s54uYA7eikd2KBRWbIeAe5eimya3u1iu"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Eduklase Online Education Info Portal",
+    "POSITION_NAME": "Founder",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 101,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=15yW67lfTiXRInLAe2VebKvqjgz9pT56v",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1QD7wX2J_q5n7KzlsWq6vnl0uXf10sZ1v"
+  },
+  {
+    "FACULTY_NAME": "CAREER ORIENTED",
+    "COMPANY_NAME": "HK Youth Law & Current Affairs Association",
+    "POSITION_NAME": "VP",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 102,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1yq6kf_GmU9zkbl17Yc9hbsttyXipgGDJ",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1f1W_BwEdVlGHSucs-gky-bANbjiGq0ld"
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "School MUN Club",
+    "POSITION_NAME": "President",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 103,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1crVRWnXc4ZaygkZ_Mj8H31Kkt0pgz0yY",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1RV6DrJEBoNSyYLoWwxdmF7gxwPlC_nU-"
+  },
+  {
+    "FACULTY_NAME": "SCIENCE/MATH",
+    "COMPANY_NAME": "Dyelectricity Science Research Team",
+    "POSITION_NAME": "Team Leader",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 104,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1wQ4glLayWj8xi8dPhyYT-ikrAWBWT5Qm",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1hyjqkCthw4t7sMzoAgBTnT5tMklbCMAw"
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "School Mock Trial team",
+    "POSITION_NAME": "Captain",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 105,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1X3_wbnfDGpBTpc_HsPKsMIHFxBxiUM2_",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=13QtxADVE6aj_afKlbZGCRqVPYs-j8gtv"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Kalliope Organization Committee",
+    "POSITION_NAME": "Cancer Action Network",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 106,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1KFXFghn4Z5NkIdnDCDrVF4-TBv91Jf8R",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1CfETtMh4CyDJVyVIi38j07Qs5MM8qsQY"
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "TEDx Youth@AISHK",
+    "POSITION_NAME": "Speaker",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 107,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1M0O_w2httSjizlR6WQDgKwrHfA0Xf__a",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1D93EGPluq9X2ggLP_Gx_tgpRU5FGwWtT"
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Stanford Summer Humanities Institute",
+    "POSITION_NAME": "Participant",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 108,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1HvZrsX0B1hGOxlfQ_NdXpiHac4Pp65j6",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1HhVuE4G4aXxfam6UFikuDuiV7E91Aw97"
+  },
+  {
+    "FACULTY_NAME": "ENVIRONMENTAL",
+    "COMPANY_NAME": "HK Youth Environmental Summit",
+    "POSITION_NAME": "Organizing Committee member",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 109,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1nrmeaPTB4a7hAUv1Pp5_UaVAVg4HTVvd",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1i8wtOSho12_bI-ukhReLuQ-V6tMM8tpQ"
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "Crossroads Foundation",
+    "POSITION_NAME": "Volunteer",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 110,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1HEvCbStWHe2N-WytQSzT9gw9COMjOuf1",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1EQoXmfekWBbLQfaamAI9DSbIleEGizgN"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "IYOW Charity Converts",
+    "POSITION_NAME": "Founder and Director",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 111,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1FH8Gl893SjggiUyEeMeHlh56pKeTnbS6",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1KVBr3xgWAoGC7Z3MHcPQYXNTqQyDqnvM"
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "Victorian State Squad for Debating",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 112,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1zlcmG46yiktviaehDRtISEIiJ8BcnqXa",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1V2Ibd2tVySvS4DU_VBc_i-jKY-9zsYWW"
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "Middle School and Senior School",
+    "POSITION_NAME": "Debating Captain",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 113,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1VTumlYVk1-JQCVgxOqvVyo3E1-TJ50TX",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1bS2lR_zSlYMgHtT652zZTeHT5mXbTE0g"
+  },
+  {
+    "FACULTY_NAME": "JOURNALISM/PUBLICATION",
+    "COMPANY_NAME": "Various publications",
+    "POSITION_NAME": "Writer and Editor",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 114,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=162443JProW0DkvmpcGhagxr7TMaFdgJ4",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1KOufgBHXbbEKYJMPNYv8Ag0YKG39SedR"
+  },
+  {
+    "FACULTY_NAME": "ART",
+    "COMPANY_NAME": "Visual Arts",
+    "POSITION_NAME": "IB artists",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 115,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=11w-vghchYVDII1rpVFj6x5ngv6izFlHm",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1x5sj2HbYOGsjwNCxzkHifjXk2Mq8CE_j"
+  },
+  {
+    "FACULTY_NAME": "MUSIC INSTRUMENTAL",
+    "COMPANY_NAME": "Piano and Viola",
+    "POSITION_NAME": "Musician",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 116,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1VG7YKIWHnxYBotWvtaNxkSLS6KjDzFyK",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1zQkha5v00wobbZyrkcXF_6p2xi2L8bPp"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Local Community Service",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 117,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1V1jZDafQe9pN_l1moncQZ8M8NNQAlmeW",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1hkvbop11ZmV2oFQ9Zh8Sdl1qjOXl9q1z"
+  },
+  {
+    "FACULTY_NAME": "THEATRE/DRAMA",
+    "COMPANY_NAME": "House Drama Captain",
+    "POSITION_NAME": "Playwright and Publicist",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 118,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1JKeEJOHkVIeZ-lWXrlA33RfG-3i1sfVf",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1Oij7FU-kmxs4hwkrI-BhldBv-1iPMZNC"
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS CLUB",
+    "COMPANY_NAME": "Badminton",
+    "POSITION_NAME": "Player",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 119,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1kxIKssgWIJOTbiMmn8v-RMOALiBd052P",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1Q6oSdi5edCcDXP0Xf6StpK6gD6r1e9jp"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Hand Up Australia Udaipur",
+    "POSITION_NAME": "Volunteer",
+    "UNIVERSITY_ID": 9,
+    "EXT_TASK_ID": 120,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1xtwhQotnQQwBNMG1qu6RUeXdFWISIGck",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1-GaXE6U-0CUXiMaPQGkPjjKTb7YLMwha"
+  },
+  {
+    "FACULTY_NAME": "OTHER/CLUB ACTIVITY",
+    "COMPANY_NAME": "UN and EP",
+    "POSITION_NAME": "AFI International Youth Ambassador",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 121,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=13bYJbI_ocq6OKKl_8DzUxJe0Y-CEljwj",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1E0ZB2ATb2k69rL6Vt398BZQT5O3YJhPt"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Youth-run charity",
+    "POSITION_NAME": "President and Founder",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 122,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1jaAwTwRRy5df1c7zBQx6XhkN9oE1DRCf",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1F3MAUEKXt1yybrHIaP79231-JFaMR3H6"
+  },
+  {
+    "FACULTY_NAME": "INTERNSHIP",
+    "COMPANY_NAME": "One Belt One Road Initiative",
+    "POSITION_NAME": "MEP EP Internship",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 123,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1cVvyGynKBCS4eDKMBMPrdbPTN4Y-QiDz",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1SjHk3SsLGNTCRdAwlKG0LsbBx0yXkzp4"
+  },
+  {
+    "FACULTY_NAME": "STUDENTS GOVT. POLITICS",
+    "COMPANY_NAME": "Students Representative Council",
+    "POSITION_NAME": "SRC Prefect",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 124,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1csXtLnao0T6qntrnRPtDcK5nchPXWb7K",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=170GgDygLKQvth1x8R0XYNbDVh88CU7Pd"
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Fictocritical Thesis Publishing Club",
+    "POSITION_NAME": "Publisher",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 125,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1wR85lSbr1uuWfLSY81a3CilTr8FgAFfl",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1cAzGy-ZXBFD_BMM86oqk-PveDu_xg41F"
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "Debating Competitions and Trinity College Diploma",
+    "POSITION_NAME": "Public Speaker",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 126,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1OVN2No2K_08YwiYWtWIkIINZ-jd_4efo",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1Ma2yjewicSdGbdFHVLPx6pDynvmG-Qp2"
+  },
+  {
+    "FACULTY_NAME": "OTHER/CLUB ACTIVITY",
+    "COMPANY_NAME": "International Courses, Programmes and Leadership",
+    "POSITION_NAME": "Participant",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 127,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1N130T4gj-AspB_OwlBruFnq8uGPJGVwd",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1zQa38moHFIoaDZeJNnIzdO_1YNfeZc-3"
+  },
+  {
+    "FACULTY_NAME": "MUSIC INSTRUMENTAL",
+    "COMPANY_NAME": "Lead Cellist, Organ, Piano, Flute, Harpsichord",
+    "POSITION_NAME": "Player",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 128,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=14f-QoZjvxD7MOVSC-QPiyhDl-VESaDal",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1DMiQzwkmDkLfByfqcTaiuw5sQ0smwJZ4"
+  },
+  {
+    "FACULTY_NAME": "CAREER ORIENTED",
+    "COMPANY_NAME": "Minister for Women’s Affairs",
+    "POSITION_NAME": "Youth Parliament member",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 129,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1qx7XoYC01qI6GIxhJXiJME5kbWexwh6R",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=13GWHdBfLAT2NceSP0fSBAqL3fqGqm_dJ"
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "Fencing, Sports and Activities",
+    "POSITION_NAME": "Participant",
+    "UNIVERSITY_ID": 10,
+    "EXT_TASK_ID": 130,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1PgTPBG4m2_atT-iejOvPKrZDjjGthwbx",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=18Jq3HF-tN3GLdbbY07Yina26zeLoTeW3"
+  },
+  {
+    "FACULTY_NAME": "STUDENT GOVT. POLITICS",
+    "COMPANY_NAME": "High School",
+    "POSITION_NAME": "Senior Prefect (School Captain)",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 131,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1QVPCQ57U3QaePPyGQA4YsXYWqniSIE3c",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1KkAH1d9CGd7X1xtTSJpHDyMJ6CsCMn3l"
+  },
+  {
+    "FACULTY_NAME": "MUSIC INSTRUMENTAL",
+    "COMPANY_NAME": "High School Orchestra",
+    "POSITION_NAME": "Music Captain",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 132,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1kpOPUUsCsPBMRImy0LzuVhU4UNGYBAuA",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1pl8PSIs4ZsgFr6VCDNjNUd24YoaLSNQj"
+  },
+  {
+    "FACULTY_NAME": "MUSIC INSTRUMENTAL",
+    "COMPANY_NAME": "School Orchestra",
+    "POSITION_NAME": "Assistant Concertmaster",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 133,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1Mx1HG0WxRihbn6Z5_EB7rZgVXxyjMYkx",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1wGtCuR-VIlkLZN0r_tU7977F18kV3EqY"
+  },
+  {
+    "FACULTY_NAME": "MUSIC VOCAL",
+    "COMPANY_NAME": "Senior A Cappella Group",
+    "POSITION_NAME": "Tenor in ‘Grammar Phones’",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 134,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=12_n4Y7utgvc4mPIzkDJ6DW0VcmjPOTIs",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1zyoi8SukOvQNXVNwPxXyos4P4GVa3VUL"
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "Cross Country",
+    "POSITION_NAME": "Cross Country Captain",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 135,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1vRmwGoFHfpCS2ibIk5xnuv1amlFaYnVt",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1HR8vkU_lLl_s7sGCaKy8BH1LKciGFtTe"
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "Power Forward in First/Second Squad",
+    "POSITION_NAME": "Basketball Player",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 136,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1aS4OWnPleh2bGOFzUXyd5OZs7KiTsu5L",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1S-jnFMtKL7Pf20D5_mZdatAJQVNf2Eh8"
+  },
+  {
+    "FACULTY_NAME": "ATHLETICS JV/VARSITY",
+    "COMPANY_NAME": "Track and field / Sprints /Middle Distance",
+    "POSITION_NAME": "Championship School Representative",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 137,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1cOGQ_325Y-15Ho23wEn7-5wqXvp77uha",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=116o77HN6XrQRp_-ZDODq7BK404xllStn"
+  },
+  {
+    "FACULTY_NAME": "FOREIGN EXCHANGE",
+    "COMPANY_NAME": "Paris/Sydney",
+    "POSITION_NAME": "Participant",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 138,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=17sYDjpRGihN4x60Rns2zXA34CJmf4Rgt",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1dtaV8paqth5xg0XEOIJZVr7EInpwecwp"
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "Debating A Team / Mooting Team (High School)",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 139,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1NxFrDzAQtlaNt-VSC64n8Q5TLA9ATw5B",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1rG6hnSB-gwDfhU3pJ5dojasjIRSx-wbq"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Australian Chamber Orchestra Music Education Program",
+    "POSITION_NAME": "Violinist",
+    "UNIVERSITY_ID": 8,
+    "EXT_TASK_ID": 140,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1GAr62-x8eSTdl6i_ALHzeH2bDjv5MFTZ",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1l4jQokDOm5Cs9OjLURUhgWQE1LGHIemU"
+  },
+  {
+    "FACULTY_NAME": "THEATRE/DRAMA",
+    "COMPANY_NAME": "Benvinda Drama Group",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 141,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1KNe9sig_o0gfTtpzSvxFP2Cnm4DgyKiH",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1FgFTyflehDiAKCFSmNEpnfoL4aBAmMPJ"
+  },
+  {
+    "FACULTY_NAME": "THEATRE/DRAMA",
+    "COMPANY_NAME": "Royal National Theatre of London",
+    "POSITION_NAME": "Connections",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 142,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1b9rcQj8K3FsmtPqF8dSXPBwluO8kxm1l",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1wZ4xZg884uPDa0XiMvludOEq19EA8D1J"
+  },
+  {
+    "FACULTY_NAME": "THEATRE/DRAMA",
+    "COMPANY_NAME": "Musical Theater Group",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 143,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1JtpX5XpcOUw-nMtgEto9L4gCqSEuOtH0",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=11NBNJcwLP4PUxWJScX2tCW-InlWnw7Lq"
+  },
+  {
+    "FACULTY_NAME": "SOCIAL JUSTICE",
+    "COMPANY_NAME": "Coletivo Maria Quitéria",
+    "POSITION_NAME": "President and Co-founder",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 144,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1hQuUDRdHDSv5QAw8A6BT7hbjCDHRQwns",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1KXhpwGlrpwdTYev7VgCJf-V6oKXoCbwu"
+  },
+  {
+    "FACULTY_NAME": "CULTURAL",
+    "COMPANY_NAME": "Brazilian Leadership Bootcamp",
+    "POSITION_NAME": "Participant",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 145,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1OfWM0mJan_5unIwZBHXRXutfOOTJ2pE0",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=14N_gjddPsve1Lu8xgZAyv0mj86qIitOq"
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "Model UN",
+    "POSITION_NAME": "Delegate, Secretary, and Chair",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 146,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1-ULFa05u0L3Q1Xi7DY4LW9xYPyunx_yz",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1wl_ERW-VB5yPZH4MrDw46vB_7wlc-uHH"
+  },
+  {
+    "FACULTY_NAME": "STUDENT GOVT. POLITICS",
+    "COMPANY_NAME": "Student Council",
+    "POSITION_NAME": "Senior Year Representative",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 147,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=11H4Oh6olAbZf8IYVMMQp88q5llwsH25J",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1LscEXAc_A5JYUG7iTUSx7ZoKhvdnVhT1"
+  },
+  {
+    "FACULTY_NAME": "STUDENT GOVT. POLITICS",
+    "COMPANY_NAME": "Political Commission",
+    "POSITION_NAME": "Founder and Spokeswoman",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 148,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1G0eHtVzhKCJTgCsCQK5XMpXInOMbo-Eb",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=14fiAJYbFyF_d4dlyaERj5SB0mAyOnRc9"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Fraternity Experience Program",
+    "POSITION_NAME": "Charity Outreach",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 149,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1ZNvOYysBS11j1My2SfeoZOoTS3uPmCT2",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=13tCix0UVhiZAyeZgwcOJmm2WBwLSuZpZ"
+  },
+  {
+    "FACULTY_NAME": "COMMUNITY SERVICE",
+    "COMPANY_NAME": "Association of Hospital das Clínicas",
+    "POSITION_NAME": "Volunteer",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 150,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1hSqwWa2gtPG9MJ5DjgtXObkqT-TFR0vb",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=18buxFRQD4HWjZq-Z_a4BYV_T8oeNzcP5"
+  },
+  {
+    "FACULTY_NAME": "INTERNSHIP",
+    "COMPANY_NAME": "Yeremyan Projects",
+    "POSITION_NAME": "Intern",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 151,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=181y5cXNnKmInQ9tx5oug2htfPta94zTg",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1gSbQeWDmR9BZTchsroA5FMBb3VudGFoE"
+  },
+  {
+    "FACULTY_NAME": "CAREER ORIENTED",
+    "COMPANY_NAME": "Association of Accountants of Armenia",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 152,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1fx0JeM0ELOq3H0mb401FIaax_IiOAt6g",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1dCIS9VKpLpQsByAC8hbt2oQYgYqaZqBV"
+  },
+  {
+    "FACULTY_NAME": "RESEARCH",
+    "COMPANY_NAME": "Yerkir Strategic Programming Foundation",
+    "POSITION_NAME": "Researcher",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 153,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=162j3mAn7IAlH_UBrBvTwD4jIboxCBFBR",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1lpzMHZIOrnSfvXje30QeekUlZA2y50ao"
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Maths Problem Solving Society",
+    "POSITION_NAME": "Founder & Co-Leader",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 155,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=11543nF7PND4pQCcjpOjuwyX9BxgK2dpS",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=14sQffzl0DQeCi31YHgmU2sz3u9j7ZPK9"
+  },
+  {
+    "FACULTY_NAME": "JOURNALISM/PUBLICATION",
+    "COMPANY_NAME": "Yerkir Editorial",
+    "POSITION_NAME": "Researcher",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 154,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=121nFzR4Tx1pV6y32xKe572eY2WOwuxfr",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=17QjHbxWysaK9V7HVTU7FORGydb0byNN6"
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "School's Olympiad Team",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 156,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1zXf5vUvgdTX_AWuQtt5WJx6Sw-H7cH_q",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1V5zzj-GIojBWpYANrYuEtsmjKeESI8Ag"
+  },
+  {
+    "FACULTY_NAME": "RESEARCH",
+    "COMPANY_NAME": "Quantum College",
+    "POSITION_NAME": "Research Assistant",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 157,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=149YEg0h_xVQUpN9LmHFzINBwUDxhGDLZ",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=19KwIz7Najpzk8PC7j00t2B4CF3c2Mtpr"
+  },
+  {
+    "FACULTY_NAME": "DEBATE/SPEECH",
+    "COMPANY_NAME": "College Debate Club",
+    "POSITION_NAME": "Co-Founder",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 158,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1nXF9Xm2sRDK4Txuxm1hSwm6nHqfNpkv1",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=16n1khWhLM9f59M32SaKqD_efvKKsc4t3"
+  },
+  {
+    "FACULTY_NAME": "VOLUNTEER",
+    "COMPANY_NAME": "Aurora Humanitarian Initiative",
+    "POSITION_NAME": "Volunteer",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 159,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1HVHsy4kgII0gMLY6O2ufUqVM7IFLoicL",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=10caLGGNa-LRy5lE6ef7P_KLvyFnUqjib"
+  },
+  {
+    "FACULTY_NAME": "VOLUNTEER",
+    "COMPANY_NAME": "National Honours Society",
+    "POSITION_NAME": "Voluntary member",
+    "UNIVERSITY_ID": 11,
+    "EXT_TASK_ID": 160,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1QC42vodpmKfJIrB5qBjNzbmVcDmTQEoF",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1MkUFIxXCHapq4GjGiLZZi-oV4TLiSgQT"
+  },
+  {
+    "FACULTY_NAME": "SCIENCE/MATH",
+    "COMPANY_NAME": "Math club",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 161,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1Ws5eboUF0ynFa8s2VHOAe4GaVZ72g9W7",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1eC-SwkVA0xUMg0f3aTCAw5CG_B7hHdGP"
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Physics Club",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 162,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=15kFpDntB5l4ZqU232Bkh8H35kZMVKy68",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=15TKX69tkx_P_4XDR_6o9NNby-posRU3H"
+  },
+  {
+    "FACULTY_NAME": "COMPUTER/TECHNOLOGY",
+    "COMPANY_NAME": "Programming club",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 163,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1Fe3Af1BwEoJUaySIDVrz00723uC-NrSR",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1l1Wgm6nb0GPABllfXLiGTXwjGNqTvB8X"
+  },
+  {
+    "FACULTY_NAME": "JOURNALISM/PUBLICATION",
+    "COMPANY_NAME": "Yerkir Foundation",
+    "POSITION_NAME": "Managing Editor",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 164,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1ulVoTbgPrPWunjBaT_5-Vv1YJnXgfkeM",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1t_hce1XHv1o7thBlxXtaPLoixkSsTWcV"
+  },
+  {
+    "FACULTY_NAME": "OTHER CLUB/ACTIVITY",
+    "COMPANY_NAME": "Chess Club",
+    "POSITION_NAME": "Founding member",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 165,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1CKIyjAECNQxCHhkKdej320PV8jOrJ_od",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1p-zQnU1P07rMf7gkfw-dp6ZGeXSVa2u8"
+  },
+  {
+    "FACULTY_NAME": "OTHER CLUB/ACTIVITY",
+    "COMPANY_NAME": "Math Club",
+    "POSITION_NAME": "Tutor",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 166,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=10s1ZxnadLGNy6gVuC0VTPqM_H-UP6oAJ",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1XWcDjluPUMrBhjnkgTu8gj1eLdxzBn9P"
+  },
+  {
+    "FACULTY_NAME": "ACADEMIC",
+    "COMPANY_NAME": "Competitive College Club (EducationUSA Armenia)",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 167,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1IjbIX6ijYiR5k8kg_eFfa_AunZ4t4Cio",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1XJp9dTehpEw2W0K-45bRqhEqH6qqIwTJ"
+  },
+  {
+    "FACULTY_NAME": "OTHER CLUB/ACTIVITY",
+    "COMPANY_NAME": "'DARK' Company",
+    "POSITION_NAME": "Volunteer",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 168,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=1Qu0CYVtfVvCDg-7z4PQAsDWp-XxeqM49",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1uFBmADxPSkK3cwOeiUaczOMytk0KrHgQ"
+  },
+  {
+    "FACULTY_NAME": "DANCE",
+    "COMPANY_NAME": "'Harq' Armenian folk dance ensemble",
+    "POSITION_NAME": "Member",
+    "UNIVERSITY_ID": 1,
+    "EXT_TASK_ID": 169,
+    "imgWeb": "http://drive.google.com/uc?export=view&id=13qYIOi0izdAi8kzxriIF_GYRQ6DnpqgF",
+    "imgMobile": "http://drive.google.com/uc?export=view&id=1U6W_UCN-5wLpYbnsxAKoOlFMLEH55tBE"
+  }
+]
