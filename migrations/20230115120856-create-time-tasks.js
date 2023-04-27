@@ -19,7 +19,7 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       point: {
-        type: Sequelize.FLOAT
+        type: Sequelize.FLOAT,
       },
     });
   },

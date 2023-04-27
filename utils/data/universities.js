@@ -61,7 +61,7 @@ const universities = [
       "Princeton is also known for its focus on undergraduate education, with a strong emphasis on teaching and close student-faculty interaction.",
       "The university is committed to diversity and inclusion, and its student body is diverse in terms of race, ethnicity, and socioeconomic background.",
     ],
-    img: "http://drive.google.com/uc?export=view&id=1RZDHy1kWVmf4NxhaXtLZmXWGx83U-AlB",
+    img: "http://drive.google.com/uc?export=view&id=1YOd1jZ4el3pVZu2-L4gpcFosfGOEh5Aa",
     imgMin:
       "http://drive.google.com/uc?export=view&id=1cGWtWWbC1bcW_Y7IhHWMdQ7op5BqBC5a",
     location: "Princeton, NJ, United States",
