@@ -134,7 +134,7 @@ const updateEmail = async (req, res) => {
       transporter.sendMail(mailOptions);
       return res.json("email is sent");
     }
-    return res.stataus(403).json("Email already in use");
+    return res.status(403).json("Email already in use");
   } catch (error) {
     console.log(error);
   }
@@ -148,7 +148,7 @@ const verify = async (req, res) => {
       const role = myEmail.role.split("toBe")[1];
       await UserEmails.destroy({
         where: {
-          userId: myEmail.userId,
+          userId: myEmail.userId, 
           role,
           token: { [sequelize.Op.ne]: token },
         },
