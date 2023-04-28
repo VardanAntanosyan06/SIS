@@ -134,7 +134,7 @@ const updateEmail = async (req, res) => {
       transporter.sendMail(mailOptions);
       return res.json("email is sent");
     }
-    return res.json("Email already in use");
+    return res.stataus(403).json("Email already in use");
   } catch (error) {
     console.log(error);
   }
