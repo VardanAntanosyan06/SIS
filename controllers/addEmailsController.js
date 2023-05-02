@@ -271,9 +271,9 @@ const updateEmail = async (req, res) => {
                   <p style="font-size: 20px; line-height: 30px;text-align:left;"
                     >If the button is not working please use the link below:
                     <a
-                      href="https://sisprogress.com/message?token=${item.token}"
+                      href="https://sisprogress.com/secondarymailverify?token=${item.token}"
                       style="color: #425dac;text-align:left;font-size:18px;"
-                      >https://sisprogress.com/message?token=${item.token}</a
+                      >https://sisprogress.com/secondarymailverify?token=${item.token}</a
                     >
                   </p>
                 </div>
@@ -434,7 +434,6 @@ const updateEmail = async (req, res) => {
               <meta charset="UTF-8" />
               <meta http-equiv="X-UA-Compatible" content="IE=edge" />
               <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-              <title>Document</title>
               <link
                 href="https://fonts.googleapis.com/css?family=Poppins"
                 rel="stylesheet"
@@ -516,9 +515,9 @@ const updateEmail = async (req, res) => {
                   <p style="font-size: 20px; line-height: 30px;text-align:left;"
                     >If the button is not working please use the link below:
                     <a
-                      href="https://sisprogress.com/message?token=${item.token}"
+                      href="https://sisprogress.com/primaryemail?token=${item.token}"
                       style="color: #425dac;text-align:left;font-size:18px;"
-                      >https://sisprogress.com/message?token=${item.token}</a
+                      >https://sisprogress.com/primaryemail?token=${item.token}</a
                     >
                   </p>
                 </div>
@@ -662,7 +661,7 @@ const verify = async (req, res) => {
   try {
     const { token } = req.body;
     const myEmail = await UserEmails.findOne({ where: { token } });
-    if (myEmail && moment().diff(user.DeactivatedUser.deactivateTime, "days") <= 5
+    if (myEmail && moment().diff(item.tokenCreatedAt, "hours") <= 24
       ) {
         const role = myEmail.role.split("toBe")[1];
         await UserEmails.destroy({
