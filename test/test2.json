@@ -1,0 +1,5 @@
+{
+    "Author":{"name":[[["equals","test"]]]},
+    "Book": {"title":[[["notcontains","c"]]]},
+    "Chapter": {"content":[[["startswith","The "]]]}
+}
