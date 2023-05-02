@@ -12,7 +12,7 @@ const { deleteUser } = require("./verifyController");
 const UserModel = require("../models").Users;
 const reg = async (req, res) => {
   try {
-    const {
+    let {
       fullName,
       email,
       password,
@@ -95,7 +95,7 @@ const reg = async (req, res) => {
 
 const sendMail = async (req, res) => {
   try {
-    const { email } = req.body;
+    let { email } = req.body;
     email = email.toLowerCase();
     const allUserEmails = await UserModel.findAll({include:[{model:UserEmails,where:{email}},DeletedUsers]});
     const user = allUserEmails.filter((e)=>e.DeletedUser===null || e.DeletedUser.isVerified===false)[0];

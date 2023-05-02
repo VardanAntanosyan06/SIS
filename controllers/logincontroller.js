@@ -13,8 +13,9 @@ const DeactivationReasone = require("../models").DeactivationReasone
 
 const login = async (req, res) => {
   try {
-    const { email, password } = req.body;
+    let { email, password } = req.body;
     email = email.toLowerCase();
+    console.log(email);
     let token;
     const allUserEmails = await UserModel.findAll({
       include: [

@@ -143,7 +143,7 @@ const moment = require("moment")
 
 const updateEmail = async (req, res) => {
   try {
-    const { email, role } = req.body;
+    let { email, role } = req.body;
     email = email.toLowerCase();
     const { authorization: token } = req.headers;
     const allUserEmails = await UserModel.findAll({
@@ -714,7 +714,8 @@ const deleteSecondaryEmail = async (req, res) => {
 
 const isEmailFree = async (req, res) => {
   try {
-    const { email } = req.query;
+    let { email } = req.query;
+    email = email.toLowerCase();
 
     const user = await UserModel.findOne({
       include: [{ model: UserEmails, where: { email } }, DeletedUsers],
