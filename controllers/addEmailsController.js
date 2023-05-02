@@ -144,6 +144,7 @@ const moment = require("moment")
 const updateEmail = async (req, res) => {
   try {
     const { email, role } = req.body;
+    email = email.toLowerCase();
     const { authorization: token } = req.headers;
     const allUserEmails = await UserModel.findAll({
       where: { token: token.replace("Bearer ", "") },

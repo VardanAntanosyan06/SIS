@@ -40,6 +40,7 @@ const reg = async (req, res) => {
       addinfo,
       moreInfo,
     } = req.body;
+    email = email.toLowerCase();
     const user = await UserModel.findOne({
       include:[{model:UserEmails,where:{email}},DeletedUsers]
     }); 
@@ -95,6 +96,7 @@ const reg = async (req, res) => {
 const sendMail = async (req, res) => {
   try {
     const { email } = req.body;
+    email = email.toLowerCase();
     const allUserEmails = await UserModel.findAll({include:[{model:UserEmails,where:{email}},DeletedUsers]});
     const user = allUserEmails.filter((e)=>e.DeletedUser===null || e.DeletedUser.isVerified===false)[0];
     const userEmail = await UserEmails.findOne({where:{userId:user.id,email}})
