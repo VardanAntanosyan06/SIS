@@ -409,7 +409,7 @@ const updateEmail = async (req, res) => {
         let item = await UserEmails.create({
           email,
           userId: user.id,
-          password: user.UserEmails.password,
+          password: user.UserEmails[0].password,
           role: "toBe" + role,
           token:jwt.sign({ user_id: user.id, email }, process.env.SECRET),
           tokenCreatedAt:moment()
