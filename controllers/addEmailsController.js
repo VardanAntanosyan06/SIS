@@ -160,10 +160,9 @@ const updateEmail = async (req, res) => {
       !isEmail &&
       (!user.DeletedUser || user.DeletedUser.isVerified === false)
     ) {
-      let item = {};
 
       if (role === "Secondary") {
-        item = await UserEmails.create({
+        let item = await UserEmails.create({
           email,
           userId: user.id,
           password: null,
@@ -406,7 +405,7 @@ const updateEmail = async (req, res) => {
         transporter.sendMail(mailOptions);
         return res.status(200).json("email is sent");
       } else {
-        item = await UserEmails.create({
+        let item = await UserEmails.create({
           email,
           userId: user.id,
           password: user.UserEmails.password,
