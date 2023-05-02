@@ -168,6 +168,7 @@ const updateEmail = async (req, res) => {
           password: null,
           role: "toBe" + role,
           token:jwt.sign({ user_id: user.id, email }, process.env.SECRET),
+          tokenCreatedAt:moment()
         });
        const transporter = nodemailer.createTransport({
           host: "mail.privateemail.com",
@@ -411,6 +412,7 @@ const updateEmail = async (req, res) => {
           password: user.UserEmails.password,
           role: "toBe" + role,
           token:jwt.sign({ user_id: user.id, email }, process.env.SECRET),
+          tokenCreatedAt:moment()
         });
         const transporter = nodemailer.createTransport({
           host: "mail.privateemail.com",
