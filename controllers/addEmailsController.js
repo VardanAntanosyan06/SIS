@@ -662,9 +662,10 @@ const verify = async (req, res) => {
   try {
     const { token } = req.body;
     const myEmail = await UserEmails.findOne({ where: { token } });
-    if (myEmail) {
-      const role = myEmail.role.split("toBe")[1];
-      await UserEmails.destroy({
+    if (myEmail && moment().diff(user.DeactivatedUser.deactivateTime, "days") <= 5
+      ) {
+        const role = myEmail.role.split("toBe")[1];
+        await UserEmails.destroy({
         where: {
           userId: myEmail.userId,
           role,
@@ -677,15 +678,16 @@ const verify = async (req, res) => {
           { email: myEmail.email },
           process.env.SECRET
         ));
-
+      myEmail.tokenCreatedAt = null;
       await myEmail.save();
       return res.json({
         success: true,
         newEmail: myEmail.email,
         emailType: role,
       });
+    } else {
+      return res.status(403).json("token timeout!");
     }
-    return res.json({ success: false });
   } catch (error) {
     console.log(error);
   }
