@@ -661,7 +661,7 @@ const verify = async (req, res) => {
   try {
     const { token } = req.body;
     const myEmail = await UserEmails.findOne({ where: { token } });
-    if (myEmail && moment().diff(item.tokenCreatedAt, "hours") <= 24
+    if (myEmail && moment().diff(myEmail.tokenCreatedAt, "hours") <= 24
       ) {
         const role = myEmail.role.split("toBe")[1];
         await UserEmails.destroy({
