@@ -8,7 +8,7 @@ const jwt = require("jsonwebtoken");
 const sequelize = require("sequelize");
 const { isMainThread } = require("worker_threads");
 const DeactivatedUsers = require("../models").DeactivatedUsers;
-
+const moment = require("moment")
 // const updateEmail = async (req, res) => {
 //   try {
 //     const { email, role } = req.body;
