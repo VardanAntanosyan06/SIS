@@ -244,7 +244,7 @@ const updateEmail = async (req, res) => {
                     You've entered ${email} as the secondary email address for your account. Please
                     verify this email address by clicking button below.
                   </p>
-                  <a href="https://sisprogress.com/message?token=${item.token}">
+                  <a href="https://sisprogress.com/secondarymailverify?token=${item.token}">
                     <button
                       style="
                         width: 130px;
@@ -489,7 +489,7 @@ const updateEmail = async (req, res) => {
                     You've entered ${email} as the email address for your account. Please
                     verify this email address by clicking button below.
                   </p>
-                  <a href="https://sisprogress.com/message?token=${item.token}">
+                  <a href="https://sisprogress.com/primaryemail?token=${item.token}">
                     <button
                       style="
                         width: 130px;
