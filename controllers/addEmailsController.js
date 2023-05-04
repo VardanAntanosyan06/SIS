@@ -266,7 +266,7 @@ const updateEmail = async (req, res) => {
                   </a>
                 </div>
                 <div
-                  style="width: 70%; height: 110px; margin-top: 30px"
+                  style="width: 70%; margin-top: 30px"
                   style="border-top: 1px solid #d4d4d4;border-bottom: 1px solid #d4d4d4;"
                 >
                   <p style="font-size: 20px; line-height: 30px;text-align:left;"
@@ -510,7 +510,7 @@ const updateEmail = async (req, res) => {
                   </a>
                 </div>
                 <div
-                  style="width: 70%; height: 110px; margin-top: 30px"
+                  style="width: 70%; margin-top: 30px"
                   style="border-top: 1px solid #d4d4d4;border-bottom: 1px solid #d4d4d4;"
                 >
                   <p style="font-size: 20px; line-height: 30px;text-align:left;"
