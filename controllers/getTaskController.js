@@ -308,7 +308,7 @@ const taksDescription = async (req, res) => {
     const user = await UserModel.findOne({
       where: { token: token.replace("Bearer ", "") },
     });
-    const taskDesc = await TimeTasks.findAll({
+    let taskDesc = await TimeTasks.findAll({
       where: {
         task_id: id,
       },
