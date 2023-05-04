@@ -326,8 +326,7 @@ const taksDescription = async (req, res) => {
     var duration = moment.duration(moment(now).diff(startDate));
     var days = Math.ceil(duration.asDays());
  
-    taskDesc = taskDesc.sort((a,b)=>a.point-b.point)
-    taskDesc = taskDesc.reverse()
+    taskDesc = taskDesc.sort((a,b)=>b.point-a.point)
     return res.json({
       taskDesc,
       currentDay: days,
