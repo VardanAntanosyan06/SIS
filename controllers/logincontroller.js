@@ -15,7 +15,6 @@ const login = async (req, res) => {
   try {
     let { email, password } = req.body;
     email = email.toLowerCase();
-    console.log(email);
     let token;
     const allUserEmails = await UserModel.findAll({
       include: [

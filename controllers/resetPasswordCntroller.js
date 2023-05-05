@@ -3,14 +3,26 @@ const bcrypt = require("bcrypt");
 const nodemailer = require("nodemailer");
 const jwt = require("jsonwebtoken");
 
-
 const sendMail = async (req, res) => {
   try {
     const { email } = req.body;
-
-    const user = await UserEmails.findOne({ where: { email } });
-
-    if (user) {
+    email = email.toLowerCase();
+    const allUserEmails = await UserModel.findAll({
+      include: [
+        { model: UserEmails, where: { email } },
+        DeletedUsers,
+        DeactivatedUsers,
+      ],
+    });
+    const user = allUserEmails.filter(
+      (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
+    )[0];
+    if (
+      user &&
+      user.UserEmails &&
+      user.UserEmails[0].isVerified &&
+      (!user.DeletedUser || user.DeletedUser.isVerified === false)
+    ) {
       const transporter = nodemailer.createTransport({
         host: "mail.privateemail.com",
         port: 465,
@@ -64,9 +76,8 @@ const sendMail = async (req, res) => {
 
       transporter.sendMail(mailOptions);
       return res.status(200).json("email is sent!");
-    } else {
-      return res.json("invalid email!");
     }
+    return res.status(403).json("invalid email!");
   } catch (error) {
     console.log(error);
   }
@@ -79,9 +90,9 @@ const resetPassword = async (req, res) => {
     if (user) {
       user.password = bcrypt.hashSync(password, 10);
       user.token = jwt.sign(
-        {user_id: user.id, email:UserEmails.email},
+        { user_id: user.id, email: UserEmails.email },
         process.env.SECRET
-    )
+      );
 
       await user.save();
       return res.json("YEAH! Your password is changed successfully");
@@ -92,10 +103,8 @@ const resetPassword = async (req, res) => {
     console.log(error);
   }
 };
-  
+
 module.exports = {
   sendMail,
   resetPassword,
-
 };
-
