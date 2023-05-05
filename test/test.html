@@ -1,0 +1,40 @@
+const mailOptions = {
+    from: "info@sisprogress.com",
+    to: email,
+    subject: "Password Reset",
+    html: `<center>
+   <h2>Password Reset</h2>
+   <p>
+   Seems like you forget your password for SIS Progress. If this is true, click below to reset your password. 
+   </p>
+   <br>
+   <br>
+    <button style="background-color: blue;
+    border: none;
+    border-radius:20px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    ">
+      <a href='https://sisprogress.com/changepassword?token=${user.token}'
+      style="color:#fff;text-decoration-line: none;font-size:20px;">Reset My Password</a>
+    </button>
+   <br>
+   <br>
+    <b>if you  did not  forget your password you can safely ignore this email.</b>
+    <br>
+    <br>
+    <a href='https://sisprogress.com/changepassword?token=${user.token}'>https://sisprogress.com/changepassword?token=${user.token}</a>   
+    <br>
+    </center>
+      `,
+    attachments: [
+      {
+        filename: "Password.png",
+        path: "./controllers/Password.png",
+        cid: "logo",
+      },
+    ],
+  };
