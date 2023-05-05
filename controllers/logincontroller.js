@@ -184,7 +184,7 @@ const deleteAccount = async (req, res) => {
         font-size: 32px;
         line-height: 48px; margin-bottom:25px;color:#0D0D0D">Delete Request: SIS Progress Account</h1>
         <p style="font-size: 18px; width:80%; line-height: 30px; text-align:left;margin-bottom:25px;color:#0D0D0D">We have received your request to delete your account. To confirm the deletion of your account, please click on the confirm button or the link provided below.</p>
-        <p style="font-size: 18px; width:80%; line-height: 30px; text-align:left;margin-bottom:25px;"><a href="https://sisprogress.com/deletemessage?token=${user.token}" style="color:#425DAC;font-size:18px;color:#15c">https://sisprogress.com/deactivatemessage?token=${user.token}</a></p>
+        <p style="font-size: 18px; width:80%; line-height: 30px; text-align:left;margin-bottom:25px;"><a href="https://sisprogress.com/deletemessage?token=${user.token}" style="color:#425DAC;font-size:18px;color:#15c">https://sisprogress.com/deletemessage?token=${user.token}</a></p>
         <a href="https://sisprogress.com/deletemessage?token=${user.token}" style="text-decoration:none"><div style="
         width:150px;
         display: flex;
