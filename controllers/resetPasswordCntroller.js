@@ -51,6 +51,11 @@ const sendMail = async (req, res) => {
               href="https://fonts.googleapis.com/css?family=Poppins"
               rel="stylesheet"
             />
+            <style>
+            button:hover{
+              background:red
+            }
+            </style>
           </head>
           <body>
             <center>
@@ -70,12 +75,11 @@ const sendMail = async (req, res) => {
               <div style="width: 70%">
                 <p
                   style="
-                    
                     font-style: normal;
                     font-weight: 600;
-                    font-size: 18px;
+                    font-size: 22px;
                     line-height: 48px;
-                    text-algin:left;
+                    text-align:left;
                   "
                 >
                 Seems like you forget your password for SIS Progress. If this is true, click below to reset your password. 
