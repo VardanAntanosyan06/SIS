@@ -185,14 +185,14 @@ const deleteAccount = async (req, res) => {
         line-height: 48px; margin-bottom:25px;color:#0D0D0D">Delete Request: SIS Progress Account</h1>
         <p style="font-size: 18px; width:80%; line-height: 30px; text-align:left;margin-bottom:25px;color:#0D0D0D">We have received your request to delete your account. To confirm the deletion of your account, please click on the confirm button or the link provided below.</p>
         <p style="font-size: 18px; width:80%; line-height: 30px; text-align:left;margin-bottom:25px;"><a href="https://sisprogress.com/deletemessage?token=${user.token}" style="color:#425DAC;font-size:18px;color:#15c">https://sisprogress.com/deactivatemessage?token=${user.token}</a></p>
-        <a href="https://sisprogress.com/deletemessage?token=${user.token}"><button style="display: flex;
+        <a href="https://sisprogress.com/deletemessage?token=${user.token}" style="text-decoration:none"><div style="display: flex;
         justify-content: center;
         align-items: center;
         padding: 8px 40px;
         background: #425DAC;
         color:#fff;
         border:none;
-        border-radius: 5px; font-size: 18px;line-height: 30px;margin-bottom:25px">Confirm</button>
+        border-radius: 5px; font-size: 18px;line-height: 30px;margin-bottom:25px;padding:6px;box-sizing: border-box;">Confirm</div>
         </a>
         <p style="text-align:left;width:80%;margin-bottom:25px;"><span style="color:#355CCA; font-size: 18px; width:80%; line-height: 30px;">Notice:</span> <span style="font-size: 18px; width:80%; line-height: 30px;color:#0D0D0D"> Keep in mind that the confirmation link will remain active for 5 days. After this period, you will need to restart the account deletion process if you still wish to delete your account.</span></p>
 
@@ -351,14 +351,14 @@ const deactivate = async (req, res) => {
         line-height: 48px; margin-bottom:25px;color:#0D0D0D">Deactivate Request: SIS Progress Account</h1>
         <p style="font-size: 18px; width:80%; line-height: 30px; text-align:left;margin-bottom:25px;color:#0D0D0D">We have received your request to deactivate your account. To confirm the deactivation of your account, please click on the confirm button or the link provided below.</p>
         <p style="font-size: 18px; width:80%; line-height: 30px; text-align:left;margin-bottom:25px;"><a href="https://sisprogress.com/deactivatemessage?token=${user.token}" style="color:#425DAC;font-size:18px;color:#15c">https://sisprogress.com/deactivatemessage?token=${user.token}</a></p>
-        <a href="https://sisprogress.com/deactivatemessage?token=${user.token}"><button style="display: flex;
+        <a href="https://sisprogress.com/deactivatemessage?token=${user.token}" style="text-decoration:none"><div style="display: flex;
         justify-content: center;
         align-items: center;
         padding: 8px 40px;
         background: #425DAC;
         color:#fff;
         border:none;
-        border-radius: 5px; font-size: 18px;line-height: 30px;margin-bottom:25px">Confirm</button></a>
+        border-radius: 5px; font-size: 18px;line-height: 30px;margin-bottom:25px;padding:7px;box-sizing: border-box">Confirm</div></a>
 
         <p style="text-align:left;width:80%;margin-bottom:25px;"><span style="color:#355CCA; font-size: 18px; width:80%; line-height: 30px;">Notice:</span> <span style="font-size: 18px; width:80%; line-height: 30px;color:#0D0D0D"> Keep in mind that the confirmation link will remain active for 5 days. After this period, you will need to restart the account deactivation process if you still wish to deactivate your account.</span></p>
 

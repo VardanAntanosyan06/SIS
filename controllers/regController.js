@@ -189,7 +189,7 @@ const sendMail = async (req, res) => {
                     line-height: 27px;
                     color: #ffffff;
                     cursor:pointer;
-                    padding:4px;
+                    padding:7px;
                     box-sizing:border-box;
                   "
                 >

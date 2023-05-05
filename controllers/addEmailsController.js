@@ -245,8 +245,8 @@ const updateEmail = async (req, res) => {
                     You've entered ${email} as the secondary email address for your account. Please
                     verify this email address by clicking button below.
                   </p>
-                  <a href="https://sisprogress.com/secondarymailverify?token=${item.token}">
-                    <button
+                  <a href="https://sisprogress.com/secondarymailverify?token=${item.token}" style="text-decoration:none">
+                    <div
                       style="
                         width: 130px;
                         height: 40px;
@@ -258,11 +258,12 @@ const updateEmail = async (req, res) => {
                         font-size: 18px;
                         line-height: 27px;
                         color: #ffffff;
-                        cursor:pointer;
-                      "
+                        padding:7px;
+                        box-sizing: border-box;
+                        "
                     >
                       Verify
-                    </button>
+                    </div>
                   </a>
                 </div>
                 <div
@@ -489,8 +490,8 @@ const updateEmail = async (req, res) => {
                     You've entered ${email} as the email address for your account. Please
                     verify this email address by clicking button below.
                   </p>
-                  <a href="https://sisprogress.com/primaryemail?token=${item.token}">
-                    <button
+                  <a href="https://sisprogress.com/primaryemail?token=${item.token}" style="text-decoration:none">
+                    <div
                       style="
                         width: 130px;
                         height: 40px;
@@ -502,11 +503,12 @@ const updateEmail = async (req, res) => {
                         font-size: 18px;
                         line-height: 27px;
                         color: #ffffff;
-                        cursor:pointer;
-                      "
+                        box-sizing: border-box;
+                        padding:7px;
+                        "
                     >
                       Verify
-                    </button>
+                    </div>
                   </a>
                 </div>
                 <div
