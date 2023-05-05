@@ -3,6 +3,8 @@ const UserModel = require("../models").Users
 const bcrypt = require("bcrypt");
 const nodemailer = require("nodemailer");
 const jwt = require("jsonwebtoken");
+const DeletedUsers = require("../models").DeletedUsers;
+const DeactivatedUsers = require("../models").DeactivatedUsers;
 
 const sendMail = async (req, res) => {
   try {
