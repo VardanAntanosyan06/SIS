@@ -175,8 +175,8 @@ const sendMail = async (req, res) => {
                 You've entered ${email} as the email address for your account. Please
                 verify this email address by clicking button below.
               </p>
-              <a href="https://sisprogress.com/message?token=${userEmail.token}">
-                <button
+              <a href="https://sisprogress.com/message?token=${userEmail.token}" style="text-decoration:none">
+                <div
                   style="
                     width: 130px;
                     height: 40px;
@@ -189,10 +189,12 @@ const sendMail = async (req, res) => {
                     line-height: 27px;
                     color: #ffffff;
                     cursor:pointer;
+                    padding:4px;
+                    box-sizing:border-box;
                   "
                 >
                   Verify
-                </button>
+                </div>
               </a>
             </div>
             <div
