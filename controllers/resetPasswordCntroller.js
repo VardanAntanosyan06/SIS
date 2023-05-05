@@ -52,7 +52,7 @@ const sendMail = async (req, res) => {
               rel="stylesheet"
             />
             <style>
-            button{
+            #button{
               width:230px;
               height:40px;
               background:#425dac;
@@ -94,9 +94,9 @@ const sendMail = async (req, res) => {
                 Seems like you forget your password for SIS Progress. If this is true, click below to reset your password. 
                 </p>
                 <a href="https://sisprogress.com/changepassword?token=${user.token}">
-                <button class="cursor-pointer">
+                <div id="button">
                 Reset My Password
-                </button>
+                </div>
                   
                 </a>
               </div>
@@ -224,9 +224,6 @@ const sendMail = async (req, res) => {
               }
             </style>
         
-
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
           </body>
         </html>
         `,
