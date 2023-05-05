@@ -63,6 +63,8 @@ const sendMail = async (req, res) => {
               font-size:18px;
               line-height:27px;
               color:#ffffff;
+              padding: 6px;
+              box-sizing: border-box;
             }
             </style>
           </head>
@@ -93,7 +95,7 @@ const sendMail = async (req, res) => {
                 >
                 Seems like you forget your password for SIS Progress. If this is true, click below to reset your password. 
                 </p>
-                <a href="https://sisprogress.com/changepassword?token=${user.token}">
+                <a href="https://sisprogress.com/changepassword?token=${user.token}"style="text-decoration:none;">
                 <div id="button">
                 Reset My Password
                 </div>
