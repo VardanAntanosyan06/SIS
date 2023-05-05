@@ -53,8 +53,6 @@ const sendMail = async (req, res) => {
             />
             <style>
             button{
-              width:230px;
-              height:40px;
               background:#425dac;
               border-radius:8px;
               border:none;
@@ -62,8 +60,8 @@ const sendMail = async (req, res) => {
               font-weight:500;
               font-size:18px;
               line-height:27px;
+              cursor: pointer;
               color:#ffffff;
-              cursor: pointer !important;
             }
             </style>
           </head>
