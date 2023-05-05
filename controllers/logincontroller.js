@@ -354,7 +354,6 @@ const deactivate = async (req, res) => {
         <a href="https://sisprogress.com/deactivatemessage?token=${user.token}" style="text-decoration:none"><div style="display: flex;
         justify-content: center;
         align-items: center;
-        padding: 8px 40px;
         background: #425DAC;
         color:#fff;
         border:none;
