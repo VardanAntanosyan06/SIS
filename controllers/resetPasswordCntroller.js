@@ -1,4 +1,5 @@
 const UserEmails = require("../models").UserEmails;
+const UserModel = require("../models").Users
 const bcrypt = require("bcrypt");
 const nodemailer = require("nodemailer");
 const jwt = require("jsonwebtoken");
