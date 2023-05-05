@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 
 const sendMail = async (req, res) => {
   try {
-    const { email } = req.body;
+    let { email } = req.body;
     email = email.toLowerCase();
     const allUserEmails = await UserModel.findAll({
       include: [
