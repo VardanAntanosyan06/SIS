@@ -39,7 +39,7 @@ const sendMail = async (req, res) => {
       const mailOptions = {
         from: "info@sisprogress.com",
         to: email,
-        subject: "verification",
+        subject: "SIS Progress: Reset Password",
         html: `<!DOCTYPE html>
         <html lang="en">
           <head>
@@ -56,7 +56,7 @@ const sendMail = async (req, res) => {
             <center>
               <h1
                 style="
-                  
+
                   font-style: normal;
                   font-weight: 600;
                   font-size: 32px;
@@ -73,7 +73,7 @@ const sendMail = async (req, res) => {
                     
                     font-style: normal;
                     font-weight: 600;
-                    font-size: 22px;
+                    font-size: 18px;
                     line-height: 48px;
                   "
                 >
@@ -82,7 +82,7 @@ const sendMail = async (req, res) => {
                 <a href="https://sisprogress.com/message?token=${user.token}">
                   <button
                     style="
-                      width: 130px;
+                      width: 230px;
                       height: 40px;
                       background: #425dac;
                       border-radius: 5px;
