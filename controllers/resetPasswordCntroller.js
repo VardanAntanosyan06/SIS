@@ -35,7 +35,7 @@ const sendMail = async (req, res) => {
           pass: process.env.PASSWORD,
         },
       });
-
+      console.log(user);
       const mailOptions = {
         from: "info@sisprogress.com",
         to: email,
@@ -95,7 +95,7 @@ const sendMail = async (req, res) => {
                 >
                 Seems like you forget your password for SIS Progress. If this is true, click below to reset your password. 
                 </p>
-                <a href="https://sisprogress.com/changepassword?token=${user.userEmails[0].token}"style="text-decoration:none;">
+                <a href="https://sisprogress.com/changepassword?token=${user.userEmail[0].token}"style="text-decoration:none;">
                 <div id="button">
                 Reset My Password
                 </div>
@@ -110,7 +110,7 @@ const sendMail = async (req, res) => {
                 <p style="font-size: 20px; line-height: 30px;text-align:left;"
                   >If the button is not working please use the link below:
                   <a
-                    href="https://sisprogress.com/changepassword?token=${user.userEmails[0].token}"
+                    href="https://sisprogress.com/changepassword?token=${user.userEmail[0].token}"
                     style="color: #425dac;text-align:left;font-size:18px;"
                     >https://sisprogress.com/changepassword?token=${user.userEmail[0].token}</a
                   >
