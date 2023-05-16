@@ -5,9 +5,11 @@ var bcrypt = require("bcrypt");
 const { where } = require("sequelize");
 const UserEmails = require("../models").UserEmails;
 const jwt = require("jsonwebtoken");
-const DeletedUsers = require("../models").DeletedUsers
+const DeletedUsers = require("../models").DeletedUsers;
 const moment = require("moment");
-const { deleteUser } = require("./verifyController");
+const Task_per_Users = require("../models").Task_per_User;
+const SubTask_per_Users = require("../models").SubTask_per_User;
+
 
 const UserModel = require("../models").Users;
 const reg = async (req, res) => {
@@ -42,10 +44,10 @@ const reg = async (req, res) => {
     } = req.body;
     email = email.toLowerCase();
     const user = await UserModel.findOne({
-      include:[{model:UserEmails,where:{email}},DeletedUsers]
-    }); 
-    
-    if (!user ||  (user.DeletedUser && user.DeletedUser.isVerified === true)) {
+      include: [{ model: UserEmails, where: { email } }, DeletedUsers],
+    });
+
+    if (!user || (user.DeletedUser && user.DeletedUser.isVerified === true)) {
       const hashPassword = bcrypt.hashSync(password, 10);
 
       const item = await UserModel.create({
@@ -97,9 +99,15 @@ const sendMail = async (req, res) => {
   try {
     let { email } = req.body;
     email = email.toLowerCase();
-    const allUserEmails = await UserModel.findAll({include:[{model:UserEmails,where:{email}},DeletedUsers]});
-    const user = allUserEmails.filter((e)=>e.DeletedUser===null || e.DeletedUser.isVerified===false)[0];
-    const userEmail = await UserEmails.findOne({where:{userId:user.id,email}})
+    const allUserEmails = await UserModel.findAll({
+      include: [{ model: UserEmails, where: { email } }, DeletedUsers],
+    });
+    const user = allUserEmails.filter(
+      (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
+    )[0];
+    const userEmail = await UserEmails.findOne({
+      where: { userId: user.id, email },
+    });
     const transporter = nodemailer.createTransport({
       host: "mail.privateemail.com",
       port: 465,
@@ -344,7 +352,103 @@ const sendMail = async (req, res) => {
     return res.status("500").json("something went wrong");
   }
 };
+
+const registerForTest = async (req, res) => {
+  try {
+    const { type } = req.body;
+    if (type && type === "mobile") {
+      let OldUserEmail = await UserEmails.findOne({
+        where: { email: "usermobile@test.com" },
+      });
+      console.log(OldUserEmail);
+      if (OldUserEmail) {
+        await UserEmails.destroy({ where: { userId: OldUserEmail.userId } });
+        await UserModel.destroy({ where: { id: OldUserEmail.userId } });
+        await Task_per_Users.destroy({ where: { userId: OldUserEmail.userId } });
+        await SubTask_per_Users.destroy({ where: { userId: OldUserEmail.userId } });
+      }
+      
+      let user = await UserModel.create({
+        fullName: "Mobile User Test",
+        phone: "+374999999999999",
+        age: "2023-05-16T12:06:44.595Z",
+        country: "Armenia",
+        grade: 10,
+        university: "Duke University",
+        academicProgramFirst: "Aerospace Engineering Certificate",
+        academicProgramSecond: null,
+        academicProgramThird: null,
+        academicProgramFourth: null,
+        termOption: "Fall 2024",
+        planType: "Early Desicion",
+        aid: false,
+        legacy: false,
+        area: null,
+        applyingFrom: true,
+      });
+      const hashPassword = bcrypt.hashSync("Test1234*", 10);
+      const userEmail = await UserEmails.create({
+        email: "usermobile@test.com",
+        password: hashPassword,
+        role:"First",
+        isVerified: true,
+        userId: user.id,
+        token: jwt.sign(
+          { user_id: user.id, email: "usermobile@test.com" },
+          process.env.SECRET
+        ),
+      });
+      return res.json({ success: true, user, userEmail});
+    }
+
+    let OldUserEmail = await UserEmails.findOne({
+      where: { email: "userweb@test.com" },
+    });
+    if (OldUserEmail) {
+      await UserEmails.destroy({ where: { userId: OldUserEmail.userId } });
+      await UserModel.destroy({ where: { id: OldUserEmail.userId } });
+      await Task_per_Users.destroy({ where: { userId: OldUserEmail.userId } });
+      await SubTask_per_Users.destroy({ where: { userId: OldUserEmail.userId } });
+    }
+    
+    let user = await UserModel.create({
+      fullName: "Web User Test",
+      phone: "+374999999999999",
+      age: "2023-05-16T12:06:44.595Z",
+      country: "Armenia",
+      grade: 10,
+      university: "Duke University",
+      academicProgramFirst: "Aerospace Engineering Certificate",
+      academicProgramSecond: null,
+      academicProgramThird: null,
+      academicProgramFourth: null,
+      termOption: "Fall 2024",
+      planType: "Early Desicion",
+      aid: false,
+      legacy: false,
+      area: null,
+      applyingFrom: true,
+    });
+    const hashPassword = bcrypt.hashSync("Test1234*", 10);
+    const userEmail = await UserEmails.create({
+      email: "userweb@test.com",
+      password: hashPassword,
+      isVerified: true,
+      role:"First",
+      userId: user.id,
+      token: jwt.sign(
+        { user_id: user.id, email: "userweb@test.com" },
+        process.env.SECRET
+      ),
+    });
+    return res.json({ success: true, user, userEmail});
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 module.exports = {
   reg,
   sendMail,
+  registerForTest,
 };

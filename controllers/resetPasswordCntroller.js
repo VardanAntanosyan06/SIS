@@ -162,7 +162,7 @@ const sendMail = async (req, res) => {
               line-height: 27px;
               color: #646464;
               text-align: left;
-             "
+             " 
               >
                 Our mailing address is:
                 <a

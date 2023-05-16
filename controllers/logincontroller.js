@@ -26,7 +26,6 @@ const login = async (req, res) => {
     const user = allUserEmails.filter(
       (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
     )[0];
-
     if (
       user &&
       user.UserEmails &&
