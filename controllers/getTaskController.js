@@ -433,9 +433,8 @@ const getTasksCategory1 = async (req, res) => {
         if (!groupedTasks[facultyNames]) groupedTasks[facultyNames] = [];
         groupedTasks[facultyNames].push(task);
       });
-      let activitiyString = user.activityName;
-      console.log(activitiyString);
-      if (activitiyString) {
+      
+      if (user.activityName!==null) {
         activitiyString = activitiyString
           .replace("[", "")
           .replace("]", "")
