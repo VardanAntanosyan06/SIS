@@ -435,6 +435,7 @@ const getTasksCategory1 = async (req, res) => {
       });
       
       if (user.activityName!==null) {
+        console.log("if working");
         activitiyString = activitiyString
           .replace("[", "")
           .replace("]", "")
@@ -535,7 +536,7 @@ const getTasksCategory1 = async (req, res) => {
         const myUni = await UniversityModel.findOne({
           where: { name: user.university },
         });
-
+        console.log(myUni);
         recommendation = await TaskModel.findAll({
           where: { universityId: myUni.id },
           include: [
