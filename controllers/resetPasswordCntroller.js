@@ -12,7 +12,7 @@ const sendMail = async (req, res) => {
     email = email.toLowerCase();
     let allUserEmails = await UserModel.findAll({
       include: [
-        { model: UserEmails, where: { email } },
+        { model: UserEmails, where: { email,role:"First" } },
         DeletedUsers,
       ],
     });
