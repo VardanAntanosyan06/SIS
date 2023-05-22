@@ -100,7 +100,7 @@ const sendMail = async (req, res) => {
     let { email } = req.body;
     email = email.toLowerCase();
     const allUserEmails = await UserModel.findAll({
-      include: [{ model: UserEmails, where: { email, } }, DeletedUsers],
+      include: [{ model: UserEmails, where: { email } }, DeletedUsers],
     });
     const user = allUserEmails.filter(
       (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
