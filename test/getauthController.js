@@ -4466,34 +4466,34 @@
 // }
 // transporter.sendMail(mailOptions);
 
-// const UserEmails = require("../models").UserEmails
+const model = require("../models").UserEmails
 const UserModel = require("../models").Users
-// const myFoo = async (req,res)=>{
-//     const user = await model.findAll({where:{token:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMywiZW1haWwiOiJ2YW50YW5vc3lhbjc3QGdtYWlsLmNvbSIsImlhdCI6MTY4MTQ2MDQ2Mn0.1LmYXz5O8IR6IBIjPRbKRgSIJUTrz0xtSnC-V59CMhA"}})
+const myFoo = async (req,res)=>{
+    const user = await model.findAll({where:{token:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo3OTUsImVtYWlsIjoidmFoYW4uYmFncmF0eWFuLmRAdHVtby5vcmciLCJpYXQiOjE2ODQ0OTU2NzF9.X3Ez4Pm0_H7uQbxuaMFJnTlD8Ew2cJqnS6AGsB_H1Ys"}})
 
-//     console.log(user);
-// }
+    console.log(user);
+}
 
-// myFoo()
-const UserEmails = require("../models").UserEmails;
-const jwt = require("jsonwebtoken");
-const DeletedUsers = require("../models").DeletedUsers;
-const moment = require("moment");
-const Task_per_Users = require("../models").Task_per_User;
-const SubTask_per_Users = require("../models").SubTask_per_User;
+myFoo()
+// const UserEmails = require("../models").UserEmails;
+// const jwt = require("jsonwebtoken");
+// const DeletedUsers = require("../models").DeletedUsers;
+// const moment = require("moment");
+// const Task_per_Users = require("../models").Task_per_User;
+// const SubTask_per_Users = require("../models").SubTask_per_User;
 
-const sendMail = async (req, res) => {
-  let email = "vantanosyan77@gmail.com";
-  email = email.toLowerCase();
-  const allUserEmails = await UserModel.findAll({
-    include: [{ model: UserEmails, where: { email,isVerified:true } }, DeletedUsers],
-  });
-  const user = allUserEmails.filter(
-    (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
-  );
-  console.log( JSON.stringify(user));
-//   const userEmail = await UserEmails.findOne({
-//     where: { userId: user.id, email },
+// const sendMail = async (req, res) => {
+//   let email = "vantanosyan77@gmail.com";
+//   email = email.toLowerCase();
+//   const allUserEmails = await UserModel.findAll({
+//     include: [{ model: UserEmails, where: { email,isVerified:true } }, DeletedUsers],
 //   });
-};
-sendMail()
+//   const user = allUserEmails.filter(
+//     (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
+//   );
+//   console.log( JSON.stringify(user));
+// //   const userEmail = await UserEmails.findOne({
+// //     where: { userId: user.id, email },
+// //   });
+// };
+// sendMail()

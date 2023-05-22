@@ -105,7 +105,7 @@ const sendMail = async (req, res) => {
     let user = allUserEmails.filter(
       (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
     )
-    user = user[user.length-1];
+      console.log(JSON.stringify({allUserEmails},{user}));
     const userEmail = await UserEmails.findOne({
       where: { userId: user.id, email },
     });
