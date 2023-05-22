@@ -130,7 +130,7 @@ const sendMail = async (req, res) => {
     const mailOptions = {
       from: "info@sisprogress.com",
       to: email,
-      subject: "verification",
+      subject: "Action Required: Verify your email address",
       html: `<!DOCTYPE html>
       <html lang="en">
         <head>
