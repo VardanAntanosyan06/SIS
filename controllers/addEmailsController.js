@@ -719,9 +719,20 @@ const isEmailFree = async (req, res) => {
     let { email } = req.query;
     email = email.toLowerCase();
 
-    const user = await UserModel.findOne({
-      include: [{ model: UserEmails, where: { email } }, DeletedUsers],
+    // const user = await UserModel.findOne({
+    //   include: [{ model: UserEmails, where: { email } }, DeletedUsers],
+    // });
+    let allUserEmails = await UserModel.findAll({
+      include: [
+        { model: UserEmails, where: { email } },
+        DeletedUsers,
+      ],
     });
+  
+    // allUserEmails = allUserEmails.filter(
+    //   (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
+    // ); 
+    const user = allUserEmails.sort((a,b)=>a.id-b.id)[allUserEmails.length-1]
     if (!user || (user.DeletedUser && user.DeletedUser.isVerified === true)) {
       return res.status(200).json("Free");
     }
