@@ -20,6 +20,7 @@ const login = async (req, res) => {
       include: [
         { model: UserEmails, where: { email } },
         DeletedUsers,
+        DeactivatedUsers
       ],
     });
   
