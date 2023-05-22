@@ -30,7 +30,7 @@
 // //       files.filter((e) => {
 // //         return arr.push({ id: e.name.split('.')[0], imgId: "http://drive.google.com/uc?export=view&id="+e.id });
 // //       });
-// //     }); 
+// //     });
 // //    let  arr2 = JSON.stringify(arr)
 // //     fs.appendFile("test/imagesMobile.json",arr2,(err) => {
 // //       if (err) {
@@ -74,18 +74,17 @@
 // //   err ? console.log(err) : console.log("ok");
 // // });
 
-
 // // webImages = JSON.parse(webImages)
 // // mobileImages = JSON.parse(mobileImages)
 
 // // let result = tasks.map((e)=>{
 // //    let  webImage = webImages.find(item => +item.id === e.EXT_TASK_ID);
 // //    let mobileImage = mobileImages.find(item => +item.id === e.EXT_TASK_ID);
-  
+
 // //   //  e.imgMobile = mobileImage;
 // //    e.imgWeb = webImage ? webImage.imgId:null
 // //    e.imgMobile = mobileImage ? mobileImage.imgId:null
-   
+
 // //    return e;
 // // })
 
@@ -93,8 +92,6 @@
 // // fs.writeFile("test/result.json",result,(err)=>err?console.log(err):console.log("a"))
 
 // // console.log(webImages.length,mobileImages.length);
-
-
 
 // const timeTasks = [
 //   {
@@ -4216,7 +4213,6 @@
 
 // differentiateFormat(timeTasks)
 
-
 // const nodemailer = require("nodemailer")
 // const transporter = nodemailer.createTransport({
 //   host: "mail.privateemail.com",
@@ -4239,7 +4235,7 @@
 //     line-height: 48px; margin-bottom:19px;text-align:left;margin-bottom:25px;color:#0D0D0D;width:70%;font-size: 20px;">Dear <b>Shushan Grigoryan San Khose Ignassio Tadevosyan</b> </p>
 //     <p style="font-size: 18px; width:70%; line-height: 30px; text-align:left;margin-bottom:25px;color:#0D0D0D">We noticed that you've chosen to deactivate your account for a month. We appreciate the time you've spent with us as part of our college admissions consulting community and understand that sometimes a break is needed. We value your feedback and would love to learn more about the reasons behind your decision to deactivate your account. Please consider taking a few moments to complete our brief survey, which will help us improve our services. As a token of gratitude, you'll receive a $10 Amazon Gift Card upon completion.</p>
 //     <p style="font-size: 18px; width:70%; line-height: 30px; text-align:left;margin-bottom:25px;color:#0D0D0D">We value your feedback and would love to learn more about the reasons behind your decision to deactivate your account. Please consider taking a few moments to complete our brief survey, which will help us improve our services. As a token of gratitude, you'll receive a $10 Amazon Gift Card upon completion.</p>
-    
+
 //     <p style="font-size: 18px; width:70%; line-height: 30px; text-align:left;margin-bottom:25px;color:#0D0D0D">Remember, you can reactivate your account within a month by simply logging back in. We hope to see you return soon and continue to support you in your college admissions journey.</p>
 //     </div>
 //     <div
@@ -4280,7 +4276,7 @@
 //     <p
 //     style="
 //     display:flex;
-    
+
 //     font-weight: 500;
 //     font-size: 18px;
 //     line-height: 27px;
@@ -4298,7 +4294,7 @@
 //     <p
 //       style="
 //       font-weight: 500;
-//       font-size: 18px;  
+//       font-size: 18px;
 //       line-height: 27px;
 //       color: #646464;
 //       text-align: left;
@@ -4309,7 +4305,7 @@
 //     <p
 //       style="
 //       font-weight: 500;
-//       font-size: 18px;  
+//       font-size: 18px;
 //       line-height: 27px;
 //       color: #646464;
 //       text-align: left;
@@ -4317,7 +4313,7 @@
 //     >
 //       You can update your
 //       <a href="" style="color: #425dac;">references</a>
-//       and 
+//       and
 //       <a href="" style="color: #425dac;"
 //         > unsubscribe.</a
 //       >
@@ -4365,7 +4361,7 @@
 //     line-height: 48px; margin-bottom:19px;text-align:left;margin-bottom:25px;color:#0D0D0D;width:70%;font-size: 20px;">Dear <b>${user.fullName}</b> </p>
 //     <p style="font-size: 18px; width:70%; line-height: 30px; text-align:left;margin-bottom:25px;color:#0D0D0D">We're saddened by your departure and truly appreciate the time you spent as part of our college admissions consulting community. We respect your decision to delete your account and understand the gravity of this choice</p>
 //     <p style="font-size: 18px; width:70%; line-height: 30px; text-align:left;margin-bottom:25px;color:#0D0D0D"> Your feedback is invaluable to us, and we'd be grateful if you could share the reasons behind your decision. Please take a few moments to complete our brief survey, which will help us improve our services. Upon completion, you'll receive a $10 Amazon Gift Card as a token of our gratitude.</p>
-    
+
 //     <p style="font-size: 18px; width:70%; line-height: 30px; text-align:left;margin-bottom:25px;color:#0D0D0D">Thank you once again for your time, and we wish you all the best in your future endeavors.</p>
 //     </div>
 //     <div
@@ -4406,7 +4402,7 @@
 //     <p
 //     style="
 //     display:flex;
-    
+
 //     font-weight: 500;
 //     font-size: 18px;
 //     line-height: 27px;
@@ -4424,7 +4420,7 @@
 //     <p
 //       style="
 //       font-weight: 500;
-//       font-size: 18px;  
+//       font-size: 18px;
 //       line-height: 27px;
 //       color: #646464;
 //       text-align: left;
@@ -4435,7 +4431,7 @@
 //     <p
 //       style="
 //       font-weight: 500;
-//       font-size: 18px;  
+//       font-size: 18px;
 //       line-height: 27px;
 //       color: #646464;
 //       text-align: left;
@@ -4443,7 +4439,7 @@
 //     >
 //       You can update your
 //       <a href="" style="color: #425dac;">references</a>
-//       and 
+//       and
 //       <a href="" style="color: #425dac;"
 //         > unsubscribe.</a
 //       >
@@ -4470,3 +4466,34 @@
 // }
 // transporter.sendMail(mailOptions);
 
+// const UserEmails = require("../models").UserEmails
+const UserModel = require("../models").Users
+// const myFoo = async (req,res)=>{
+//     const user = await model.findAll({where:{token:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMywiZW1haWwiOiJ2YW50YW5vc3lhbjc3QGdtYWlsLmNvbSIsImlhdCI6MTY4MTQ2MDQ2Mn0.1LmYXz5O8IR6IBIjPRbKRgSIJUTrz0xtSnC-V59CMhA"}})
+
+//     console.log(user);
+// }
+
+// myFoo()
+const UserEmails = require("../models").UserEmails;
+const jwt = require("jsonwebtoken");
+const DeletedUsers = require("../models").DeletedUsers;
+const moment = require("moment");
+const Task_per_Users = require("../models").Task_per_User;
+const SubTask_per_Users = require("../models").SubTask_per_User;
+
+const sendMail = async (req, res) => {
+  let email = "vantanosyan77@gmail.com";
+  email = email.toLowerCase();
+  const allUserEmails = await UserModel.findAll({
+    include: [{ model: UserEmails, where: { email,isVerified:true } }, DeletedUsers],
+  });
+  const user = allUserEmails.filter(
+    (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
+  );
+  console.log( JSON.stringify(user));
+//   const userEmail = await UserEmails.findOne({
+//     where: { userId: user.id, email },
+//   });
+};
+sendMail()

@@ -100,11 +100,11 @@ const sendMail = async (req, res) => {
     let { email } = req.body;
     email = email.toLowerCase();
     const allUserEmails = await UserModel.findAll({
-      include: [{ model: UserEmails, where: { email } }, DeletedUsers],
+      include: [{ model: UserEmails, where: { email, } }, DeletedUsers],
     });
     const user = allUserEmails.filter(
       (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
-    )[0];
+    )[allUserEmails.length-1];
     const userEmail = await UserEmails.findOne({
       where: { userId: user.id, email },
     });
@@ -121,7 +121,7 @@ const sendMail = async (req, res) => {
     const mailOptions = {
       from: "info@sisprogress.com",
       to: email,
-      subject: "verification",
+      subject: "Action Required: Verify your new email address",
       html: `<!DOCTYPE html>
       <html lang="en">
         <head>
