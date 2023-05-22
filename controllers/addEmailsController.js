@@ -221,7 +221,7 @@ const updateEmail = async (req, res) => {
                       line-height: 48px;
                     "
                   >
-                    Please verify your email address.
+                    Please verify your Secondary email address.
                   </h1>
                   <p
                             style="
@@ -232,7 +232,7 @@ const updateEmail = async (req, res) => {
                             "
                           >
                             In order to complete your registration and start preparing for
-                            college admissions, you'll need to verify your email address.
+                            college admissions, you'll need to verify your secondary email address.
                           </p> 
                   <p
                     style="
