@@ -9,7 +9,7 @@ const DeletedUsers = require("../models").DeletedUsers;
 const moment = require("moment");
 const Task_per_Users = require("../models").Task_per_User;
 const SubTask_per_Users = require("../models").SubTask_per_User;
-
+let userId;
 
 const UserModel = require("../models").Users;
 const reg = async (req, res) => {
@@ -85,7 +85,7 @@ const reg = async (req, res) => {
         token: jwt.sign({ user_id: item.id, email }, process.env.SECRET),
         tokenCreatedAt: moment(),
       });
-
+      userId = item.id;
       return res.status(200).json({ success: true });
     } else {
       return res.status(403).json("user alredy exist");
@@ -99,15 +99,15 @@ const sendMail = async (req, res) => {
   try {
     let { email } = req.body;
     email = email.toLowerCase();
-    const allUserEmails = await UserModel.findAll({
-      include: [{ model: UserEmails, where: { email } }, DeletedUsers],
-    });
-    let user = allUserEmails.filter(
-      (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
-    )
-      console.log(JSON.stringify({allUserEmails},{user}));
+    // const allUserEmails = await UserModel.findAll({
+    //   include: [{ model: UserEmails, where: { email,isVerified:false } }, DeletedUsers],
+    // });
+    
+    // const user = allUserEmails.filter(
+    //   (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
+    // )[0];
     const userEmail = await UserEmails.findOne({
-      where: { userId: user.id, email },
+      where: { userId, email },
     });
     const transporter = nodemailer.createTransport({
       host: "mail.privateemail.com",
@@ -122,7 +122,7 @@ const sendMail = async (req, res) => {
     const mailOptions = {
       from: "info@sisprogress.com",
       to: email,
-      subject: "Action Required: Verify your new email address",
+      subject: "verification",
       html: `<!DOCTYPE html>
       <html lang="en">
         <head>
