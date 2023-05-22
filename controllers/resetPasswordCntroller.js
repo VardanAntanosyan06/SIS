@@ -10,16 +10,17 @@ const sendMail = async (req, res) => {
   try {
     let { email } = req.body;
     email = email.toLowerCase();
-    const allUserEmails = await UserModel.findAll({
+    let allUserEmails = await UserModel.findAll({
       include: [
         { model: UserEmails, where: { email } },
         DeletedUsers,
-        DeactivatedUsers,
       ],
     });
-    const user = allUserEmails.filter(
+  
+    allUserEmails = allUserEmails.filter(
       (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
-    )[0];
+    ); 
+    const user = allUserEmails.sort((a,b)=>a.id-b.id)[allUserEmails.length-1]
     if (
       user &&
       user.UserEmails &&

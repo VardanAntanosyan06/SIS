@@ -9,9 +9,9 @@ const DeletedUsers = require("../models").DeletedUsers;
 const moment = require("moment");
 const Task_per_Users = require("../models").Task_per_User;
 const SubTask_per_Users = require("../models").SubTask_per_User;
+const UserModel = require("../models").Users;
 let userId;
 
-const UserModel = require("../models").Users;
 const reg = async (req, res) => {
   try {
     let {
@@ -43,9 +43,17 @@ const reg = async (req, res) => {
       moreInfo,
     } = req.body;
     email = email.toLowerCase();
-    const user = await UserModel.findOne({
-      include: [{ model: UserEmails, where: { email } }, DeletedUsers],
+    let allUserEmails = await UserModel.findAll({
+      include: [
+        { model: UserEmails, where: { email } },
+        DeletedUsers,
+      ],
     });
+  
+    allUserEmails = allUserEmails.filter(
+      (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
+    ); 
+    const user = allUserEmails.sort((a,b)=>a.id-b.id)[allUserEmails.length-1]
 
     if (!user || (user.DeletedUser && user.DeletedUser.isVerified === true)) {
       const hashPassword = bcrypt.hashSync(password, 10);
@@ -99,13 +107,13 @@ const sendMail = async (req, res) => {
   try {
     let { email } = req.body;
     email = email.toLowerCase();
-    // const allUserEmails = await UserModel.findAll({
-    //   include: [{ model: UserEmails, where: { email,isVerified:false } }, DeletedUsers],
-    // });
+    const allUserEmails = await UserModel.findAll({
+      include: [{ model: UserEmails, where: { email,isVerified:false } }, DeletedUsers],
+    });
     
-    // const user = allUserEmails.filter(
-    //   (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
-    // )[0];
+    const user = allUserEmails.filter(
+      (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
+    )[0];
     const userEmail = await UserEmails.findOne({
       where: { userId, email },
     });
