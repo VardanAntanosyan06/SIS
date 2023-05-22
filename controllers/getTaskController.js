@@ -435,7 +435,7 @@ const getTasksCategory1 = async (req, res) => {
       });
       
       if (user.activityName!==null) {
-        console.log("if working");
+        let activitiyString =  user.activityName;
         activitiyString = activitiyString
           .replace("[", "")
           .replace("]", "")
@@ -536,7 +536,6 @@ const getTasksCategory1 = async (req, res) => {
         const myUni = await UniversityModel.findOne({
           where: { name: user.university },
         });
-        console.log(myUni);
         recommendation = await TaskModel.findAll({
           where: { universityId: myUni.id },
           include: [
@@ -576,7 +575,6 @@ const getTasksCategory1 = async (req, res) => {
                       status: _subTask.SubTask_per_Users[0].status,
                       description: _subTask.SubTask_per_Users[0].description,
                     };
-
                     delete _sub_task.SubTask_per_Users;
                     return _sub_task;
                   })()
@@ -600,10 +598,10 @@ const getTasksCategory1 = async (req, res) => {
         return res.status(200).send({ recommendation: newTasks, groupedTasks });
       }
     }
-    return res.json("user not found");
+    return res.status(404).json("user not found");
   } catch (error) {
     console.log(error);
-    return res.json("something went wrong!");
+    return res.status(500).json("something went wrong!");
   }
 };
 
