@@ -94,6 +94,7 @@ const reg = async (req, res) => {
         tokenCreatedAt: moment(),
       });
       userId = item.id;
+      console.log(userId);
       return res.status(200).json({ success: true });
     } else {
       return res.status(403).json("user alredy exist");
@@ -106,7 +107,8 @@ const reg = async (req, res) => {
 const sendMail = async (req, res) => {
   try {
     let { email } = req.body;
-    email = email.toLowerCase();
+    email = email.toLowerCase()
+    console.log(userId);
     const allUserEmails = await UserModel.findAll({
       include: [{ model: UserEmails, where: { email,isVerified:false } }, DeletedUsers],
     });
