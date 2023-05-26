@@ -52,7 +52,7 @@ const reg = async (req, res) => {
   
     // allUserEmails = allUserEmails.filter(
     //   (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
-    // ); 
+    //
     const user = allUserEmails.sort((a,b)=>a.id-b.id)[allUserEmails.length-1]
 
     if (!user || (user.DeletedUser && user.DeletedUser.isVerified === true)) {
