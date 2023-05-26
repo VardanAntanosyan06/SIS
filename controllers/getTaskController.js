@@ -454,6 +454,7 @@ const getTasksCategory1 = async (req, res) => {
             let tasks = await TaskModel.findAll({
               where: { facultyName: e.toUpperCase() },
               order: sequelize.random(),
+              limit:1,
               include: [
                 {
                   model: SubTasks,
