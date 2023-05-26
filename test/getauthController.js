@@ -4220,17 +4220,11 @@ const changeUsers = async (req, res) => {
     const users = await Users.findAll();
     users.map((user) => {
       if (user.grade === 10) {
-        let newArray = [
-          "SOCIAL JUSTICE",
-          "SOCIAL JUSTICE",
-          "COMMUNITY SERVICE",
-          "ACADEMIC",
-          "SCIENCE/MATH",
-          "RELIGIOUS",
-        ]; // Push the new element into the array
-        user.activityName = newArray;
+        user.activityName =
+          "[SOCIAL JUSTICE (1), COMMUNITY SERVICE (2), ACADEMIC (2), THEATRE/DRAMA (1)]";
+
         return user.save();
-      }else{
+      } else {
         user.activityName = null;
         return user.save();
       }

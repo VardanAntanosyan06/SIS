@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
       token: DataTypes.STRING,
       img: DataTypes.STRING,
       trainingDate: DataTypes.DATE,
-      activityName:DataTypes.ARRAY(DataTypes.STRING)
+      activityName:DataTypes.STRING
     },
     {
       sequelize,

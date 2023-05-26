@@ -3,7 +3,7 @@ module.exports = {
       return queryInterface.sequelize.transaction((t) => {
           return Promise.all([
               queryInterface.addColumn('Users', 'activityName', {
-                  type: Sequelize.ARRAY(Sequelize.STRING)
+                  type: Sequelize.STRING
               }, { transaction: t }),
         ])
       })
