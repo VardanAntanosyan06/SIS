@@ -12,7 +12,6 @@ const SubTask_per_Users = require("../models").SubTask_per_User;
 const UserModel = require("../models").Users;
 let userId;
 
-
 const reg = async (req, res) => {
   try {
     let {
@@ -103,7 +102,6 @@ const reg = async (req, res) => {
     console.log(error);
   }
 };
-
 
 const sendMail = async (req, res) => {
   try {
