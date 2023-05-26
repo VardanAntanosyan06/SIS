@@ -4213,3 +4213,35 @@
 
 // // differentiateFormat(timeTasks)
 
+const { Users } = require("../models");
+
+const changeUsers = async (req, res) => {
+  try {
+    const users = await Users.findAll();
+    users.map((user) => {
+      if (user.grade === 10) {
+        let newArray = [
+          "SOCIAL JUSTICE",
+          "SOCIAL JUSTICE",
+          "COMMUNITY SERVICE",
+          "COMMUNITY SERVICE",
+          "JOURNALISM/PUBLICATION",
+          "DEBATE/SPEECH",
+          "COMMUNITY SERVICE",
+          "ACADEMIC",
+          "SCIENCE/MATH",
+          "RELIGIOUS",
+        ]; // Push the new element into the array
+        user.activityName = newArray;
+        return user.save();
+      }else{
+        user.activityName = null;
+        return user.save();
+      }
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+changeUsers();

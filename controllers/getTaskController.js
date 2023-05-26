@@ -436,24 +436,24 @@ const getTasksCategory1 = async (req, res) => {
       
       if (user.activityName!==null) {
         let activitiyString =  user.activityName;
-        activitiyString = activitiyString
-          .replace("[", "")
-          .replace("]", "")
-          .trim();
-        const activityList = activitiyString.split(",");
-        const obj = activityList.map((activity) => {
-          const x = activity.split("(");
-          return {
-            activityName: x[0].trim(),
-            count: +x[1].replace(")", ""),
-          };
-        });
+        // activitiyString = activitiyString
+        //   .replace("[", "")
+        //   .replace("]", "")
+        //   .trim();
+        console.log(activitiyString);
+        // const obj = activityList.map((activity) => {
+        //   const x = activity.split("(");
+        //   return {
+        //     activityName: x[0].trim(),
+        //     count: +x[1].replace(")", ""),
+        //   };
+        // });
+
         let recommendation = await Promise.all(
-          obj.map(async (e) => {
+          activitiyString.map(async (e) => {
             let tasks = await TaskModel.findAll({
-              where: { facultyName: e.activityName.toUpperCase() },
+              where: { facultyName: e.toUpperCase() },
               order: sequelize.random(),
-              limit: e.count,
               include: [
                 {
                   model: SubTasks,
@@ -527,7 +527,7 @@ const getTasksCategory1 = async (req, res) => {
 
         return res
           .status(200)
-          .send({ recommendation: newArr, groupedTasks, obj });
+          .send({ recommendation: newArr, groupedTasks });
       } else {
         const { authorization: token } = req.headers;
         const user = await UserModel.findOne({
@@ -543,7 +543,7 @@ const getTasksCategory1 = async (req, res) => {
               model: SubTasks,
               include: {
                 model: SubTask_per_User,
-                required: true,
+                required: false,
                 where: { userId: user.id },
               },
             },

@@ -98,7 +98,30 @@ const changePassword = async (req, res) => {
   }
 };
 
+const changeActivities = async (req,res)=>{
+  try {
+    const {newActivityName} = req.body
+    // console.log(newActivityName.length);
+    if(newActivityName.length>0){ 
+      const { authorization: token } = req.headers;
+  
+      const user = await UserModel.findOne({
+        where: { token: token.replace("Bearer ", "")},
+      });
+      if(user){
+        user.activityName = newActivityName;
+        user.save()
+        return res.json({success:true}) 
+      }
+      return res.status(404).json("user not found!") 
+    }
+      return res.status(403).json("newAccademics cannot be empty !")
+  } catch (error) {
+    console.log(error);
+  }
+}
 module.exports = {
   change,
   changePassword,
+  changeActivities
 };

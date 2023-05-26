@@ -34,13 +34,14 @@ module.exports = (sequelize, DataTypes) => {
       recentSchool: DataTypes.STRING,
       achievements: DataTypes.BOOLEAN,
       admission: DataTypes.BOOLEAN,
-      activityName: DataTypes.STRING,
+      // activityName: DataTypes.STRING,
       workExperience: DataTypes.STRING,
       addinfo: DataTypes.BOOLEAN,
       moreInfo: DataTypes.STRING,
       token: DataTypes.STRING,
       img: DataTypes.STRING,
       trainingDate: DataTypes.DATE,
+      activityName:DataTypes.ARRAY(DataTypes.STRING)
     },
     {
       sequelize,

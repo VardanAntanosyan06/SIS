@@ -75,9 +75,6 @@ module.exports = {
       admission: {
         type: Sequelize.BOOLEAN,
       },
-      activityName: {
-        type: Sequelize.STRING,
-      },
       workExperience: {
         type: Sequelize.STRING,
       },
