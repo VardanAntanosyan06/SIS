@@ -12,6 +12,7 @@ const SubTask_per_Users = require("../models").SubTask_per_User;
 const UserModel = require("../models").Users;
 let userId;
 
+
 const reg = async (req, res) => {
   try {
     let {
@@ -25,7 +26,22 @@ const reg = async (req, res) => {
       university,
       academicProgramFirst,
       academicProgramSecond,
-      academicProgramThird
+      academicProgramThird,
+      study,
+      termOption,
+      planType,
+      aid,
+      legacy,
+      area,
+      applyingFrom,
+      testSubmit,
+      recentSchool,
+      achievements,
+      admission,
+      activityName,
+      workExperience,
+      addinfo,
+      moreInfo,
     } = req.body;
     email = email.toLowerCase();
     let allUserEmails = await UserModel.findAll({
@@ -53,6 +69,21 @@ const reg = async (req, res) => {
         academicProgramFirst,
         academicProgramSecond,
         academicProgramThird,
+        study,
+        termOption,
+        planType,
+        aid,
+        legacy,
+        area,
+        applyingFrom,
+        testSubmit,
+        recentSchool,
+        achievements,
+        admission,
+        activityName,
+        workExperience,
+        addinfo,
+        moreInfo,
       });
 
       await UserEmails.create({
@@ -72,13 +103,8 @@ const reg = async (req, res) => {
     console.log(error);
   }
 };
-const regPartTwo = async (req,res)=>{
-  try {
-    // const 
-  } catch (error) {
-    
-  }
-}
+
+
 const sendMail = async (req, res) => {
   try {
     let { email } = req.body;
