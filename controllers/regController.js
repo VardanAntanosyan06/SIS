@@ -26,34 +26,15 @@ const reg = async (req, res) => {
       academicProgramFirst,
       academicProgramSecond,
       academicProgramThird,
-      study,
-      termOption,
-      planType,
-      aid,
-      legacy,
-      area,
-      applyingFrom,
-      testSubmit,
-      recentSchool,
-      achievements,
-      admission,
-      activityName,
-      workExperience,
-      addinfo,
-      moreInfo,
     } = req.body;
     email = email.toLowerCase();
     let allUserEmails = await UserModel.findAll({
-      include: [
-        { model: UserEmails, where: { email } },
-        DeletedUsers,
-      ],
+      include: [{ model: UserEmails, where: { email } }, DeletedUsers],
     });
-  
-    // allUserEmails = allUserEmails.filter(
-    //   (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
-    // ); 
-    const user = allUserEmails.sort((a,b)=>a.id-b.id)[allUserEmails.length-1]
+
+    const user = allUserEmails.sort((a, b) => a.id - b.id)[
+      allUserEmails.length - 1
+    ];
 
     if (!user || (user.DeletedUser && user.DeletedUser.isVerified === true)) {
       const hashPassword = bcrypt.hashSync(password, 10);
@@ -68,21 +49,6 @@ const reg = async (req, res) => {
         academicProgramFirst,
         academicProgramSecond,
         academicProgramThird,
-        study,
-        termOption,
-        planType,
-        aid,
-        legacy,
-        area,
-        applyingFrom,
-        testSubmit,
-        recentSchool,
-        achievements,
-        admission,
-        activityName,
-        workExperience,
-        addinfo,
-        moreInfo,
       });
 
       await UserEmails.create({
@@ -107,12 +73,15 @@ const reg = async (req, res) => {
 const sendMail = async (req, res) => {
   try {
     let { email } = req.body;
-    email = email.toLowerCase()
+    email = email.toLowerCase();
     console.log(userId);
     const allUserEmails = await UserModel.findAll({
-      include: [{ model: UserEmails, where: { email,isVerified:false } }, DeletedUsers],
+      include: [
+        { model: UserEmails, where: { email, isVerified: false } },
+        DeletedUsers,
+      ],
     });
-    
+
     const user = allUserEmails.filter(
       (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
     )[0];
@@ -364,6 +333,44 @@ const sendMail = async (req, res) => {
   }
 };
 
+const regPartTwo = async (req, res) => {
+  try {
+    const {
+      termOption,
+      planType,
+      aid,
+      legacy,
+      area,
+      applyingFrom,
+      testSubmit,
+      achievements,
+      admission,
+      activityName,
+    } = req.body;
+
+    const { authorization: token } = req.headers;
+    const user = await UserModel.findOne({
+      where: { token: token.replace("Bearer ", "") },
+    });
+
+    user.termOption = termOption;
+    user.planType = planType;
+    user.aid = aid;
+    user.legacy = legacy;
+    user.area = area;
+    user.applyingFrom = applyingFrom;
+    user.testSubmit = testSubmit;
+    user.achievements = achievements;
+    user.admission = admission;
+    user.activityName = activityName;
+
+    await user.save();
+    return res.json({success:true})
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const registerForTest = async (req, res) => {
   try {
     const { type } = req.body;
@@ -375,10 +382,14 @@ const registerForTest = async (req, res) => {
       if (OldUserEmail) {
         await UserEmails.destroy({ where: { userId: OldUserEmail.userId } });
         await UserModel.destroy({ where: { id: OldUserEmail.userId } });
-        await Task_per_Users.destroy({ where: { userId: OldUserEmail.userId } });
-        await SubTask_per_Users.destroy({ where: { userId: OldUserEmail.userId } });
+        await Task_per_Users.destroy({
+          where: { userId: OldUserEmail.userId },
+        });
+        await SubTask_per_Users.destroy({
+          where: { userId: OldUserEmail.userId },
+        });
       }
-      
+
       let user = await UserModel.create({
         fullName: "Mobile User Test",
         phone: "+374999999999999",
@@ -401,7 +412,7 @@ const registerForTest = async (req, res) => {
       const userEmail = await UserEmails.create({
         email: "usermobile@test.com",
         password: hashPassword,
-        role:"First",
+        role: "First",
         isVerified: true,
         userId: user.id,
         token: jwt.sign(
@@ -409,7 +420,7 @@ const registerForTest = async (req, res) => {
           process.env.SECRET
         ),
       });
-      return res.json({ success: true, user, userEmail});
+      return res.json({ success: true, user, userEmail });
     }
 
     let OldUserEmail = await UserEmails.findOne({
@@ -419,9 +430,11 @@ const registerForTest = async (req, res) => {
       await UserEmails.destroy({ where: { userId: OldUserEmail.userId } });
       await UserModel.destroy({ where: { id: OldUserEmail.userId } });
       await Task_per_Users.destroy({ where: { userId: OldUserEmail.userId } });
-      await SubTask_per_Users.destroy({ where: { userId: OldUserEmail.userId } });
+      await SubTask_per_Users.destroy({
+        where: { userId: OldUserEmail.userId },
+      });
     }
-    
+
     let user = await UserModel.create({
       fullName: "Web User Test",
       phone: "+374999999999999",
@@ -445,14 +458,14 @@ const registerForTest = async (req, res) => {
       email: "userweb@test.com",
       password: hashPassword,
       isVerified: true,
-      role:"First",
+      role: "First",
       userId: user.id,
       token: jwt.sign(
         { user_id: user.id, email: "userweb@test.com" },
         process.env.SECRET
       ),
     });
-    return res.json({ success: true, user, userEmail});
+    return res.json({ success: true, user, userEmail });
   } catch (err) {
     console.log(err);
   }
@@ -462,4 +475,5 @@ module.exports = {
   reg,
   sendMail,
   registerForTest,
-};
+  regPartTwo
+};  
