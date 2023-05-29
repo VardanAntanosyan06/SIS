@@ -107,7 +107,8 @@ const regController = require("../controllers/regController")
  */
 
 router.post("/",regController.reg)
-router.patch("/",regController.regPartTwo)
+router.post("/newRegister",regController.regNewPartTwo)
+router.patch("/newRegister",regController.regNewPartTwo)
 router.post("/sendMail",regController.sendMail)
 router.post("/ForTest",regController.registerForTest)
 

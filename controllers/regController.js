@@ -26,15 +26,34 @@ const reg = async (req, res) => {
       academicProgramFirst,
       academicProgramSecond,
       academicProgramThird,
+      study,
+      termOption,
+      planType,
+      aid,
+      legacy,
+      area,
+      applyingFrom,
+      testSubmit,
+      recentSchool,
+      achievements,
+      admission,
+      activityName,
+      workExperience,
+      addinfo,
+      moreInfo,
     } = req.body;
     email = email.toLowerCase();
     let allUserEmails = await UserModel.findAll({
-      include: [{ model: UserEmails, where: { email } }, DeletedUsers],
+      include: [
+        { model: UserEmails, where: { email } },
+        DeletedUsers,
+      ],
     });
-
-    const user = allUserEmails.sort((a, b) => a.id - b.id)[
-      allUserEmails.length - 1
-    ];
+  
+    // allUserEmails = allUserEmails.filter(
+    //   (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
+    // ); 
+    const user = allUserEmails.sort((a,b)=>a.id-b.id)[allUserEmails.length-1]
 
     if (!user || (user.DeletedUser && user.DeletedUser.isVerified === true)) {
       const hashPassword = bcrypt.hashSync(password, 10);
@@ -49,6 +68,21 @@ const reg = async (req, res) => {
         academicProgramFirst,
         academicProgramSecond,
         academicProgramThird,
+        study,
+        termOption,
+        planType,
+        aid,
+        legacy,
+        area,
+        applyingFrom,
+        testSubmit,
+        recentSchool,
+        achievements,
+        admission,
+        activityName,
+        workExperience,
+        addinfo,
+        moreInfo,
       });
 
       await UserEmails.create({
@@ -332,8 +366,65 @@ const sendMail = async (req, res) => {
     return res.status("500").json("something went wrong");
   }
 };
+const regNewPartOne = async (req, res) => {
+  try {
+    let {
+      fullName,
+      email,
+      password,
+      phone,
+      age,
+      country,
+      grade,
+      university,
+      academicProgramFirst,
+      academicProgramSecond,
+      academicProgramThird,
+    } = req.body;
+    email = email.toLowerCase();
+    let allUserEmails = await UserModel.findAll({
+      include: [{ model: UserEmails, where: { email } }, DeletedUsers],
+    });
 
-const regPartTwo = async (req, res) => {
+    const user = allUserEmails.sort((a, b) => a.id - b.id)[
+      allUserEmails.length - 1
+    ];
+
+    if (!user || (user.DeletedUser && user.DeletedUser.isVerified === true)) {
+      const hashPassword = bcrypt.hashSync(password, 10);
+
+      const item = await UserModel.create({
+        fullName,
+        phone,
+        age,
+        country,
+        grade,
+        university,
+        academicProgramFirst,
+        academicProgramSecond,
+        academicProgramThird,
+      });
+
+      await UserEmails.create({
+        email,
+        password: hashPassword,
+        userId: item.id,
+        role: "First",
+        token: jwt.sign({ user_id: item.id, email }, process.env.SECRET),
+        tokenCreatedAt: moment(),
+      });
+      userId = item.id;
+      console.log(userId);
+      return res.status(200).json({ success: true });
+    } else {
+      return res.status(403).json("user alredy exist");
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const regNewPartTwo = async (req, res) => {
   try {
     const {
       termOption,
@@ -475,5 +566,6 @@ module.exports = {
   reg,
   sendMail,
   registerForTest,
-  regPartTwo
+  regNewPartTwo,
+  regNewPartOne
 };  
