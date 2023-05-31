@@ -110,6 +110,6 @@ router.post("/register",regController.reg)
 router.post("/newRegister",regController.regNewPartOne)
 router.patch("/newRegister",regController.regNewPartTwo)
 router.post("/sendMail",regController.sendMail)
-router.post("/ForTest",regController.registerForTest)
+router.post("register/ForTest",regController.registerForTest)
 
 module.exports = router;
