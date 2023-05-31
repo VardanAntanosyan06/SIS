@@ -75,7 +75,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 app.use("/", indexRouter);
-app.use("/register", usersRouter);
+app.use("/", usersRouter);
 app.use("/verify", verifyRouter);
 app.use("/user", loginRouter);
 app.use("/resetPassword", resetPassword);

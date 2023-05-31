@@ -106,7 +106,7 @@ const regController = require("../controllers/regController")
  *         description: user alredy exit
  */
 
-router.post("/",regController.reg)
+router.post("/register",regController.reg)
 router.post("/newRegister",regController.regNewPartOne)
 router.patch("/newRegister",regController.regNewPartTwo)
 router.post("/sendMail",regController.sendMail)

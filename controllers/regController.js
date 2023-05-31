@@ -414,8 +414,7 @@ const regNewPartOne = async (req, res) => {
         tokenCreatedAt: moment(),
       });
       userId = item.id;
-      console.log(userId);
-      return res.status(200).json({ success: true });
+      return res.status(200).json({ success: true,email });
     } else {
       return res.status(403).json("user alredy exist");
     }
