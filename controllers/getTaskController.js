@@ -436,24 +436,12 @@ const getTasksCategory1 = async (req, res) => {
       
       if (user.activityName!==null) {
         let activitiyString =  user.activityName;
-        activitiyString = activitiyString
-          .replace("[", "")
-          .replace("]", "")
-          .trim();
-        const activityList = activitiyString.split(",");
-        const obj = activityList.map((activity) => {
-          const x = activity.split("(");
-          return {
-            activityName: x[0].trim(),
-            count: +x[1].replace(")", ""),
-          };
-        });
         let recommendation = await Promise.all(
-          obj.map(async (e) => {
+          activitiyString.map(async (e) => {
             let tasks = await TaskModel.findAll({
               where: { facultyName: e.activityName.toUpperCase() },
               order: sequelize.random(),
-              limit: e.count,
+              limit: 1,
               include: [
                 {
                   model: SubTasks,
