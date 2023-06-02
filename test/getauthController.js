@@ -4213,57 +4213,57 @@
 
 // // // differentiateFormat(timeTasks)
 
-// const { Users } = require("../models");
+const { Users } = require("../models");
 
-// const changeUsers = async (req, res) => {
-//   try {
-//     const users = await Users.findAll();
-//     users.map((user) => {
-//       if (user.grade === 10) {
-//         user.activityName =
-//           "[SOCIAL JUSTICE (1), COMMUNITY SERVICE (2), ACADEMIC (2), THEATRE/DRAMA (1)]";
-
-//         return user.save();
-//       } else {
-//         user.activityName = null;
-//         return user.save();
-//       }
-//     });
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-
-// changeUsers();
-
-
-
-const UserEmails = require("../models").UserEmails;
-const jwt = require("jsonwebtoken");
-const DeletedUsers = require("../models").DeletedUsers;
-const moment = require("moment");
-const Task_per_Users = require("../models").Task_per_User;
-const SubTask_per_Users = require("../models").SubTask_per_User;
-const UserModel = require("../models").User
-
-const foo = async(req,res)=>{
+const changeUsers = async (req, res) => {
   try {
-    let OldUserEmail = await UserEmails.findAll({
-      where: { email: "userweb@test.com" },
+    const users = await Users.findAll();
+    users.map((user) => {
+      if (user.grade === 10) {
+        user.activityName =
+    ["SOCIAL JUSTICE","SOCIAL JUSTICE","COMMUNITY SERVICE","COMMUNITY SERVICE","JOURNALISM/PUBLICATION","DEBATE/SPEECH","COMMUNITY SERVICE","ACADEMIC","SCIENCE/MATH","RELIGIOUS"]
+
+        return user.save();
+      } else {
+        user.activityName = null;
+        return user.save();
+      }
     });
-    await Promise.all(
-    OldUserEmail.map(async(e)=>{
-      await UserEmails.destroy({ where: { userId: e.userId } });
-      await UserModel.destroy({ where: { id: e.userId } });
-      await Task_per_Users.destroy({ where: { userId: e.userId } });
-      await SubTask_per_Users.destroy({
-        where: { userId: e.userId },
-      });
-    }))
   } catch (error) {
     console.log(error);
   }
-}
+};
+
+changeUsers();
 
 
-foo()
+
+// const UserEmails = require("../models").UserEmails;
+// const jwt = require("jsonwebtoken");
+// const DeletedUsers = require("../models").DeletedUsers;
+// const moment = require("moment");
+// const Task_per_Users = require("../models").Task_per_User;
+// const SubTask_per_Users = require("../models").SubTask_per_User;
+// const UserModel = require("../models").User
+
+// const foo = async(req,res)=>{
+//   try {
+//     let OldUserEmail = await UserEmails.findAll({
+//       where: { email: "userweb@test.com" },
+//     });
+//     await Promise.all(
+//     OldUserEmail.map(async(e)=>{
+//       await UserEmails.destroy({ where: { userId: e.userId } });
+//       await UserModel.destroy({ where: { id: e.userId } });
+//       await Task_per_Users.destroy({ where: { userId: e.userId } });
+//       await SubTask_per_Users.destroy({
+//         where: { userId: e.userId },
+//       });
+//     }))
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+
+// foo()
