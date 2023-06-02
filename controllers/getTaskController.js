@@ -515,7 +515,7 @@ const getTasksCategory1 = async (req, res) => {
 
         return res
           .status(200)
-          .send({ recommendation: newArr, groupedTasks, obj });
+          .send({ recommendation: newArr, groupedTasks });
       } else {
         const { authorization: token } = req.headers;
         const user = await UserModel.findOne({
