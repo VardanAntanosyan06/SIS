@@ -15,6 +15,7 @@ const change = async (req, res) => {
       academicProgramFirst,
       academicProgramSecond,
       academicProgramThird,
+      academicProgramFourth,
       study,
     } = req.body;
     const { authorization: token } = req.headers;
@@ -28,6 +29,7 @@ const change = async (req, res) => {
         user.academicProgramFirst = null
         user.academicProgramSecond = null
         user.academicProgramThird = null
+        user.academicProgramFourth = null
       }
       user.fullName = fullName !== undefined ? fullName : user.fullName;
       user.phone = phone !== undefined ? phone : user.phone;
@@ -47,6 +49,11 @@ const change = async (req, res) => {
         academicProgramThird !== undefined
           ? academicProgramThird
           : user.academicProgramThird;
+          user.academicProgramFourth =
+          academicProgramFourth !== undefined
+            ? academicProgramFourth
+            : user.academicProgramFourth;
+          
       user.study = study !== undefined ? study : user.study;
       await user.save();
       return res.status(200).json({ success: true });
