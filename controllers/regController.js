@@ -26,6 +26,7 @@ const reg = async (req, res) => {
       academicProgramFirst,
       academicProgramSecond,
       academicProgramThird,
+      academicProgramFourth,
       study,
       termOption,
       planType,
