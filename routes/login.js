@@ -103,6 +103,6 @@ router.get("/get",loginController.getUser)
 router.patch("/deleteAccount",loginController.deleteAccount)
 router.patch("/deactivate",loginController.deactivate)
 router.post("/deletionReasone",loginController.deletionReasone)
-
+router.delete("/deleteForTesting",loginController.deleteForTesting)
 
 module.exports = router;

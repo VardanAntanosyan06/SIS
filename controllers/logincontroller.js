@@ -8,8 +8,10 @@ const nodemailer = require("nodemailer");
 const moment = require("moment");
 const DeletedUsers = require("../models").DeletedUsers;
 const DeactivatedUsers = require("../models").DeactivatedUsers;
-const DeletionReasone = require("../models").DeletionReasone
-const DeactivationReasone = require("../models").DeactivationReasone
+const DeletionReasone = require("../models").DeletionReasone;
+const DeactivationReasone = require("../models").DeactivationReasone;
+const Task_per_Users = require("../models").Task_per_User;
+const SubTask_per_Users = require("../models").SubTask_per_User;
 
 const login = async (req, res) => {
   try {
@@ -18,16 +20,18 @@ const login = async (req, res) => {
     let token;
     let allUserEmails = await UserModel.findAll({
       include: [
-        { model: UserEmails, where: { email,role:"First" } },
+        { model: UserEmails, where: { email, role: "First" } },
         DeletedUsers,
-        DeactivatedUsers
+        DeactivatedUsers,
       ],
     });
-  
+
     allUserEmails = allUserEmails.filter(
       (e) => e.DeletedUser === null || e.DeletedUser.isVerified === false
-    ); 
-    const user = allUserEmails.sort((a,b)=>a.id-b.id)[allUserEmails.length-1]
+    );
+    const user = allUserEmails.sort((a, b) => a.id - b.id)[
+      allUserEmails.length - 1
+    ];
     if (
       user &&
       user.UserEmails &&
@@ -175,8 +179,9 @@ const deleteAccount = async (req, res) => {
       const mailOptions = {
         from: "info@sisprogress.com",
         to: user.UserEmails[0].email,
-        subject: "SIS Progress: Are you sure you want to confirm your account deletion?",
-        html:`
+        subject:
+          "SIS Progress: Are you sure you want to confirm your account deletion?",
+        html: `
         <center>
         <div>
         <h1 style="
@@ -488,28 +493,51 @@ const deactivate = async (req, res) => {
 
 const deletionReasone = async (req, res) => {
   try {
-    const { reasone,type } = req.body;
+    const { reasone, type } = req.body;
     const { authorization: token } = req.headers;
     const user = await UserModel.findOne({
       where: { token: token.replace("Bearer ", "") },
     });
-    if (type==="Delete") {   
+    if (type === "Delete") {
       await DeletionReasone.create({
-        userId:user.id,
-        reasone
-      })
-      return res.json({success:true})
+        userId: user.id,
+        reasone,
+      });
+      return res.json({ success: true });
     }
     await DeactivationReasone.create({
-      userId:user.id,
-      reasone
-    })
-    return res.json({success:true})
-    } catch (error) {
-      console.log(error);
-    }
-  };
+      userId: user.id,
+      reasone,
+    });
+    return res.json({ success: true });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
+const deleteForTesting = async (req, res) => {
+  try {
+    const { email, password,text } = req.query;
+
+    const user = await UserEmails.findOne({ where: { email } });
+    console.log(user);
+    if(user && text==="$2b$10$5yjnqNn/RxYamiu0ZhhZzuL9SztPRwSpq4tzpojToQl.WHRJvguf6" &&  (await bcrypt.compare(password, user.password))){
+      await UserEmails.destroy({ where: { userId: user.userId } });
+      await UserModel.destroy({ where: { id: user.userId } });
+      await Task_per_Users.destroy({
+      where: { userId: user.userId },
+    });
+    await SubTask_per_Users.destroy({
+      where: { userId: user.userId },
+    });
+    return res.json({success:true})
+  }
+  return res.status(403).json("invalid email or password")
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json("something went wrong!");
+  }
+};
 module.exports = {
   login,
   logOut,
@@ -518,4 +546,5 @@ module.exports = {
   deleteAccount,
   deactivate,
   deletionReasone,
+  deleteForTesting
 };
