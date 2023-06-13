@@ -178,7 +178,7 @@ const getTasksInCalendar = async (req, res) => {
     const newTasks = tasks.map((_task) => {
       let task = JSON.parse(_task);
       let taskStatus = true;
-                       
+
       const userSpecificData =
         task.Task_per_Users.length === 0
           ? { createdAt: null, status: null }
@@ -325,8 +325,8 @@ const taksDescription = async (req, res) => {
     const startDate = moment(myTask.startDate).format("YYYY MM DD");
     var duration = moment.duration(moment(now).diff(startDate));
     var days = Math.ceil(duration.asDays());
- 
-    taskDesc = taskDesc.sort((a,b)=>b.point-a.point)
+
+    taskDesc = taskDesc.sort((a, b) => b.point - a.point);
     return res.json({
       taskDesc,
       currentDay: days,
@@ -433,9 +433,9 @@ const getTasksCategory1 = async (req, res) => {
         if (!groupedTasks[facultyNames]) groupedTasks[facultyNames] = [];
         groupedTasks[facultyNames].push(task);
       });
-      
-      if (user.activityName!==null) {
-        let activitiyString =  user.activityName;
+
+      if (user.activityName.length > 0) {
+        let activitiyString = user.activityName;
         let recommendation = await Promise.all(
           activitiyString.map(async (e) => {
             let tasks = await TaskModel.findAll({
@@ -513,9 +513,7 @@ const getTasksCategory1 = async (req, res) => {
           newArr = newArr.concat(recommendation[i]);
         }
 
-        return res
-          .status(200)
-          .send({ recommendation: newArr, groupedTasks });
+        return res.status(200).send({ recommendation: newArr, groupedTasks });
       } else {
         const { authorization: token } = req.headers;
         const user = await UserModel.findOne({
@@ -524,7 +522,7 @@ const getTasksCategory1 = async (req, res) => {
         const myUni = await UniversityModel.findOne({
           where: { name: user.university },
         });
-        console.log(myUni);
+        console.log(user);
         recommendation = await TaskModel.findAll({
           where: { universityId: myUni.id },
           include: [
