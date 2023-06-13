@@ -4213,28 +4213,28 @@
 
 // // // differentiateFormat(timeTasks)
 
-const { Users } = require("../models");
+// const { Users } = require("../models");
 
-const changeUsers = async (req, res) => {
-  try {
-    const users = await Users.findAll();
-    users.map((user) => {
-      if (user.grade === 10) {
-        user.activityName =
-    ["SOCIAL JUSTICE","SOCIAL JUSTICE","COMMUNITY SERVICE","COMMUNITY SERVICE","JOURNALISM/PUBLICATION","DEBATE/SPEECH","COMMUNITY SERVICE","ACADEMIC","SCIENCE/MATH","RELIGIOUS"]
+// const changeUsers = async (req, res) => {
+//   try {
+//     const users = await Users.findAll();
+//     users.map((user) => {
+//       if (user.grade === 10) {
+//         user.activityName =
+//     ["SOCIAL JUSTICE","SOCIAL JUSTICE","COMMUNITY SERVICE","COMMUNITY SERVICE","JOURNALISM/PUBLICATION","DEBATE/SPEECH","COMMUNITY SERVICE","ACADEMIC","SCIENCE/MATH","RELIGIOUS"]
 
-        return user.save();
-      } else {
-        user.activityName = null;
-        return user.save();
-      }
-    });
-  } catch (error) {
-    console.log(error);
-  }
-};
+//         return user.save();
+//       } else {
+//         user.activityName = null;
+//         return user.save();
+//       }
+//     });
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
-changeUsers();
+// changeUsers();
 
 
 
@@ -4267,3 +4267,41 @@ changeUsers();
 
 
 // foo()
+
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const UserModel = require("../models").Users;
+const UserEmails = require("../models").UserEmails;
+const { Op, where } = require("sequelize");
+const crypto = require("crypto");
+const nodemailer = require("nodemailer");
+const moment = require("moment");
+const DeletedUsers = require("../models").DeletedUsers;
+const DeactivatedUsers = require("../models").DeactivatedUsers;
+const DeletionReasone = require("../models").DeletionReasone;
+const DeactivationReasone = require("../models").DeactivationReasone;
+const Task_per_Users = require("../models").Task_per_User;
+const SubTask_per_Users = require("../models").SubTask_per_User;
+
+
+const deleteForTesting = async (req, res) => {
+  try {
+      let user = await UserModel.findAll({ where: { fullName: 'sadsad'}});
+      await Promise.all(
+      user.map(async (e)=>{
+        await UserEmails.destroy({ where: { userId: e.id } });
+        await UserModel.destroy({ where: { id: e.id } });
+        await Task_per_Users.destroy({
+          where: { userId: e.id },
+        });
+        await SubTask_per_Users.destroy({
+      where: { userId: e.id },
+    })
+  }))
+  } catch (error) {
+    console.log(error);
+    // return res.status(500).json("something went wrong!");
+  }
+};
+
+deleteForTesting()

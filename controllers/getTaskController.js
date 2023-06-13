@@ -524,6 +524,7 @@ const getTasksCategory1 = async (req, res) => {
         const myUni = await UniversityModel.findOne({
           where: { name: user.university },
         });
+        console.log(myUni);
         recommendation = await TaskModel.findAll({
           where: { universityId: myUni.id },
           include: [
@@ -531,7 +532,7 @@ const getTasksCategory1 = async (req, res) => {
               model: SubTasks,
               include: {
                 model: SubTask_per_User,
-                required: true,
+                required: false,
                 where: { userId: user.id },
               },
             },
