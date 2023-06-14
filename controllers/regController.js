@@ -470,7 +470,6 @@ const registerForTest = async (req, res) => {
       let OldUserEmail = await UserEmails.findOne({
         where: { email: "usermobile@test.com" },
       });
-      console.log(OldUserEmail);
       if (OldUserEmail) {
         await UserEmails.destroy({ where: { userId: OldUserEmail.userId } });
         await UserModel.destroy({ where: { id: OldUserEmail.userId } });
@@ -493,6 +492,7 @@ const registerForTest = async (req, res) => {
         academicProgramSecond: null,
         academicProgramThird: null,
         academicProgramFourth: null,
+        activityName:["SOCIAL JUSTICE", "RESEARCH", "JOURNALISM/PUBLICATION"],
         termOption: "Fall 2024",
         planType: "Early Desicion",
         aid: false,
@@ -538,6 +538,7 @@ const registerForTest = async (req, res) => {
       academicProgramSecond: null,
       academicProgramThird: null,
       academicProgramFourth: null,
+      activityName:["SOCIAL JUSTICE", "RESEARCH", "JOURNALISM/PUBLICATION"],
       termOption: "Fall 2024",
       planType: "Early Desicion",
       aid: false,

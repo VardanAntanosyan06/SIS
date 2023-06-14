@@ -24,7 +24,7 @@ const Tasks = [
     imgMobile: "http://drive.google.com/uc?export=view&id=15VndUQNor6Wmz3uV7GR6zNjbyQLSHaKF"
   },
   {
-    facultyName: "PUBLICATION/JOURNALISM",
+    facultyName: "JOURNALISM/PUBLICATION",
     companyName: "Group Co-leader",
     positionName: "Society of Freelance Journalists",
     universityId: 1,
@@ -168,7 +168,7 @@ const Tasks = [
     imgMobile: "http://drive.google.com/uc?export=view&id=1kgbZ0ziQYao3aLLWM20zw0aacG1W6w06"
   },
   {
-    facultyName: "THEATRE/DRAMA",
+    facultyName: "THEATER/DRAMA",
     companyName: "Knox School Academy of Performing Arts",
     positionName: "Lead Actor",
     universityId: 3,
@@ -176,7 +176,7 @@ const Tasks = [
     imgMobile: "http://drive.google.com/uc?export=view&id=14ZRszmydS0WGnGfTUJKs7a_-IA4Knsep"
   },
   {
-    facultyName: "THEATRE/DRAMA",
+    facultyName: "THEATER/DRAMA",
     companyName: "Abbotsleigh School for the Performing Arts",
     positionName: "Lead Actor",
     universityId: 3,
@@ -304,7 +304,7 @@ const Tasks = [
     imgMobile: "http://drive.google.com/uc?export=view&id=1K0ad5f8qizGbnXjltLpYo7QndnJzXQJj"
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     companyName: "Int. Student Association",
     positionName: "VP of Community Service",
     universityId: 4,
@@ -512,7 +512,7 @@ const Tasks = [
     imgMobile: "http://drive.google.com/uc?export=view&id=1fkiRUsIZL_Hl2zGnCcMwNpOGSaTB5FGh"
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     companyName: "College Awareness Club",
     positionName: "President & Founder",
     universityId: 7,
@@ -624,7 +624,7 @@ const Tasks = [
     imgMobile: "http://drive.google.com/uc?export=view&id=1YNYsbu2HAlkgCaKdplKZ7uhPCixIL9WW"
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     companyName: "House Poetry Competition",
     positionName: "Writer",
     universityId: 6,
@@ -728,7 +728,7 @@ const Tasks = [
     imgMobile: "http://drive.google.com/uc?export=view&id=1KFyc-qnFtbUdLe30QlA7B0j7gFN8mx4r"
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     companyName: "Transfer Student Club",
     positionName: "Co-founder and President",
     universityId: 7,
@@ -936,7 +936,7 @@ const Tasks = [
     imgMobile: "http://drive.google.com/uc?export=view&id=1hkvbop11ZmV2oFQ9Zh8Sdl1qjOXl9q1z"
   },
   {
-    facultyName: "THEATRE/DRAMA",
+    facultyName: "THEATER/DRAMA",
     companyName: "House Drama Captain",
     positionName: "Playwright and Publicist",
     universityId: 9,
@@ -984,7 +984,7 @@ const Tasks = [
     imgMobile: "http://drive.google.com/uc?export=view&id=1SjHk3SsLGNTCRdAwlKG0LsbBx0yXkzp4"
   },
   {
-    facultyName: "STUDENTS GOVT. POLITICS",
+    facultyName: "STUDENT GOVT. POLITICS",
     companyName: "Students Representative Council",
     positionName: "SRC Prefect",
     universityId: 10,
@@ -1120,7 +1120,7 @@ const Tasks = [
     imgMobile: "http://drive.google.com/uc?export=view&id=1l4jQokDOm5Cs9OjLURUhgWQE1LGHIemU"
   },
   {
-    facultyName: "THEATRE/DRAMA",
+    facultyName: "THEATER/DRAMA",
     companyName: "Benvinda Drama Group",
     positionName: "Member",
     universityId: 11,
@@ -1128,7 +1128,7 @@ const Tasks = [
     imgMobile: "http://drive.google.com/uc?export=view&id=1FgFTyflehDiAKCFSmNEpnfoL4aBAmMPJ"
   },
   {
-    facultyName: "THEATRE/DRAMA",
+    facultyName: "THEATER/DRAMA",
     companyName: "Royal National Theatre of London",
     positionName: "Connections",
     universityId: 11,
@@ -1136,7 +1136,7 @@ const Tasks = [
     imgMobile: "http://drive.google.com/uc?export=view&id=1wZ4xZg884uPDa0XiMvludOEq19EA8D1J"
   },
   {
-    facultyName: "THEATRE/DRAMA",
+    facultyName: "THEATER/DRAMA",
     companyName: "Musical Theater Group",
     positionName: "Member",
     universityId: 11,
@@ -1312,7 +1312,7 @@ const Tasks = [
     imgMobile: "http://drive.google.com/uc?export=view&id=1t_hce1XHv1o7thBlxXtaPLoixkSsTWcV"
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     companyName: "Chess Club",
     positionName: "Founding member",
     universityId: 1,
@@ -1320,7 +1320,7 @@ const Tasks = [
     imgMobile: "http://drive.google.com/uc?export=view&id=1p-zQnU1P07rMf7gkfw-dp6ZGeXSVa2u8"
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     companyName: "Math Club",
     positionName: "Tutor",
     universityId: 1,
@@ -1336,7 +1336,7 @@ const Tasks = [
     imgMobile: "http://drive.google.com/uc?export=view&id=1XJp9dTehpEw2W0K-45bRqhEqH6qqIwTJ"
   },
   {
-    facultyName: "OTHER CLUB/ACTIVITY",
+    facultyName: "OTHER/CLUB ACTIVITY",
     companyName: "'DARK' Company",
     positionName: "Volunteer",
     universityId: 1,
