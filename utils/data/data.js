@@ -11,7 +11,7 @@ const testUserExample = [
     country: "Armenia",
     grade: 10,
     university: "Johns Hopkins University",
-    academicProgramFirst:"some info",
+    academicProgramFirst:"some info@",
     academicProgramSecond:"some info",
     academicProgramThird:"some info", 
     study: "some info",
